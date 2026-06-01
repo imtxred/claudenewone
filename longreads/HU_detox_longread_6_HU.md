@@ -1,10 +1,6 @@
-Harminckét évig dolgoztam a gyárban.
+Harminckét évig dolgoztam a gyárban. Aztán kirúgtak. A végzésbe azt írták: „ismételt munkafegyelmi vétség". Az igazi ok más volt. A férfiak erről nem beszélnek. Én most először mondom el.
 
-Aztán kirúgtak. A végzésbe azt írták: „ismételt munkafegyelmi vétség". Az igazi ok más volt.
 
-A férfiak erről nem beszélnek. Én most először mondom el.
-
----
 
 Józsefnek hívnak. Ötvennyolc éves vagyok. Miskolc. Hengersorkezelő — huszonöt éves koromtól, ugyanabban a gyárban. Harmincnégy éve vagyok Margit férje. Két lányom van — Katalin Budapesten, Anna Németországban.
 
@@ -30,7 +26,7 @@ Másodjára — a művezető körútján. Nem voltam az állásomon. Amikor viss
 
 — Értem. De a szabályok — mindenkire vonatkoznak.
 
----
+
 
 Aztán jött április.
 
@@ -52,7 +48,7 @@ Három nappal később — behívás a személyzeti osztályra. Egy héttel kés
 
 Harminckét év munka. Egyetlen végzés.
 
----
+
 
 Margitnak azt mondtam: nézeteltérés a vezetéssel. Sírt. Nem magyaráztam el.
 
@@ -82,7 +78,7 @@ Lajos hallgatta. Aztán:
 
 Egy nappal később elküldte a linket.
 
----
+
 
 Egy gasztroenterológus cikke. Húsz év gyakorlat, több száz kolonoszkópia. Nem reklám. Egy mechanizmus magyarázata — amit hét év alatt egyetlen orvos sem mondott el nekem.
 
@@ -98,7 +94,7 @@ Miért nincs patikában — egyenesen megírta: gyógyszeripari cégek pénzt aj
 
 Megtaláltam a rendelés gombot. Fizetés átvételkor.
 
----
+
 
 Margit megkérdezte, mi van a csomagban.
 
@@ -126,7 +122,7 @@ Két hét múlva először hónapok óta söröztem Lajossal. Egy korsóval. Nyu
 
 Egy hónappal később egyedül mentem a piacra — vettem krumplit és paprikát. Negyven perc. Semmi sem történt. Csak elmentem és visszajöttem.
 
----
+
 
 Egy este Margittal ültem a konyhában. Olvasott.
 
@@ -152,7 +148,7 @@ Sokáig nézett rám. Aztán felkelt, odajött, a vállamra tette a kezét.
 
 Nem mondott semmit. Csak ott állt mellettem.
 
----
+
 
 Májusban elintéztem a korengedményes nyugdíjat — jogosult vagyok a szolgálati évek alapján. Elmentem a gyárba a papírokért. Kijöttem a portán, megálltam a kapunál.
 
@@ -170,7 +166,7 @@ Tudom.
 
 Előbb kellett volna.
 
----
+
 
 Azt mondták nekem: a férfiak nem panaszkodnak a gyomrukra. Megfeszítetted az izmot — menj dolgozni. Fáj a fejed — majd elmúlik. Fáj a hasad — az is elmúlik majd.
 
