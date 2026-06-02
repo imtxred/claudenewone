@@ -20,7 +20,7 @@ Y colgó.
 
 La enfermera empujaba mi silla por el pasillo. Cuatro camas. Olor a medicamentos y cloro. Ancianas con la mirada vacía contemplaban el techo. Entendí: aquí moriría.
 
----
+
 
 Todo empezó hace cinco años.
 
@@ -62,7 +62,7 @@ Al año empecé a caerme. Una noche me levanté y las piernas no me sostuvieron.
 
 Después de eso me caía constantemente. A los sesenta y cinco: silla de ruedas. En ese mismo apartamento que había comprado para mí.
 
----
+
 
 Valentina al principio me ayudaba. Se levantaba más temprano para ayudarme a vestirme. Me traía los medicamentos. Me llevaba a las consultas.
 
@@ -86,7 +86,7 @@ Pero dijo:
 
 Una semana después «lo pensó». Y desde entonces: la residencia de ancianos.
 
----
+
 
 La primera semana solo lloré. No comí. No hablé con nadie. Pensaba en la muerte.
 
@@ -108,7 +108,7 @@ Dejé de esperar. Empecé a odiar.
 
 ¿Y saben qué es lo más aterrador? Nunca había odiado a nadie. Y a mi hija la odié en un mes de su silencio.
 
----
+
 
 Y luego todo cambió.
 
@@ -150,7 +150,7 @@ A la semana caminaba por el cuarto sosteniéndome de las paredes. A las dos sema
 
 Estaba parada en el patio bajo el sol y lloraba.
 
----
+
 
 Y luego dejé de llorar. Algo en mí se activó.
 
@@ -168,7 +168,7 @@ Dos semanas después salí de la residencia. Con mis propios pies. Con bastón, 
 
 No llamé a Valentina. No avisé.
 
----
+
 
 Llegué a mi apartamento.
 
@@ -202,7 +202,7 @@ Solo dije una cosa:
 
 A los seis días se fueron.
 
----
+
 
 Ahora vivo en mi apartamento. Sola. Por primera vez en muchos años: en paz.
 
@@ -258,7 +258,7 @@ Andrés no viene. Y no vendrá. Ese es mi límite, y permanecerá para siempre. 
 
 Perdoné. Pero no olvidé. Y nunca olvidaré.
 
----
+
 
 Qué pena no haber conocido este spray antes. Antes de la silla. Antes de la residencia. Antes de que Valentina se convirtiera en una mujer que dejé de reconocer.
 
