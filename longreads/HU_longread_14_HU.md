@@ -8,7 +8,7 @@ Megfogtam a kezét. Azt mondtam: Erzsi, amíg élek — te itthon maradsz. Velem
 
 Három héttel később mégis ott volt. Megszegtem az ígéretemet. Mert elestem a konyhai padlón, és nem tudtam felkelni.
 
----
+
 
 Szilágyi Gábor vagyok. Hetvenegy éves. Eger. Negyven évig dolgoztam építésvezetőként — alapozás, falazás, födémek. Egész életemben csizmában, hidegben, nehéz terheléssel. A hátam ötven éves korom körül kezdett fájni. Fájdalmon keresztül dolgoztam. A térdeim hatvanévesen. Fájdalmon keresztül dolgoztam. Ez így szokás nálunk.
 
@@ -24,7 +24,7 @@ Reggel — a hálószobából a fürdőbe. Aztán a konyhába. Este — vissza. 
 
 A gyerekek hetente egyszer telefonáltak. Péter fia Budapestről. „Hogy vagytok, apa?" — „Jól". Mit mondtam volna? Hogy az anyját a vécébe viszem? Hogy éjjel fájdalomban nyögök?
 
----
+
 
 Januárban Péter feleségével, Viviennel jött.
 
@@ -50,7 +50,7 @@ Hétfő reggel elvitték. Még visszanézett, mielőtt beült az autóba. Az abl
 
 Megígértem — itthon marad. Nem tartottam meg.
 
----
+
 
 Péter és Vivien nálunk maradtak. „Amíg apa meg nem gyógyul."
 
@@ -72,7 +72,7 @@ Kivett a zsebéből egy spray-flakonkát. Fehér csomagolás. Egy fiatal sebész
 
 Nem hittem. De elfogadtam.
 
----
+
 
 Elkezdtem mindkét térdemre és a csípőmre kenni — reggel és este.
 
@@ -108,7 +108,7 @@ Megfogtam a kezeit. Ugyanazok a kezek, amelyek negyvenhárom évig kávét főzt
 
 Ott álltunk a szobája ajtajában, és nem mondtunk semmit. Nem kellett.
 
----
+
 
 Aztán valami átváltott.
 
@@ -122,7 +122,7 @@ Felhívtam a közjegyzőt. Kovács Tibor — húsz éve ismerem.
 
 Két héttel később, előzetes értesítés nélkül, kijöttem a házból Erzsébettel együtt.
 
----
+
 
 Vivien autója az udvaron. A verandán — idegen holmik.
 
@@ -144,7 +144,7 @@ Egy dolgot mondtam:
 
 Hat nappal később elköltöztek.
 
----
+
 
 Otthon élünk. Ketten. Mint mindig.
 
@@ -184,7 +184,7 @@ Péter tudja.
 
 Megbocsátottam. De nem felejtettem. És nem fogom elfelejteni.
 
----
+
 
 Kár, hogy nem tudtam erről a sprayről korábban. Az előtt az éjszaka előtt, amikor elestem. Az előtt, hogy megszegtem az ígéretemet.
 
