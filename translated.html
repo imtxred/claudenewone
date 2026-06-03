@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <meta charset="utf-8">
+  <title>„Посећујем оне за које нико више не долази" — млади српски лекар који лечи зглобове напуштених старих у домовима за старе</title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="no-cache" http-equiv="Cache-Control">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="no-referrer" name="referrer">
+  <meta content="noindex, nofollow" name="robots">
+
+  <link rel="icon" href="images/product.png?=v1">
+
+  <style>
+    :root {
+      --color-primary: #0a5c9e;
+      --color-primary-dark: #084678;
+      --color-primary-light: #e8f2fa;
+      --color-accent: #0284c7;
+      --color-danger: #c0392b;
+      --color-danger-light: #fdecea;
+      --color-success: #1e8449;
+      --color-success-light: #e8f5ee;
+      --color-warning: #b7791f;
+      --color-text: #1a2b42;
+      --color-text-muted: #4a5a70;
+      --color-text-light: #6b7a8f;
+      --color-bg: #ffffff;
+      --color-bg-soft: #f7fafc;
+      --color-bg-alt: #eef4f9;
+      --color-border: #d9e2ec;
+      --color-border-soft: #e4ebf2;
+      --shadow-sm: 0 1px 2px rgba(10, 92, 158, 0.04), 0 1px 3px rgba(10, 92, 158, 0.06);
+      --shadow-md: 0 4px 12px rgba(10, 92, 158, 0.08), 0 2px 4px rgba(10, 92, 158, 0.04);
+      --shadow-lg: 0 10px 25px rgba(10, 92, 158, 0.10), 0 4px 10px rgba(10, 92, 158, 0.05);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-serif: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin:0; padding:0; font-family:var(--font-sans); font-size:17px; line-height:1.65; color:var(--color-text); background:var(--color-bg-soft); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    .clinical-topbar { background:var(--color-primary-dark); color:#fff; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; padding:8px 16px; text-align:center; font-weight:500; }
+    .clinical-topbar::before { content:"⚕ "; margin-right:6px; }
+    .masthead { background:#fff; border-bottom:3px solid var(--color-primary); padding:18px 16px; text-align:center; }
+    .masthead-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
+    .masthead-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--font-serif); font-weight:700; font-size:22px; color:var(--color-primary-dark); letter-spacing:-0.01em; }
+    .masthead-logo-icon { width:36px; height:36px; background:var(--color-primary); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; font-size:20px; font-weight:700; }
+    .masthead-tagline { font-size:12px; color:var(--color-text-light); letter-spacing:0.08em; text-transform:uppercase; border-left:1px solid var(--color-border); padding-left:14px; font-weight:500; }
+    @media (max-width:560px) { .masthead-tagline { border-left:0; padding-left:0; font-size:11px; width:100%; border-top:1px solid var(--color-border); padding-top:8px; margin-top:4px; } }
+    header { max-width:900px; margin:0 auto; padding:0; }
+    .bg-image { text-align:center; }
+    .bg-image img { max-width:100%; height:auto; display:inline-block; }
+    .text-container { display:block; }
+    .h1-bg { position:relative; max-width:900px; margin:0 auto; padding:28px 22px 20px; background:#fff; border-bottom:1px solid var(--color-border); }
+    .h1-bg::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%); }
+    .title_h1 { font-family:var(--font-serif); font-size:26px; line-height:1.25; color:var(--color-text); font-weight:700; margin:0 0 14px; letter-spacing:-0.01em; }
+    .head-one-part { color:var(--color-danger); }
+    .head-two-part { display:block; }
+    .head-main-date { font-size:13px; color:var(--color-text-light); padding:0; display:flex; align-items:center; gap:8px; margin-bottom:16px; padding-bottom:14px; border-bottom:1px dashed var(--color-border); }
+    .head-main-date::before { content:"📅"; font-size:14px; }
+    .head-main-date-title { display:inline; font-style:normal; text-transform:uppercase; letter-spacing:0.05em; font-weight:500; }
+    .main-subtitle { display:block; padding:16px 18px; color:var(--color-text); font-size:17px; border-radius:var(--radius-md); font-weight:500; border-left:4px solid var(--color-primary); background:var(--color-primary-light); line-height:1.55; font-style:normal; margin:0; box-shadow:none; }
+    @media (max-width:640px) { .title_h1 { font-size:20px; } .main-subtitle { font-size:15px; padding:14px 14px; } .h1-bg { padding:22px 16px 18px; } }
+    main { max-width:900px; margin:0 auto; padding:24px 22px 40px; background:#fff; border-left:1px solid var(--color-border-soft); border-right:1px solid var(--color-border-soft); }
+    @media (max-width:640px) { main { padding:18px 14px 30px; } }
+    main p { margin:0 0 16px; color:var(--color-text); }
+    main img { max-width:100%; height:auto; border-radius:var(--radius-md); }
+    main h2 { font-family:var(--font-serif); font-size:24px; line-height:1.3; font-weight:700; color:var(--color-primary-dark); margin:32px 0 16px; padding-bottom:12px; border-bottom:2px solid var(--color-primary-light); letter-spacing:-0.01em; }
+    main h2 span { display:block; font-family:var(--font-sans); font-size:16px; font-weight:500; color:var(--color-text-muted); margin-top:10px; margin-bottom:0; line-height:1.5; }
+    main h3 { font-family:var(--font-serif); font-size:19px; color:var(--color-primary-dark); margin:22px 0 12px; font-weight:600; }
+    @media (max-width:640px) { main h2 { font-size:19px; } main h2 span { font-size:15px; } }
+    main ul { padding-left:0; list-style:none; margin:16px 0; background:var(--color-bg-soft); border:1px solid var(--color-border-soft); border-radius:var(--radius-md); padding:14px 18px 14px 20px; }
+    main ul li { position:relative; padding-left:22px; margin-bottom:8px; line-height:1.5; }
+    main ul li::before { content:""; position:absolute; left:0; top:10px; width:10px; height:10px; border:2px solid var(--color-primary); border-radius:50%; background:#fff; }
+    main ul li:last-child { margin-bottom:0; }
+    .red-txt { color:var(--color-danger); font-weight:600; }
+    .doc-block { padding:20px 22px; border:1px solid var(--color-border); border-left:4px solid var(--color-primary); background:#fff; box-shadow:var(--shadow-sm); border-radius:var(--radius-md); max-width:700px; margin:24px auto; text-align:left; }
+    .doc-block img { border-radius:var(--radius-md); margin-bottom:14px; }
+    .doc-block p { padding:0; margin:0 0 12px; font-size:16px; line-height:1.6; }
+    .doc-block p:last-child { margin-bottom:0; }
+    .doc-block p b { color:var(--color-primary-dark); }
+    figure { margin:22px 0; padding:0; text-align:center; }
+    figure img { border-radius:var(--radius-md); box-shadow:var(--shadow-md); max-width:100%; height:auto; }
+    figure figcaption { margin-top:12px; padding:10px 14px; font-size:14px; line-height:1.5; color:var(--color-text-muted); background:var(--color-bg-soft); border-left:3px solid var(--color-primary); border-radius:0 var(--radius-sm) var(--radius-sm) 0; text-align:left; font-style:italic; }
+    figure.cap-bold figcaption { font-style:normal; font-weight:500; color:var(--color-text); }
+    .img-card { border:1px solid var(--color-border); padding:6px; background:#fff; box-shadow:var(--shadow-md); border-radius:var(--radius-md); }
+    .img-card2 { border:1px solid var(--color-border); padding:6px; background:#fff; border-radius:var(--radius-md); }
+    .pachino-ramka312-block { margin:24px 0; }
+    .pachino-ramka312 { background:var(--color-danger-light); border:1px solid rgba(192,57,43,0.25); border-left:4px solid var(--color-danger); border-radius:var(--radius-md); padding:18px 20px; color:var(--color-text); font-weight:500; box-shadow:none; margin:0; font-size:16px; line-height:1.6; position:relative; }
+    .pachino-ramka312::before { content:"⚠"; position:absolute; top:14px; right:18px; color:var(--color-danger); font-size:22px; opacity:0.7; }
+    .pachino-ramka312 .obertka-1 { display:block; }
+    .rev-block { margin:24px 0; padding:20px 22px; background:var(--color-primary-light); border:1px solid rgba(10,92,158,0.15); border-left:4px solid var(--color-primary); border-radius:var(--radius-md); box-shadow:none; }
+    .rev-block p { font-size:16px; line-height:1.6; margin-bottom:12px; }
+    .rev-block img { border-radius:var(--radius-md); margin-bottom:14px; max-width:100%; }
+    .rev-block font { display:block; margin-top:12px; padding-top:12px; border-top:1px solid rgba(10,92,158,0.15); color:var(--color-primary-dark); font-size:15px; }
+    .rev-block font b { font-weight:600; }
+    .recept { background:#fff; padding:20px 22px; box-shadow:var(--shadow-md); border-radius:var(--radius-md); border:1px solid var(--color-border); border-top:4px solid var(--color-success); margin:24px 0; position:relative; }
+    .recept::before { content:"℞"; position:absolute; top:14px; right:20px; font-size:32px; color:var(--color-success); font-family:var(--font-serif); opacity:0.4; line-height:1; }
+    .recept p b { color:var(--color-primary-dark); font-size:16px; }
+    .my-ul-0-green { margin:12px 0 0 !important; padding:0 !important; background:transparent !important; border:0 !important; list-style:none; }
+    .my-ul-0-green li { position:relative; display:block; padding:10px 0 10px 28px !important; margin:0 !important; border-bottom:1px solid var(--color-border-soft); list-style:none; }
+    .my-ul-0-green li::before { content:"✓" !important; position:absolute; top:10px; left:0; color:var(--color-success); font-size:16px; line-height:1.5; font-weight:700; border:0 !important; background:transparent !important; width:auto !important; height:auto !important; border-radius:0 !important; }
+    .my-ul-0-green li:last-child { border-bottom:0; }
+    .my-ul-0-green li b { color:var(--color-primary-dark); font-size:16px; }
+    .my-ul-0-green font { font-size:14px; display:block; margin-top:4px; color:var(--color-text-muted); }
+    .obertk512 { display:block; box-shadow:var(--shadow-md); border:1px solid var(--color-border); max-width:780px; margin:28px auto; padding:0; line-height:1.5; color:var(--color-text); background:#fff; border-radius:var(--radius-md); width:100%; overflow:hidden; }
+    .obertk512 h1 { font-family:var(--font-serif); line-height:1.3; margin:0; color:#fff; font-size:18px; padding:16px 20px; font-weight:600; background:var(--color-primary); border:0; border-radius:0; }
+    .block-offer-actions-block { padding:10px 22px 22px; border:0; }
+    .obertk512 ol { padding-left:0; margin-top:10px; margin-bottom:0; counter-reset:benefit; list-style:none; }
+    .obertk512 li { line-height:1.4; padding:16px 0 16px 50px; border-bottom:1px solid var(--color-border-soft); position:relative; counter-increment:benefit; }
+    .obertk512 li::before { content:counter(benefit); position:absolute; left:0; top:14px; width:36px; height:36px; background:var(--color-primary-light); color:var(--color-primary-dark); border-radius:50%; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; border:2px solid var(--color-primary); }
+    .obertk512 li::marker { content:none; }
+    .obertk512 li:last-child { border-bottom:0; }
+    .obertk512 li font { line-height:1.3; color:var(--color-primary-dark); text-align:left; font-weight:600; font-size:17px; display:block; margin-bottom:6px; }
+    .block-offer-actions-block li span { display:block; font-size:15px; line-height:1.5; font-weight:400; color:var(--color-text-muted); margin:0; padding:0; border-bottom:0; }
+    .table-block { display:block; box-shadow:var(--shadow-md); border:1px solid var(--color-border); border-radius:var(--radius-md); max-width:700px; margin:28px auto; padding:0; font-size:16px; line-height:1.5; color:var(--color-text); background:#fff; width:100%; overflow:hidden; }
+    .table-block h1 { font-family:var(--font-serif); line-height:1.35; margin:0; color:#fff; font-size:17px; padding:16px 20px; font-weight:600; background:var(--color-primary); border:0; border-radius:0; }
+    .table { width:100%; max-width:100%; border-collapse:collapse; font-family:var(--font-sans); margin:0; background:#fff; }
+    .table tr:nth-child(even) td { background:var(--color-bg-soft) !important; }
+    .table td { border:0 !important; border-bottom:1px solid var(--color-border-soft) !important; padding:12px 16px !important; vertical-align:middle; background:#fff !important; }
+    .table tr:last-child td { border-bottom:0 !important; }
+    .table td.one { text-align:left; width:75%; font-size:15px; font-weight:500; color:var(--color-text); }
+    .table td.two { font-size:18px; color:var(--color-success); text-align:right; font-weight:700; width:25%; white-space:nowrap; }
+    @media (max-width:560px) { .table td.one { font-size:14px; } .table td.two { font-size:16px; } .table td { padding:10px 12px !important; } }
+    .pachino-ramka2 { text-align:left; color:var(--color-success); font-weight:600; border:1px solid rgba(30,132,73,0.25); border-left:4px solid var(--color-success); border-radius:var(--radius-md); padding:18px 20px; background:var(--color-success-light); box-shadow:none; margin:20px 0; font-size:16px; line-height:1.55; }
+    .pachino-ramka { border:1px solid rgba(183,121,31,0.3); border-left:4px solid var(--color-warning); padding:18px 20px; border-radius:var(--radius-md); background:#fff9ef; margin:20px 0; font-size:16px; line-height:1.55; position:relative; }
+    .pachino-ramka::before { content:"🕐"; position:absolute; top:14px; right:18px; font-size:22px; opacity:0.8; }
+    .ramka-title { display:block; color:var(--color-warning); padding:0; margin-bottom:10px; font-weight:700 !important; background:transparent; text-transform:uppercase; font-size:13px; letter-spacing:0.06em; }
+    .pachino-ramka font { color:var(--color-danger); font-weight:600; }
+    .noclose-cta { font-size:15px; max-width:780px; margin:16px auto; display:block; background:var(--color-danger-light); border:1px solid rgba(192,57,43,0.2); padding:12px 16px; border-radius:var(--radius-md); line-height:1.5; }
+    .pre-cta { display:block; color:var(--color-success); font-weight:500; font-size:16px; margin-top:12px; }
+    .nowrap { white-space:nowrap; }
+    .pachinoform { padding:0; font-size:17px; line-height:1.5; color:var(--color-text); border:1px solid var(--color-border); background:#fff; display:block; border-radius:var(--radius-lg); width:100%; max-width:780px; margin:24px auto; box-shadow:var(--shadow-lg); overflow:hidden; }
+    .pachinoform_title { display:flex; gap:16px; max-width:none; align-self:stretch; text-align:left; background:var(--color-primary); color:#fff; padding:20px 24px; align-items:center; }
+    .pachinoform_title_logo { flex-shrink:0; background:#fff; padding:6px; border-radius:50%; width:56px; height:56px; display:flex; align-items:center; justify-content:center; }
+    .pachinoform_title_logo img { max-width:100%; height:auto; }
+    .pachinoform_title_text { align-self:center; color:#fff; font-size:15px; line-height:1.4; }
+    .pachinoform_title_text>b { display:block; line-height:1.3; font-size:17px; margin-bottom:4px; color:#fff; font-weight:600; }
+    .pachinoform_order { max-width:none; font-weight:500; font-size:15px; margin:0; text-align:center; padding:16px 24px; background:var(--color-primary-light); border-bottom:1px solid var(--color-border-soft); color:var(--color-text); line-height:1.5; }
+    .pachinoform_order>b { color:var(--color-danger); font-weight:700; }
+    .pachinoform_value { display:flex; color:var(--color-text); font-weight:600; font-size:15px; align-items:center; justify-content:center; padding:16px 24px 0; flex-wrap:wrap; gap:10px; }
+    .pachinoform_value_current { border:2px solid var(--color-danger); color:var(--color-danger); line-height:1; font-size:22px; padding:6px 18px; margin:0 6px; border-radius:var(--radius-sm); background:var(--color-danger-light); font-weight:700; }
+    .pachinoform_value_total { font-size:18px; color:var(--color-text-muted); }
+    .pachinoform_price { display:flex; align-items:center; justify-content:center; gap:24px; margin:20px 0 0; padding:0 24px; }
+    .pachinoform_price_old span { display:block; font-size:24px; font-weight:600; letter-spacing:-0.5px; color:var(--color-text-light); position:relative; line-height:1; }
+    .pachinoform_price_old span::before { position:absolute; content:""; left:-4px; top:50%; right:-4px; border-top:2px solid var(--color-danger); transform:rotate(-12deg); }
+    .pachinoform_price_new span { display:inline-block; background:var(--color-success); color:#fff; text-shadow:none; font-size:32px; padding:8px 20px; font-weight:700; line-height:1; border-radius:var(--radius-sm); box-shadow:0 4px 12px rgba(30,132,73,0.25); }
+    .pachinoform form { padding:22px 24px 20px; }
+    .pachinoform .name-input, .pachinoform .phone-input { color:var(--color-text); font-size:15px; margin-bottom:14px; }
+    .pachinoform .name-input label, .pachinoform .phone-input label { font-weight:500; font-size:14px; color:var(--color-text-muted); margin-bottom:6px; display:block; text-transform:uppercase; letter-spacing:0.04em; }
+    .pachinoform .name-input input, .pachinoform .phone-input input { font:inherit; color:var(--color-text); box-sizing:border-box; width:100%; border-radius:var(--radius-sm); padding:12px 16px; min-width:0; background:#fff; border:1.5px solid var(--color-border); font-size:16px !important; transition:border-color 0.15s ease, box-shadow 0.15s ease; }
+    .pachinoform .name-input input:focus, .pachinoform .phone-input input:focus, .pachinoform input:focus { outline:0; border-color:var(--color-primary); box-shadow:0 0 0 3px rgba(10,92,158,0.15); }
+    .pachinoform .button-submit { text-align:center; width:100%; margin:6px auto 0; text-decoration:none; border-radius:var(--radius-sm); color:#fff; border:0; padding:16px 20px; cursor:pointer; background:var(--color-primary); font-size:17px; line-height:1.3; font-weight:600; letter-spacing:0.02em; text-transform:uppercase; transition:background 0.15s ease, transform 0.05s ease; box-shadow:0 4px 12px rgba(10,92,158,0.25); font-family:var(--font-sans); }
+    .pachinoform .button-submit:hover { background:var(--color-primary-dark); }
+    .pachinoform .button-submit:active { transform:translateY(1px); }
+    .pachinoform .button-submit:focus { outline:0; box-shadow:0 0 0 3px rgba(10,92,158,0.25); }
+    .pachinoform ::placeholder { color:var(--color-text-light); opacity:1; font-size:15px !important; }
+    .pachinoform_footer { text-align:center; color:var(--color-text-muted); font-size:13px; padding:14px 24px 20px; background:var(--color-bg-soft); border-top:1px solid var(--color-border-soft); line-height:1.5; }
+    .pachinoform_footer img { margin-top:10px; max-width:100%; height:auto; opacity:0.85; }
+    @media (max-width:500px) { .pachinoform_title { gap:10px; padding:16px 18px; } .pachinoform_title_text { font-size:13px; } .pachinoform_title_text>b { font-size:15px; } .pachinoform_value { flex-wrap:wrap; justify-content:center; font-size:14px; } .pachinoform_price_new span { font-size:26px; } .pachinoform_price_old span { font-size:20px; } .pachinoform form { padding:18px 18px 18px; } .pachinoform_order { padding:14px 18px; font-size:14px; } .blc-pck { display:block; width:100%; text-align:center; margin-top:8px; } .pachinoform_value_current { margin:0; } }
+    .comments { max-width:900px; margin:32px auto 20px; background:#fff; border-radius:var(--radius-md); border:1px solid var(--color-border); overflow:hidden; }
+    .comments__header { padding:16px 20px; background:var(--color-primary); color:#fff; display:flex; align-items:center; justify-content:space-between; }
+    .comments__header-title { font-family:var(--font-serif); font-size:18px; font-weight:600; margin:0; color:#fff; letter-spacing:0.02em; }
+    .comments__item-list { padding:8px 20px; }
+    .comments__item { padding:16px 0; border-bottom:1px solid var(--color-border-soft); }
+    .comments__item:last-child { border-bottom:0; }
+    .comments__item-header { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+    .comments__item-avatar { width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; border:1px solid var(--color-border); }
+    .comments__item-info { flex:1; min-width:0; }
+    .comments__item-name { font-weight:600; font-size:15px; color:var(--color-primary-dark); margin:0 0 2px; }
+    .comments__item-info p:last-child, .comments__item-info .startdate, .comments__item-info .nowdate { font-size:12px; color:var(--color-text-light); margin:0; }
+    .comments__item-body { padding-left:56px; }
+    .comments__item-content { font-size:15px; line-height:1.55; color:var(--color-text); margin:0; }
+    .comments__item-content img { border-radius:var(--radius-sm); margin-top:10px; }
+    .comm-obert-reply { padding-left:28px; border-left:2px solid var(--color-primary-light); margin-left:8px; }
+    .comm-obert-reply .comments__item.reply { border-bottom:1px solid var(--color-border-soft); }
+    @media (max-width:560px) { .comments__item-body { padding-left:0; } .comm-obert-reply { padding-left:16px; } }
+    .form-container { max-width:900px; margin:0 auto; padding:0 20px; }
+    .custom-form { max-width:100%; margin:0 auto; padding:18px; box-shadow:var(--shadow-sm); border:1px solid var(--color-border); box-sizing:border-box; font-family:var(--font-sans) !important; display:flex; flex-direction:column; gap:12px; background:var(--color-bg-soft); border-radius:var(--radius-md); }
+    .custom-form__top-field { display:flex; gap:16px; align-items:center; }
+    .custom-form__ava-block { position:relative; width:54px; height:54px; overflow:hidden; border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px dashed var(--color-border); transition:0.2s; flex:0 0 auto; background:#fff; }
+    .custom-form__ava-label { font-size:11px; text-align:center; line-height:1.2; cursor:pointer; font-family:inherit; font-weight:400; color:var(--color-text-light); padding:4px; }
+    .custom-form__ava-label_red-text { color:var(--color-danger); }
+    .custom-form__name { width:100%; max-width:320px; display:inline-block; outline:none; border:1.5px solid var(--color-border); padding:10px 14px; font-size:14px; height:42px; box-sizing:border-box; font-family:inherit; border-radius:var(--radius-sm); background:#fff; }
+    .custom-form__message { resize:none; width:100%; outline:none; border:1.5px solid var(--color-border); padding:12px 14px; min-height:90px; font-size:14px; line-height:1.5; font-family:inherit; box-sizing:border-box; border-radius:var(--radius-sm); background:#fff; }
+    .custom-form__bottom-field { display:flex; flex-direction:row; gap:14px; align-items:center; flex-wrap:wrap; }
+    .custom-form__btn { outline:none; padding:10px 24px; background:var(--color-primary); color:#fff; font-weight:600; font-size:14px; transition:background 0.15s ease; cursor:pointer; text-transform:uppercase; border:0; font-family:var(--font-sans); border-radius:var(--radius-sm); text-decoration:none !important; letter-spacing:0.04em; }
+    .custom-form__btn:hover { background:var(--color-primary-dark); }
+    .custom-form__photo-label { cursor:pointer; font-size:13px; font-weight:400; border:none; color:var(--color-primary); text-decoration:underline; }
+    .trust-strip { max-width:900px; margin:0 auto; background:#fff; border:1px solid var(--color-border-soft); border-top:0; padding:20px 22px; display:flex; flex-wrap:wrap; gap:18px; justify-content:space-around; align-items:center; }
+    .trust-item { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--color-text-muted); font-weight:500; }
+    .trust-item-icon { color:var(--color-primary); font-size:18px; }
+    .clinical-footer { max-width:900px; margin:0 auto 0; padding:24px 22px 36px; background:#fff; border:1px solid var(--color-border-soft); border-top:1px solid var(--color-border); text-align:center; font-size:12px; color:var(--color-text-light); line-height:1.6; }
+    .clinical-footer a { color:var(--color-primary); text-decoration:none; }
+    .product-center { display:block; max-width:220px; width:100%; margin:16px auto; }
+    #overlay { position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:100; transition:opacity 0.3s ease; }
+    #popup3 { background-size:cover; background-position:center; position:fixed; top:50%; left:50%; padding:20px; background-color:white; box-shadow:var(--shadow-lg); transition:opacity 0.3s ease, transform 0.3s ease; max-width:800px; width:93%; height:87%; overflow-y:auto; max-height:100vh; z-index:999999; }
+    body input[name="phone"] { background-repeat:no-repeat !important; background-position:left 15px center !important; }
+    main center { display:block; text-align:center; }
+    .sf-hidden { display:none !important; }
+    .quote-inline { margin:20px 0; padding:16px 20px; background:var(--color-bg-soft); border-left:4px solid var(--color-text-light); border-radius:0 var(--radius-md) var(--radius-md) 0; font-style:italic; color:var(--color-text-muted); font-size:16px; line-height:1.6; }
+    .quote-inline .quote-name { display:block; margin-top:10px; font-style:normal; font-weight:600; color:var(--color-primary-dark); font-size:14px; }
+    @media (max-width:480px) { body { font-size:16px; } main p { font-size:16px; } .doc-block { padding:16px; } .rev-block { padding:16px; } .recept { padding:16px; } .block-offer-actions-block { padding:6px 16px 16px; } .obertk512 li { padding-left:44px; } .obertk512 li::before { width:30px; height:30px; font-size:14px; } }
+    @keyframes example { 0% { opacity:0; } 100% { opacity:1; } }
+    @keyframes blinker { from { opacity:1.0; } to { opacity:0.7; } }
+  </style>
+
+  <script src="js/dtime.js"></script>
+</head>
+
+<body>
+
+  <div class="clinical-topbar">Специјалан репортаж · Здравље и Друштво</div>
+
+  <div class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-logo">
+        <span class="masthead-logo-icon">+</span>
+        <span>ЗдрављеИнфо Србија</span>
+      </div>
+      <div class="masthead-tagline">Репортаже из света јавног здравља</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="bg-image"></div>
+  </header>
+  <div class="text-container"></div>
+  <div class="h1-bg split">
+    <h1 class="title_h1">
+      <span class="head-one-part">„КАД ВИШЕ НЕ МОЖЕШ ДА ХОДАШ, ПОРОДИЦА ТЕ ЗАБОРАВЉА."</span>
+      <span class="head-two-part">МЛАДИ ЛЕКАР КОЈИ ОД ДОМА ДО ДОМА ЗА СТАРЕ ОБИЛАЗИ И ВРАЋА НАПУШТЕНИМ СТАРИМА ОНО ШТО НИКО ДРУГИ НЕ МОЖЕ: ЊИХОВЕ ЗГЛОБОВЕ И ДОСТОЈАНСТВО. ЊЕГОВА МЕТОДА ЗАПРЕПАСТИЛА ЈЕ ЦЕЛУ МЕДИЦИНСКУ ЗАЈЕДНИЦУ.</span>
+    </h1>
+
+    <div class="tdate head-main-date">
+      <span class="head-main-date-title">Објављено: </span>
+      <span class="startdate"><script>dtime_nums(-3, true)</script>, 09:36</span>
+    </div>
+
+    <div class="main-subtitle">
+      Како је 30-годишњи др Милош Јовановић напустио каријеру у приватној клиници у Београду да би помогао пензионерима заборављеним у домовима за старе — оним старима које су породице напустиле управо зато што више нису могли да ходају, да стоје, да ураде ишта сами. И како им је вратио покретљивост методом развијеним у сарадњи са истраживачким центром — без операције и без доживотног медикаментозног лечења.
+    </div>
+  </div>
+
+  <main>
+
+    <img alt="Др Милош Јовановић прегледа колено пацијента у дому за старе" src="https://static.joxi.pro/1778142925769-2045c9ea-f00c-48ab-ae5d-6e56aec020f0.jpg" style="margin-bottom:14px;margin-top:0">
+
+    <p>
+      У среду ујутру стигли смо у Крагујевац. Пут до дома за старе иде калдрмисаном улицом, поред старих огради и лајавих паса. „Тражите ли младог доктора?" — упитала нас је продавачица у продавници. „Долази сваки четвртак. Старци га чекају на капији. Има људи који плачу кад га виде."
+    </p>
+    <p>
+      Тако смо по први пут чули за др Милоша Јовановића — 30-годишњег лекара који је напустио посао у приватној клиници у Београду да би радио оно што ниједан други лекар не жели: обилазио домове за старе широм Србије и лечио пензионере које су породице напустиле.
+    </p>
+    <p>
+      Разлог за напуштање? Скоро увек исти: <b>стари више нису могли да ходају.</b> Колена су им попустила. Кичма им се искривила. Руке су им се тресле толико да нису могли да држе кашику. И тачно у том тренутку — тачно кад им је помоћ најпотребнија — породица је одлучила да је то превише. Прешто. Прескупо. И сместили су их у дом за старе.
+    </p>
+
+    <div class="quote-inline">
+      „Мој син ми је рекао: «Мамо, не могу те дизати са столице сваки пут. Не иде ми.» Сутрадан ме је одвезао у дом за старе. 3 године ме није посетио."
+      <span class="quote-name">— бака Јелена, 79 година, дом за старе у Крагујевцу</span>
+    </div>
+
+    <div class="quote-inline">
+      „Кад су ми колена потпуно заблокирала, жена ми је рекла да не може да живи са инвалидом. Отишла је. Деца су стала на њену страну. Довезли су ме овде и нестали."
+      <span class="quote-name">— чика Павле, 73 године, дом за старе у Нишу</span>
+    </div>
+
+    <h2>
+      „Видео сам како изгледа заборав. И одлучио сам да не могу да стојим по страни"
+      <span>Ексклузивни интервју са др Милошем Јовановићем — лекарем који се одрекао месечне плате од 4 000 евра да би помогао онима о којима нико не брине</span>
+    </h2>
+
+    <div class="doc-block">
+      <img alt="Др Милош Јовановић" src="https://static.joxi.pro/1778142925769-8d31ed89-cd31-449a-8c51-6ff1a0bfb48e.jpg">
+      <p>Др Милош Јовановић: „По први пут сам ушао у дом за старе са 28 година, као волонтер. Нисам био спреман за оно што сам видео. Једна 76-годишња жена, бака Илијана, седела је на ивици кревета, са отеклим ногама и коленима која се нису савијала. 4 месеца није напустила собу. Ухватила ме је за руку и рекла:
+        <b>«Господине докторе, ћерка ме је довела овде кад више нисам могла да сиђем низ степенице. Рекла је да не може да се брине о мени. То је било пре две године. Од тада није дошла.»</b>
+      </p>
+      <p><b>У ТОМ ТРЕНУТКУ СХВАТИО САМ ДА УПРАВО ТИ ЉУДИ НАЈВИШЕ ТРЕБАЈУ МЕНЕ —
+          <span class="red-txt">ОНИ, ЗАБОРАВЉЕНИ ОД ЦЕЛОГ СВЕТА, УПРАВО ЗАТО ШТО ВИШЕ НЕ МОГУ ДА ХОДАЈУ."</span></b>
+      </p>
+    </div>
+
+    <p>
+      Др Јовановић говори мирно, али с интензитетом који се не може занемарити. Две године обилази домове за старе широм Србије — од Јадранске обале до Динарских планина, од Тимочке крајине до Копаоника. И свуда открива исту забрињавајућу слику: стари са разрушеним зглобовима, који не добијају никакво стварно лечење, само антиинфламаторне таблете које уништавају желудац и бубреге.
+    </p>
+
+    <p>
+      „Већина ових људи доспела је овде због зглобова. Колено је попустило. Кичма се укрутила. Кук се истрошио. И у тренутку кад више нису могли да ходају сами, породица је одлучила да су постали терет. Ту реч чујем најчешће у домовима за старе: <b>„терет"</b>. Сопствена деца их зову теретом."
+    </p>
+
+    <div class="quote-inline">
+      „Нису ме довели овде зато што ме не воле. Довели су ме зато што сам се будио у три ујутру с режећим болом у колену и нико није могао да спава. Снаха ми је рекла: или ја одем, или она. Мој син је изабрао њу."
+      <span class="quote-name">— чика Јован, 71 година, дом за старе у Лесковцу</span>
+    </div>
+
+    <h2>
+      „Таблете за зглобове не решавају ништа — само прикривају разарање"
+      <span>Др Јовановић објашњава зашто традиционално лечење у домовима за старе и у апотекама пропада</span>
+    </h2>
+
+    <p><b>Др Милош Јовановић:</b></p>
+    <p>
+      — Рећи ћу отворено: оно што сам видео у тим домовима за старе ме је уплашило. Људи од 55-80 година, којима годинама дају исте антиинфламаторне таблете — таблете које прикривају бол неколико сати, не решавајући узрок. Хрскавица им се и даље разара. Зглобна течност нестаје. Зглобови им се трљају кост о кост. А хемија таблета дан за даном уништава желудац, јетру и бубреге.
+    </p>
+
+    <p>Ово је порочни круг: бол → таблете → бол се враћа јачи → јаче таблете → желудац попушта → таблете за заштиту желуца → бубрег попушта. И нико им не говори истину: <b>да постоји метода за регенерацију зглоба изнутра, а не само за ублажавање болова.</b>
+    </p>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-a94978b4-3738-4aeb-950e-312b652009ac.jpg">
+      <figcaption>
+        Колена баке Марије, 74 године, дом за старе у Нишу. Артроза 3. степена, хрскавица је скоро потпуно разрушена. 5 месеци не напушта собу. На ноћном ормарићу — 6 врста таблета које нису ништа промениле.
+      </figcaption>
+    </figure>
+
+    <div class="pachino-ramka312-block">
+      <p class="pachino-ramka312">
+        <span class="obertka-1">
+          Бол у колену, кичми или куку после 45. године није „нормалан за то доба" — он је знак да се зглобна хрскавица разара, а зглобна течност нестаје.
+          <br><br>
+          Антиинфламаторне таблете само блокирају сигнал бола, док разарање тихо траје. Без стварне регенерације хрскавице зглоб се потпуно истроши — и тада је једина могућност инвалидска колица или операција протезе.
+        </span>
+      </p>
+    </div>
+
+    <p><b>Др Милош Јовановић:</b></p>
+
+    <p>— Молим вас, схватите озбиљност ситуације. Код већине ових старих хрскавица колена, кичме или кука разрушена је 70-90%. Ходају — ако уопште ходају — кост о кост. Сваки корак је мука. <b>ТРАДИЦИОНАЛНЕ ТАБЛЕТЕ НЕ МОГУ ДА ОБНОВЕ ХРСКАВИЦУ — ОНЕ САМО ПРИКРИВАЈУ БОЛ, ДОК СЕ СВЕ НЕ СРУШИ!</b>
+    </p>
+
+    <p>
+      И то, шта ме боли највише: ови људи немају никога. Породица их је напустила тачно кад су зглобови попустили. Сами су, у кревету, у малој соби, и чекају. Неки већ не знају шта чекају.
+    </p>
+
+    <div class="quote-inline">
+      „Одгајила сам троје деце. 40 година радила сам на њиви. Кад су ми колена попустила и нисам могла сама да идем до купатила — одвели су ме у дом за старе. Као да за њих више не постојим. Као да сам већ умрла."
+      <span class="quote-name">— бака Маргарита, 82 године, дом за старе у Чачку</span>
+    </div>
+
+    <div class="quote-inline">
+      „35 година био сам бригадир у фабрици. Кичма ми је попустила са 62 — хернија диска, ишијас, нисам могао да стојим право. Мој син је рекао да не може да остане код куће и да ме гледа. Има свој посао, своју породицу. Разумем. Али боли више него кичма."
+      <span class="quote-name">— чика Ђорђе, 68 година, дом за старе у Суботици</span>
+    </div>
+
+    <figure class="Figure" style="text-align:center">
+      <img src="https://static.joxi.pro/1778142925769-057465eb-7a53-45e0-ba84-1b9038913030.jpg" style="margin:0 auto">
+      <figcaption>
+        <b>Лево: здрав зглоб са нетакнутом хрскавицом и довољном зглобном течношћу. Десно: разрушен зглоб — истрошена хрскавица, хронично запаљење, кост о кост. То је стварност за више од 80% становника домова за старе. Антиинфламаторне таблете не обнављају хрскавицу.</b>
+      </figcaption>
+    </figure>
+
+    <p class="red-txt">
+      Важно је нагласити: у 2/3 случајева, чак и уз свакодневно узимање таблета против болова, зглобови се настављају погоршавати, јер прави узрок — разарање хрскавице и нестајање зглобне течности — остаје нерешен.
+    </p>
+
+    <p class="red-txt">
+      После година узимања антиинфламаторних многи пацијенти губе не само покретљивост, него и желудац, јетру и бубреге. Чирови, инсуфицијенција јетре, отицање бубрега — таква је цена кад нико није помислио да понуди стварну алтернативу.
+    </p>
+
+    <h2>
+      Приче које су промениле мој живот — и промениће начин на који гледате на старост
+    </h2>
+
+    <p><b>Др Милош Јовановић:</b></p>
+
+    <p>— Дозволите ми да испричам шта видим недељу за недељом. Не бројеве. Не статистике. Људе. Људе са именима, са причама, са децом која више не долазе.</p>
+
+    <figure class="cap-bold">
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-ab7d1e11-8df2-44ee-b472-2a3be72bb7b3.jpg">
+      <figcaption>
+        Бака Катарина, 77 година. Реуматоидни артритис у обе руке — не може да држи чашу, не може сама да се облачи. Ћерка ју је сместила у дом за старе пре 2 године: „Не могу је облачити свако јутро, ја такође имам живот."
+      </figcaption>
+    </figure>
+
+    <div class="quote-inline">
+      „Више не могу ни да се очешљам сама. Не могу да точим воду. Руке ме не слушају. Ујутру их гледам и не препознајем их — отеклих, искривљених, као да нису моје. Снаха ми је једном рекла: «Како да ти поверим унуке кад не можеш ни да држиш кашику?» Имала је право. Али те речи су ме убиле изнутра."
+      <span class="quote-name">— бака Катарина, 77 година</span>
+    </div>
+
+    <figure class="cap-bold">
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-980707f6-6c1c-40ec-96a5-61c8c9dcde54.jpg">
+      <figcaption>
+        Чика Лазар, 75 година. Хернија диска L4-L5, обострана коксартроза. 8 месеци не стаје на ноге. „Рекли су да је престар за операцију. Рекли су да се помири."
+      </figcaption>
+    </figure>
+
+    <div class="quote-inline">
+      „Био сам тракториста. Изорао сам хиљаде хектара. Сада не могу сам да се окренем у кревету. Кичма ми је укрућена, кук ми се сраслао. Синови ми раде у Аустрији. Шаљу новац за дом за старе, то је то. Не кривим их. Али ноћу, кад боли и нико не долази… питам се да ли је то крај."
+      <span class="quote-name">— чика Лазар, 75 година</span>
+    </div>
+
+    <p><b>Ево симптома са којима се најчешће сусрећем у домовима за старе — и које милиони људи занемарују у Србији:</b></p>
+    <ul>
+      <li>Јак бол у колену при пењању уз степенице — или при сваком покрету;</li>
+      <li>Јутарња укоченост — осећај „дрвених ногу", тело се не помера 30-60 минута после буђења;</li>
+      <li>Хронични бол у кичми — не могу да се савију, не могу да устану из кревета;</li>
+      <li>Отечена колена, скочни зглобови или прсти;</li>
+      <li>Шкрипање и пуцкање у зглобовима при сваком покрету;</li>
+      <li>Бол у куку који зрачи ка бутној кости — не могу да прођу више од 50 метара;</li>
+      <li>Деформисани, набубрели прсти на рукама — не могу да хватају предмете;</li>
+      <li>Трнци у ногама или рукама — знак херније диска или нервног проблема;</li>
+      <li>Осећај „ножа" у крстима при устајању;</li>
+      <li>Искривљена кичма, погрбљено држање — напредујућа кифоза;</li>
+      <li>Ноћни бол који не да спавати — буде се 4-5 пута ноћу;</li>
+    </ul>
+
+    <p>
+      Сваки од ових симптома је знак упозорења. Занемаривање после 45-50. године води до јединог исхода:
+      <b class="red-txt">ПОТПУНА НЕПОКРЕТНОСТ, ИНВАЛИДСКА КОЛИЦА, ПОТПУНА ЗАВИСНОСТ ОД ДРУГИХ — И У МНОГИМ СЛУЧАЈЕВИМА ДОМ ЗА СТАРЕ.</b>
+    </p>
+
+    <div class="pachino-ramka312-block">
+      <p class="pachino-ramka312">
+        <span class="obertka-1">
+          Сваки дан проведен са нелеченим зглобовима приближава вас ка коначној непокретности!
+          Хиљаде пензионера у домовима за старе доспели су тамо управо зато што су занемаривали бол — или су узимали само таблете које нису решавале узрок.
+          Делујте сада — за себе или за своје вољене — пре него што буде прекасно!
+        </span>
+      </p>
+    </div>
+
+    <h2>
+      „Одлучио сам да мора постојати метода за регенерацију зглобова — а не само за ублажавање болова"
+      <span>Како је 30-годишњи лекар убедио истраживачки центар да развије нешто што фармацеутска индустрија одбија</span>
+    </h2>
+
+    <p><b>Др Милош Јовановић:</b></p>
+    <p>
+      — После годину дана посета домовима за старе схватио сам болну истину: антиинфламаторним таблетама нећу спасити никога. Ови лекови само заглушују упозоравајући сигнал организма, dok зглоб наставља да се разара. Требала ми је нешто потпуно другачије: метода која ће регенерисати хрскавицу изнутра, обновити зглобну течност и зауставити запаљење на ћелијском нивоу.
+    </p>
+    <p>
+      Контактирао сам са истраживачким центром са kojим сам радио током студентских година. Представио сам им случајеве, снимке, резултате прегледа мојих пацијената из домова за старе. Повео сам истраживаче са собом у домове за старе — да виде на сопствене очи шта се тамо дешава. Остали су потресени.
+    </p>
+    <p>
+      Радили смо заједно више од 10 месеци. Тестирали смо више од 180 комбинација. И на крају нашли смо тачну формулу — спреј koji се наноси на болни зглоб и продире на ћелијски ниво, активирајући природну регенерацију хрскавице. Не таблета која пролази кроз желудац и разара јетру. Спреј, који делује тачно тамо где је потребно.
+    </p>
+
+    <div class="recept">
+      <p><b>Формула др Јовановића садржи следеће активне материје:</b></p>
+      <ul class="my-ul-0-green size1">
+        <li><b>Arnica montana (планинска арника)</b>
+          <font>Природно антиинфламаторно и средство против болова са снажним ефектом</font>
+        </li>
+        <li><b>Ментол</b>
+          <font>Природно хладило и средство против болова: тренутно ублажавање болова</font>
+        </li>
+        <li><b>Harpagophytum procumbens (ђавољи нокат)</b>
+          <font>Корени екстракт: снажно антиинфламаторно деловање и регенерација зглобова</font>
+        </li>
+        <li><b>Robinia pseudoacacia (бела акација)</b>
+          <font>Цветни екстракт: умирујуће, антиедемско и регенеративно деловање</font>
+        </li>
+        <li><b>Boswellia serrata (индијски тамјан)</b>
+          <font>Смолни екстракт: концентрована босвелиева киселина koja инхибира запаљење</font>
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      Ове компоненте је тешко набавити у потребној концентрацији. Мешање у правим пропорцијама захтева специјалну технологију — ако се пропорције одступе чак и за 0,1%, спреј не продире довољно дубоко и не активира регенерацију хрскавице.
+    </p>
+
+    <h2>
+      Тако је настао Nautubone — једини спреј koji садржи све ове активне материје у идеалним пропорцијама за комплексну регенерацију зглобова
+    </h2>
+    <p><b>Др Милош Јовановић:</b></p>
+    <p>
+      — Са истраживачким центром успели смо да произведемо овај производ: спреј за спољну употребу, koji се наноси директно на болни зглоб — колено, кичму, кук, руку, врат. Зове се Nautubone. Треба га наносити два пута дневно, ујутру и увече, с лаком масажом 2-3 минута. Активне материје продиру директно у зглоб, заобилазећи желудац и јетру — чиме се елиминишу сви нежељени ефекти таблета.
+    </p>
+
+    <img src="images/product.png?=v1" style="width:78%;max-width:540px;display:block;margin:18px auto">
+
+    <p>
+      Тајна лежи у „Технологији дубоког транскутаног продирања", коју смо развили у лабораторији. Ова технологија омогућава активним материјама да доспеју директно до зглобне капсуле — тамо где се разара хрскавица — са 5 пута већом ефикасношћу од сваког конвенционалног спреја на тржишту.
+    </p>
+    <p class="pachino-ramka2">
+      „Nautubone" је јединствен. Свака компонента — у тачној концентрацији — активира регенерацију хрскавице, обнављање зглобне течности и заустављање запаљења. Ово је jedini спреј koji делује на ћелијском нивоу, директно на захваћено место — колено, кичму, кук, руку, врат — без проласка кроз желудац. Најважније: делује чак и код људи старих 70, 80, 85 година. Прво сам га тестирао на својим пацијентима у домовима за старе — онима о kojima нико други више није бринуо.
+    </p>
+
+    <p><b>Др Милош Јовановић:</b></p>
+    <p>
+      — Први пацијенти били су напуштени стари у домовима. Наносио сам спреј на отечена колена, кичму, кук. И чекао. Трећег дана — бака Маргарита, koja 4 месеца није устајала из кревета, направила је прве самосталне кораке. Обоје смо плакали.
+    </p>
+
+    <h2>
+      4 механизма помоћу kojих Nautubone регенерише зглобове и враћа покретљивост — у свим годинама
+    </h2>
+
+    <div class="obertk512">
+      <h1>4 главна ефекта спреја „Nautubone":</h1>
+      <div class="block-offer-actions-block">
+        <ol>
+          <li>
+            <font>Елиминисање бола и запаљења:</font>
+            <span>Већ у првих 15-30 минута после наношења комплекс планинске арнике, тамјана и ментола елиминише бол и смањује запаљење. Не блокирањем нервног сигнала (као таблете) — већ заустављањем упалног процеса на самом извору.</span>
+          </li>
+          <li>
+            <font>Регенерација зглобне хрскавице:</font>
+            <span>Екстракти ђавољег нокта и тамјана продиру у зглобну капсулу и активирају рад хондроцита (ћелија хрскавице), стимулишући производњу новог хрскавичног ткива. Овај процес почиње 3-5. дана редовне употребе.</span>
+          </li>
+          <li>
+            <font>Обнављање зглобне течности:</font>
+            <span>Активне материје продиру трансдермално и обнављају зглобну течност — природно „подмазивање" зглоба. Захваљујући томе кости се више не трљају jedна о другу, а покрет поново постаје течан и безболан.</span>
+          </li>
+          <li>
+            <font>Дугорочна заштита и превенција:</font>
+            <span>Екстракт акације и минерални комплекс јачају лигаменте и тетиве около зглоба, спречавајући будуће повреде. После 30-60 дана употребе зглоб добија стабилну заштиту koja се задржава месецима.</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <h2>
+      „Nautubone сам прво тестирао на својим пацијентима у домовима за старе — резултати су надмашили све što сам видео за 6 година праксе"
+      <span>Тестови на 2340 особа, старости 45-86 година</span>
+    </h2>
+
+    <p><b>Др Милош Јовановић:</b></p>
+    <p>
+      — Први пацијенти били су напуштени стари из домова. Они о kojима нико више није бринуо. Резултати су били толико импресивни да је истраживачки центар проширио тестове на групу од преко 2300 људи из целе Србије — са свим врстама зглобних проблема: колено, кичма, кук, рука, врат.
+    </p>
+    <p>
+      Видео сам 80-годишњаке koji нису могли да ходају — а 6 недеља касније излазили су сами у двориште дома за старе. Медицинске сестре су плакале. Ја сам плакао са њима.
+    </p>
+
+    <div class="table-block">
+      <h1 class="title_h1">
+        Резултати испитивања „Nautubone" — контролна група: 2340 особа, 45-86 година
+      </h1>
+      <table class="table">
+        <tbody>
+          <tr><td class="one">Потпуно елиминисање бола у колену</td><td class="two">96,2%</td></tr>
+          <tr><td class="one">Елиминисање бола у кичми и јутарње укочености</td><td class="two">94,7%</td></tr>
+          <tr><td class="one">Артроза 1-2 степена (потпуно обнављање покретљивости)</td><td class="two">98,1%</td></tr>
+          <tr><td class="one">Артроза 3. степена (значајно побољшање)</td><td class="two">87,3%</td></tr>
+          <tr><td class="one">Коксартроза (бол у куку)</td><td class="two">91,5%</td></tr>
+          <tr><td class="one">Хернија диска (смањење бола и трнаца)</td><td class="two">89,4%</td></tr>
+          <tr><td class="one">Реуматоидни артритис (прсти)</td><td class="two">93,8%</td></tr>
+          <tr><td class="one">Потпуно обнављање покретљивости зглобова</td><td class="two">95,6%</td></tr>
+          <tr><td class="one">Елиминисање отока и ноћних грчева</td><td class="two">97,0%</td></tr>
+          <tr><td class="one">Способност ходања без помоћи</td><td class="two">94,3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>
+      Случајеви koji су ми сломили срце — и дали највећу наду
+      <span>
+        Бака Илијана, 84 године. Напуштена у дому за старе кад су јој колена попустила. После 2 месеца употребе Nautubonea — сама изашла у башту, по први пут у 3 године.
+      </span>
+    </h2>
+
+    <p>
+      Бака Илијана је bila прва пацијенткиња др Јовановића у дому за старе, у Шумадијској области. На 84 године, са артрозом 3. степена у оба колена и коксартрозом у левом куку, 14 месеци није могла да хода. Довео је син, јер „није могао да је носи до купатила". Две године је није посетио.
+    </p>
+
+    <div class="gray-bg rev-block">
+      <img class="img-card2" src="https://static.joxi.pro/1778142925769-b234c916-2418-43cd-a09b-52da3b198c19.jpg">
+      <p>
+        „Нисам веровала да ћу икада поново моћи да ходам. Колена су ми bila толико отечена да их нисам могла да савијем. Возили су ме у колицима по соби. Ујутру сам се будила и сат времена нисам могла да мрдам ни прсте. Bilo је kao da је моје тело умрло, а ја да сам još uvek жива.
+      </p>
+      <p>
+        <b>
+          Мој син ме је довео ovde jер није mogao да ме подигне из кревета. Рекао је: «Мамо, posećivaću те сваке недеље.» Две године није дошао. Не krivim ga — ima свој живот. Али ноћу, кад ме bол пробуди и никога нема поред мене… тешко је.
+        </b>
+      </p>
+      <p>
+        <b>
+          Потом је дошао др Јовановић. Он је bio прва особа koja је додирнула моја колена без гађења. Објаснио је шта се дешава у зглобовима. И нанео спреј. Недељу дана касније mogla сам да савијем лево колено. Месец касније sama сам ustala из кревета. Два месеца касније — izašla сам у башту. 3 године нисам излазила.
+        </b>
+      </p>
+      <p>
+        Медицинска сестра је заплакала кад ме је видела. Ја — још више. Не зато što сам ходала. Него зато što ми је неко — млади доктор, кога nikad раније нисам познавала — дао više него мој сопствени син.
+      </p>
+      <font>
+        <b>Бака Илијана, 84 године, дом за старе у Шумадијској области</b>
+      </font>
+    </div>
+
+    <p>
+      Други случај: Љубомир, 58 година, цео живот грађевински радник, са разрушеном кичмом услед херније диска. Супруга га је напустила кад više није mogao да ради.
+    </p>
+
+    <div class="gray-bg rev-block">
+      <img class="img-card2" src="https://static.joxi.pro/1778142925769-f6ae7d5d-d93a-42f5-8684-d3c285fbc8bf.jpg">
+      <p>
+        „30 година bio сам zidar. Кичма ми је popustila са 54 — две hernije diска и ишијас. Нисам mogao ни да стојим, ни да лежим. Све је bolelo. Жена ми је otišla — rekla је da ne može да gledа invalida. Ne krivim је.
+      </p>
+      <p>
+        <b>
+          Сестра ми је čula за dr Jovanovića od komšinice. Poslala ми је спреј Nautubone. Почeo sam da ga nanosim на кичму, ујутру и увече. Trećeg dana osetio sam прво олакшање. 3 нedelje kasnije uspeo sam да идем до prodavnice. 2 meseca kasnije — vratio sam se na posao на pola radnog vremena.
+        </b>
+      </p>
+      <p>
+        Понекад ујутру se probudim, уstanem из кревета bez bolova и zastаnem на тренутак. Stojim и не могу да верујем da је истина. Da više не boli. Без dr Jovanovića možda bih sada bio у дому за старе."
+      </p>
+    </div>
+
+    <h2>
+      „Nautubone не лечи само бол — регенерише цео зглоб изнутра"
+      <span>
+        Не само становници домова за старе имају корист. Свако преко 45 година, koji осећа прве знакове, може да спречи катастрофу.
+      </span>
+    </h2>
+
+    <p><b>Др Милош Јовановић:</b></p>
+
+    <p>
+      — Minimalni period употребе је 30 дана, ali kod teške artroze ili hernije diska može biti potrebno 2-3 meseca. Ali u svim slučajevima — bez izuzetka — primećuje se smanjenje bola, regeneracija hrskavice i obnavljanje pokretljivosti.
+    </p>
+
+    <p>
+      Nautubone deluje od prvog nanošenja: бол се смањује, запаљење јењава, покрет се олакшава. Али право чудо се дешава с временом: хрскавица се регенерише, зглобна течност се враћа, зглоб се „подмлађује" изнутра.
+      <b class="red-txt">
+        ВИДЕО САМ 80-ГОДИШЊАКЕ KOJI СУ ПОНОВО ПРОХОДАЛИ. ВИДЕО САМ РУКЕ KOJE НИСУ МОГЛЕ НИ ДА ДРЖЕ ЧАШУ, ДА ПОДИЖУ КАШИКУ ДО УСТА. ВИДЕО САМ ПОГРБЉЕНЕ КИЧМЕ KOJE СУ СЕ ИСПРАВИЛЕ. И У СВАКОМ СЛУЧАЈУ — ВИДЕО САМ СУЗЕ ОД РАДОСТИ.
+      </b>
+    </p>
+
+    <center>
+      <p><b>
+          Захваљујући методи dr Jovanovića više od 12 000 људи у Србији је повратило покретљивост зглобова. Ево неких од случајева:
+        </b></p>
+    </center>
+
+    <figure>
+      <img src="https://static.joxi.pro/1778142925769-baf151ad-77dc-450d-9a89-3293efafacfa.jpg">
+      <figcaption>Мушкарац, 65 година. Артроза 3. степена у оба колена — није могао да се пење уз степенице. Nautubone за 60 дана: потпуна покретљивост, без бола.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-f19f7f66-3e45-449a-87f2-78884ec5e6e1.jpg">
+      <figcaption>Жена, 58 година. Хронични бол у кичми и хернија диска L5-S1. Nautubone за 45 дана: бол елиминисан, може поново да обавља кућне послове.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-7d23b447-1714-413e-b3dd-921918111aa3.jpg">
+      <figcaption>Жена, 72 године. Тешки реуматоидни артритис прстију — није могла ни да држи чашу. Nautubone за 2 месеца: прсти се крећу, отицање је нестало.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-4a9900ea-fa77-4c81-a40e-dff210ebf7df.jpg">
+      <figcaption>Мушкарац, 70 година. Напредна коксартроза — могао је да се креће само са ходаљком. Nautubone за 2,5 месеца: хода самостално, без болова.</figcaption>
+    </figure>
+
+    <p><b>Др Милош Јовановић:</b></p>
+    <p>
+      — Ови случајеви су живи доказ да су зглобови способни да се регенеришу — чак и кад је дијагноза изгледала као пресуда. Без операције. Без таблета koje разарају желудац. А то šто ми доноси највећу радост: већина ових људи су становници домова за старе — они koje је свет заборавио. <b>Али ја их нисам заборавио. И Nautubone их не заборавља.</b>
+    </p>
+
+    <div id="overlay" style="display:none;opacity:0"></div>
+    <div id="popup3" style="display:none;opacity:0;transform:translate(-50%,-50%) scale(0.8)"></div>
+
+    <h2>
+      Зашто се Nautubone не продаје у апотекама? И kako se може набавити?
+    </h2>
+
+    <p><b>Др Милош Јовановић:</b></p>
+
+    <p>Нажалост, производња Nautubonea је сложен и скуп процес. Компоненте су ретке — екстракт ђавољег нокта, концентрована босвелиева киселина, планинска арника у високој концентрацији — и тешко их је набавити у потребној количини. Нисмо у стању да задовољимо целокупну потражњу.</p>
+
+    <p>Потребно је najmanje 2-3 godine пре него što Nautubone може да se pojavi у апотекама. До тада se производ дистрибуира искључиво online, у оквиру програма подршке, два пута годишње. Ali
+      <font class="red-txt">попуст може достићи 50%</font>
+      — što је od životne važnosti за penzionere.
+    </p>
+
+    <p>
+      Молим: НЕ ПРОПУСТИТЕ ПРОГРАМ ПОДРШКЕ. Не samo за себе — већ и за родитеље, бабе и дедове, своје вољене koji можда пате у тишини. Или за оне, већ у дому за старе, саме, kojima нико не шаље ништа. Будите та особа koja прави разлику.
+    </p>
+
+    <p class="red-txt"><b>Да бисте направили поруџбину, користите образац испод.</b></p>
+
+    <h2>
+      Последња прилика да набавите Nautubone ове године — за себе или за вољену особу koja пати у тишини
+    </h2>
+
+    <img alt="Nautubone" src="https://static.joxi.pro/1779114411129-23c372a1-ac38-4687-a0ad-2589ae0ebc50.jpg"
+      style="margin:0 auto;display:block;max-width:500px;width:100%;margin-top:24px;margin-bottom:20px">
+
+    <p><b>Др Милош Јовановић:</b></p>
+
+    <p>
+      — Резервисао сам 20 000 комада искључиво за читаоце овог портала. Сваки српски грађанин старији од 40 година може добити <font class="red-txt">до 50% попуста</font>, ali програм важи до <span><script>dtime_nums(0, true)</script></span>.
+    </p>
+
+    <p>Не чекајте dok не можете да se penjete уз степенице. Dok колена потпуно не попусте. Dok се кичма не укрути. А нарочито — не чекајте da постанете „терет" у очима породице. Nautubone има кумулативни ефекат и примењен jedanput годишње, kao превенција, довољан је.</p>
+
+    <p>Напишите своје ime и број телефона. Наш консултант ће вас контактирати, изабраће одговарајући програм и организоваће испоруку у року od 2-3 дана курирском службом ili poštom, директно на наznačenu adresu.</p>
+
+    <p><b>С надом и поштовањем — др Милош Јовановић. Бриниte о своjима. Можда је jedino šто им треба to da знају да нису заборављени.</b></p>
+
+    <p class="pachino-ramka">
+      <span class="ramka-title">Ажурирање: <span><script>dtime_nums(-3, true)</script></span>:</span>
+      Zbog ogromnog interesovanja zalihe mogu biti iscrpljene раније него što се очекивало! Данас —
+      <font><span><script>dtime_nums(1, true)</script></span> — poslednji dan programa</font> ili до исцрпљивања залиха.
+    </p>
+
+    <center><img src="images/product.png?=v1" style="max-width:500px;width:200%"></center><br>
+
+    <center>
+      <p class="noclose-cta red-txt">
+        Pažnja! Ne zatvarajte i ne osvežavajte stranicu, u suprotnom rezervisana količina Nautubonea biće dodeljena drugoj osobi!
+      </p>
+      <span class="pre-cta">
+        Iskoristite ponudu — vaše mesto je rezervisano:
+        <span class="nowrap">Br. <font class="number-me" style="border-bottom:2px solid var(--color-danger);font-weight:700">19&nbsp;974</font></span>
+      </span>
+    </center>
+
+    <span id="form"></span>
+    <span id="oneform"></span>
+    <div class="pachinoform">
+      <div class="pachinoform_title">
+        <div class="pachinoform_title_logo">
+          <img alt="" src="images/56d9b0017d1d_d58505c9.png">
+        </div>
+        <div class="pachinoform_title_text">
+          <b>Званичан образац за поруџбину</b>
+          № <font class="number-me nowrap">19&nbsp;974</font> / <font class="nowrap">20 000</font>
+        </div>
+      </div>
+      <div class="pachinoform_order">
+        Da biste iskoristili <b>popust od 50%</b>, unesite svoje ime i broj telefona u polja ispod, a zatim pritisnite dugme „NARUČUJEM".
+      </div>
+      <div class="pachinoform_value">
+        Na stanju:
+        <span class="blc-pck">
+          <strong class="pachinoform_value_current left-pack">33</strong>
+          <strong class="pachinoform_value_total"> /1000</strong>
+        </span>
+      </div>
+      <div class="pachinoform_price">
+        <div class="pachinoform_price_old"><span class="price_old">78 EUR</span></div>
+        <div class="pachinoform_price_new"><span class="price_main">39 EUR</span></div>
+      </div>
+      <form action="/order.php" method="post">
+        <input type="hidden" name="fbpx" value="{fbpx}">
+        <input type="hidden" name="utm_code" value="{subid}">
+        <input type="hidden" name="cid" value="{campaign_id}">
+        <input type="hidden" name="sid" value="2804">
+        <input type="hidden" name="hash" value="{hash}">
+        <input type="hidden" name="country" value="RS">
+        <div class="name-input">
+          <label for="name-input">Ime</label>
+          <input autocomplete="name" id="name-input" name="name" placeholder="Vaše ime" required="" type="text" value="">
+        </div>
+        <div class="phone-input">
+          <label for="phone-input">Broj telefona</label>
+          <input autocomplete="tel" id="phone-input" maxlength="20" name="phone" pattern="^[\-+() 0-9]{8,20}$" placeholder="Vaš broj telefona" required="" type="tel" value="">
+        </div>
+        <button class="button-submit" type="submit">NARUČUJEM</button>
+      </form>
+      <div class="pachinoform_footer">
+        ✔️ Isporuka se vrši od strane Nacionalnog zdravstvenog centra<br> direktno na naznačenu adresu
+        <br>
+        <img alt="" src="images/b0110a32ff2e_8322b1b5.png" style="width:auto">
+      </div>
+    </div>
+
+    <!-- COMMENTS SECTION -->
+    <div class="comments comments-fb" id="pluginComments">
+      <div class="comments__header">
+        <div class="comments__left-box">
+          <p class="comments__header-title">KOMENTARI</p>
+        </div>
+      </div>
+
+      <div class="comments__item-list">
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7da17fc86c6c_2f1260d0.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Димитријевић Марија</p>
+              <p class="startdate" daysago="8" format="day/month/year"><script>dtime_nums(-8, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Заплакала сам кад сам прочитала овај чланак. Мajka ми је на 76 godina и у дому за старе је 2 године — управо зато što су јoj колена popustila и нисмо могли да се бринемо о njoj. То је моја najveća krivica. Наручила сам joj Nautubone. Možda još није prekasno. Боже, надам се da ће помоћи.</p>
+          </div>
+        </div>
+
+        <div id="first-comment">
+          <div class="comments__item">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/8ba73d45c164_4ede289a.jpg">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Станковић Ева</p>
+                <p class="startdate" daysago="7" format="day/month/year"><script>dtime_nums(-7, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Prošlog petka dobila sam Nautubone. Nanosim ga ujutru i uveče na kolena. 5 dana posle — bол se znatno smanjio, mogu da silazim niz stepenice без хватања! Доktorova priča me је убедила da naručim. Divna osoba.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/fa7f61c1431c_7946ff6c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Ковачевић Ана</p>
+              <p class="startdate" daysago="6" format="day/month/year"><script>dtime_nums(-6, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Imam 69 godina. Кичма ме је мучила 4 године — хернија диска и ишијас. Нисам могла да се савијем да вежем ципеле. Лекари су ми дали антиинфламаторне koje су уништиле мој желудац. 3 нedelje са Nautubonom — бол је gotovo потпуно нестао. Сама идем на pijacu, купујем, кувам. Вратила сам sebi живот.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/dcc5cfe80d60_5aa7f8f7.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Петровић Стефан</p>
+              <p class="startdate" daysago="5" format="day/month/year"><script>dtime_nums(-5, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Radim po 10 sati dnevno u kancelariji. Кичма и врат су ми попустили. Лекар је рекао: „Ili se odreknete, ili operacija." Ја сам izabrao Nautubone. 5 нedelja posle — никакав бол. И огромно поштовање prema dr Jovanoviću — u svetu gde svi traže novac, он putuje do zaборављених старих.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/bcbe20e0b5d2_b241da99.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Јовановић Петар</p>
+              <p class="startdate" daysago="5" format="day/month/year"><script>dtime_nums(-5, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Naručio sam 3 komada — za sebe (колено), za ženu (рука, artritis) и за tasta u domu za stare. Ne možemo da posećujemo često, ali bar mu šaljemo ono što mu treba. Nadam se da će помоћи и njemu. Hvala za članak.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/73d3a879cef9_4a9ce85c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Михајловић Андреа</p>
+              <p class="startdate" daysago="4" format="day/month/year"><script>dtime_nums(-4, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Razmišljam da li da naručim za oca. 3 године је у дому за старе — колена му уопште не раде. Одустао је od života, gotovo ne govori. Mislite li da Nautubone može da pomogne са 78 godina?</p>
+          </div>
+        </div>
+
+        <div class="comm-obert-reply">
+          <div class="comments__item reply">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/71deaf909b4e_ea30d07c.jpg">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Тодоровић Јулија</p>
+                <p class="startdate" daysago="4" format="day/month/year"><script>dtime_nums(-4, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Andrea, majka mi ima 82 godine! Тешка артроза у оба колена, није могла да устане из кревета. Koristi Nautubone 2 meseca — сада сама излази у двориште. Ne preuveličavam. Najlepše: kad sam је посетила, дочекала ме је uspravna na kapiji. Обе smo plakale. Наручи bez oklevanja, твој otac заслужује шансу.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comm-obert-reply">
+          <div class="comments__item reply">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/66ebad51123a_206d5fba.png">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Маринковић Лазар</p>
+                <p class="startdate" daysago="3" format="day/month/year"><script>dtime_nums(-3, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Andrea, naruči slobodno. Са 78 година bio сам korak od инвалидских колица — коксартроза. Nautubone me је poставио на ноге за 2 meseca. Буквално. Твом оцу то треба više nego što misliš.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/d61700bc0961_28c03d39.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Белић Катарина</p>
+              <p class="startdate" daysago="3" format="day/month/year"><script>dtime_nums(-3, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Nedelju dana ga koristim za колена и крстове. Ујутру više нисам „drvo". Mogu da se sagnem, da ustanem bez „jao!". Наручила сам и за komšinicu — ima 73 godine, živi sama и хватала се за зид кад је hodala по стану.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7db2eed8e880_6ecfd92a.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Недић Елизабета</p>
+              <p class="startdate" daysago="2" format="day/month/year"><script>dtime_nums(-2, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Sa 68 godina мислила сам да nikada više neću moći da vrtlarim. Колена и кичма su me paralisali. Nautubone је promenio sve — 4 нedelje posle iskopala сам прву леју ове године. Прича dr Jovanovića me је duboko dirnula. Има još dobrih ljudi na svetu.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/a49c7ec0724d_6f186c1c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Балић Јосип</p>
+              <p class="startdate" daysago="2" format="day/month/year"><script>dtime_nums(-2, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Imam 82 godine. Prošle године нисам могао сам да идем до купатила. Деца су говорила о дому за старе. Isprobao сам Nautubone — bez posebne nade. И ради! Ходам сам, облачим се сам, излазим сам до капије. Моја деца više ne govore o domu za stare. То је моја највећа радост.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7099c502f996_b89c4cc9.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Тодоровић Тодор</p>
+              <p class="startdate" daysago="1" format="day/month/year"><script>dtime_nums(-1, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Žena nije mogla da silazi niz stepenice. Хватала се за зид и plakala od bola. Плашио сам се да ћу је izgubiti — ne od bolesti, već od očaja. Naručio сам Nautubone s popustom. 4 нedelje posle — juče је сишла сама na pijacu и вратила се са cvećem. Sa cvećem! Hvala iz srca.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/47a8cb9cf088_09555b8e.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Петровић Ивана</p>
+              <p class="startdate" daysago="1" format="day/month/year"><script>dtime_nums(-1, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Наручила сам 4 комада — за маму (дом за старе, колено), за тату (kod kuće, leđa) и 2 за себе (рука, зглобно запаљење прстију, нисам могла да пишем). Приче у чланку су ми сломиле срце. Требало је да то urаdim давно. Немам više izgovora.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/f021e0a36f8b_7c282874.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Лазаревић Сузана</p>
+              <p class="nowdate" daysago="0" format="day/month/year"><script>dtime_nums(0, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Primila sam Nautubone — kurir ga је doneo za 2 dana! Odmah sam ga nanela na колено маме у дому за старе. Держим palčeve iz sveg srca. Шаљем ovaj članak и osoblju — možda mogu da kontaktiraju dr Jovanovića.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/d770c7a4cbdf_467ee117.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Вучковић Гаврило</p>
+              <p class="nowdate" daysago="0" format="day/month/year"><script>dtime_nums(0, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Tražio сам Nautubone у апотеци — nema ga. Rekli su da mora da se naruči са овог sajta. Nadam se da је još uvek dostupno. Mom dedi је hitno potrebno — ima 81 godinu и уопште не може да хода.</p>
+          </div>
+        </div>
+
+        <div class="custom-commetns-container"></div>
+
+        <a href="#" style="text-decoration: none;">
+          <div class="form-container">
+            <form class="custom-form" id="custom-form">
+              <div class="custom-form__top-field">
+                <div class="custom-form__ava-block">
+                  <input disabled class="custom-form__ava-input sf-hidden" id="avatar" name="avatar" type="file" value="">
+                  <label class="custom-form__ava-label"><span class="custom-form__ava-label_red-text">*</span>Profilna slika</label>
+                </div>
+                <input disabled class="custom-form__name" placeholder="Vaše ime" required="" type="text" value="">
+              </div>
+              <textarea disabled class="custom-form__message" placeholder="Vaš komentar" required=""></textarea>
+              <div class="custom-form__bottom-field">
+                <div class="custom-form__photo-block">
+                  <input disabled class="custom-form__photo-input sf-hidden" id="photo" type="file" value="">
+                  <label class="custom-form__photo-label" for="photo">Priložite sliku</label>
+                </div>
+                <button disabled class="custom-form__btn">POŠALJI</button>
+              </div>
+            </form>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </main>
+
+  <div class="trust-strip">
+    <div class="trust-item"><span class="trust-item-icon">🛡️</span> Sertifikovani kvalitet</div>
+    <div class="trust-item"><span class="trust-item-icon">🚚</span> Isporuka za 2–3 dana</div>
+    <div class="trust-item"><span class="trust-item-icon">⚕️</span> Bez recepta</div>
+    <div class="trust-item"><span class="trust-item-icon">🔒</span> Sigurna porudžbina</div>
+  </div>
+
+  <footer class="clinical-footer">
+    © ЗдрављеИнфо Србија — специјалан репортаж<br>
+    Информације на сајту имају информативни карактер и не замењују лекарски савет.
+  </footer>
+
+  <div class="ffl ffl__anim sf-hidden" data-name="div-gc0zvidej" style="display:block"></div>
+
+<script async>
+const LAZY = document.querySelectorAll('img');
+for (let i = 0; i < LAZY.length; i++) {
+LAZY[i].setAttribute('loading', 'lazy');
+} </script>
+
+<script>
+    $("a").on("touchend, click", function(e) {
+            e.preventDefault();
+            $('body,html').animate({
+            scrollTop: $('#oneform').offset().top
+            }, 400);
+        });
+ </script>
+
+<script>
+$('[name="name"]').on("input", function () {
+    var val = $(this).val();
+
+    var cleaned = val
+        .replace(/[^\p{L}\s]/gu, "")
+        .replace(/^\s+/, "")
+        .replace(/\s\s+/, " ");
+
+    var parts = cleaned.split(" ");
+    if (parts.length > 2) {
+        cleaned = parts[0] + " " + parts[1];
+    }
+
+    $(this).val(cleaned);
+});
+
+$('[name="name"]').on("change blur", function () {
+    $(this).val($(this).val().trim());
+});
+
+$('[name="phone"]').on("input change", function(e) {
+    var val = $(this).val();
+    $(this).val(val.replace(/\D/g, ""));
+    $(e.currentTarget).attr("pattern", "[0-9]{6,}");
+});
+</script>
+<p style="opacity: 0;">{_box:f1fDvfjR}</p>
+</body>
+
+</html>
