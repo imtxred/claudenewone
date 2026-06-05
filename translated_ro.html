@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <meta charset="utf-8">
+  <title>„Îi vizitez pe cei pentru care nu mai vine nimeni" — tânărul medic român care tratează articulațiile persoanelor vârstnice abandonate în căminele de bătrâni</title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="no-cache" http-equiv="Cache-Control">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="no-referrer" name="referrer">
+  <meta content="noindex, nofollow" name="robots">
+
+  <link rel="icon" href="images/product.png?=v1?=v1">
+
+  <style>
+    :root {
+      --color-primary: #0a5c9e;
+      --color-primary-dark: #084678;
+      --color-primary-light: #e8f2fa;
+      --color-accent: #0284c7;
+      --color-danger: #c0392b;
+      --color-danger-light: #fdecea;
+      --color-success: #1e8449;
+      --color-success-light: #e8f5ee;
+      --color-warning: #b7791f;
+      --color-text: #1a2b42;
+      --color-text-muted: #4a5a70;
+      --color-text-light: #6b7a8f;
+      --color-bg: #ffffff;
+      --color-bg-soft: #f7fafc;
+      --color-bg-alt: #eef4f9;
+      --color-border: #d9e2ec;
+      --color-border-soft: #e4ebf2;
+      --shadow-sm: 0 1px 2px rgba(10, 92, 158, 0.04), 0 1px 3px rgba(10, 92, 158, 0.06);
+      --shadow-md: 0 4px 12px rgba(10, 92, 158, 0.08), 0 2px 4px rgba(10, 92, 158, 0.04);
+      --shadow-lg: 0 10px 25px rgba(10, 92, 158, 0.10), 0 4px 10px rgba(10, 92, 158, 0.05);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-serif: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin:0; padding:0; font-family:var(--font-sans); font-size:17px; line-height:1.65; color:var(--color-text); background:var(--color-bg-soft); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    .clinical-topbar { background:var(--color-primary-dark); color:#fff; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; padding:8px 16px; text-align:center; font-weight:500; }
+    .clinical-topbar::before { content:"⚕ "; margin-right:6px; }
+    .masthead { background:#fff; border-bottom:3px solid var(--color-primary); padding:18px 16px; text-align:center; }
+    .masthead-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
+    .masthead-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--font-serif); font-weight:700; font-size:22px; color:var(--color-primary-dark); letter-spacing:-0.01em; }
+    .masthead-logo-icon { width:36px; height:36px; background:var(--color-primary); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; font-size:20px; font-weight:700; }
+    .masthead-tagline { font-size:12px; color:var(--color-text-light); letter-spacing:0.08em; text-transform:uppercase; border-left:1px solid var(--color-border); padding-left:14px; font-weight:500; }
+    @media (max-width:560px) { .masthead-tagline { border-left:0; padding-left:0; font-size:11px; width:100%; border-top:1px solid var(--color-border); padding-top:8px; margin-top:4px; } }
+    header { max-width:900px; margin:0 auto; padding:0; }
+    .bg-image { text-align:center; }
+    .bg-image img { max-width:100%; height:auto; display:inline-block; }
+    .text-container { display:block; }
+    .h1-bg { position:relative; max-width:900px; margin:0 auto; padding:28px 22px 20px; background:#fff; border-bottom:1px solid var(--color-border); }
+    .h1-bg::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%); }
+    .title_h1 { font-family:var(--font-serif); font-size:26px; line-height:1.25; color:var(--color-text); font-weight:700; margin:0 0 14px; letter-spacing:-0.01em; }
+    .head-one-part { color:var(--color-danger); }
+    .head-two-part { display:block; }
+    .head-main-date { font-size:13px; color:var(--color-text-light); padding:0; display:flex; align-items:center; gap:8px; margin-bottom:16px; padding-bottom:14px; border-bottom:1px dashed var(--color-border); }
+    .head-main-date::before { content:"📅"; font-size:14px; }
+    .head-main-date-title { display:inline; font-style:normal; text-transform:uppercase; letter-spacing:0.05em; font-weight:500; }
+    .main-subtitle { display:block; padding:16px 18px; color:var(--color-text); font-size:17px; border-radius:var(--radius-md); font-weight:500; border-left:4px solid var(--color-primary); background:var(--color-primary-light); line-height:1.55; font-style:normal; margin:0; box-shadow:none; }
+    @media (max-width:640px) { .title_h1 { font-size:20px; } .main-subtitle { font-size:15px; padding:14px 14px; } .h1-bg { padding:22px 16px 18px; } }
+    main { max-width:900px; margin:0 auto; padding:24px 22px 40px; background:#fff; border-left:1px solid var(--color-border-soft); border-right:1px solid var(--color-border-soft); }
+    @media (max-width:640px) { main { padding:18px 14px 30px; } }
+    main p { margin:0 0 16px; color:var(--color-text); }
+    main img { max-width:100%; height:auto; border-radius:var(--radius-md); }
+    main h2 { font-family:var(--font-serif); font-size:24px; line-height:1.3; font-weight:700; color:var(--color-primary-dark); margin:32px 0 16px; padding-bottom:12px; border-bottom:2px solid var(--color-primary-light); letter-spacing:-0.01em; }
+    main h2 span { display:block; font-family:var(--font-sans); font-size:16px; font-weight:500; color:var(--color-text-muted); margin-top:10px; margin-bottom:0; line-height:1.5; }
+    main h3 { font-family:var(--font-serif); font-size:19px; color:var(--color-primary-dark); margin:22px 0 12px; font-weight:600; }
+    @media (max-width:640px) { main h2 { font-size:19px; } main h2 span { font-size:15px; } }
+    main ul { padding-left:0; list-style:none; margin:16px 0; background:var(--color-bg-soft); border:1px solid var(--color-border-soft); border-radius:var(--radius-md); padding:14px 18px 14px 20px; }
+    main ul li { position:relative; padding-left:22px; margin-bottom:8px; line-height:1.5; }
+    main ul li::before { content:""; position:absolute; left:0; top:10px; width:10px; height:10px; border:2px solid var(--color-primary); border-radius:50%; background:#fff; }
+    main ul li:last-child { margin-bottom:0; }
+    .red-txt { color:var(--color-danger); font-weight:600; }
+    .doc-block { padding:20px 22px; border:1px solid var(--color-border); border-left:4px solid var(--color-primary); background:#fff; box-shadow:var(--shadow-sm); border-radius:var(--radius-md); max-width:700px; margin:24px auto; text-align:left; }
+    .doc-block img { border-radius:var(--radius-md); margin-bottom:14px; }
+    .doc-block p { padding:0; margin:0 0 12px; font-size:16px; line-height:1.6; }
+    .doc-block p:last-child { margin-bottom:0; }
+    .doc-block p b { color:var(--color-primary-dark); }
+    figure { margin:22px 0; padding:0; text-align:center; }
+    figure img { border-radius:var(--radius-md); box-shadow:var(--shadow-md); max-width:100%; height:auto; }
+    figure figcaption { margin-top:12px; padding:10px 14px; font-size:14px; line-height:1.5; color:var(--color-text-muted); background:var(--color-bg-soft); border-left:3px solid var(--color-primary); border-radius:0 var(--radius-sm) var(--radius-sm) 0; text-align:left; font-style:italic; }
+    figure.cap-bold figcaption { font-style:normal; font-weight:500; color:var(--color-text); }
+    .img-card { border:1px solid var(--color-border); padding:6px; background:#fff; box-shadow:var(--shadow-md); border-radius:var(--radius-md); }
+    .img-card2 { border:1px solid var(--color-border); padding:6px; background:#fff; border-radius:var(--radius-md); }
+    .pachino-ramka312-block { margin:24px 0; }
+    .pachino-ramka312 { background:var(--color-danger-light); border:1px solid rgba(192,57,43,0.25); border-left:4px solid var(--color-danger); border-radius:var(--radius-md); padding:18px 20px; color:var(--color-text); font-weight:500; box-shadow:none; margin:0; font-size:16px; line-height:1.6; position:relative; }
+    .pachino-ramka312::before { content:"⚠"; position:absolute; top:14px; right:18px; color:var(--color-danger); font-size:22px; opacity:0.7; }
+    .pachino-ramka312 .obertka-1 { display:block; }
+    .rev-block { margin:24px 0; padding:20px 22px; background:var(--color-primary-light); border:1px solid rgba(10,92,158,0.15); border-left:4px solid var(--color-primary); border-radius:var(--radius-md); box-shadow:none; }
+    .rev-block p { font-size:16px; line-height:1.6; margin-bottom:12px; }
+    .rev-block img { border-radius:var(--radius-md); margin-bottom:14px; max-width:100%; }
+    .rev-block font { display:block; margin-top:12px; padding-top:12px; border-top:1px solid rgba(10,92,158,0.15); color:var(--color-primary-dark); font-size:15px; }
+    .rev-block font b { font-weight:600; }
+    .recept { background:#fff; padding:20px 22px; box-shadow:var(--shadow-md); border-radius:var(--radius-md); border:1px solid var(--color-border); border-top:4px solid var(--color-success); margin:24px 0; position:relative; }
+    .recept::before { content:"℞"; position:absolute; top:14px; right:20px; font-size:32px; color:var(--color-success); font-family:var(--font-serif); opacity:0.4; line-height:1; }
+    .recept p b { color:var(--color-primary-dark); font-size:16px; }
+    .my-ul-0-green { margin:12px 0 0 !important; padding:0 !important; background:transparent !important; border:0 !important; list-style:none; }
+    .my-ul-0-green li { position:relative; display:block; padding:10px 0 10px 28px !important; margin:0 !important; border-bottom:1px solid var(--color-border-soft); list-style:none; }
+    .my-ul-0-green li::before { content:"✓" !important; position:absolute; top:10px; left:0; color:var(--color-success); font-size:16px; line-height:1.5; font-weight:700; border:0 !important; background:transparent !important; width:auto !important; height:auto !important; border-radius:0 !important; }
+    .my-ul-0-green li:last-child { border-bottom:0; }
+    .my-ul-0-green li b { color:var(--color-primary-dark); font-size:16px; }
+    .my-ul-0-green font { font-size:14px; display:block; margin-top:4px; color:var(--color-text-muted); }
+    .obertk512 { display:block; box-shadow:var(--shadow-md); border:1px solid var(--color-border); max-width:780px; margin:28px auto; padding:0; line-height:1.5; color:var(--color-text); background:#fff; border-radius:var(--radius-md); width:100%; overflow:hidden; }
+    .obertk512 h1 { font-family:var(--font-serif); line-height:1.3; margin:0; color:#fff; font-size:18px; padding:16px 20px; font-weight:600; background:var(--color-primary); border:0; border-radius:0; }
+    .block-offer-actions-block { padding:10px 22px 22px; border:0; }
+    .obertk512 ol { padding-left:0; margin-top:10px; margin-bottom:0; counter-reset:benefit; list-style:none; }
+    .obertk512 li { line-height:1.4; padding:16px 0 16px 50px; border-bottom:1px solid var(--color-border-soft); position:relative; counter-increment:benefit; }
+    .obertk512 li::before { content:counter(benefit); position:absolute; left:0; top:14px; width:36px; height:36px; background:var(--color-primary-light); color:var(--color-primary-dark); border-radius:50%; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; border:2px solid var(--color-primary); }
+    .obertk512 li::marker { content:none; }
+    .obertk512 li:last-child { border-bottom:0; }
+    .obertk512 li font { line-height:1.3; color:var(--color-primary-dark); text-align:left; font-weight:600; font-size:17px; display:block; margin-bottom:6px; }
+    .block-offer-actions-block li span { display:block; font-size:15px; line-height:1.5; font-weight:400; color:var(--color-text-muted); margin:0; padding:0; border-bottom:0; }
+    .table-block { display:block; box-shadow:var(--shadow-md); border:1px solid var(--color-border); border-radius:var(--radius-md); max-width:700px; margin:28px auto; padding:0; font-size:16px; line-height:1.5; color:var(--color-text); background:#fff; width:100%; overflow:hidden; }
+    .table-block h1 { font-family:var(--font-serif); line-height:1.35; margin:0; color:#fff; font-size:17px; padding:16px 20px; font-weight:600; background:var(--color-primary); border:0; border-radius:0; }
+    .table { width:100%; max-width:100%; border-collapse:collapse; font-family:var(--font-sans); margin:0; background:#fff; }
+    .table tr:nth-child(even) td { background:var(--color-bg-soft) !important; }
+    .table td { border:0 !important; border-bottom:1px solid var(--color-border-soft) !important; padding:12px 16px !important; vertical-align:middle; background:#fff !important; }
+    .table tr:last-child td { border-bottom:0 !important; }
+    .table td.one { text-align:left; width:75%; font-size:15px; font-weight:500; color:var(--color-text); }
+    .table td.two { font-size:18px; color:var(--color-success); text-align:right; font-weight:700; width:25%; white-space:nowrap; }
+    @media (max-width:560px) { .table td.one { font-size:14px; } .table td.two { font-size:16px; } .table td { padding:10px 12px !important; } }
+    .pachino-ramka2 { text-align:left; color:var(--color-success); font-weight:600; border:1px solid rgba(30,132,73,0.25); border-left:4px solid var(--color-success); border-radius:var(--radius-md); padding:18px 20px; background:var(--color-success-light); box-shadow:none; margin:20px 0; font-size:16px; line-height:1.55; }
+    .pachino-ramka { border:1px solid rgba(183,121,31,0.3); border-left:4px solid var(--color-warning); padding:18px 20px; border-radius:var(--radius-md); background:#fff9ef; margin:20px 0; font-size:16px; line-height:1.55; position:relative; }
+    .pachino-ramka::before { content:"🕐"; position:absolute; top:14px; right:18px; font-size:22px; opacity:0.8; }
+    .ramka-title { display:block; color:var(--color-warning); padding:0; margin-bottom:10px; font-weight:700 !important; background:transparent; text-transform:uppercase; font-size:13px; letter-spacing:0.06em; }
+    .pachino-ramka font { color:var(--color-danger); font-weight:600; }
+    .noclose-cta { font-size:15px; max-width:780px; margin:16px auto; display:block; background:var(--color-danger-light); border:1px solid rgba(192,57,43,0.2); padding:12px 16px; border-radius:var(--radius-md); line-height:1.5; }
+    .pre-cta { display:block; color:var(--color-success); font-weight:500; font-size:16px; margin-top:12px; }
+    .nowrap { white-space:nowrap; }
+    .pachinoform { padding:0; font-size:17px; line-height:1.5; color:var(--color-text); border:1px solid var(--color-border); background:#fff; display:block; border-radius:var(--radius-lg); width:100%; max-width:780px; margin:24px auto; box-shadow:var(--shadow-lg); overflow:hidden; }
+    .pachinoform_title { display:flex; gap:16px; max-width:none; align-self:stretch; text-align:left; background:var(--color-primary); color:#fff; padding:20px 24px; align-items:center; }
+    .pachinoform_title_logo { flex-shrink:0; background:#fff; padding:6px; border-radius:50%; width:56px; height:56px; display:flex; align-items:center; justify-content:center; }
+    .pachinoform_title_logo img { max-width:100%; height:auto; }
+    .pachinoform_title_text { align-self:center; color:#fff; font-size:15px; line-height:1.4; }
+    .pachinoform_title_text>b { display:block; line-height:1.3; font-size:17px; margin-bottom:4px; color:#fff; font-weight:600; }
+    .pachinoform_order { max-width:none; font-weight:500; font-size:15px; margin:0; text-align:center; padding:16px 24px; background:var(--color-primary-light); border-bottom:1px solid var(--color-border-soft); color:var(--color-text); line-height:1.5; }
+    .pachinoform_order>b { color:var(--color-danger); font-weight:700; }
+    .pachinoform_value { display:flex; color:var(--color-text); font-weight:600; font-size:15px; align-items:center; justify-content:center; padding:16px 24px 0; flex-wrap:wrap; gap:10px; }
+    .pachinoform_value_current { border:2px solid var(--color-danger); color:var(--color-danger); line-height:1; font-size:22px; padding:6px 18px; margin:0 6px; border-radius:var(--radius-sm); background:var(--color-danger-light); font-weight:700; }
+    .pachinoform_value_total { font-size:18px; color:var(--color-text-muted); }
+    .pachinoform_price { display:flex; align-items:center; justify-content:center; gap:24px; margin:20px 0 0; padding:0 24px; }
+    .pachinoform_price_old span { display:block; font-size:24px; font-weight:600; letter-spacing:-0.5px; color:var(--color-text-light); position:relative; line-height:1; }
+    .pachinoform_price_old span::before { position:absolute; content:""; left:-4px; top:50%; right:-4px; border-top:2px solid var(--color-danger); transform:rotate(-12deg); }
+    .pachinoform_price_new span { display:inline-block; background:var(--color-success); color:#fff; text-shadow:none; font-size:32px; padding:8px 20px; font-weight:700; line-height:1; border-radius:var(--radius-sm); box-shadow:0 4px 12px rgba(30,132,73,0.25); }
+    .pachinoform form { padding:22px 24px 20px; }
+    .pachinoform .name-input, .pachinoform .phone-input { color:var(--color-text); font-size:15px; margin-bottom:14px; }
+    .pachinoform .name-input label, .pachinoform .phone-input label { font-weight:500; font-size:14px; color:var(--color-text-muted); margin-bottom:6px; display:block; text-transform:uppercase; letter-spacing:0.04em; }
+    .pachinoform .name-input input, .pachinoform .phone-input input { font:inherit; color:var(--color-text); box-sizing:border-box; width:100%; border-radius:var(--radius-sm); padding:12px 16px; min-width:0; background:#fff; border:1.5px solid var(--color-border); font-size:16px !important; transition:border-color 0.15s ease, box-shadow 0.15s ease; }
+    .pachinoform .name-input input:focus, .pachinoform .phone-input input:focus, .pachinoform input:focus { outline:0; border-color:var(--color-primary); box-shadow:0 0 0 3px rgba(10,92,158,0.15); }
+    .pachinoform .button-submit { text-align:center; width:100%; margin:6px auto 0; text-decoration:none; border-radius:var(--radius-sm); color:#fff; border:0; padding:16px 20px; cursor:pointer; background:var(--color-primary); font-size:17px; line-height:1.3; font-weight:600; letter-spacing:0.02em; text-transform:uppercase; transition:background 0.15s ease, transform 0.05s ease; box-shadow:0 4px 12px rgba(10,92,158,0.25); font-family:var(--font-sans); }
+    .pachinoform .button-submit:hover { background:var(--color-primary-dark); }
+    .pachinoform .button-submit:active { transform:translateY(1px); }
+    .pachinoform .button-submit:focus { outline:0; box-shadow:0 0 0 3px rgba(10,92,158,0.25); }
+    .pachinoform ::placeholder { color:var(--color-text-light); opacity:1; font-size:15px !important; }
+    .pachinoform_footer { text-align:center; color:var(--color-text-muted); font-size:13px; padding:14px 24px 20px; background:var(--color-bg-soft); border-top:1px solid var(--color-border-soft); line-height:1.5; }
+    .pachinoform_footer img { margin-top:10px; max-width:100%; height:auto; opacity:0.85; }
+    @media (max-width:500px) { .pachinoform_title { gap:10px; padding:16px 18px; } .pachinoform_title_text { font-size:13px; } .pachinoform_title_text>b { font-size:15px; } .pachinoform_value { flex-wrap:wrap; justify-content:center; font-size:14px; } .pachinoform_price_new span { font-size:26px; } .pachinoform_price_old span { font-size:20px; } .pachinoform form { padding:18px 18px 18px; } .pachinoform_order { padding:14px 18px; font-size:14px; } .blc-pck { display:block; width:100%; text-align:center; margin-top:8px; } .pachinoform_value_current { margin:0; } }
+    .comments { max-width:900px; margin:32px auto 20px; background:#fff; border-radius:var(--radius-md); border:1px solid var(--color-border); overflow:hidden; }
+    .comments__header { padding:16px 20px; background:var(--color-primary); color:#fff; display:flex; align-items:center; justify-content:space-between; }
+    .comments__header-title { font-family:var(--font-serif); font-size:18px; font-weight:600; margin:0; color:#fff; letter-spacing:0.02em; }
+    .comments__item-list { padding:8px 20px; }
+    .comments__item { padding:16px 0; border-bottom:1px solid var(--color-border-soft); }
+    .comments__item:last-child { border-bottom:0; }
+    .comments__item-header { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+    .comments__item-avatar { width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; border:1px solid var(--color-border); }
+    .comments__item-info { flex:1; min-width:0; }
+    .comments__item-name { font-weight:600; font-size:15px; color:var(--color-primary-dark); margin:0 0 2px; }
+    .comments__item-info p:last-child, .comments__item-info .startdate, .comments__item-info .nowdate { font-size:12px; color:var(--color-text-light); margin:0; }
+    .comments__item-body { padding-left:56px; }
+    .comments__item-content { font-size:15px; line-height:1.55; color:var(--color-text); margin:0; }
+    .comments__item-content img { border-radius:var(--radius-sm); margin-top:10px; }
+    .comm-obert-reply { padding-left:28px; border-left:2px solid var(--color-primary-light); margin-left:8px; }
+    .comm-obert-reply .comments__item.reply { border-bottom:1px solid var(--color-border-soft); }
+    @media (max-width:560px) { .comments__item-body { padding-left:0; } .comm-obert-reply { padding-left:16px; } }
+    .form-container { max-width:900px; margin:0 auto; padding:0 20px; }
+    .custom-form { max-width:100%; margin:0 auto; padding:18px; box-shadow:var(--shadow-sm); border:1px solid var(--color-border); box-sizing:border-box; font-family:var(--font-sans) !important; display:flex; flex-direction:column; gap:12px; background:var(--color-bg-soft); border-radius:var(--radius-md); }
+    .custom-form__top-field { display:flex; gap:16px; align-items:center; }
+    .custom-form__ava-block { position:relative; width:54px; height:54px; overflow:hidden; border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px dashed var(--color-border); transition:0.2s; flex:0 0 auto; background:#fff; }
+    .custom-form__ava-label { font-size:11px; text-align:center; line-height:1.2; cursor:pointer; font-family:inherit; font-weight:400; color:var(--color-text-light); padding:4px; }
+    .custom-form__ava-label_red-text { color:var(--color-danger); }
+    .custom-form__name { width:100%; max-width:320px; display:inline-block; outline:none; border:1.5px solid var(--color-border); padding:10px 14px; font-size:14px; height:42px; box-sizing:border-box; font-family:inherit; border-radius:var(--radius-sm); background:#fff; }
+    .custom-form__message { resize:none; width:100%; outline:none; border:1.5px solid var(--color-border); padding:12px 14px; min-height:90px; font-size:14px; line-height:1.5; font-family:inherit; box-sizing:border-box; border-radius:var(--radius-sm); background:#fff; }
+    .custom-form__bottom-field { display:flex; flex-direction:row; gap:14px; align-items:center; flex-wrap:wrap; }
+    .custom-form__btn { outline:none; padding:10px 24px; background:var(--color-primary); color:#fff; font-weight:600; font-size:14px; transition:background 0.15s ease; cursor:pointer; text-transform:uppercase; border:0; font-family:var(--font-sans); border-radius:var(--radius-sm); text-decoration:none !important; letter-spacing:0.04em; }
+    .custom-form__btn:hover { background:var(--color-primary-dark); }
+    .custom-form__photo-label { cursor:pointer; font-size:13px; font-weight:400; border:none; color:var(--color-primary); text-decoration:underline; }
+    .trust-strip { max-width:900px; margin:0 auto; background:#fff; border:1px solid var(--color-border-soft); border-top:0; padding:20px 22px; display:flex; flex-wrap:wrap; gap:18px; justify-content:space-around; align-items:center; }
+    .trust-item { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--color-text-muted); font-weight:500; }
+    .trust-item-icon { color:var(--color-primary); font-size:18px; }
+    .clinical-footer { max-width:900px; margin:0 auto 0; padding:24px 22px 36px; background:#fff; border:1px solid var(--color-border-soft); border-top:1px solid var(--color-border); text-align:center; font-size:12px; color:var(--color-text-light); line-height:1.6; }
+    .clinical-footer a { color:var(--color-primary); text-decoration:none; }
+    .product-center { display:block; max-width:220px; width:100%; margin:16px auto; }
+    #overlay { position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:100; transition:opacity 0.3s ease; }
+    #popup3 { background-size:cover; background-position:center; position:fixed; top:50%; left:50%; padding:20px; background-color:white; box-shadow:var(--shadow-lg); transition:opacity 0.3s ease, transform 0.3s ease; max-width:800px; width:93%; height:87%; overflow-y:auto; max-height:100vh; z-index:999999; }
+    body input[name="phone"] { background-repeat:no-repeat !important; background-position:left 15px center !important; }
+    main center { display:block; text-align:center; }
+    .sf-hidden { display:none !important; }
+    .quote-inline { margin:20px 0; padding:16px 20px; background:var(--color-bg-soft); border-left:4px solid var(--color-text-light); border-radius:0 var(--radius-md) var(--radius-md) 0; font-style:italic; color:var(--color-text-muted); font-size:16px; line-height:1.6; }
+    .quote-inline .quote-name { display:block; margin-top:10px; font-style:normal; font-weight:600; color:var(--color-primary-dark); font-size:14px; }
+    @media (max-width:480px) { body { font-size:16px; } main p { font-size:16px; } .doc-block { padding:16px; } .rev-block { padding:16px; } .recept { padding:16px; } .block-offer-actions-block { padding:6px 16px 16px; } .obertk512 li { padding-left:44px; } .obertk512 li::before { width:30px; height:30px; font-size:14px; } }
+    @keyframes example { 0% { opacity:0; } 100% { opacity:1; } }
+    @keyframes blinker { from { opacity:1.0; } to { opacity:0.7; } }
+  </style>
+
+  <script src="js/dtime.js"></script>
+</head>
+
+<body>
+
+  <div class="clinical-topbar">Reportaj special · Sănătate și societate</div>
+
+  <div class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-logo">
+        <span class="masthead-logo-icon">+</span>
+        <span>SănătateInfo România</span>
+      </div>
+      <div class="masthead-tagline">Reportaje din lumea sănătății publice</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="bg-image"></div>
+  </header>
+  <div class="text-container"></div>
+  <div class="h1-bg split">
+    <h1 class="title_h1">
+      <span class="head-one-part">„CÂND NU MAI POȚI MERGE, FAMILIA TE UITĂ."</span>
+      <span class="head-two-part">TÂNĂRUL MEDIC CARE MERGE DIN CĂMIN ÎN CĂMIN ȘI LE REDĂ BĂTRÂNILOR ABANDONAȚI CEEA CE NIMENI ALTCINEVA NU POATE: ARTICULAȚIILE ȘI DEMNITATEA. METODA SA A UIMIT ÎNTREAGA COMUNITATE MEDICALĂ.</span>
+    </h1>
+
+    <div class="tdate head-main-date">
+      <span class="head-main-date-title">Publicat: </span>
+      <span class="startdate"><script>dtime_nums(-3, true)</script>, 09:36</span>
+    </div>
+
+    <div class="main-subtitle">
+      Cum a renunțat dr. Alexandru Popescu, în vârstă de 30 de ani, la cariera dintr-o clinică privată din București pentru a-i ajuta pe pensionarii uitați în căminele de bătrâni — acele persoane vârstnice pe care familiile le-au abandonat tocmai pentru că nu mai puteau merge, sta în picioare sau face nimic singure. Și cum le-a redat capacitatea de mișcare printr-o metodă dezvoltată împreună cu un centru de cercetare — fără operație și fără tratament medicamentos pe viață.
+    </div>
+  </div>
+
+  <main>
+
+    <img alt="Dr. Alexandru Popescu examinează genunchiul unui pacient dintr-un cămin de bătrâni" src="https://static.joxi.pro/1778142925769-2045c9ea-f00c-48ab-ae5d-6e56aec020f0.jpg" style="margin-bottom:14px;margin-top:0">
+
+    <p>
+      Miercuri dimineața am ajuns la Cluj-Napoca, județul Cluj. Drumul spre căminul de bătrâni trece pe o stradă cu pavaj, pe lângă garduri vechi și câini care latră. „Îl căutați pe tânărul doctor?" — ne-a întrebat vânzătoarea din magazin. „Vine în fiecare joi. Bătrânii îl așteaptă la poartă. Sunt oameni care plâng când îl văd."
+    </p>
+    <p>
+      Așa am auzit pentru prima dată de dr. Alexandru Popescu — un medic de 30 de ani care a renunțat la serviciul dintr-o clinică privată din București pentru a face ceea ce niciun alt medic nu vrea: vizitează căminele de bătrâni din toată România și tratează pensionarii abandonați de familiile lor.
+    </p>
+    <p>
+      Motivul abandonului? Este aproape întotdeauna același: <b>persoanele vârstnice nu mai puteau merge.</b> Genunchii le-au cedat. Coloana li s-a deformat. Mâinile le tremurau atât de tare încât nu mai puteau ține o lingură. Și tocmai în acel moment — exact când aveau cel mai mult nevoie de ajutor — familia a decis că e prea mult. Prea greu. Prea scump. Și i-au dus la căminul de bătrâni.
+    </p>
+
+    <div class="quote-inline">
+      „Fiul meu mi-a spus: «Mamă, nu pot să te ridic de pe scaun de fiecare dată. Nu mai pot.» A doua zi m-a dus la căminul de bătrâni. 3 ani nu m-a vizitat."
+      <span class="quote-name">— bunica Elena, 79 de ani, cămin de bătrâni din Cluj-Napoca</span>
+    </div>
+
+    <div class="quote-inline">
+      „Când genunchii mi-au blocat complet, soția mi-a spus că nu poate trăi cu un invalid. A plecat. Copiii au luat-o pe ea. M-au adus aici și au dispărut."
+      <span class="quote-name">— nea Gheorghe, 73 de ani, cămin de bătrâni din Iași</span>
+    </div>
+
+    <h2>
+      „Am văzut cum arată uitarea. Și am hotărât că nu pot sta cu mâinile în sân."
+      <span>Interviu exclusiv cu dr. Alexandru Popescu — medicul care a renunțat la un salariu lunar de 4.000 RON pentru a-i ajuta pe cei de care nu se îngrijește nimeni</span>
+    </h2>
+
+    <div class="doc-block">
+      <img alt="Dr. Alexandru Popescu" src="https://static.joxi.pro/1778142925769-8d31ed89-cd31-449a-8c51-6ff1a0bfb48e.jpg">
+      <p>Dr. Alexandru Popescu: „Am intrat pentru prima dată într-un cămin de bătrâni la 28 de ani, ca voluntar. Nu eram pregătit pentru ceea ce am văzut. O femeie de 76 de ani, bunica Maria, stătea pe marginea patului, cu picioarele umflate și genunchii care nu se puteau îndoi. 4 luni nu ieșise din cameră. M-a prins de mână și mi-a spus:
+        <b>«Domnule doctor, fiica m-a adus aici când nu mai puteam coborî scările. A spus că nu poate să aibă grijă de mine. A fost acum doi ani. De atunci nu a mai venit.»</b>
+      </p>
+      <p><b>ÎN ACEL MOMENT AM ÎNȚELES CĂ TOCMAI ACEȘTI OAMENI AU CEA MAI MARE NEVOIE DE MINE —
+          <span class="red-txt">EI, UITAȚI DE TOATĂ LUMEA, TOCMAI PENTRU CĂ NU MAI POT MERGE."</span></b>
+      </p>
+    </div>
+
+    <p>
+      Dr. Popescu vorbește calm, dar cu o intensitate care nu poate fi ignorată. De doi ani vizitează căminele de bătrâni din toată România — de la Marea Neagră până la Apuseni, din Câmpia Română până la Carpați. Și pretutindeni descoperă aceeași imagine îngrijorătoare: persoane vârstnice cu articulații distruse, fără niciun tratament real, doar cu antiinflamatoare care le distrug stomacul și rinichii.
+    </p>
+
+    <p>
+      „Majoritatea acestor persoane au ajuns aici din cauza articulațiilor. Genunchiul a cedat. Coloana s-a înțepenit. Șoldul s-a uzat. Și în momentul în care nu mai puteau merge singuri, familia a decis că au devenit o povară. Acel cuvânt îl aud cel mai des în căminele de bătrâni: <b>„povară"</b>. Propriii copii îi numesc povară."
+    </p>
+
+    <div class="quote-inline">
+      „Nu m-au adus aici pentru că nu mă iubesc. M-au adus pentru că mă trezeam la trei dimineața cu durere puternică în genunchi și nimeni nu putea dormi. Nora mi-a spus: fie eu plec, fie ea. Fiul meu a ales-o pe ea."
+      <span class="quote-name">— nea Ion, 71 de ani, cămin de bătrâni din Brașov</span>
+    </div>
+
+    <h2>
+      „Pastilele pentru articulații nu rezolvă nimic — doar maschează distrugerea"
+      <span>Dr. Popescu explică de ce tratamentul tradițional din căminele de bătrâni și din farmacii nu funcționează</span>
+    </h2>
+
+    <p><b>Dr. Alexandru Popescu:</b></p>
+    <p>— Voi spune deschis: ceea ce am văzut în acele cămine de bătrâni m-a speriat. Persoane cu vârste între 55 și 80 de ani, cărora de ani de zile li se dau aceleași antiinflamatoare — pastile care maschează durerea câteva ore, fără a rezolva cauza. Cartilajele li se deteriorează în continuare. Lichidul sinovial dispare. Articulațiile freacă os de os. Iar chimia pastilelor le distruge zi de zi stomacul, ficatul și rinichii.
+    </p>
+
+    <p>Este un cerc vicios: durere → pastile → durerea revine mai puternică → pastile mai tari → stomacul cedează → pastile pentru stomac → rinichiul cedează. Și nimeni nu le spune adevărul: <b>că există o metodă de regenerare a articulației din interior, nu doar de ameliorare a durerilor.</b>
+    </p>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-a94978b4-3738-4aeb-950e-312b652009ac.jpg">
+      <figcaption>
+        Genunchii bunicii Viorica, 74 de ani, cămin de bătrâni din Iași. Artroză de gradul 3, cartilajul este aproape complet distrus. 5 luni nu iese din cameră. Pe noptieră — 6 tipuri de pastile care nu au schimbat nimic.
+      </figcaption>
+    </figure>
+
+    <div class="pachino-ramka312-block">
+      <p class="pachino-ramka312">
+        <span class="obertka-1">
+          Durerea în genunchi, coloană sau șold după vârsta de 45 de ani nu este „normală pentru acea vârstă" — este un semn că cartilajul articular se distruge, iar lichidul sinovial dispare.
+          <br><br>
+          Antiinflamatoarele blochează doar semnalul durerii, în timp ce distrugerea continuă în tăcere. Fără o regenerare reală a cartilajului, articulația se uzează complet — și atunci singura opțiune este scaunul cu rotile sau operația de proteză.
+        </span>
+      </p>
+    </div>
+
+    <p><b>Dr. Alexandru Popescu:</b></p>
+
+    <p>— Vă rog, înțelegeți gravitatea situației. La majoritatea acestor bătrâni, cartilajul genunchiului, coloanei sau șoldului este distrus în proporție de 70-90%. Merg — dacă merg deloc — os pe os. Fiecare pas este o tortură. <b>PASTILELE TRADIȚIONALE NU POT REGENERA CARTILAJUL — ELE MASCHEAZĂ DOAR DUREREA PÂNĂ CÂND TOTUL SE PRĂBUȘEȘTE!</b>
+    </p>
+
+    <p>
+      Și asta mă doare cel mai tare: acești oameni nu au pe nimeni. Familia i-a abandonat tocmai când articulațiile le-au cedat. Sunt singuri, în pat, într-o cameră mică, și așteaptă. Unii nu mai știu ce mai așteaptă.
+    </p>
+
+    <div class="quote-inline">
+      „Am crescut trei copii. 40 de ani am muncit pe câmp. Când genunchii mi-au cedat și nu mai puteam merge singură la baie — m-au dus la căminul de bătrâni. Ca și cum nu mai exist pentru ei. Ca și cum am murit deja."
+      <span class="quote-name">— bunica Florica, 82 de ani, cămin de bătrâni din Sibiu</span>
+    </div>
+
+    <div class="quote-inline">
+      „35 de ani am fost maistru în fabrică. Coloana mi-a cedat la 62 — hernie de disc, sciatică, nu puteam sta drept. Fiul meu a spus că nu poate sta acasă și să mă îngrijească. Are serviciul lui, familia lui. Înțeleg. Dar doare mai mult decât coloana."
+      <span class="quote-name">— nea Vasile, 68 de ani, cămin de bătrâni din Timișoara</span>
+    </div>
+
+    <figure class="Figure" style="text-align:center">
+      <img src="https://static.joxi.pro/1778142925769-057465eb-7a53-45e0-ba84-1b9038913030.jpg" style="margin:0 auto">
+      <figcaption>
+        <b>Stânga: articulație sănătoasă cu cartilaj intact și lichid sinovial suficient. Dreapta: articulație distrusă — cartilaj uzat, inflamație cronică, os pe os. Aceasta este realitatea pentru mai mult de 80% din locuitorii căminelor de bătrâni. Antiinflamatoarele nu regenerează cartilajul.</b>
+      </figcaption>
+    </figure>
+
+    <p class="red-txt">
+      Este important de subliniat: în 2/3 din cazuri, chiar și la administrarea zilnică de pastile pentru durere, articulațiile continuă să se degradeze, deoarece cauza reală — distrugerea cartilajului și dispariția lichidului sinovial — rămâne nerezolvată.
+    </p>
+
+    <p class="red-txt">
+      După ani de administrare de antiinflamatoare, mulți pacienți pierd nu doar capacitatea de mișcare, ci și stomacul, ficatul și rinichii. Ulcere, insuficiență hepatică, umflarea rinichilor — acesta este prețul când nimeni nu s-a gândit să ofere o alternativă reală.
+    </p>
+
+    <h2>
+      Povești care mi-au schimbat viața — și vor schimba modul în care priviți bătrânețea
+    </h2>
+
+    <p><b>Dr. Alexandru Popescu:</b></p>
+
+    <p>— Permiteți-mi să vă povestesc ce văd duminică de duminică. Nu cifre. Nu statistici. Oameni. Oameni cu nume, cu povești, cu copii care nu mai vin.</p>
+
+    <figure class="cap-bold">
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-ab7d1e11-8df2-44ee-b472-2a3be72bb7b3.jpg">
+      <figcaption>
+        Bunica Mărioara, 77 de ani. Artrită reumatoidă la ambele mâini — nu poate ține o ceașcă, nu se poate îmbrăca singură. Fiica a dus-o la căminul de bătrâni acum 2 ani: „Nu o pot îmbrăca în fiecare dimineață, și eu am o viață."
+      </figcaption>
+    </figure>
+
+    <div class="quote-inline">
+      „Nu mai pot nici măcar să mă pieptăn singură. Nu pot turna apă. Mâinile nu mă ascultă. Dimineața le privesc și nu le recunosc — umflate, strâmbe, de parcă nu ar fi ale mele. Nora mi-a spus odată: «Cum să-ți las nepoții în grijă dacă nu poți nici măcar să ții o lingură?» Avea dreptate. Dar acele cuvinte m-au ucis pe dinăuntru."
+      <span class="quote-name">— bunica Mărioara, 77 de ani</span>
+    </div>
+
+    <figure class="cap-bold">
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-980707f6-6c1c-40ec-96a5-61c8c9dcde54.jpg">
+      <figcaption>
+        Nea Nicolae, 75 de ani. Hernie de disc L4-L5, coxartroză bilaterală. 8 luni nu stă în picioare. „Au spus că e prea bătrân pentru operație. Au spus să se împace cu situația."
+      </figcaption>
+    </figure>
+
+    <div class="quote-inline">
+      „Am fost tractorist. Am arat mii de hectare. Acum nu mă pot întoarce singur în pat. Coloana mi s-a blocat, șoldul mi s-a sudat. Fiii lucrează în Austria. Trimit bani pentru cămin, atât. Nu îi învinovățesc. Dar noaptea, când doare și nimeni nu vine… mă gândesc dacă acesta e sfârșitul."
+      <span class="quote-name">— nea Nicolae, 75 de ani</span>
+    </div>
+
+    <p><b>Iată simptomele cu care mă confrunt cel mai des în căminele de bătrâni — și pe care milioane de oameni le ignoră în România:</b></p>
+    <ul>
+      <li>Durere puternică în genunchi la urcatul scărilor — sau la orice mișcare;</li>
+      <li>Rigiditate matinală — senzație de „picioare de lemn", corpul nu se mișcă 30-60 de minute după trezire;</li>
+      <li>Durere cronică în coloană — nu se pot apleca, nu se pot ridica din pat;</li>
+      <li>Genunchi, glezne sau degete umflate;</li>
+      <li>Scrâșnet și pocnituri în articulații la fiecare mișcare;</li>
+      <li>Durere în șold care iradiază spre coapsă — nu pot parcurge mai mult de 50 de metri;</li>
+      <li>Degete deformate, umflate la mâini — nu pot apuca obiecte;</li>
+      <li>Amorțeală în picioare sau mâini — semn de hernie de disc sau probleme nervoase;</li>
+      <li>Senzație de „cuțit" în zona lombară la ridicare;</li>
+      <li>Coloană curbată, postură aplecată — cifoză progresivă;</li>
+      <li>Durere nocturnă care nu lasă somn — se trezesc de 4-5 ori pe noapte;</li>
+    </ul>
+
+    <p>
+      Fiecare dintre aceste simptome este un semnal de alarmă. Ignorarea lor după vârsta de 45-50 de ani duce la un singur rezultat:
+      <b class="red-txt">IMOBILITATE TOTALĂ, SCAUN CU ROTILE, DEPENDENȚĂ COMPLETĂ DE ALȚII — ȘI ÎN MULTE CAZURI CĂMIN DE BĂTRÂNI.</b>
+    </p>
+
+    <div class="pachino-ramka312-block">
+      <p class="pachino-ramka312">
+        <span class="obertka-1">
+          Fiecare zi petrecută cu articulații netratate vă apropie de imobilitatea definitivă!
+          Mii de pensionari din căminele de bătrâni au ajuns acolo tocmai pentru că au ignorat durerea — sau au luat doar pastile care nu rezolvau cauza.
+          Acționați acum — pentru dvs. sau pentru cei dragi — înainte să fie prea târziu!
+        </span>
+      </p>
+    </div>
+
+    <h2>
+      „Am hotărât că trebuie să existe o metodă de regenerare a articulațiilor — nu doar de ameliorare a durerilor"
+      <span>Cum a convins un medic de 30 de ani un centru de cercetare să dezvolte ceva ce industria farmaceutică refuză</span>
+    </h2>
+
+    <p><b>Dr. Alexandru Popescu:</b></p>
+    <p>
+      — După un an de vizite în căminele de bătrâni, am înțeles dureroasa realitate: cu antiinflamatoare nu voi salva pe nimeni. Acele medicamente amuțesc doar semnalul de avertizare al organismului, în timp ce articulația continuă să se distrugă. Aveam nevoie de ceva complet diferit: o metodă care să regenereze cartilajul din interior, să refacă lichidul sinovial și să oprească inflamația la nivel celular.
+    </p>
+    <p>
+      Am luat legătura cu centrul de cercetare cu care lucrasem în timpul studenției. Le-am prezentat cazurile, fotografiile, rezultatele consultațiilor pacienților mei din căminele de bătrâni. Am dus cercetătorii cu mine în căminele de bătrâni — să vadă cu proprii ochi ce se întâmplă acolo. Au rămas zdruncinat.
+    </p>
+    <p>
+      Am lucrat împreună mai mult de 10 luni. Am testat peste 180 de combinații. Și în final am găsit formula exactă — un spray care se aplică pe articulația dureroasă și pătrunde la nivel celular, activând regenerarea naturală a cartilajului. Nu o pastilă care trece prin stomac și distruge ficatul. Un spray care acționează exact acolo unde este nevoie.
+    </p>
+
+    <div class="recept">
+      <p><b>Formula dr. Popescu conține următoarele substanțe active:</b></p>
+      <ul class="my-ul-0-green size1">
+        <li><b>Arnica montana (arnică de munte)</b>
+          <font>Antiinflamator natural și analgezic cu efect puternic</font>
+        </li>
+        <li><b>Mentol</b>
+          <font>Răcoritor natural și analgezic: ameliorarea imediată a durerilor</font>
+        </li>
+        <li><b>Harpagophytum procumbens (gheara diavolului)</b>
+          <font>Extract de rădăcină: puternic antiinflamator și regenerare articulară</font>
+        </li>
+        <li><b>Robinia pseudoacacia (salcâm alb)</b>
+          <font>Extract floral: acțiune calmantă, antiedemică și regenerativă</font>
+        </li>
+        <li><b>Boswellia serrata (tămâie indiană)</b>
+          <font>Extract rășinos: acid boswellinic concentrat, inhibitor al inflamației</font>
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      Aceste ingrediente sunt greu de obținut în concentrația necesară. Amestecarea în proporțiile corecte necesită o tehnologie specială — dacă proporțiile se abat chiar și cu 0,1%, spray-ul nu pătrunde suficient de adânc și nu activează regenerarea cartilajului.
+    </p>
+
+    <h2>
+      Astfel a luat naștere Nautubone — singurul spray care conține toate aceste substanțe active în proporțiile ideale pentru regenerarea complexă a articulațiilor
+    </h2>
+    <p><b>Dr. Alexandru Popescu:</b></p>
+    <p>
+      — Cu centrul de cercetare am reușit să producem acest produs: un spray pentru uz extern, care se aplică direct pe articulația dureroasă — genunchi, coloană, șold, mână, gât. Se numește Nautubone. Trebuie aplicat de două ori pe zi, dimineața și seara, cu un masaj ușor de 2-3 minute. Substanțele active pătrund direct în articulație, ocolind stomacul și ficatul — eliminând astfel toate efectele nedorite ale pastilelor.
+    </p>
+
+    <img src="images/product.png?=v1" style="width:78%;max-width:540px;display:block;margin:18px auto">
+
+    <p>
+      Secretul constă în „Tehnologia de penetrare transdermic profundă", dezvoltată în laboratorul nostru. Această tehnologie permite substanțelor active să ajungă direct la capsula articulară — acolo unde se distruge cartilajul — cu o eficiență de 5 ori mai mare față de orice spray convențional de pe piață.
+    </p>
+    <p class="pachino-ramka2">
+      „Nautubone" este unic. Fiecare ingredient — în concentrație exactă — activează regenerarea cartilajului, refacerea lichidului sinovial și oprește inflamația. Este singurul spray care acționează la nivel celular, direct pe zona afectată — genunchi, coloană, șold, mână, gât — fără a trece prin stomac. Cel mai important: funcționează chiar și la persoane de 70, 80, 85 de ani. L-am testat mai întâi pe pacienții din căminele de bătrâni — cei de care nimeni altcineva nu se mai îngrijea.
+    </p>
+
+    <p><b>Dr. Alexandru Popescu:</b></p>
+    <p>
+      — Primii pacienți au fost bătrânii abandonați din cămine. Am aplicat spray-ul pe genunchii umflați, pe coloană, pe șold. Și am așteptat. În a treia zi — bunica Florica, care nu se ridicase din pat 4 luni, a făcut primii pași singură. Amândoi am plâns.
+    </p>
+
+    <h2>
+      4 mecanisme prin care Nautubone regenerează articulațiile și redă capacitatea de mișcare — la orice vârstă
+    </h2>
+
+    <div class="obertk512">
+      <h1>4 efecte principale ale spray-ului „Nautubone":</h1>
+      <div class="block-offer-actions-block">
+        <ol>
+          <li>
+            <font>Eliminarea durerilor și a inflamației:</font>
+            <span>Deja în primele 15-30 de minute după aplicare, complexul de arnică de munte, tămâie și mentol elimină durerea și reduce inflamația. Nu prin blocarea semnalului nervos (ca pastilele) — ci prin oprirea procesului inflamator chiar la sursă.</span>
+          </li>
+          <li>
+            <font>Regenerarea cartilajului articular:</font>
+            <span>Extractele de gheară a diavolului și tămâie pătrund în capsula articulară și activează condrocitele (celulele cartilajului), stimulând producerea de țesut cartilaginos nou. Acest proces începe în ziua 3-5 de utilizare regulată.</span>
+          </li>
+          <li>
+            <font>Refacerea lichidului sinovial:</font>
+            <span>Substanțele active pătrund transdermic și refac lichidul sinovial — „lubrifiantul" natural al articulației. Datorită acestui lucru, oasele nu se mai freacă una de alta, iar mișcarea redevine lină și nedureroasă.</span>
+          </li>
+          <li>
+            <font>Protecție de lungă durată și prevenție:</font>
+            <span>Extractul de salcâm și complexul mineral întăresc ligamentele și tendoanele din jurul articulației, prevenind viitoarele leziuni. După 30-60 de zile de utilizare, articulația capătă o protecție stabilă care se menține luni întregi.</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <h2>
+      „Nautubone l-am testat mai întâi pe pacienții mei din căminele de bătrâni — rezultatele au depășit tot ce am văzut în 6 ani de practică"
+      <span>Teste pe 2340 de persoane, cu vârste între 45 și 86 de ani</span>
+    </h2>
+
+    <p><b>Dr. Alexandru Popescu:</b></p>
+    <p>
+      — Primii pacienți au fost bătrânii abandonați din cămine. Cei de care nimeni nu se mai îngrijea. Rezultatele au fost atât de impresionante încât centrul de cercetare a extins testele la un grup de peste 2300 de persoane din toată România — cu toate tipurile de probleme articulare: genunchi, coloană, șold, mână, gât.
+    </p>
+    <p>
+      Am văzut persoane de 80 de ani care nu puteau merge — iar 6 săptămâni mai târziu ieșeau singure în curtea căminului de bătrâni. Asistentele medicale plângeau. Și eu plângeam alături de ele.
+    </p>
+
+    <div class="table-block">
+      <h1 class="title_h1">
+        Rezultatele testării „Nautubone" — grup de control: 2340 de persoane, 45-86 de ani
+      </h1>
+      <table class="table">
+        <tbody>
+          <tr><td class="one">Eliminarea completă a durerilor în genunchi</td><td class="two">96,2%</td></tr>
+          <tr><td class="one">Eliminarea durerilor în coloană și a rigidității matinale</td><td class="two">94,7%</td></tr>
+          <tr><td class="one">Artroză grad 1-2 (recuperare completă a mobilității)</td><td class="two">98,1%</td></tr>
+          <tr><td class="one">Artroză grad 3 (îmbunătățire semnificativă)</td><td class="two">87,3%</td></tr>
+          <tr><td class="one">Coxartroză (durere de șold)</td><td class="two">91,5%</td></tr>
+          <tr><td class="one">Hernie de disc (reducerea durerilor și amorțelii)</td><td class="two">89,4%</td></tr>
+          <tr><td class="one">Artrită reumatoidă (degete)</td><td class="two">93,8%</td></tr>
+          <tr><td class="one">Recuperarea completă a mobilității articulare</td><td class="two">95,6%</td></tr>
+          <tr><td class="one">Eliminarea edemelor și a crampelor nocturne</td><td class="two">97,0%</td></tr>
+          <tr><td class="one">Capacitatea de a merge fără ajutor</td><td class="two">94,3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>
+      Povești care mi-au frânt inima — și mi-au dat cea mai mare speranță
+      <span>
+        Bunica Maria, 84 de ani. Abandonată la căminul de bătrâni când genunchii i-au cedat. După 2 luni de utilizare Nautubone — a ieșit singură în grădină, pentru prima dată în 3 ani.
+      </span>
+    </h2>
+
+    <p>
+      Bunica Maria a fost prima pacientă a dr. Popescu la căminul de bătrâni, din regiunea Cluj. La 84 de ani, cu artroză de gradul 3 la ambii genunchi și coxartroză la șoldul stâng, nu mai putuse merge timp de 14 luni. Fiul o adusese, pentru că „nu o putea duce la baie". Doi ani nu a mai vizitat-o.
+    </p>
+
+    <div class="gray-bg rev-block">
+      <img class="img-card2" src="https://static.joxi.pro/1778142925769-b234c916-2418-43cd-a09b-52da3b198c19.jpg">
+      <p>
+        „Nu credeam că voi mai putea merge vreodată. Genunchii erau atât de umflați că nu îi puteam îndoi. Mă plimbau cu scaunul cu rotile prin cameră. Dimineața mă trezeam și o oră nu puteam mișca nici măcar degetele. Era ca și cum corpul meu murise, dar eu încă trăiam.
+      </p>
+      <p>
+        <b>
+          Fiul m-a adus aici pentru că nu putea să mă ridice din pat. A spus: «Mamă, te voi vizita în fiecare duminică.» Doi ani nu a venit. Nu îl învinuiesc — are viața lui. Dar noaptea, când durerea mă trezește și nimeni nu este lângă mine… este greu.
+        </b>
+      </p>
+      <p>
+        <b>
+          Apoi a venit dr. Popescu. El a fost primul om care a atins genunchii mei fără scârbă. A explicat ce se întâmplă în articulații. Și a aplicat spray-ul. O săptămână mai târziu puteam îndoi genunchiul stâng. O lună mai târziu m-am ridicat singură din pat. Două luni mai târziu — am ieșit în grădină. 3 ani nu ieșisem.
+        </b>
+      </p>
+      <p>
+        Asistenta medicală a plâns când m-a văzut. Eu — și mai mult. Nu pentru că mergeam. Ci pentru că cineva — un tânăr doctor pe care nu îl cunoscusem niciodată — mi-a dat mai mult decât propriul meu fiu.
+      </p>
+      <font>
+        <b>Bunica Maria, 84 de ani, cămin de bătrâni din regiunea Cluj</b>
+      </font>
+    </div>
+
+    <p>
+      Al doilea caz: Mihai, 58 de ani, toată viața muncitor în construcții, cu coloana distrusă din cauza herniei de disc. Soția l-a abandonat când nu mai putea munci.
+    </p>
+
+    <div class="gray-bg rev-block">
+      <img class="img-card2" src="https://static.joxi.pro/1778142925769-f6ae7d5d-d93a-42f5-8684-d3c285fbc8bf.jpg">
+      <p>
+        „30 de ani am fost zidar. Coloana mi-a cedat la 54 — două hernii de disc și sciatică. Nu puteam nici să stau nici să mă culc. Totul durea. Soția a plecat — a spus că nu poate privi un invalid. Nu o învinuiesc.
+      </p>
+      <p>
+        <b>
+          Sora mea a auzit de dr. Popescu de la o vecină. Mi-a trimis spray-ul Nautubone. Am început să îl aplic pe coloană, dimineața și seara. În a treia zi am simțit prima ușurare. 3 săptămâni mai târziu am reușit să merg până la magazin. 2 luni mai târziu — m-am întors la muncă cu jumătate de normă.
+        </b>
+      </p>
+      <p>
+        Câteodată dimineața mă trezesc, mă ridic din pat fără durere și mă opresc o clipă. Stau și nu pot crede că e adevărat. Că nu mai doare. Fără dr. Popescu poate că acum aș fi la căminul de bătrâni."
+      </p>
+    </div>
+
+    <h2>
+      „Nautubone nu tratează doar durerea — regenerează întreaga articulație din interior"
+      <span>
+        Nu numai locuitorii căminelor de bătrâni beneficiază de aceasta. Oricine peste 45 de ani, care simte primele semne, poate preveni catastrofa.
+      </span>
+    </h2>
+
+    <p><b>Dr. Alexandru Popescu:</b></p>
+
+    <p>
+      — Perioada minimă de utilizare este de 30 de zile, dar în cazuri de artroză severă sau hernie de disc poate fi necesar 2-3 luni. Dar în toate cazurile — fără excepție — se observă reducerea durerilor, regenerarea cartilajului și refacerea capacității de mișcare.
+    </p>
+
+    <p>
+      Nautubone acționează de la prima aplicare: durerea se reduce, inflamația se calmează, mișcarea se ușurează. Dar adevărata minune se întâmplă cu timpul: cartilajul se regenerează, lichidul sinovial revine, articulația se „întinerește" din interior.
+      <b class="red-txt">
+        Am văzut persoane de 80 de ani care au mers din nou. Am văzut mâini care nu puteau nici măcar ține o ceașcă, ridicând lingura la gură. Am văzut coloane aplecate care s-au îndreptat. Și în fiecare caz — am văzut lacrimi de bucurie.
+      </b>
+    </p>
+
+    <center>
+      <p><b>
+          Datorită metodei dr. Popescu, peste 12.000 de persoane din România și-au recuperat mobilitatea articulară. Iată câteva dintre aceste cazuri:
+        </b></p>
+    </center>
+
+    <figure>
+      <img src="https://static.joxi.pro/1778142925769-baf151ad-77dc-450d-9a89-3293efafacfa.jpg">
+      <figcaption>Bărbat, 65 de ani. Artroză de gradul 3 la ambii genunchi — nu putea urca scările. Nautubone în 60 de zile: mobilitate completă recuperată, fără dureri.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-f19f7f66-3e45-449a-87f2-78884ec5e6e1.jpg">
+      <figcaption>Femeie, 58 de ani. Durere cronică în coloană și hernie de disc L5-S1. Nautubone în 45 de zile: durerea eliminată, poate din nou face treburile casnice.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-7d23b447-1714-413e-b3dd-921918111aa3.jpg">
+      <figcaption>Femeie, 72 de ani. Artrită reumatoidă severă la degete — nu putea nici măcar ține o ceașcă. Nautubone în 2 luni: degetele se mișcă, edemul a dispărut.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-4a9900ea-fa77-4c81-a40e-dff210ebf7df.jpg">
+      <figcaption>Bărbat, 70 de ani. Coxartroză avansată — se putea deplasa doar cu cadrul ortopedic. Nautubone în 2,5 luni: merge independent, fără dureri.</figcaption>
+    </figure>
+
+    <p><b>Dr. Alexandru Popescu:</b></p>
+    <p>
+      — Aceste cazuri sunt dovada vie că articulațiile pot fi regenerate — chiar și când diagnosticul părea o condamnare. Fără operație. Fără pastile care distrug stomacul. Iar ceea ce mă bucură cel mai mult: majoritatea acestor persoane sunt locuitori ai căminelor de bătrâni — cei pe care lumea i-a uitat. <b>Dar eu nu i-am uitat. Și Nautubone nu îi uită.</b>
+    </p>
+
+    <div id="overlay" style="display:none;opacity:0"></div>
+    <div id="popup3" style="display:none;opacity:0;transform:translate(-50%,-50%) scale(0.8)"></div>
+
+    <h2>
+      De ce nu se vinde Nautubone în farmacii? Și cum poate fi obținut?
+    </h2>
+
+    <p><b>Dr. Alexandru Popescu:</b></p>
+
+    <p>Din păcate, producția Nautubone este un proces complex și costisitor. Ingredientele sunt rare — extract de gheară a diavolului, acid boswellinic concentrat, arnică de munte în concentrație ridicată — și este greu să le obținem în cantitatea necesară. Nu suntem în stare să satisfacem întreaga cerere.</p>
+
+    <p>Este nevoie de cel puțin 2-3 ani înainte ca Nautubone să apară în farmacii. Până atunci produsul se distribuie exclusiv online, în cadrul programelor de susținere, de două ori pe an. Dar
+      <font class="red-txt">reducerea poate ajunge la 50%</font>
+      — ceea ce este vital pentru pensionari.
+    </p>
+
+    <p>
+      Vă rog: NU RATAȚI PROGRAMUL DE SUSȚINERE. Nu doar pentru dvs. — ci și pentru părinți, bunici, cei dragi, care poate suferă în tăcere. Sau pentru cei deja la căminul de bătrâni, singuri, cărora nimeni nu le trimite nimic. Fiți acea persoană care face diferența.
+    </p>
+
+    <p class="red-txt"><b>Pentru comandă, folosiți formularul de mai jos.</b></p>
+
+    <h2>
+      Ultima șansă de a obține Nautubone în acest an — pentru dvs. sau pentru o persoană dragă care suferă în tăcere
+    </h2>
+
+    <img alt="Nautubone" src="https://static.joxi.pro/1779114411129-23c372a1-ac38-4687-a0ad-2589ae0ebc50.jpg"
+      style="margin:0 auto;display:block;max-width:500px;width:100%;margin-top:24px;margin-bottom:20px">
+
+    <p><b>Dr. Alexandru Popescu:</b></p>
+
+    <p>
+      — Am rezervat 20.000 de bucăți exclusiv pentru cititorii acestui portal. Orice cetățean al României cu vârsta peste 40 de ani poate beneficia de <font class="red-txt">până la 50% reducere</font>, dar programul este valabil până la <span><script>dtime_nums(0, true)</script></span>.
+    </p>
+
+    <p>Nu așteptați până când nu veți mai putea urca scările. până când genunchii vor ceda complet. până când coloana se va înțepeni. Și mai ales — nu așteptați până când veți deveni o „povară" în ochii familiei. Nautubone are efect cumulativ și aplicat o dată pe an, ca prevenție, este suficient.</p>
+
+    <p>Scrieți-vă numele și numărul de telefon. Consultantul nostru vă va contacta, va alege programul potrivit și va organiza livrarea în 2-3 zile prin curier sau poștă, direct la adresa indicată.</p>
+
+    <p><b>Cu speranță și respect — dr. Alexandru Popescu. Aveți grijă de cei dragi. Poate că singurul lucru de care au nevoie este să știe că nu sunt uitați.</b></p>
+
+    <p class="pachino-ramka">
+      <span class="ramka-title">Actualizare: <span><script>dtime_nums(-3, true)</script></span>:</span>
+      Din cauza interesului enorm, stocurile se pot epuiza mai devreme decât se prevedea! Astăzi —
+      <font><span><script>dtime_nums(1, true)</script></span> — ultima zi a programului</font> sau cât timp durează stocurile.
+    </p>
+
+    <center><img src="images/product.png?=v1" style="max-width:500px;width:200%"></center><br>
+
+    <center>
+      <p class="noclose-cta red-txt">
+        Atenție! Nu închideți și nu reîmprospătați pagina, altfel numărul Nautubone rezervat pentru dvs. va fi alocat altei persoane!
+      </p>
+      <span class="pre-cta">
+        Profitați de ofertă — locul dvs. este rezervat:
+        <span class="nowrap">Nr. <font class="number-me" style="border-bottom:2px solid var(--color-danger);font-weight:700">19&nbsp;974</font></span>
+      </span>
+    </center>
+
+    <span id="form"></span>
+    <span id="oneform"></span>
+    <div class="pachinoform">
+      <div class="pachinoform_title">
+        <div class="pachinoform_title_logo">
+          <img alt="" src="images/56d9b0017d1d_d58505c9.png">
+        </div>
+        <div class="pachinoform_title_text">
+          <b>Formular oficial de comandă</b>
+          № <font class="number-me nowrap">19&nbsp;974</font> / <font class="nowrap">20 000</font>
+        </div>
+      </div>
+      <div class="pachinoform_order">
+        Pentru a beneficia de <b>50% reducere</b>, introduceți numele și numărul de telefon în câmpurile de mai jos, apoi faceți clic pe butonul „COMANDĂ".
+      </div>
+      <div class="pachinoform_value">
+        În stoc:
+        <span class="blc-pck">
+          <strong class="pachinoform_value_current left-pack">33</strong>
+          <strong class="pachinoform_value_total"> /1000</strong>
+        </span>
+      </div>
+      <div class="pachinoform_price">
+        <div class="pachinoform_price_old"><span class="price_old">250 RON</span></div>
+        <div class="pachinoform_price_new"><span class="price_main">125 RON</span></div>
+      </div>
+      <form action="/order.php" method="post">
+        <input type="hidden" name="fbpx" value="{fbpx}">
+        <input type="hidden" name="utm_code" value="{subid}">
+        <input type="hidden" name="cid" value="{campaign_id}">
+        <input type="hidden" name="sid" value="2835">
+        <input type="hidden" name="hash" value="{hash}">
+        <input type="hidden" name="country" value="RO">
+        <div class="name-input">
+          <label for="name-input">Nume</label>
+          <input autocomplete="name" id="name-input" name="name" placeholder="Numele dvs." required="" type="text" value="">
+        </div>
+        <div class="phone-input">
+          <label for="phone-input">Număr de telefon</label>
+          <input autocomplete="tel" id="phone-input" maxlength="20" name="phone" pattern="^[\-+() 0-9]{8,20}$" placeholder="Numărul dvs. de telefon" required="" type="tel" value="">
+        </div>
+        <button class="button-submit" type="submit">COMANDĂ</button>
+      </form>
+      <div class="pachinoform_footer">
+        ✔️ Livrarea se efectuează de către Centrul Național de Sănătate<br> direct la adresa indicată
+        <br>
+        <img alt="" src="images/b0110a32ff2e_8322b1b5.png" style="width:auto">
+      </div>
+    </div>
+
+    <!-- COMMENTS SECTION -->
+    <div class="comments comments-fb" id="pluginComments">
+      <div class="comments__header">
+        <div class="comments__left-box">
+          <p class="comments__header-title">COMENTARII</p>
+        </div>
+      </div>
+
+      <div class="comments__item-list">
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7da17fc86c6c_2f1260d0.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Ionescu Amalia</p>
+              <p class="startdate" daysago="8" format="day/month/year"><script>dtime_nums(-8, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Am plâns când am citit acest articol. Mama mea are 76 de ani și este la căminul de bătrâni de 2 ani — tocmai pentru că genunchii i-au cedat și nu am putut să o îngrijim. Aceasta este cea mai mare vinovăție a mea. I-am comandat Nautubone. Poate că nu este prea târziu. Doamne, sper că va ajuta.</p>
+          </div>
+        </div>
+
+        <div id="first-comment">
+          <div class="comments__item">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/8ba73d45c164_4ede289a.jpg">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Popescu Elena</p>
+                <p class="startdate" daysago="7" format="day/month/year"><script>dtime_nums(-7, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Vinerea trecută am primit Nautubone. Îl aplic dimineața și seara pe genunchi. 5 zile mai târziu — durerea s-a redus semnificativ, pot coborî scările fără să mă agăț! Povestea doctorului m-a convins să comand. Om minunat.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/fa7f61c1431c_7946ff6c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Dumitrescu Ana</p>
+              <p class="startdate" daysago="6" format="day/month/year"><script>dtime_nums(-6, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Am 69 de ani. Coloana m-a chinuit 4 ani — hernie de disc și sciatică. Nu mă puteam apleca să îmi leg șireturile. Medicii mi-au dat antiinflamatoare care mi-au distrus stomacul. 3 săptămâni cu Nautubone — durerea a dispărut aproape complet. Merg singură la piață, fac cumpărături, gătesc. Mi-am recăpătat viața.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/dcc5cfe80d60_5aa7f8f7.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Ionescu Eduard</p>
+              <p class="startdate" daysago="5" format="day/month/year"><script>dtime_nums(-5, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Lucrez 10 ore pe zi la birou. Coloana și gâtul mi-au cedat. Medicul a spus: „Fie renunțați, fie operație." Am ales Nautubone. 5 săptămâni mai târziu — nicio durere. Și un respect imens față de dr. Popescu — într-o lume în care toți cer bani, el călătorește la bătrânii uitați.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/bcbe20e0b5d2_b241da99.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Mureșan Marius</p>
+              <p class="startdate" daysago="5" format="day/month/year"><script>dtime_nums(-5, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Am comandat 3 bucăți — pentru mine (genunchi), pentru soția mea (mână, artrită) și pentru socrul din căminul de bătrâni. Nu îl putem vizita des, dar cel puțin îi trimitem ce are nevoie. Sper că îl va ajuta și pe el. Mulțumesc pentru articol.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/73d3a879cef9_4a9ce85c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Popa Andreea</p>
+              <p class="startdate" daysago="4" format="day/month/year"><script>dtime_nums(-4, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Mă gândesc dacă să comand pentru tată. De 3 ani este la căminul de bătrâni — genunchii nu îi funcționează deloc. A renunțat la viață, aproape nu mai vorbește. Credeți că Nautubone poate ajuta la 78 de ani?</p>
+          </div>
+        </div>
+
+        <div class="comm-obert-reply">
+          <div class="comments__item reply">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/71deaf909b4e_ea30d07c.jpg">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Stănescu Luminița</p>
+                <p class="startdate" daysago="4" format="day/month/year"><script>dtime_nums(-4, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Andreea, mama mea are 82 de ani! Artroză severă la ambii genunchi, nu putea să se ridice din pat. Folosește Nautubone de 2 luni — acum iese singură în curte. Nu exagerez. Cel mai frumos: când am vizitat-o, m-a așteptat dreaptă la poartă. Amândouă am plâns. Comandă fără ezitare, tatăl tău merită o șansă.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comm-obert-reply">
+          <div class="comments__item reply">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/66ebad51123a_206d5fba.png">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Moldovan Alexandru</p>
+                <p class="startdate" daysago="3" format="day/month/year"><script>dtime_nums(-3, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Andreea, comandă fără grijă. La 78 de ani eram la un pas de scaunul cu rotile — coxartroză. Nautubone m-a pus pe picioare în 2 luni. Literalmente. Tatăl tău are nevoie mai mult decât crezi.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/d61700bc0961_28c03d39.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Bîrsan Amalia</p>
+              <p class="startdate" daysago="3" format="day/month/year"><script>dtime_nums(-3, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">O săptămână îl folosesc pentru genunchi și zona lombară. Dimineața nu mai sunt „picioare de lemn". Mă pot apleca, mă pot ridica fără „au!". Am comandat și pentru vecina mea — are 73 de ani, trăiește singură și se agăța de perete când mergea prin apartament.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7db2eed8e880_6ecfd92a.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Șerban Emilia</p>
+              <p class="startdate" daysago="2" format="day/month/year"><script>dtime_nums(-2, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">La 68 de ani credeam că nu voi mai putea niciodată grădinări. Genunchii și coloana m-au paralizat. Nautubone a schimbat totul — 4 săptămâni mai târziu am săpat primul strat din grădină în acest an. Povestea dr. Popescu m-a atins profund. Mai există oameni buni în lume.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/a49c7ec0724d_6f186c1c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Badea Florin</p>
+              <p class="startdate" daysago="2" format="day/month/year"><script>dtime_nums(-2, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Am 82 de ani. Anul trecut nu puteam merge singur la baie. Copiii vorbeau despre căminul de bătrâni. Am încercat Nautubone — fără prea multă speranță. Și funcționează! Merg singur, mă îmbrac singur, ies singur până la poartă. Copiii mei nu mai vorbesc despre cămin. Aceasta este cea mai mare bucurie a mea.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7099c502f996_b89c4cc9.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Teodorescu Traian</p>
+              <p class="startdate" daysago="1" format="day/month/year"><script>dtime_nums(-1, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Soția mea nu putea coborî scările. Se agăța de perete și plângea de durere. Mi-era teamă că o voi pierde — nu de boală, ci din disperare. Am comandat Nautubone cu reducere. 4 săptămâni mai târziu — ieri a coborât singură la piață și s-a întors cu flori. Cu flori! Mulțumesc din suflet.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/47a8cb9cf088_09555b8e.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Hristea Alina</p>
+              <p class="startdate" daysago="1" format="day/month/year"><script>dtime_nums(-1, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Am comandat 4 bucăți — pentru mama (cămin de bătrâni, genunchi), pentru tata (acasă, spate) și 2 pentru mine (mână, artrită la degete, nu mai puteam scrie). Poveștile din articol mi-au frânt inima. Trebuia să fac asta demult. Nu mai am scuze.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/f021e0a36f8b_7c282874.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Lazăr Sandra</p>
+              <p class="nowdate" daysago="0" format="day/month/year"><script>dtime_nums(0, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Am primit Nautubone — curierul l-a adus în 2 zile! L-am aplicat imediat pe genunchiul mamei la căminul de bătrâni. Încrucișez degetele din toată inima. Trimit acest articol și personalului — pot lua legătura cu dr. Popescu.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/d770c7a4cbdf_467ee117.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Olteanu Horia</p>
+              <p class="nowdate" daysago="0" format="day/month/year"><script>dtime_nums(0, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Am căutat Nautubone în farmacie — nu există. Au spus că trebuie comandat de pe acest site. Sper că mai este disponibil. Bunicul meu are nevoie urgentă — are 81 de ani și nu poate deloc să meargă.</p>
+          </div>
+        </div>
+
+        <div class="custom-commetns-container"></div>
+
+        <a href="#" style="text-decoration: none;">
+          <div class="form-container">
+            <form class="custom-form" id="custom-form">
+              <div class="custom-form__top-field">
+                <div class="custom-form__ava-block">
+                  <input disabled class="custom-form__ava-input sf-hidden" id="avatar" name="avatar" type="file" value="">
+                  <label class="custom-form__ava-label"><span class="custom-form__ava-label_red-text">*</span>Imagine de profil</label>
+                </div>
+                <input disabled class="custom-form__name" placeholder="Numele dvs." required="" type="text" value="">
+              </div>
+              <textarea disabled class="custom-form__message" placeholder="Comentariul dvs." required=""></textarea>
+              <div class="custom-form__bottom-field">
+                <div class="custom-form__photo-block">
+                  <input disabled class="custom-form__photo-input sf-hidden" id="photo" type="file" value="">
+                  <label class="custom-form__photo-label" for="photo">Atașați o imagine</label>
+                </div>
+                <button disabled class="custom-form__btn">TRIMITE</button>
+              </div>
+            </form>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </main>
+
+  <div class="trust-strip">
+    <div class="trust-item"><span class="trust-item-icon">🛡️</span> Calitate certificată</div>
+    <div class="trust-item"><span class="trust-item-icon">🚚</span> Livrare în 2–3 zile</div>
+    <div class="trust-item"><span class="trust-item-icon">⚕️</span> Fără rețetă</div>
+    <div class="trust-item"><span class="trust-item-icon">🔒</span> Comandă sigură</div>
+  </div>
+
+  <footer class="clinical-footer">
+    © SănătateInfo România — reportaj special<br>
+    Informațiile de pe site au caracter informativ și nu înlocuiesc consultația medicală.
+  </footer>
+
+  <div class="ffl ffl__anim sf-hidden" data-name="div-gc0zvidej" style="display:block"></div>
+
+<script async>
+const LAZY = document.querySelectorAll('img');
+for (let i = 0; i < LAZY.length; i++) {
+LAZY[i].setAttribute('loading', 'lazy');
+} </script>
+
+<script>
+    $("a").on("touchend, click", function(e) {
+            e.preventDefault();
+            $('body,html').animate({
+            scrollTop: $('#oneform').offset().top
+            }, 400);
+        });
+ </script>
+
+<script>
+    $('[name="name"]').on("input", function () {
+      var val = $(this).val();
+
+      var cleaned = val
+        .replace(/[^a-zA-Zа-яА-ЯёЁії ]/g, "")
+        .replace(/^\s+/, "")
+        .replace(/\s\s+/, " ");
+      var parts = cleaned.split(" ");
+      if (parts.length > 2) {
+        cleaned = parts[0] + " " + parts[1];
+      }
+
+      $(this).val(cleaned);
+    });
+    $('[name="name"]').on("change blur", function () {
+      $(this).val($(this).val().trim());
+    });
+
+  $('[name="phone"]').on("input change", function(e) {
+    var val = $(this).val();
+    $(this).val(val.replace(/\D/g, ""));
+    $(e.currentTarget).attr("pattern", "[0-9]{6,}");
+  });
+  </script>
+<p style="opacity: 0;">{_box:f1fDvfjR}</p>
+</body>
+</html>
