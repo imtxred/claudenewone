@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <meta charset="utf-8">
+  <title>«Dinadalaw ko ang mga hindi na dinadalaw ng iba» — ang batang Pilipinong doktor na nagpapagaling sa mga kasukasuan ng matatandang iniwan sa mga nursing home</title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="no-cache" http-equiv="Cache-Control">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="no-referrer" name="referrer">
+  <meta content="noindex, nofollow" name="robots">
+
+  <link rel="icon" href="images/prod.png">
+
+  <style>
+    :root {
+      --color-primary: #0a5c9e;
+      --color-primary-dark: #084678;
+      --color-primary-light: #e8f2fa;
+      --color-accent: #0284c7;
+      --color-danger: #c0392b;
+      --color-danger-light: #fdecea;
+      --color-success: #1e8449;
+      --color-success-light: #e8f5ee;
+      --color-warning: #b7791f;
+      --color-text: #1a2b42;
+      --color-text-muted: #4a5a70;
+      --color-text-light: #6b7a8f;
+      --color-bg: #ffffff;
+      --color-bg-soft: #f7fafc;
+      --color-bg-alt: #eef4f9;
+      --color-border: #d9e2ec;
+      --color-border-soft: #e4ebf2;
+      --shadow-sm: 0 1px 2px rgba(10, 92, 158, 0.04), 0 1px 3px rgba(10, 92, 158, 0.06);
+      --shadow-md: 0 4px 12px rgba(10, 92, 158, 0.08), 0 2px 4px rgba(10, 92, 158, 0.04);
+      --shadow-lg: 0 10px 25px rgba(10, 92, 158, 0.10), 0 4px 10px rgba(10, 92, 158, 0.05);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-serif: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin:0; padding:0; font-family:var(--font-sans); font-size:17px; line-height:1.65; color:var(--color-text); background:var(--color-bg-soft); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    .clinical-topbar { background:var(--color-primary-dark); color:#fff; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; padding:8px 16px; text-align:center; font-weight:500; }
+    .clinical-topbar::before { content:"⚕ "; margin-right:6px; }
+    .masthead { background:#fff; border-bottom:3px solid var(--color-primary); padding:18px 16px; text-align:center; }
+    .masthead-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
+    .masthead-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--font-serif); font-weight:700; font-size:22px; color:var(--color-primary-dark); letter-spacing:-0.01em; }
+    .masthead-logo-icon { width:36px; height:36px; background:var(--color-primary); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; font-size:20px; font-weight:700; }
+    .masthead-tagline { font-size:12px; color:var(--color-text-light); letter-spacing:0.08em; text-transform:uppercase; border-left:1px solid var(--color-border); padding-left:14px; font-weight:500; }
+    @media (max-width:560px) { .masthead-tagline { border-left:0; padding-left:0; font-size:11px; width:100%; border-top:1px solid var(--color-border); padding-top:8px; margin-top:4px; } }
+    header { max-width:900px; margin:0 auto; padding:0; }
+    .bg-image { text-align:center; }
+    .bg-image img { max-width:100%; height:auto; display:inline-block; }
+    .text-container { display:block; }
+    .h1-bg { position:relative; max-width:900px; margin:0 auto; padding:28px 22px 20px; background:#fff; border-bottom:1px solid var(--color-border); }
+    .h1-bg::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%); }
+    .title_h1 { font-family:var(--font-serif); font-size:26px; line-height:1.25; color:var(--color-text); font-weight:700; margin:0 0 14px; letter-spacing:-0.01em; }
+    .head-one-part { color:var(--color-danger); }
+    .head-two-part { display:block; }
+    .head-main-date { font-size:13px; color:var(--color-text-light); padding:0; display:flex; align-items:center; gap:8px; margin-bottom:16px; padding-bottom:14px; border-bottom:1px dashed var(--color-border); }
+    .head-main-date::before { content:"📅"; font-size:14px; }
+    .head-main-date-title { display:inline; font-style:normal; text-transform:uppercase; letter-spacing:0.05em; font-weight:500; }
+    .main-subtitle { display:block; padding:16px 18px; color:var(--color-text); font-size:17px; border-radius:var(--radius-md); font-weight:500; border-left:4px solid var(--color-primary); background:var(--color-primary-light); line-height:1.55; font-style:normal; margin:0; box-shadow:none; }
+    @media (max-width:640px) { .title_h1 { font-size:20px; } .main-subtitle { font-size:15px; padding:14px 14px; } .h1-bg { padding:22px 16px 18px; } }
+    main { max-width:900px; margin:0 auto; padding:24px 22px 40px; background:#fff; border-left:1px solid var(--color-border-soft); border-right:1px solid var(--color-border-soft); }
+    @media (max-width:640px) { main { padding:18px 14px 30px; } }
+    main p { margin:0 0 16px; color:var(--color-text); }
+    main img { max-width:100%; height:auto; border-radius:var(--radius-md); }
+    main h2 { font-family:var(--font-serif); font-size:24px; line-height:1.3; font-weight:700; color:var(--color-primary-dark); margin:32px 0 16px; padding-bottom:12px; border-bottom:2px solid var(--color-primary-light); letter-spacing:-0.01em; }
+    main h2 span { display:block; font-family:var(--font-sans); font-size:16px; font-weight:500; color:var(--color-text-muted); margin-top:10px; margin-bottom:0; line-height:1.5; }
+    main h3 { font-family:var(--font-serif); font-size:19px; color:var(--color-primary-dark); margin:22px 0 12px; font-weight:600; }
+    @media (max-width:640px) { main h2 { font-size:19px; } main h2 span { font-size:15px; } }
+    main ul { padding-left:0; list-style:none; margin:16px 0; background:var(--color-bg-soft); border:1px solid var(--color-border-soft); border-radius:var(--radius-md); padding:14px 18px 14px 20px; }
+    main ul li { position:relative; padding-left:22px; margin-bottom:8px; line-height:1.5; }
+    main ul li::before { content:""; position:absolute; left:0; top:10px; width:10px; height:10px; border:2px solid var(--color-primary); border-radius:50%; background:#fff; }
+    main ul li:last-child { margin-bottom:0; }
+    .red-txt { color:var(--color-danger); font-weight:600; }
+    .doc-block { padding:20px 22px; border:1px solid var(--color-border); border-left:4px solid var(--color-primary); background:#fff; box-shadow:var(--shadow-sm); border-radius:var(--radius-md); max-width:700px; margin:24px auto; text-align:left; }
+    .doc-block img { border-radius:var(--radius-md); margin-bottom:14px; }
+    .doc-block p { padding:0; margin:0 0 12px; font-size:16px; line-height:1.6; }
+    .doc-block p:last-child { margin-bottom:0; }
+    .doc-block p b { color:var(--color-primary-dark); }
+    figure { margin:22px 0; padding:0; text-align:center; }
+    figure img { border-radius:var(--radius-md); box-shadow:var(--shadow-md); max-width:100%; height:auto; }
+    figure figcaption { margin-top:12px; padding:10px 14px; font-size:14px; line-height:1.5; color:var(--color-text-muted); background:var(--color-bg-soft); border-left:3px solid var(--color-primary); border-radius:0 var(--radius-sm) var(--radius-sm) 0; text-align:left; font-style:italic; }
+    figure.cap-bold figcaption { font-style:normal; font-weight:500; color:var(--color-text); }
+    .img-card { border:1px solid var(--color-border); padding:6px; background:#fff; box-shadow:var(--shadow-md); border-radius:var(--radius-md); }
+    .img-card2 { border:1px solid var(--color-border); padding:6px; background:#fff; border-radius:var(--radius-md); }
+    .pachino-ramka312-block { margin:24px 0; }
+    .pachino-ramka312 { background:var(--color-danger-light); border:1px solid rgba(192,57,43,0.25); border-left:4px solid var(--color-danger); border-radius:var(--radius-md); padding:18px 20px; color:var(--color-text); font-weight:500; box-shadow:none; margin:0; font-size:16px; line-height:1.6; position:relative; }
+    .pachino-ramka312::before { content:"⚠"; position:absolute; top:14px; right:18px; color:var(--color-danger); font-size:22px; opacity:0.7; }
+    .pachino-ramka312 .obertka-1 { display:block; }
+    .rev-block { margin:24px 0; padding:20px 22px; background:var(--color-primary-light); border:1px solid rgba(10,92,158,0.15); border-left:4px solid var(--color-primary); border-radius:var(--radius-md); box-shadow:none; }
+    .rev-block p { font-size:16px; line-height:1.6; margin-bottom:12px; }
+    .rev-block img { border-radius:var(--radius-md); margin-bottom:14px; max-width:100%; }
+    .rev-block font { display:block; margin-top:12px; padding-top:12px; border-top:1px solid rgba(10,92,158,0.15); color:var(--color-primary-dark); font-size:15px; }
+    .rev-block font b { font-weight:600; }
+    .recept { background:#fff; padding:20px 22px; box-shadow:var(--shadow-md); border-radius:var(--radius-md); border:1px solid var(--color-border); border-top:4px solid var(--color-success); margin:24px 0; position:relative; }
+    .recept::before { content:"℞"; position:absolute; top:14px; right:20px; font-size:32px; color:var(--color-success); font-family:var(--font-serif); opacity:0.4; line-height:1; }
+    .recept p b { color:var(--color-primary-dark); font-size:16px; }
+    .my-ul-0-green { margin:12px 0 0 !important; padding:0 !important; background:transparent !important; border:0 !important; list-style:none; }
+    .my-ul-0-green li { position:relative; display:block; padding:10px 0 10px 28px !important; margin:0 !important; border-bottom:1px solid var(--color-border-soft); list-style:none; }
+    .my-ul-0-green li::before { content:"✓" !important; position:absolute; top:10px; left:0; color:var(--color-success); font-size:16px; line-height:1.5; font-weight:700; border:0 !important; background:transparent !important; width:auto !important; height:auto !important; border-radius:0 !important; }
+    .my-ul-0-green li:last-child { border-bottom:0; }
+    .my-ul-0-green li b { color:var(--color-primary-dark); font-size:16px; }
+    .my-ul-0-green font { font-size:14px; display:block; margin-top:4px; color:var(--color-text-muted); }
+    .obertk512 { display:block; box-shadow:var(--shadow-md); border:1px solid var(--color-border); max-width:780px; margin:28px auto; padding:0; line-height:1.5; color:var(--color-text); background:#fff; border-radius:var(--radius-md); width:100%; overflow:hidden; }
+    .obertk512 h1 { font-family:var(--font-serif); line-height:1.3; margin:0; color:#fff; font-size:18px; padding:16px 20px; font-weight:600; background:var(--color-primary); border:0; border-radius:0; }
+    .block-offer-actions-block { padding:10px 22px 22px; border:0; }
+    .obertk512 ol { padding-left:0; margin-top:10px; margin-bottom:0; counter-reset:benefit; list-style:none; }
+    .obertk512 li { line-height:1.4; padding:16px 0 16px 50px; border-bottom:1px solid var(--color-border-soft); position:relative; counter-increment:benefit; }
+    .obertk512 li::before { content:counter(benefit); position:absolute; left:0; top:14px; width:36px; height:36px; background:var(--color-primary-light); color:var(--color-primary-dark); border-radius:50%; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; border:2px solid var(--color-primary); }
+    .obertk512 li::marker { content:none; }
+    .obertk512 li:last-child { border-bottom:0; }
+    .obertk512 li font { line-height:1.3; color:var(--color-primary-dark); text-align:left; font-weight:600; font-size:17px; display:block; margin-bottom:6px; }
+    .block-offer-actions-block li span { display:block; font-size:15px; line-height:1.5; font-weight:400; color:var(--color-text-muted); margin:0; padding:0; border-bottom:0; }
+    .table-block { display:block; box-shadow:var(--shadow-md); border:1px solid var(--color-border); border-radius:var(--radius-md); max-width:700px; margin:28px auto; padding:0; font-size:16px; line-height:1.5; color:var(--color-text); background:#fff; width:100%; overflow:hidden; }
+    .table-block h1 { font-family:var(--font-serif); line-height:1.35; margin:0; color:#fff; font-size:17px; padding:16px 20px; font-weight:600; background:var(--color-primary); border:0; border-radius:0; }
+    .table { width:100%; max-width:100%; border-collapse:collapse; font-family:var(--font-sans); margin:0; background:#fff; }
+    .table tr:nth-child(even) td { background:var(--color-bg-soft) !important; }
+    .table td { border:0 !important; border-bottom:1px solid var(--color-border-soft) !important; padding:12px 16px !important; vertical-align:middle; background:#fff !important; }
+    .table tr:last-child td { border-bottom:0 !important; }
+    .table td.one { text-align:left; width:75%; font-size:15px; font-weight:500; color:var(--color-text); }
+    .table td.two { font-size:18px; color:var(--color-success); text-align:right; font-weight:700; width:25%; white-space:nowrap; }
+    @media (max-width:560px) { .table td.one { font-size:14px; } .table td.two { font-size:16px; } .table td { padding:10px 12px !important; } }
+    .pachino-ramka2 { text-align:left; color:var(--color-success); font-weight:600; border:1px solid rgba(30,132,73,0.25); border-left:4px solid var(--color-success); border-radius:var(--radius-md); padding:18px 20px; background:var(--color-success-light); box-shadow:none; margin:20px 0; font-size:16px; line-height:1.55; }
+    .pachino-ramka { border:1px solid rgba(183,121,31,0.3); border-left:4px solid var(--color-warning); padding:18px 20px; border-radius:var(--radius-md); background:#fff9ef; margin:20px 0; font-size:16px; line-height:1.55; position:relative; }
+    .pachino-ramka::before { content:"🕐"; position:absolute; top:14px; right:18px; font-size:22px; opacity:0.8; }
+    .ramka-title { display:block; color:var(--color-warning); padding:0; margin-bottom:10px; font-weight:700 !important; background:transparent; text-transform:uppercase; font-size:13px; letter-spacing:0.06em; }
+    .pachino-ramka font { color:var(--color-danger); font-weight:600; }
+    .noclose-cta { font-size:15px; max-width:780px; margin:16px auto; display:block; background:var(--color-danger-light); border:1px solid rgba(192,57,43,0.2); padding:12px 16px; border-radius:var(--radius-md); line-height:1.5; }
+    .pre-cta { display:block; color:var(--color-success); font-weight:500; font-size:16px; margin-top:12px; }
+    .nowrap { white-space:nowrap; }
+    .pachinoform { padding:0; font-size:17px; line-height:1.5; color:var(--color-text); border:1px solid var(--color-border); background:#fff; display:block; border-radius:var(--radius-lg); width:100%; max-width:780px; margin:24px auto; box-shadow:var(--shadow-lg); overflow:hidden; }
+    .pachinoform_title { display:flex; gap:16px; max-width:none; align-self:stretch; text-align:left; background:var(--color-primary); color:#fff; padding:20px 24px; align-items:center; }
+    .pachinoform_title_logo { flex-shrink:0; background:#fff; padding:6px; border-radius:50%; width:56px; height:56px; display:flex; align-items:center; justify-content:center; }
+    .pachinoform_title_logo img { max-width:100%; height:auto; }
+    .pachinoform_title_text { align-self:center; color:#fff; font-size:15px; line-height:1.4; }
+    .pachinoform_title_text>b { display:block; line-height:1.3; font-size:17px; margin-bottom:4px; color:#fff; font-weight:600; }
+    .pachinoform_order { max-width:none; font-weight:500; font-size:15px; margin:0; text-align:center; padding:16px 24px; background:var(--color-primary-light); border-bottom:1px solid var(--color-border-soft); color:var(--color-text); line-height:1.5; }
+    .pachinoform_order>b { color:var(--color-danger); font-weight:700; }
+    .pachinoform_value { display:flex; color:var(--color-text); font-weight:600; font-size:15px; align-items:center; justify-content:center; padding:16px 24px 0; flex-wrap:wrap; gap:10px; }
+    .pachinoform_value_current { border:2px solid var(--color-danger); color:var(--color-danger); line-height:1; font-size:22px; padding:6px 18px; margin:0 6px; border-radius:var(--radius-sm); background:var(--color-danger-light); font-weight:700; }
+    .pachinoform_value_total { font-size:18px; color:var(--color-text-muted); }
+    .pachinoform_price { display:flex; align-items:center; justify-content:center; gap:24px; margin:20px 0 0; padding:0 24px; }
+    .pachinoform_price_old span { display:block; font-size:24px; font-weight:600; letter-spacing:-0.5px; color:var(--color-text-light); position:relative; line-height:1; }
+    .pachinoform_price_old span::before { position:absolute; content:""; left:-4px; top:50%; right:-4px; border-top:2px solid var(--color-danger); transform:rotate(-12deg); }
+    .pachinoform_price_new span { display:inline-block; background:var(--color-success); color:#fff; text-shadow:none; font-size:32px; padding:8px 20px; font-weight:700; line-height:1; border-radius:var(--radius-sm); box-shadow:0 4px 12px rgba(30,132,73,0.25); }
+    .pachinoform form { padding:22px 24px 20px; }
+    .pachinoform .name-input, .pachinoform .phone-input { color:var(--color-text); font-size:15px; margin-bottom:14px; }
+    .pachinoform .name-input label, .pachinoform .phone-input label { font-weight:500; font-size:14px; color:var(--color-text-muted); margin-bottom:6px; display:block; text-transform:uppercase; letter-spacing:0.04em; }
+    .pachinoform .name-input input, .pachinoform .phone-input input { font:inherit; color:var(--color-text); box-sizing:border-box; width:100%; border-radius:var(--radius-sm); padding:12px 16px; min-width:0; background:#fff; border:1.5px solid var(--color-border); font-size:16px !important; transition:border-color 0.15s ease, box-shadow 0.15s ease; }
+    .pachinoform .name-input input:focus, .pachinoform .phone-input input:focus, .pachinoform input:focus { outline:0; border-color:var(--color-primary); box-shadow:0 0 0 3px rgba(10,92,158,0.15); }
+    .pachinoform .button-submit { text-align:center; width:100%; margin:6px auto 0; text-decoration:none; border-radius:var(--radius-sm); color:#fff; border:0; padding:16px 20px; cursor:pointer; background:var(--color-primary); font-size:17px; line-height:1.3; font-weight:600; letter-spacing:0.02em; text-transform:uppercase; transition:background 0.15s ease, transform 0.05s ease; box-shadow:0 4px 12px rgba(10,92,158,0.25); font-family:var(--font-sans); }
+    .pachinoform .button-submit:hover { background:var(--color-primary-dark); }
+    .pachinoform .button-submit:active { transform:translateY(1px); }
+    .pachinoform .button-submit:focus { outline:0; box-shadow:0 0 0 3px rgba(10,92,158,0.25); }
+    .pachinoform ::placeholder { color:var(--color-text-light); opacity:1; font-size:15px !important; }
+    .pachinoform_footer { text-align:center; color:var(--color-text-muted); font-size:13px; padding:14px 24px 20px; background:var(--color-bg-soft); border-top:1px solid var(--color-border-soft); line-height:1.5; }
+    .pachinoform_footer img { margin-top:10px; max-width:100%; height:auto; opacity:0.85; }
+    @media (max-width:500px) { .pachinoform_title { gap:10px; padding:16px 18px; } .pachinoform_title_text { font-size:13px; } .pachinoform_title_text>b { font-size:15px; } .pachinoform_value { flex-wrap:wrap; justify-content:center; font-size:14px; } .pachinoform_price_new span { font-size:26px; } .pachinoform_price_old span { font-size:20px; } .pachinoform form { padding:18px 18px 18px; } .pachinoform_order { padding:14px 18px; font-size:14px; } .blc-pck { display:block; width:100%; text-align:center; margin-top:8px; } .pachinoform_value_current { margin:0; } }
+    .comments { max-width:900px; margin:32px auto 20px; background:#fff; border-radius:var(--radius-md); border:1px solid var(--color-border); overflow:hidden; }
+    .comments__header { padding:16px 20px; background:var(--color-primary); color:#fff; display:flex; align-items:center; justify-content:space-between; }
+    .comments__header-title { font-family:var(--font-serif); font-size:18px; font-weight:600; margin:0; color:#fff; letter-spacing:0.02em; }
+    .comments__item-list { padding:8px 20px; }
+    .comments__item { padding:16px 0; border-bottom:1px solid var(--color-border-soft); }
+    .comments__item:last-child { border-bottom:0; }
+    .comments__item-header { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+    .comments__item-avatar { width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; border:1px solid var(--color-border); }
+    .comments__item-info { flex:1; min-width:0; }
+    .comments__item-name { font-weight:600; font-size:15px; color:var(--color-primary-dark); margin:0 0 2px; }
+    .comments__item-info p:last-child, .comments__item-info .startdate, .comments__item-info .nowdate { font-size:12px; color:var(--color-text-light); margin:0; }
+    .comments__item-body { padding-left:56px; }
+    .comments__item-content { font-size:15px; line-height:1.55; color:var(--color-text); margin:0; }
+    .comments__item-content img { border-radius:var(--radius-sm); margin-top:10px; }
+    .comm-obert-reply { padding-left:28px; border-left:2px solid var(--color-primary-light); margin-left:8px; }
+    .comm-obert-reply .comments__item.reply { border-bottom:1px solid var(--color-border-soft); }
+    @media (max-width:560px) { .comments__item-body { padding-left:0; } .comm-obert-reply { padding-left:16px; } }
+    .form-container { max-width:900px; margin:0 auto; padding:0 20px; }
+    .custom-form { max-width:100%; margin:0 auto; padding:18px; box-shadow:var(--shadow-sm); border:1px solid var(--color-border); box-sizing:border-box; font-family:var(--font-sans) !important; display:flex; flex-direction:column; gap:12px; background:var(--color-bg-soft); border-radius:var(--radius-md); }
+    .custom-form__top-field { display:flex; gap:16px; align-items:center; }
+    .custom-form__ava-block { position:relative; width:54px; height:54px; overflow:hidden; border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px dashed var(--color-border); transition:0.2s; flex:0 0 auto; background:#fff; }
+    .custom-form__ava-label { font-size:11px; text-align:center; line-height:1.2; cursor:pointer; font-family:inherit; font-weight:400; color:var(--color-text-light); padding:4px; }
+    .custom-form__ava-label_red-text { color:var(--color-danger); }
+    .custom-form__name { width:100%; max-width:320px; display:inline-block; outline:none; border:1.5px solid var(--color-border); padding:10px 14px; font-size:14px; height:42px; box-sizing:border-box; font-family:inherit; border-radius:var(--radius-sm); background:#fff; }
+    .custom-form__message { resize:none; width:100%; outline:none; border:1.5px solid var(--color-border); padding:12px 14px; min-height:90px; font-size:14px; line-height:1.5; font-family:inherit; box-sizing:border-box; border-radius:var(--radius-sm); background:#fff; }
+    .custom-form__bottom-field { display:flex; flex-direction:row; gap:14px; align-items:center; flex-wrap:wrap; }
+    .custom-form__btn { outline:none; padding:10px 24px; background:var(--color-primary); color:#fff; font-weight:600; font-size:14px; transition:background 0.15s ease; cursor:pointer; text-transform:uppercase; border:0; font-family:var(--font-sans); border-radius:var(--radius-sm); text-decoration:none !important; letter-spacing:0.04em; }
+    .custom-form__btn:hover { background:var(--color-primary-dark); }
+    .custom-form__photo-label { cursor:pointer; font-size:13px; font-weight:400; border:none; color:var(--color-primary); text-decoration:underline; }
+    .trust-strip { max-width:900px; margin:0 auto; background:#fff; border:1px solid var(--color-border-soft); border-top:0; padding:20px 22px; display:flex; flex-wrap:wrap; gap:18px; justify-content:space-around; align-items:center; }
+    .trust-item { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--color-text-muted); font-weight:500; }
+    .trust-item-icon { color:var(--color-primary); font-size:18px; }
+    .clinical-footer { max-width:900px; margin:0 auto 0; padding:24px 22px 36px; background:#fff; border:1px solid var(--color-border-soft); border-top:1px solid var(--color-border); text-align:center; font-size:12px; color:var(--color-text-light); line-height:1.6; }
+    .clinical-footer a { color:var(--color-primary); text-decoration:none; }
+    .product-center { display:block; max-width:220px; width:100%; margin:16px auto; }
+    #overlay { position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:100; transition:opacity 0.3s ease; }
+    #popup3 { background-size:cover; background-position:center; position:fixed; top:50%; left:50%; padding:20px; background-color:white; box-shadow:var(--shadow-lg); transition:opacity 0.3s ease, transform 0.3s ease; max-width:800px; width:93%; height:87%; overflow-y:auto; max-height:100vh; z-index:999999; }
+    body input[name="phone"] { background-repeat:no-repeat !important; background-position:left 15px center !important; }
+    main center { display:block; text-align:center; }
+    .sf-hidden { display:none !important; }
+    .quote-inline { margin:20px 0; padding:16px 20px; background:var(--color-bg-soft); border-left:4px solid var(--color-text-light); border-radius:0 var(--radius-md) var(--radius-md) 0; font-style:italic; color:var(--color-text-muted); font-size:16px; line-height:1.6; }
+    .quote-inline .quote-name { display:block; margin-top:10px; font-style:normal; font-weight:600; color:var(--color-primary-dark); font-size:14px; }
+    @media (max-width:480px) { body { font-size:16px; } main p { font-size:16px; } .doc-block { padding:16px; } .rev-block { padding:16px; } .recept { padding:16px; } .block-offer-actions-block { padding:6px 16px 16px; } .obertk512 li { padding-left:44px; } .obertk512 li::before { width:30px; height:30px; font-size:14px; } }
+    @keyframes example { 0% { opacity:0; } 100% { opacity:1; } }
+    @keyframes blinker { from { opacity:1.0; } to { opacity:0.7; } }
+  </style>
+
+  <script src="js/dtime.js"></script>
+</head>
+
+<body>
+
+  <div class="clinical-topbar">Espesyal na ulat · Kalusugan at Lipunan</div>
+
+  <div class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-logo">
+        <span class="masthead-logo-icon">+</span>
+        <span>HealthInfo Pilipinas</span>
+      </div>
+      <div class="masthead-tagline">Mga ulat mula sa mundo ng pampublikong kalusugan</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="bg-image"></div>
+  </header>
+  <div class="text-container"></div>
+  <div class="h1-bg split">
+    <h1 class="title_h1">
+      <span class="head-one-part">«KAPAG HINDI KA NA MAKALAKAD, IIWAN KA NG IYONG PAMILYA.»</span>
+      <span class="head-two-part">ANG BATANG DOKTOR NA NAGMUMULA SA ISANG NURSING HOME PATUNGO SA IBA, IBINABALIK SA MGA MATATANDANG INIWAN ANG HINDI MAIBIGAY NINUMAN: ANG KANILANG MGA KASUKASUAN AT DANGAL. ANG KANYANG PARAAN AY NAGPANGANGA SA BUONG KOMUNIDAD MEDIKAL.</span>
+    </h1>
+
+    <div class="tdate head-main-date">
+      <span class="head-main-date-title">Nai-publish: </span>
+      <span class="startdate"><script>dtime_nums(-3, true)</script>, 09:36</span>
+    </div>
+
+    <div class="main-subtitle">
+      Kung paano si Dr. Jose Santos, 30 taong gulang, tinalikuran ang isang karera sa isang pribadong klinika sa Maynila upang tulungan ang mga retiradong nakalimutan sa mga nursing home — ang mga matatandang iniwan ng kanilang pamilya dahil mismo sa hindi na sila makalakad, makatayo, o makagawa ng anuman nang mag-isa. At kung paano niya ibinalik ang kanilang galaw sa pamamagitan ng isang paraang binuo kasama ng isang sentro ng pananaliksik — walang operasyon o panghabambuhay na gamot.
+    </div>
+  </div>
+
+  <main>
+
+    <img alt="Sinusuri ni Dr. Jose Santos ang tuhod ng isang pasyente sa nursing home" src="https://static.joxi.pro/1778142925769-2045c9ea-f00c-48ab-ae5d-6e56aec020f0.jpg" style="margin-bottom:14px;margin-top:0">
+
+    <p>
+      Isang Martes ng umaga, dumating kami sa Tanay, sa lalawigan ng Rizal. Ang daan papunta sa nursing home ay hindi pa semento, napaliligiran ng mga bahay na may lumang bakod at mga asong tumatahol. «Hinahanap n'yo ba ang batang doktor?» — tanong ng tindera sa maliit na tindahan ng bayan. «Pumupunta siya tuwing Huwebes. Naghihintay sa kanya ang matatanda sa pintuan. May mga umiiyak pa pagkakita sa kanya.»
+    </p>
+    <p>
+      Ganoon namin nalaman ang tungkol kay Dr. Jose Santos — ang 30 taong gulang na doktor na iniwan ang kanyang trabaho sa isang pribadong klinika sa Maynila upang gawin ang ayaw gawin ng ibang doktor: libutin ang mga nursing home sa buong Pilipinas at alagaan ang mga retiradong iniwan ng kanilang pamilya.
+    </p>
+    <p>
+      Ano ang dahilan ng pag-iwan? Halos palaging pareho: <b>hindi na makalakad ang matatanda.</b> Bumigay ang kanilang mga tuhod. Bumaluktot ang gulugod. Nanginginig nang husto ang kanilang mga kamay kaya hindi na sila makahawak ng kutsara. At sa sandaling iyon — sa mismong oras na pinakakailangan nila ng tulong — napagdesisyunan ng pamilya na masyado na itong mabigat. Masyadong magastos. At ipinasok sila sa isang nursing home.
+    </p>
+
+    <div class="quote-inline">
+      «Sabi ng anak ko: 'Inay, hindi ko na kayang buhatin kayo mula sa silya paulit-ulit. Hindi ko na kaya.' Kinabukasan, dinala niya ako sa nursing home. 3 taon na siyang hindi dumadalaw sa akin.»
+      <span class="quote-name">— Aling Rosa, 79 taong gulang, nursing home ng Tanay, Rizal</span>
+    </div>
+
+    <div class="quote-inline">
+      «Nang lubusang manigas ang mga tuhod ko, sinabi ng asawa ko na hindi siya makakasama sa isang invalido. Umalis siya. Pumanig sa kanya ang mga anak. Dinala nila ako rito at naglaho.»
+      <span class="quote-name">— Mang Pablo, 73 taong gulang, nursing home ng Iloilo</span>
+    </div>
+
+    <h2>
+      «Nakita ko kung ano ang hitsura ng pagkalimot. At napagdesisyunan kong hindi puwedeng manatiling nakahalukipkip lang»
+      <span>Eksklusibong panayam kay Dr. Jose Santos — ang doktor na tumalikod sa sahod na ₱120,000 buwan-buwan upang tulungan ang mga walang kahit sino</span>
+    </h2>
+
+    <div class="doc-block">
+      <img alt="Dr. Jose Santos" src="https://static.joxi.pro/1778142925769-8d31ed89-cd31-449a-8c51-6ff1a0bfb48e.jpg">
+      <p>Dr. Jose Santos: «Noong unang beses akong pumasok sa isang nursing home, 28 taong gulang ako, bilang volunteer. Hindi ako handa sa nakita ko. Isang ginang na 76 taong gulang, si Aling Elena, nakaupo sa gilid ng kama, namamaga ang mga paa at matigas ang mga tuhod na ayaw bumaluktot. 4 na buwan na siyang hindi lumalabas ng kuwarto. Hinawakan niya ang kamay ko at sinabi:
+        <b>«Doktor, dinala ako rito ng anak kong babae nang hindi na ako makababa ng hagdan. Sabi niya hindi na niya ako kayang alagaan. Dalawang taon na ang nakalipas. Mula noon, hindi na siya bumalik.»</b>
+      </p>
+      <p><b>SA SANDALING IYON NAUNAWAAN KO NA KAILANGAN AKO NG MGA TAONG ITO NANG HIGIT KANINUMAN —
+          <span class="red-txt">ANG MGA NAKALIMUTAN NA NG BUONG MUNDO, DAHIL MISMO SA HINDI NA SILA MAKALAKAD.»</span></b>
+      </p>
+    </div>
+
+    <p>
+      Mahinahon magsalita si Dr. Santos, ngunit may bigat na hindi maibabaling. Dalawang taon na siyang naglilibot sa mga nursing home sa buong Pilipinas — mula Batanes hanggang Tawi-Tawi, mula hilaga hanggang timog ng bansa. At saanman, pareho ang nakikita niyang nakakabahalang larawan: matatandang wasak ang mga kasukasuan na walang natatanggap na tunay na lunas, puro pampaalis-pamamaga lamang na sumisira sa kanilang tiyan at bato.
+    </p>
+
+    <p>
+      «Karamihan sa mga taong ito ay napunta rito dahil sa kanilang mga kasukasuan. Ipinagkanulo sila ng tuhod. Naninigas ang gulugod. Nauubos ang balakang. At sa sandaling iyon, nang hindi na sila makalakad nang mag-isa, napagdesisyunan ng pamilya na sila ay naging pabigat. Iyon ang salitang pinakamadalas kong marinig sa mga nursing home: <b>«pabigat»</b>. Ganoon nila tinatawag ang sarili nilang mga magulang.»
+    </p>
+
+    <div class="quote-inline">
+      «Hindi nila ako dinala rito dahil hindi nila ako mahal. Dinala nila ako dahil nagigising ako ng alas-tres ng madaling-araw na sumisigaw sa sakit ng tuhod at walang makatulog. Sinabi ng manugang ko: ako o siya. Pinili ng anak ko siya.»
+      <span class="quote-name">— Mang Juan, 71 taong gulang, nursing home ng Cebu</span>
+    </div>
+
+    <h2>
+      «Ang mga gamot sa kasukasuan ay walang nilulutas — itinatago lang nila ang pinsala»
+      <span>Ipinapaliwanag ni Dr. Santos kung bakit nabibigo ang karaniwang panggamot sa mga nursing home at botika</span>
+    </h2>
+
+    <p><b>Dr. Jose Santos:</b></p>
+    <p>
+      — Sasabihin ko sa inyo nang buong katapatan: ang nakita ko sa mga nursing home na ito ay nakakatakot. Mga taong 55 hanggang 80 taong gulang na ilang taon nang binibigyan ng parehong pampaalis-pamamaga — mga tabletang nagpapagaan ng sakit nang ilang oras nang hindi nilulutas ang sanhi. Patuloy na nasisira ang kartilago. Naglalaho ang likidong sinovial. Nagkukuskos ang buto sa buto sa mga kasukasuan. At ang kemikal ng mga tabletang iyon ay araw-araw na sumisira sa tiyan, atay, at bato.
+    </p>
+
+    <p>Isa itong masamang siklo: sakit → tableta → bumabalik ang sakit nang mas malakas → mas malakas na tableta → bumibigay ang tiyan → tableta para sa tiyan → bumibigay ang bato. At walang nagsasabi sa kanila ng totoo: <b>na may paraan upang i-regenerate ang kasukasuan mula sa loob, hindi lang patulugin ang sakit.</b>
+    </p>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-a94978b4-3738-4aeb-950e-312b652009ac.jpg">
+      <figcaption>
+        Mga tuhod ni Aling Maria, 74 taong gulang, nursing home ng Iloilo. Artrosis sa ikatlong yugto, halos lubusang nawasak ang kartilago. 5 buwan na siyang hindi lumalabas ng kuwarto. Sa kanyang lamesita — 6 na uri ng tableta na walang naibago.
+      </figcaption>
+    </figure>
+
+    <div class="pachino-ramka312-block">
+      <p class="pachino-ramka312">
+        <span class="obertka-1">
+          Ang sakit ng tuhod, gulugod, o balakang pagkatapos ng edad na 45 ay hindi «normal sa edad» — ito ay senyales na nasisira ang kartilago ng kasukasuan at naglalaho ang likidong sinovial.
+          <br><br>
+          Ang pampaalis-pamamaga ay hinaharangan lamang ang senyales ng sakit habang patahimik na umuusad ang pagkasira. Kung walang tunay na pag-regenerate ng kartilago, lubusang nauubos ang kasukasuan — at saka, ang tanging pagpipilian ay ang wheelchair o ang operasyon ng prosthesis.
+        </span>
+      </p>
+    </div>
+
+    <p><b>Dr. Jose Santos:</b></p>
+
+    <p>— Pakiusap, unawain ang bigat ng sitwasyon. Sa karamihan ng matatandang ito, ang kartilago ng tuhod, gulugod, o balakang ay nawasak nang 70-90%. Naglalakad sila — kung naglalakad pa nga sila — na nagkukuskos ang buto sa buto. Bawat hakbang ay isang tortyur. <b>HINDI KAYANG MULING ITAYO NG KARANIWANG TABLETA ANG KARTILAGO — ITINATAGO LANG NILA ANG SAKIT HABANG GUMUGUHO ANG LAHAT!</b>
+    </p>
+
+    <p>
+      At ang pinakamasakit sa akin: ang mga taong ito ay walang kahit sino. Iniwan sila ng pamilya sa mismong sandaling bumigay ang kanilang mga kasukasuan. Nag-iisa sila, nakahiga, sa isang maliit na kuwarto, naghihintay. May ilang hindi na alam kung ano ang hinihintay nila.
+    </p>
+
+    <div class="quote-inline">
+      «Pinalaki ko ang tatlong anak. 40 taon akong nagtrabaho sa bukid. Nang bumigay ang mga tuhod ko at hindi na ako makapunta nang mag-isa sa banyo — dinala nila ako sa nursing home. Para bang hindi na ako umiiral para sa kanila. Para bang patay na ako.»
+      <span class="quote-name">— Aling Margarita, 82 taong gulang, nursing home ng Davao</span>
+    </div>
+
+    <div class="quote-inline">
+      «35 taon akong shift leader sa pabrika. Bumigay ang gulugod ko sa edad na 62 — disc hernia, sciatica, hindi ako makatayo. Sabi ng anak ko hindi siya puwedeng manatili sa bahay para alagaan ako. May trabaho siya, may pamilya. Naiintindihan ko. Pero mas masakit ito kaysa sa gulugod.»
+      <span class="quote-name">— Mang Jorge, 68 taong gulang, nursing home ng Cagayan de Oro</span>
+    </div>
+
+    <figure class="Figure" style="text-align:center">
+      <img src="https://static.joxi.pro/1778142925769-057465eb-7a53-45e0-ba84-1b9038913030.jpg" style="margin:0 auto">
+      <figcaption>
+        <b>Kaliwa: malusog na kasukasuan na buo ang kartilago at sapat ang likidong sinovial. Kanan: wasak na kasukasuan — gasgas ang kartilago, talamak na pamamaga, buto sa buto. Ito ang realidad ng mahigit 80% ng mga residente ng nursing home. Hindi muling itinatayo ng pampaalis-pamamaga ang kartilago.</b>
+      </figcaption>
+    </figure>
+
+    <p class="red-txt">
+      Mahalagang banggitin: sa 2 sa bawat 3 kaso, kahit araw-araw uminom ng pampatigil-sakit, patuloy na nasisira ang mga kasukasuan, dahil ang tunay na sanhi — ang pagkasira ng kartilago at ang paglaho ng likidong sinovial — ay nananatiling hindi nalulutas.
+    </p>
+
+    <p class="red-txt">
+      Pagkatapos ng ilang taong pag-inom ng pampaalis-pamamaga, maraming pasyente ang hindi lang nawawalan ng galaw, kundi pati na rin ng tiyan, atay, at bato. Ulser, pagpalya ng atay, pamamaga ng bato — iyon ang presyo ng kawalan ng nag-isip mag-alok ng tunay na alternatibo.
+    </p>
+
+    <h2>
+      Mga kuwentong nagbago sa buhay ko — at magbabago sa paraan ng pagtingin mo sa pagtanda
+    </h2>
+
+    <p><b>Dr. Jose Santos:</b></p>
+
+    <p>— Hayaan ninyong ikuwento ko ang nakikita ko linggo-linggo. Hindi mga numero. Hindi mga estadistika. Mga tao. Mga taong may pangalan, kuwento, mga anak na hindi na dumadalaw.</p>
+
+    <figure class="cap-bold">
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-ab7d1e11-8df2-44ee-b472-2a3be72bb7b3.jpg">
+      <figcaption>
+        Si Aling Catalina, 77 taong gulang. Rheumatoid arthritis sa magkabilang kamay — hindi makahawak ng tasa, hindi makapagbihis mag-isa. Ipinasok siya ng anak niya 2 taon na ang nakalipas: «Hindi kita kayang bihisan tuwing umaga, may buhay din ako.»
+      </figcaption>
+    </figure>
+
+    <div class="quote-inline">
+      «Hindi na nga ako makasuklay. Hindi na makapagbuhos ng tubig. Ayaw sumunod ng mga kamay ko. Tuwing umaga, tinitingnan ko ang mga ito at hindi ko makilala — namamaga, baluktot, parang hindi akin. Minsan sinabi ng manugang ko: «Paano kita ipagkakatiwala sa mga apo kung hindi ka man lang makahawak ng kutsara?» Tama siya. Pero pinatay ako ng mga salitang iyon sa loob.»
+      <span class="quote-name">— Aling Catalina, 77 taong gulang</span>
+    </div>
+
+    <figure class="cap-bold">
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-980707f6-6c1c-40ec-96a5-61c8c9dcde54.jpg">
+      <figcaption>
+        Si Mang Luis, 75 taong gulang. Disc hernia L4-L5, coxarthrosis sa magkabilang balakang. 8 buwan na siyang hindi makatayo. «Sinabi nila masyado na akong matanda para operahan. Sinabi nila tanggapin ko na lang.»
+      </figcaption>
+    </figure>
+
+    <div class="quote-inline">
+      «Tractor driver ako noon. Inararo ko ang libu-libong ektarya. Ngayon hindi na ako makapagpaikot mag-isa sa kama. Naninigas ang gulugod ko, nagkadikit ang balakang. Nagtatrabaho ang mga anak ko sa Amerika. Nagpapadala sila ng pera para sa nursing home, at iyon na. Hindi ko sila sinisisi. Pero sa gabi, kapag sumasakit at walang dumarating… naiisip ko kung ito na ang katapusan.»
+      <span class="quote-name">— Mang Luis, 75 taong gulang</span>
+    </div>
+
+    <p><b>Ito ang mga sintomas na pinakamadalas kong makita sa mga nursing home — at hindi pinapansin ng milyun-milyon sa Pilipinas:</b></p>
+    <ul>
+      <li>Matinding sakit ng tuhod sa pag-akyat ng hagdan — o sa anumang galaw;</li>
+      <li>Pagkamatigas tuwing umaga — pakiramdam na «kahoy», kailangan ng 30-60 minuto bago lumuwag ang katawan pagkagising;</li>
+      <li>Talamak na sakit ng gulugod — hindi makayuko, hindi makabangon mula sa kama;</li>
+      <li>Namamagang tuhod, bukung-bukong, o daliri;</li>
+      <li>Pagputok at paglagitik ng mga kasukasuan sa bawat galaw;</li>
+      <li>Sakit ng balakang na kumakalat sa hita — hindi makalakad nang higit sa 50 metro;</li>
+      <li>Baluktot at madugtong na mga daliri — hindi makahawak ng mga bagay;</li>
+      <li>Pamamanhid sa binti o kamay — senyales ng disc hernia o problema sa nerbiyo;</li>
+      <li>Pakiramdam na «kutsilyo» sa baywang sa pagbangon;</li>
+      <li>Baluktot na gulugod, nakayukong tindig — paunti-unting kyphosis;</li>
+      <li>Sakit sa gabi na hindi makatulog — nagigising nang 4-5 beses kada gabi;</li>
+    </ul>
+
+    <p>
+      Bawat isa sa mga sintomang ito ay senyales ng babala. Ang hindi pagpansin sa mga ito pagkatapos ng edad na 45-50 ay humahantong sa iisang wakas:
+      <b class="red-txt">LUBUSANG KAWALAN NG GALAW, WHEELCHAIR, ABSOLUTONG PAGDEPENDE — AT SA MARAMING KASO, ANG NURSING HOME.</b>
+    </p>
+
+    <div class="pachino-ramka312-block">
+      <p class="pachino-ramka312">
+        <span class="obertka-1">
+          Bawat araw na hindi nagagamot ang mga kasukasuan ay naglalapit sa iyo sa tuluyang kawalan ng galaw!
+          Libu-libong retirado sa mga nursing home ang napunta roon dahil mismo sa hindi nila pinansin ang sakit — o dahil tableta lang ang ininom nila na walang nilulutas na sanhi.
+          Kumilos na ngayon — para sa inyo o para sa inyong mga mahal sa buhay — bago mahuli ang lahat!
+        </span>
+      </p>
+    </div>
+
+    <h2>
+      «Napagdesisyunan kong dapat may paraan upang i-regenerate ang mga kasukasuan — hindi lang patulugin ang sakit»
+      <span>Kung paano nakumbinsi ng isang 30 taong gulang na doktor ang isang sentro ng pananaliksik upang bumuo ng isang bagay na ayaw gawin ng industriya ng parmasyutiko</span>
+    </h2>
+
+    <p><b>Dr. Jose Santos:</b></p>
+    <p>
+      — Pagkatapos ng isang taon ng pagdalaw sa mga nursing home, naunawaan ko ang isang masakit na katotohanan: hindi ko maililigtas ang kahit sino gamit ang pampaalis-pamamaga. Pinapatahimik lamang ng mga gamot na iyon ang senyales ng alarma ng katawan habang patuloy na nasisira ang kasukasuan. Kailangan ko ng isang bagay na ganap na naiiba: isang paraang nag-regenerate ng kartilago mula sa loob, nagpapanumbalik ng likidong sinovial, at humihinto sa pamamaga sa antas ng cell.
+    </p>
+    <p>
+      Nakipag-ugnayan ako sa isang sentro ng pananaliksik na kinatrabaho ko noong mga taon ko sa unibersidad. Ipinakita ko sa kanila ang mga kaso, ang mga litrato, ang mga resulta ng pagsusuri ng aking mga pasyente sa mga nursing home. Isinama ko ang mga mananaliksik sa mga nursing home — upang makita nila sa sarili nilang mga mata kung ano ang nangyayari roon. Nagulat sila.
+    </p>
+    <p>
+      Magkasama kaming nagtrabaho nang mahigit 10 buwan. Sinubukan namin ang mahigit 180 kombinasyon. At sa huli, natagpuan namin ang eksaktong pormula — isang spray na, kapag ipinahid sa apektadong kasukasuan, tumatagos sa antas ng cell at ina-activate ang natural na pag-regenerate ng kartilago. Hindi isang tableta na dumadaan sa tiyan at sumisira sa atay. Isang spray na kumikilos nang eksakto kung saan kailangan.
+    </p>
+
+    <div class="recept">
+      <p><b>Ang pormula ni Dr. Santos ay naglalaman ng mga sumusunod na aktibong sangkap:</b></p>
+      <ul class="my-ul-0-green size1">
+        <li><b>Arnica montana (arnica ng bundok)</b>
+          <font>Likas na pampaalis-pamamaga at pampatigil-sakit na may malakas na epekto</font>
+        </li>
+        <li><b>Menthol</b>
+          <font>Likas na pampalamig at pampatigil-sakit: agarang ginhawa mula sa sakit</font>
+        </li>
+        <li><b>Harpagophytum procumbens (devil's claw)</b>
+          <font>Extract ng ugat: malakas na epektong pampaalis-pamamaga at pampa-regenerate ng kasukasuan</font>
+        </li>
+        <li><b>Robinia pseudoacacia (puting akasya)</b>
+          <font>Extract ng bulaklak: nakakapagpahupa, pampaalis-pamamaga, at pampa-regenerate na epekto</font>
+        </li>
+        <li><b>Boswellia serrata (Indian frankincense)</b>
+          <font>Extract ng dagta: konsentradong boswellic acid na humahadlang sa pamamaga</font>
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      Ang mga sangkap na ito ay mahirap makuha sa kinakailangang konsentrasyon. Ang paghahalo nito sa tamang proporsyon ay nangangailangan ng espesyalisadong teknolohiya — kung mag-iba ang proporsyon kahit 0.1% lamang, hindi sapat ang pagtagos ng spray at hindi nito ina-activate ang pag-regenerate ng kartilago.
+    </p>
+
+    <h2>
+      Ganito isinilang ang Flexacil — ang tanging spray na naglalaman ng lahat ng aktibong sangkap na ito sa perpektong proporsyon para sa ganap na pag-regenerate ng mga kasukasuan
+    </h2>
+    <p><b>Dr. Jose Santos:</b></p>
+    <p>
+      — Kasama ng sentro ng pananaliksik, nagawa namin ang produktong ito: isang spray na panlabas na gamit na ipinapahid nang direkta sa apektadong kasukasuan — tuhod, gulugod, balakang, kamay, leeg. Tinatawag itong Flexacil. Ipinapahid ito dalawang beses sa isang araw, umaga at gabi, na may banayad na masahe nang 2-3 minuto. Ang mga aktibong sangkap ay tumatagos nang direkta sa kasukasuan, nang hindi dumadaan sa tiyan o atay — kaya naaalis ang lahat ng side effect ng mga tableta.
+    </p>
+
+    <img src="images/prod.png" style="width:78%;max-width:540px;display:block;margin:18px auto">
+
+    <p>
+      Ang sikreto ay nasa «Transdermal Deep Penetration Technology», na binuo sa laboratoryo kasama ng koponan. Pinahihintulutan ng paraang ito na maabot ng mga aktibong sangkap nang direkta ang kapsula ng kasukasuan — kung saan nasisira ang kartilago — nang may bisang 5 beses na mas mataas kaysa sa anumang karaniwang spray sa merkado.
+    </p>
+    <p class="pachino-ramka2">
+      Ang «Flexacil» ay natatangi. Bawat sangkap — sa eksaktong konsentrasyon — ay ina-activate ang pag-regenerate ng kartilago, ang pagpapanumbalik ng likidong sinovial, at ang pagtigil ng pamamaga. Ito ang tanging spray na kumikilos sa antas ng cell, nang direkta sa apektadong lugar — tuhod, gulugod, balakang, kamay, leeg — nang hindi dumadaan sa tiyan. Ang pinakamahalaga: gumagana ito kahit sa mga taong 70, 80, 85 taong gulang. Sinubukan ko muna ito sa aking mga pasyente sa nursing home — ang mga hindi na inaalagaan ninuman.
+    </p>
+
+    <p><b>Dr. Jose Santos:</b></p>
+    <p>
+      — Ang mga unang pasyente ay ang mga matatandang iniwan sa mga nursing home. Ipinahid ko ang spray sa namamagang tuhod, sa gulugod, sa balakang. At naghintay ako. Sa ikatlong araw — si Aling Margarita, na 4 na buwan nang hindi makabangon mula sa kama, ay gumawa ng kanyang mga unang hakbang nang mag-isa. Pareho kaming umiyak.
+    </p>
+
+    <h2>
+      4 na mekanismo kung paano ni-regenerate ng Flexacil ang mga kasukasuan at ibinabalik ang galaw — sa anumang edad
+    </h2>
+
+    <div class="obertk512">
+      <h1>Ang 4 na pangunahing epekto ng spray na «Flexacil»:</h1>
+      <div class="block-offer-actions-block">
+        <ol>
+          <li>
+            <font>Pag-alis ng sakit at pamamaga:</font>
+            <span>Sa loob na ng unang 15-30 minuto pagkatapos ng paggamit, inaalis ng complex ng arnica, frankincense, at menthol ang sakit at binabawasan ang pamamaga. Hindi sa pamamagitan ng paghadlang sa senyales ng nerbiyo (gaya ng tableta) — kundi sa pagtigil sa proseso ng pamamaga sa pinagmulan nito.</span>
+          </li>
+          <li>
+            <font>Pag-regenerate ng kartilago ng kasukasuan:</font>
+            <span>Ang mga extract ng devil's claw at frankincense ay tumatagos sa kapsula ng kasukasuan at ina-activate ang paggana ng mga cell ng kartilago (chondrocytes), na nagpapasigla sa produksyon ng bagong tisyu ng kartilago. Nagsisimula ang prosesong ito mula sa ika-3 hanggang ika-5 araw ng regular na paggamit.</span>
+          </li>
+          <li>
+            <font>Pagpapanumbalik ng likidong sinovial:</font>
+            <span>Tumatagos nang transdermal ang mga aktibong sangkap at nagpapanumbalik ng likidong sinovial — ang natural na «pampadulas» ng kasukasuan. Dahil dito, hindi na nagkukuskos ang mga buto at bumabalik na maayos at walang sakit ang galaw.</span>
+          </li>
+          <li>
+            <font>Proteksyon at pag-iwas sa pangmatagalan:</font>
+            <span>Ang extract ng akasya at ang mineral complex ay nagpapalakas sa mga litid at tendon sa paligid ng kasukasuan, na pumipigil sa pinsala sa hinaharap. Pagkatapos ng 30-60 araw ng paggamit, nakakatanggap ng matatag na proteksyon ang kasukasuan na tumatagal nang ilang buwan.</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <h2>
+      «Sinubukan ko muna ang Flexacil sa aking mga pasyente sa nursing home — nalampasan ng mga resulta ang lahat ng nakita ko sa 6 na taon ng praktika»
+      <span>Mga pagsubok sa 2,340 katao mula 45 hanggang 86 taong gulang</span>
+    </h2>
+
+    <p><b>Dr. Jose Santos:</b></p>
+    <p>
+      — Ang mga unang pasyente ay ang mga matatandang iniwan sa mga nursing home. Ang mga hindi na ginagamot ninuman. Napakatindi ng mga resulta kaya pinalawak ng sentro ng pananaliksik ang mga pagsubok sa isang grupong mahigit 2,300 katao mula sa buong Pilipinas — na may lahat ng uri ng problema sa kasukasuan: tuhod, gulugod, balakang, kamay, leeg.
+    </p>
+    <p>
+      Nakita ko ang mga taong 80 taong gulang na hindi makalakad — at pagkalipas ng anim na linggo, lumalabas nang mag-isa sa bakuran ng nursing home. Umiiyak ang mga nars. Umiyak ako kasama nila.
+    </p>
+
+    <div class="table-block">
+      <h1 class="title_h1">
+        Mga resulta ng pagsubok sa «Flexacil» — control group: 2,340 katao, mula 45 hanggang 86 taong gulang
+      </h1>
+      <table class="table">
+        <tbody>
+          <tr><td class="one">Lubusang pag-alis ng sakit ng tuhod</td><td class="two">96.2%</td></tr>
+          <tr><td class="one">Pag-alis ng sakit ng gulugod at pagkamatigas tuwing umaga</td><td class="two">94.7%</td></tr>
+          <tr><td class="one">Artrosis yugto 1-2 (ganap na pagbawi ng galaw)</td><td class="two">98.1%</td></tr>
+          <tr><td class="one">Artrosis yugto 3 (malaking pagbuti)</td><td class="two">87.3%</td></tr>
+          <tr><td class="one">Coxarthrosis (sakit ng balakang)</td><td class="two">91.5%</td></tr>
+          <tr><td class="one">Disc hernia (pagbaba ng sakit at pamamanhid)</td><td class="two">89.4%</td></tr>
+          <tr><td class="one">Rheumatoid arthritis (mga daliri)</td><td class="two">93.8%</td></tr>
+          <tr><td class="one">Ganap na pagbawi ng galaw ng kasukasuan</td><td class="two">95.6%</td></tr>
+          <tr><td class="one">Pag-alis ng pamamaga at pamumulikat sa gabi</td><td class="two">97.0%</td></tr>
+          <tr><td class="one">Kakayahang makalakad nang walang tulong</td><td class="two">94.3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>
+      Mga kasong dumurog sa puso ko — at nagbigay sa akin ng pinakamalaking pag-asa
+      <span>
+        Si Aling Elena, 84 taong gulang. Iniwan sa nursing home nang bumigay ang kanyang mga tuhod. Pagkatapos ng 2 buwan sa Flexacil — lumabas siya nang mag-isa sa hardin, sa unang pagkakataon sa loob ng 3 taon.
+      </span>
+    </h2>
+
+    <p>
+      Si Aling Elena ang unang pasyente ni Dr. Santos sa nursing home ng Baguio. Sa edad na 84, may artrosis sa yugto 3 sa magkabilang tuhod at coxarthrosis sa kaliwang balakang, 14 na buwan na siyang hindi makalakad. Ipinasok siya ng anak niya dahil «hindi na niya kayang buhatin siya papuntang banyo». Dalawang taon na siyang hindi dumadalaw.
+    </p>
+
+    <div class="gray-bg rev-block">
+      <img class="img-card2" src="https://static.joxi.pro/1778142925769-b234c916-2418-43cd-a09b-52da3b198c19.jpg">
+      <p>
+        «Hindi ako naniniwalang makakalakad pa ako balang araw. Namaga nang husto ang mga tuhod ko kaya hindi ko ito mabaluktot. Pinasyal nila ako sa wheelchair sa loob ng kuwarto. Nagigising ako sa umaga at sa loob ng isang oras ay hindi ko magalaw kahit ang mga daliri ko. Para bang patay na ang katawan ko, pero buhay pa ako.
+      </p>
+      <p>
+        <b>
+          Dinala ako rito ng anak ko dahil hindi na ako makabangon sa kama. Sinabi niya: «Inay, dadalawin kita tuwing Linggo.» Dalawang taon na siyang hindi dumarating. Hindi ko siya sinisisi — may sarili siyang buhay. Pero sa gabi, kapag ginigising ako ng sakit at walang katabi… mahirap.
+        </b>
+      </p>
+      <p>
+        <b>
+          Tapos dumating si Dr. Santos. Siya ang unang taong humawak sa mga tuhod ko nang walang pandidiri. Ipinaliwanag niya kung ano ang nangyayari sa mga kasukasuan. At ipinahid niya ang spray. Pagkalipas ng isang linggo, nabaluktot ko na ang kaliwang tuhod. Pagkalipas ng isang buwan, bumangon ako nang mag-isa sa kama. Pagkalipas ng dalawang buwan — lumabas ako sa hardin. 3 taon akong hindi nakalabas.
+        </b>
+      </p>
+      <p>
+        Umiyak ang nars nang makita niya ako. Mas umiyak ako. Hindi dahil naglalakad ako. Kundi dahil may isang tao — isang batang doktor na hindi ko pa nakilala — ang nagbigay sa akin ng higit pa sa ibinigay ng sarili kong anak.
+      </p>
+      <font>
+        <b>Aling Elena, 84 taong gulang, nursing home ng Baguio</b>
+      </font>
+    </div>
+
+    <p>
+      Isa pang kaso: si Francisco, 58 taong gulang, mason habambuhay, na wasak ang gulugod dahil sa disc hernia. Iniwan siya ng asawa nang hindi na siya makapagtrabaho.
+    </p>
+
+    <div class="gray-bg rev-block">
+      <img class="img-card2" src="https://static.joxi.pro/1778142925769-f6ae7d5d-d93a-42f5-8684-d3c285fbc8bf.jpg">
+      <p>
+        «Mason ako nang 30 taon. Bumigay ang gulugod ko sa edad na 54 — dalawang disc hernia at sciatica. Hindi ako makatayo o makahiga. Lahat ay masakit. Umalis ang asawa ko — sabi niya hindi niya kayang alagaan ang isang invalido. Hindi ko siya sinisisi.
+      </p>
+      <p>
+        <b>
+          Nalaman ng kapatid kong babae ang tungkol kay Dr. Santos mula sa kapitbahay. Pinadalhan niya ako ng spray na Flexacil. Sinimulan kong ipahid ito sa gulugod, umaga at gabi. Sa ikatlong araw, naramdaman ko ang unang ginhawa. Pagkalipas ng 3 linggo — nakakapunta na ako sa tindahan. Pagkalipas ng 2 buwan — bumalik akong magtrabaho nang part-time.
+        </b>
+      </p>
+      <p>
+        Minsan nagigising ako, bumabangon ako sa kama nang walang sakit at tumatayo nang sandali. Nakatayo ako at hindi ako makapaniwalang totoo ito. Na hindi na masakit. Kung hindi dahil kay Dr. Santos, baka nasa nursing home din ako ngayon.»
+      </p>
+    </div>
+
+    <h2>
+      «Hindi lang ginagamot ng Flexacil ang sakit — ni-regenerate nito ang buong kasukasuan mula sa loob»
+      <span>
+        Hindi lang ang mga residente ng nursing home ang nakikinabang. Sinumang mahigit 45 taong gulang na nakakaramdam ng mga unang sintomas ay maaaring maiwasan ang sakuna.
+      </span>
+    </h2>
+
+    <p><b>Dr. Jose Santos:</b></p>
+
+    <p>
+      — Ang pinakamababang panahon ng paggamit ay 30 araw, ngunit sa mga kaso ng malalang artrosis o disc hernia, maaaring kailanganin ang 2-3 buwan. Sa lahat ng kaso nang walang eksepsiyon — naoobserbahan ang pagbaba ng sakit, pag-regenerate ng kartilago, at pagbawi ng galaw.
+    </p>
+
+    <p>
+      Kumikilos ang Flexacil mula sa unang paggamit: bumababa ang sakit, humuhupa ang pamamaga, gumagaan ang galaw. Ngunit ang tunay na himala ay nangyayari sa paglipas ng panahon: nire-regenerate ang kartilago, bumabalik ang likidong sinovial, «bumabata» ang kasukasuan mula sa loob.
+      <b class="red-txt">
+        Nakita ko ang mga taong 80 taong gulang na muling nakalakad. Nakita ko ang mga kamay na hindi makahawak ng tasa o makapagdala ng kutsara sa bibig. Nakita ko ang mga baluktot na gulugod na tumuwid. At sa lahat ng kaso — nakita ko ang mga luha ng kaligayahan.
+      </b>
+    </p>
+
+    <center>
+      <p><b>
+          Salamat sa paraan ni Dr. Santos, mahigit 12,000 katao ang nakabawi ng galaw ng kanilang kasukasuan sa Pilipinas. Narito ang ilang kaso:
+        </b></p>
+    </center>
+
+    <figure>
+      <img src="https://static.joxi.pro/1778142925769-baf151ad-77dc-450d-9a89-3293efafacfa.jpg">
+      <figcaption>Lalaki, 65 taong gulang. Artrosis yugto 3 sa magkabilang tuhod — hindi makaakyat ng hagdan. Flexacil sa 60 araw: ganap na galaw, walang sakit.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-f19f7f66-3e45-449a-87f2-78884ec5e6e1.jpg">
+      <figcaption>Babae, 58 taong gulang. Talamak na sakit ng gulugod at disc hernia L5-S1. Flexacil sa 45 araw: naalis ang sakit, nakakagawa ng gawaing bahay muli.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-7d23b447-1714-413e-b3dd-921918111aa3.jpg">
+      <figcaption>Babae, 72 taong gulang. Malalang RA sa mga daliri — hindi makahawak ng tasa. Flexacil sa 2 buwan: gumagalaw ang mga daliri, nawala ang pamamaga.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-4a9900ea-fa77-4c81-a40e-dff210ebf7df.jpg">
+      <figcaption>Lalaki, 70 taong gulang. Malalang coxarthrosis — nakakagalaw lang gamit ang walker. Flexacil sa 2.5 buwan: naglalakad nang mag-isa, walang sakit.</figcaption>
+    </figure>
+
+    <p><b>Dr. Jose Santos:</b></p>
+    <p>
+      — Ang mga kasong ito ay buhay na patunay na maaaring mag-regenerate ang mga kasukasuan — kahit na ang diagnosis ay tila isang hatol. Walang operasyon. Walang tabletang sumisira sa tiyan. At ang pinakanakapagpapasaya sa akin: karamihan sa mga taong ito ay residente ng nursing home — ang mga nakalimutan na ng mundo. <b>Pero hindi ko sila kinalimutan. At hindi rin sila kinalimutan ng Flexacil.</b>
+    </p>
+
+    <div id="overlay" style="display:none;opacity:0"></div>
+    <div id="popup3" style="display:none;opacity:0;transform:translate(-50%,-50%) scale(0.8)"></div>
+
+    <h2>
+      Bakit hindi ibinebenta ang Flexacil sa mga botika? At paano ito makukuha?
+    </h2>
+
+    <p><b>Dr. Jose Santos:</b></p>
+
+    <p>Sa kasamaang-palad, ang paggawa ng Flexacil ay isang masalimuot at magastos na proseso. Bihira ang mga sangkap — extract ng devil's claw, konsentradong boswellic acid, arnica ng bundok sa mataas na konsentrasyon — at mahirap makuha sa kinakailangang dami. Hindi namin matutugunan ang lahat ng pangangailangan.</p>
+
+    <p>Kailangan pa ng hindi bababa sa 2-3 taon bago makarating ang Flexacil sa mga botika. Pansamantala, ibinabahagi ang produkto nang eksklusibo online, sa loob ng mga programa ng suporta, dalawang beses sa isang taon. Gayunpaman, ang
+      <font class="red-txt">diskuwento ay maaaring umabot sa 50%</font>
+      — na napakahalaga para sa mga retirado.
+    </p>
+
+    <p>
+      Pakiusap: HUWAG PALAMPASIN ANG PROGRAMA NG SUPORTA. Hindi lang para sa inyo — kundi para rin sa inyong mga magulang, lolo't lola, mga mahal sa buhay na maaaring nagdurusa nang tahimik. O para sa mga nasa nursing home na, nag-iisa, at walang nagpapadala ng anuman. Maging kayo ang taong nagbabago ng mga bagay.
+    </p>
+
+    <p class="red-txt"><b>Upang mag-order, gamitin ang form sa ibaba.</b></p>
+
+    <h2>
+      Ang huling pagkakataon ngayong taon para makuha ang Flexacil — para sa inyo o para sa isang mahal sa buhay na nagdurusa nang tahimik
+    </h2>
+
+    <img alt="Flexacil" src="https://static.joxi.pro/1779114411129-23c372a1-ac38-4687-a0ad-2589ae0ebc50.jpg"
+      style="margin:0 auto;display:block;max-width:500px;width:100%;margin-top:24px;margin-bottom:20px">
+
+    <p><b>Dr. Jose Santos:</b></p>
+
+    <p>
+      — Nagreserba ako ng 20,000 yunit nang eksklusibo para sa mga mambabasa ng portal na ito. Bawat Pilipinong mahigit 40 taong gulang ay maaaring makakuha ng <font class="red-txt">hanggang 50% na diskuwento</font>, ngunit nagtatapos ang programa sa <span><script>dtime_nums(0, true)</script></span>.
+    </p>
+
+    <p>Huwag maghintay hanggang hindi na kayo makaakyat ng hagdan. Hanggang lubusang bumigay ang mga tuhod. Hanggang manigas ang gulugod. At higit sa lahat — huwag maghintay hanggang maging «pabigat» kayo sa inyong pamilya. May kumukulektang epekto ang Flexacil, at ang paggamit nito minsan sa isang taon bilang pag-iwas ay sapat na.</p>
+
+    <p>Isulat ang inyong pangalan at numero ng telepono. Makikipag-ugnayan sa inyo ang aming consultant, pipili ng tamang programa, at aayusin ang paghahatid sa loob ng 2-3 araw sa pamamagitan ng courier o koreo, nang direkta sa ibinigay na address.</p>
+
+    <p><b>May pag-asa at paggalang — Dr. Jose Santos. Alagaan ninyo ang inyong mga mahal sa buhay. Marahil ang tanging kailangan nila ay malaman na hindi sila nakalimutan.</b></p>
+
+    <p class="pachino-ramka">
+      <span class="ramka-title">Update: <span><script>dtime_nums(-3, true)</script></span>:</span>
+      Dahil sa napakalaking interes, maaaring maubos ang stock nang mas maaga kaysa inaasahan! Ngayon —
+      <font><span><script>dtime_nums(1, true)</script></span> — ang huling araw ng programa</font> o hanggang maubos ang stock.
+    </p>
+
+    <center><img src="images/prod.png" style="max-width:500px;width:200%"></center><br>
+
+    <center>
+      <p class="noclose-cta red-txt">
+        Babala! Huwag isara o i-refresh ang pahina, kung hindi ang yunit ng Flexacil na nakareserba para sa inyo ay ibibigay sa iba!
+      </p>
+      <span class="pre-cta">
+        Samantalahin ang alok — nakareserba ang inyong puwesto:
+        <span class="nowrap">Blg. <font class="number-me" style="border-bottom:2px solid var(--color-danger);font-weight:700">19&nbsp;974</font></span>
+      </span>
+    </center>
+
+    <span id="form"></span>
+    <span id="oneform"></span>
+    <div class="pachinoform">
+      <div class="pachinoform_title">
+        <div class="pachinoform_title_logo">
+          <img alt="" src="images/56d9b0017d1d_d58505c9.png">
+        </div>
+        <div class="pachinoform_title_text">
+          <b>Opisyal na form ng order</b>
+          № <font class="number-me nowrap">19&nbsp;974</font> / <font class="nowrap">20 000</font>
+        </div>
+      </div>
+      <div class="pachinoform_order">
+        Upang masamantala ang <b>50% na diskuwento</b>, isulat ang inyong pangalan at numero ng telepono sa mga patlang sa ibaba at pindutin ang button na «MAG-ORDER NGAYON».
+      </div>
+      <div class="pachinoform_value">
+        Nasa stock:
+        <span class="blc-pck">
+          <strong class="pachinoform_value_current left-pack">33</strong>
+          <strong class="pachinoform_value_total"> /1000</strong>
+        </span>
+      </div>
+      <div class="pachinoform_price">
+        <div class="pachinoform_price_old"><span class="price_old">₱5,980</span></div>
+        <div class="pachinoform_price_new"><span class="price_main">₱2,990</span></div>
+      </div>
+      <form action="/order.php" method="post">
+        <input type="hidden" name="fbpx" value="{fbpx}">
+        <input type="hidden" name="utm_code" value="{subid}">
+        <input type="hidden" name="cid" value="{campaign_id}">
+        <input type="hidden" name="sid" value="3799">
+        <input type="hidden" name="hash" value="{hash}">
+        <input type="hidden" name="country" value="PH">
+        <div class="name-input">
+          <label for="name-input">Pangalan</label>
+          <input autocomplete="name" id="name-input" name="name" placeholder="Inyong pangalan" required="" type="text" value="">
+        </div>
+        <div class="phone-input">
+          <label for="phone-input">Numero ng telepono</label>
+          <input autocomplete="tel" id="phone-input" maxlength="20" name="phone" pattern="^[\\-+() 0-9]{8,20}$" placeholder="Inyong numero ng telepono" required="" type="tel" value="">
+        </div>
+        <button class="button-submit" type="submit">MAG-ORDER NGAYON</button>
+      </form>
+      <div class="pachinoform_footer">
+        ✔️ Ang paghahatid ay isinasagawa ng Pambansang Sentro ng Kalusugan<br> nang direkta sa ibinigay na address
+        <br>
+        <img alt="" src="images/b0110a32ff2e_8322b1b5.png" style="width:auto">
+      </div>
+    </div>
+
+    <!-- COMMENTS SECTION -->
+    <div class="comments comments-fb" id="pluginComments">
+      <div class="comments__header">
+        <div class="comments__left-box">
+          <p class="comments__header-title">MGA KOMENTO</p>
+        </div>
+      </div>
+
+      <div class="comments__item-list">
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7da17fc86c6c_2f1260d0.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Maria Santos</p>
+              <p class="startdate" daysago="8" format="day/month/year"><script>dtime_nums(-8, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Umiyak ako nang basahin ko ang artikulong ito. 76 taong gulang na ang nanay ko at 2 taon na siyang nasa nursing home — dahil mismo sa bumigay ang mga tuhod niya at hindi namin siya kayang alagaan. Iyon ang pinakamalaki kong kasalanan. Inorder ko ang Flexacil para sa kanya. Sana hindi pa huli ang lahat. Diyos ko, sana gumana.</p>
+          </div>
+        </div>
+
+        <div id="first-comment">
+          <div class="comments__item">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/8ba73d45c164_4ede289a.jpg">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Eva Reyes</p>
+                <p class="startdate" daysago="7" format="day/month/year"><script>dtime_nums(-7, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Natanggap ko ang Flexacil noong nakaraang Biyernes. Ipinapahid ko ito sa mga tuhod umaga at gabi. Pagkalipas ng 5 araw — bumaba nang husto ang sakit, nakakababa na ako ng hagdan nang hindi humahawak! Ang kuwento ng doktor ang kumumbinsi sa akin na mag-order. Napakabuting tao niya.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/fa7f61c1431c_7946ff6c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Ana Cruz</p>
+              <p class="startdate" daysago="6" format="day/month/year"><script>dtime_nums(-6, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">69 taong gulang na ako. Pinahirapan ako ng gulugod ko nang 4 na taon — disc hernia at sciatica. Hindi ako makayuko para itali ang sapatos ko. Binigyan ako ng mga doktor ng pampaalis-pamamaga na sumira sa tiyan ko. Pagkalipas ng 3 linggo sa Flexacil — halos lubusan nang nawala ang sakit. Pumupunta ako nang mag-isa sa palengke, namamalengke, nagluluto. Nabawi ko ang buhay ko.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/dcc5cfe80d60_5aa7f8f7.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Esteban Garcia</p>
+              <p class="startdate" daysago="5" format="day/month/year"><script>dtime_nums(-5, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Nagtatrabaho ako ng 10 oras kada araw sa opisina. Bumigay ang gulugod at leeg ko. Sinabi ng doktor: «O tigil ka sa trabaho, o operasyon.» Pinili ko ang Flexacil. Pagkalipas ng 5 linggo — walang sakit. At malaking paggalang kay Dr. Santos — sa mundong lahat ay naghahangad ng pera, naglalakbay siya para makita ang mga nakalimutang matatanda.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/bcbe20e0b5d2_b241da99.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Pedro Bautista</p>
+              <p class="startdate" daysago="5" format="day/month/year"><script>dtime_nums(-5, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Nag-order ako ng 3 yunit — para sa akin (tuhod), para sa asawa ko (kamay, arthritis), at para sa biyenan kong nasa nursing home. Hindi kami makadalaw nang madalas, pero kahit papaano napapadalhan namin siya ng kailangan niya. Sana gumana rin sa kanya. Salamat sa artikulo.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/73d3a879cef9_4a9ce85c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Andrea Ramos</p>
+              <p class="startdate" daysago="4" format="day/month/year"><script>dtime_nums(-4, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Pinag-iisipan ko kung mag-order para sa tatay. 3 taon na siyang nasa nursing home — hindi na talaga gumagana nang maayos ang mga tuhod niya. Sumuko na siya, halos hindi na nagsasalita. Sa palagay n'yo ba kayang tumulong pa ng Flexacil sa edad na 78?</p>
+          </div>
+        </div>
+
+        <div class="comm-obert-reply">
+          <div class="comments__item reply">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/71deaf909b4e_ea30d07c.jpg">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Judith Torres</p>
+                <p class="startdate" daysago="4" format="day/month/year"><script>dtime_nums(-4, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Andrea, 82 taong gulang na ang nanay ko! Malalang artrosis sa magkabilang tuhod, hindi makabangon sa kama. Gumamit siya ng Flexacil nang 2 buwan — ngayon lumalabas na siya nang mag-isa sa bakuran. Hindi ako nagpapalabis. Ang pinakamaganda: nang dalawin ko siya, hinihintay niya ako nang nakatayo sa pintuan. Pareho kaming umiyak. Mag-order ka nang walang alinlangan, karapat-dapat ang tatay mo sa pagkakataong ito.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comm-obert-reply">
+          <div class="comments__item reply">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/66ebad51123a_206d5fba.png">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Luis Flores</p>
+                <p class="startdate" daysago="3" format="day/month/year"><script>dtime_nums(-3, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Andrea, mag-order ka nang walang takot. Ako noong 78 ay isang hakbang na lang sa wheelchair — coxarthrosis. Ipinatayo ako ng Flexacil sa loob ng 2 buwan. Literal. Kailangan ito ng tatay mo nang higit sa iniisip mo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/d61700bc0961_28c03d39.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Catalina Aquino</p>
+              <p class="startdate" daysago="3" format="day/month/year"><script>dtime_nums(-3, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Isang linggo ko nang ipinapahid ito sa mga tuhod at baywang ko. Tuwing umaga, hindi na ako parang «kahoy». Nakakayuko na ako, nakakabangon nang hindi sinasabing «aray». Inorderan ko rin ang kapitbahay — 73 taong gulang siya, nag-iisang nakatira at humahawak sa dingding para makalakad sa loob ng bahay.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7db2eed8e880_6ecfd92a.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Elizabeth Castillo</p>
+              <p class="startdate" daysago="2" format="day/month/year"><script>dtime_nums(-2, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Sa edad na 68 akala ko hindi na ako makakapag-hardin muli. Pinaralisa ako ng mga tuhod at gulugod ko. Binago ng Flexacil ang lahat — pagkalipas ng 4 na linggo, naghuhukay na ako ng unang taniman ngayong taon. Naantig ang kaluluwa ko sa kuwento ni Dr. Santos. May mabubuti pa ring tao sa mundong ito.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/a49c7ec0724d_6f186c1c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Jose Reyes</p>
+              <p class="startdate" daysago="2" format="day/month/year"><script>dtime_nums(-2, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">82 taong gulang na ako. Noong nakaraang taon, hindi na ako makapunta nang mag-isa sa banyo. Nag-uusap na ang mga anak ko tungkol sa pagpapasok sa akin sa nursing home. Sinubukan ko ang Flexacil — nang walang gaanong pag-asa. At gumagana! Naglalakad ako nang mag-isa, nagbibihis mag-isa, lumalabas nang mag-isa hanggang sa pintuan. Hindi na nag-uusap ang mga anak ko tungkol sa nursing home. Iyon ang pinakamalaki kong kaligayahan.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7099c502f996_b89c4cc9.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Teodoro Cruz</p>
+              <p class="startdate" daysago="1" format="day/month/year"><script>dtime_nums(-1, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Hindi makababa ng hagdan ang asawa ko. Humahawak siya sa dingding at umiiyak sa sakit. Natatakot akong mawala siya — hindi dahil sa sakit, kundi sa kawalan ng pag-asa. Nag-order ako ng Flexacil nang may diskuwento. Pagkalipas ng 4 na linggo — kahapon pumunta siya nang mag-isa sa palengke at umuwing may dalang bulaklak. May bulaklak! Buong puso, maraming salamat.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/47a8cb9cf088_09555b8e.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Ilda dela Cruz</p>
+              <p class="startdate" daysago="1" format="day/month/year"><script>dtime_nums(-1, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Nag-order ako ng 4 na yunit — para sa nanay (nursing home, tuhod), para sa tatay (sa bahay, gulugod), at 2 para sa akin (kamay, namamagang kasukasuan, hindi makasulat). Dumurog sa puso ko ang mga kuwento sa artikulo. Dapat ginawa ko na ito noon pa. Tapos na ang mga dahilan.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/f021e0a36f8b_7c282874.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Susana Mendoza</p>
+              <p class="nowdate" daysago="0" format="day/month/year"><script>dtime_nums(0, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Natanggap ko ang Flexacil — dinala ito ng courier sa loob ng 2 araw! Ipinahid ko na ito sa mga tuhod ng nanay sa nursing home. Pinananabikan ko ang pinakamabuti. Ipapadala ko rin ang artikulong ito sa mga tauhan — baka makipag-ugnayan sila kay Dr. Santos.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/d770c7a4cbdf_467ee117.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Gabriel Villanueva</p>
+              <p class="nowdate" daysago="0" format="day/month/year"><script>dtime_nums(0, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Hinanap ko ang Flexacil sa botika — wala sila. Sinabi nila kailangan itong i-order mula sa pahinang ito. Sana may stock pa. Kailangang-kailangan ito ng lolo ko — 81 taong gulang siya at hindi na talaga makalakad.</p>
+          </div>
+        </div>
+
+        <div class="custom-commetns-container"></div>
+
+        <a href="#" style="text-decoration: none;">
+          <div class="form-container">
+            <form class="custom-form" id="custom-form">
+              <div class="custom-form__top-field">
+                <div class="custom-form__ava-block">
+                  <input disabled class="custom-form__ava-input sf-hidden" id="avatar" name="avatar" type="file" value="">
+                  <label class="custom-form__ava-label"><span class="custom-form__ava-label_red-text">*</span>Larawan sa profile</label>
+                </div>
+                <input disabled class="custom-form__name" placeholder="Inyong pangalan" required="" type="text" value="">
+              </div>
+              <textarea disabled class="custom-form__message" placeholder="Inyong komento" required=""></textarea>
+              <div class="custom-form__bottom-field">
+                <div class="custom-form__photo-block">
+                  <input disabled class="custom-form__photo-input sf-hidden" id="photo" type="file" value="">
+                  <label class="custom-form__photo-label" for="photo">Maglakip ng larawan</label>
+                </div>
+                <button disabled class="custom-form__btn">IPADALA</button>
+              </div>
+            </form>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </main>
+
+  <div class="trust-strip">
+    <div class="trust-item"><span class="trust-item-icon">🛡️</span> Sertipikadong kalidad</div>
+    <div class="trust-item"><span class="trust-item-icon">🚚</span> Paghahatid sa 2–3 araw</div>
+    <div class="trust-item"><span class="trust-item-icon">⚕️</span> Walang reseta ng doktor</div>
+    <div class="trust-item"><span class="trust-item-icon">🔒</span> Ligtas na order</div>
+  </div>
+
+  <footer class="clinical-footer">
+    © HealthInfo Pilipinas — espesyal na ulat<br>
+    Ang mga datos na nai-publish sa pahinang ito ay para sa kaalaman lamang at hindi kapalit ng konsultasyon sa doktor.
+  </footer>
+
+  <div class="ffl ffl__anim sf-hidden" data-name="div-gc0zvidej" style="display:block"></div>
+
+<script async>
+  const LAZY = document.querySelectorAll('img');
+  for (let i = 0; i < LAZY.length; i++) {
+    LAZY[i].setAttribute('loading', 'lazy');
+  } </script>
+<script>
+  $("a").on("touchend, click", function (e) {
+    e.preventDefault();
+    $('body,html').animate({
+      scrollTop: $('#oneform').offset().top
+    }, 400);
+  });
+</script>
+<script>
+  $('[name="name"]').on("input", function () {
+    var val = $(this).val();
+    var cleaned = val
+      .replace(/[^\p{L}\s]/gu, "")
+      .replace(/^\s+/, "")
+      .replace(/\s\s+/, " ");
+    var parts = cleaned.split(" ");
+    if (parts.length > 2) {
+      cleaned = parts[0] + " " + parts[1];
+    }
+    $(this).val(cleaned);
+  });
+  $('[name="name"]').on("change blur", function () {
+    $(this).val($(this).val().trim());
+  });
+  $('[name="phone"]').on("input change", function (e) {
+    var val = $(this).val();
+    $(this).val(val.replace(/\D/g, ""));
+    $(e.currentTarget).attr("pattern", "[0-9]{6,}");
+  });
+</script>
+<p style="opacity: 0;">{_box:696Vgj23}</p>
+</body>
+
+</html>
