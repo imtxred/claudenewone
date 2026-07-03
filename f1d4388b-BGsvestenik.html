@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <meta charset="utf-8">
+  <title>„Посещавам онези, за които никой вече не идва" — български свещеник, който лекува ставите на изоставените стари хора в домовете за стари хора със старинна манастирска рецепта</title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="no-cache" http-equiv="Cache-Control">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="no-referrer" name="referrer">
+  <meta content="noindex, nofollow" name="robots">
+
+  <link rel="icon" href="images/product.png?=v1">
+
+  <style>
+    :root {
+      --color-primary: #0a5c9e;
+      --color-primary-dark: #084678;
+      --color-primary-light: #e8f2fa;
+      --color-accent: #0284c7;
+      --color-danger: #c0392b;
+      --color-danger-light: #fdecea;
+      --color-success: #1e8449;
+      --color-success-light: #e8f5ee;
+      --color-warning: #b7791f;
+      --color-text: #1a2b42;
+      --color-text-muted: #4a5a70;
+      --color-text-light: #6b7a8f;
+      --color-bg: #ffffff;
+      --color-bg-soft: #f7fafc;
+      --color-bg-alt: #eef4f9;
+      --color-border: #d9e2ec;
+      --color-border-soft: #e4ebf2;
+      --shadow-sm: 0 1px 2px rgba(10, 92, 158, 0.04), 0 1px 3px rgba(10, 92, 158, 0.06);
+      --shadow-md: 0 4px 12px rgba(10, 92, 158, 0.08), 0 2px 4px rgba(10, 92, 158, 0.04);
+      --shadow-lg: 0 10px 25px rgba(10, 92, 158, 0.10), 0 4px 10px rgba(10, 92, 158, 0.05);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-serif: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin:0; padding:0; font-family:var(--font-sans); font-size:17px; line-height:1.65; color:var(--color-text); background:var(--color-bg-soft); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    .clinical-topbar { background:var(--color-primary-dark); color:#fff; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; padding:8px 16px; text-align:center; font-weight:500; }
+    .clinical-topbar::before { content:"⚕ "; margin-right:6px; }
+    .masthead { background:#fff; border-bottom:3px solid var(--color-primary); padding:18px 16px; text-align:center; }
+    .masthead-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
+    .masthead-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--font-serif); font-weight:700; font-size:22px; color:var(--color-primary-dark); letter-spacing:-0.01em; }
+    .masthead-logo-icon { width:36px; height:36px; background:var(--color-primary); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; font-size:20px; font-weight:700; }
+    .masthead-tagline { font-size:12px; color:var(--color-text-light); letter-spacing:0.08em; text-transform:uppercase; border-left:1px solid var(--color-border); padding-left:14px; font-weight:500; }
+    @media (max-width:560px) { .masthead-tagline { border-left:0; padding-left:0; font-size:11px; width:100%; border-top:1px solid var(--color-border); padding-top:8px; margin-top:4px; } }
+    header { max-width:900px; margin:0 auto; padding:0; }
+    .bg-image { text-align:center; }
+    .bg-image img { max-width:100%; height:auto; display:inline-block; }
+    .text-container { display:block; }
+    .h1-bg { position:relative; max-width:900px; margin:0 auto; padding:28px 22px 20px; background:#fff; border-bottom:1px solid var(--color-border); }
+    .h1-bg::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%); }
+    .title_h1 { font-family:var(--font-serif); font-size:26px; line-height:1.25; color:var(--color-text); font-weight:700; margin:0 0 14px; letter-spacing:-0.01em; }
+    .head-one-part { color:var(--color-danger); }
+    .head-two-part { display:block; }
+    .head-main-date { font-size:13px; color:var(--color-text-light); padding:0; display:flex; align-items:center; gap:8px; margin-bottom:16px; padding-bottom:14px; border-bottom:1px dashed var(--color-border); }
+    .head-main-date::before { content:"📅"; font-size:14px; }
+    .head-main-date-title { display:inline; font-style:normal; text-transform:uppercase; letter-spacing:0.05em; font-weight:500; }
+    .main-subtitle { display:block; padding:16px 18px; color:var(--color-text); font-size:17px; border-radius:var(--radius-md); font-weight:500; border-left:4px solid var(--color-primary); background:var(--color-primary-light); line-height:1.55; font-style:normal; margin:0; box-shadow:none; }
+    @media (max-width:640px) { .title_h1 { font-size:20px; } .main-subtitle { font-size:15px; padding:14px 14px; } .h1-bg { padding:22px 16px 18px; } }
+    main { max-width:900px; margin:0 auto; padding:24px 22px 40px; background:#fff; border-left:1px solid var(--color-border-soft); border-right:1px solid var(--color-border-soft); }
+    @media (max-width:640px) { main { padding:18px 14px 30px; } }
+    main p { margin:0 0 16px; color:var(--color-text); }
+    main img { max-width:100%; height:auto; border-radius:var(--radius-md); }
+    main h2 { font-family:var(--font-serif); font-size:24px; line-height:1.3; font-weight:700; color:var(--color-primary-dark); margin:32px 0 16px; padding-bottom:12px; border-bottom:2px solid var(--color-primary-light); letter-spacing:-0.01em; }
+    main h2 span { display:block; font-family:var(--font-sans); font-size:16px; font-weight:500; color:var(--color-text-muted); margin-top:10px; margin-bottom:0; line-height:1.5; }
+    main h3 { font-family:var(--font-serif); font-size:19px; color:var(--color-primary-dark); margin:22px 0 12px; font-weight:600; }
+    @media (max-width:640px) { main h2 { font-size:19px; } main h2 span { font-size:15px; } }
+    main ul { padding-left:0; list-style:none; margin:16px 0; background:var(--color-bg-soft); border:1px solid var(--color-border-soft); border-radius:var(--radius-md); padding:14px 18px 14px 20px; }
+    main ul li { position:relative; padding-left:22px; margin-bottom:8px; line-height:1.5; }
+    main ul li::before { content:""; position:absolute; left:0; top:10px; width:10px; height:10px; border:2px solid var(--color-primary); border-radius:50%; background:#fff; }
+    main ul li:last-child { margin-bottom:0; }
+    .red-txt { color:var(--color-danger); font-weight:600; }
+    .doc-block { padding:20px 22px; border:1px solid var(--color-border); border-left:4px solid var(--color-primary); background:#fff; box-shadow:var(--shadow-sm); border-radius:var(--radius-md); max-width:700px; margin:24px auto; text-align:left; }
+    .doc-block img { border-radius:var(--radius-md); margin-bottom:14px; }
+    .doc-block p { padding:0; margin:0 0 12px; font-size:16px; line-height:1.6; }
+    .doc-block p:last-child { margin-bottom:0; }
+    .doc-block p b { color:var(--color-primary-dark); }
+    figure { margin:22px 0; padding:0; text-align:center; }
+    figure img { border-radius:var(--radius-md); box-shadow:var(--shadow-md); max-width:100%; height:auto; }
+    figure figcaption { margin-top:12px; padding:10px 14px; font-size:14px; line-height:1.5; color:var(--color-text-muted); background:var(--color-bg-soft); border-left:3px solid var(--color-primary); border-radius:0 var(--radius-sm) var(--radius-sm) 0; text-align:left; font-style:italic; }
+    figure.cap-bold figcaption { font-style:normal; font-weight:500; color:var(--color-text); }
+    .img-card { border:1px solid var(--color-border); padding:6px; background:#fff; box-shadow:var(--shadow-md); border-radius:var(--radius-md); }
+    .img-card2 { border:1px solid var(--color-border); padding:6px; background:#fff; border-radius:var(--radius-md); }
+    .pachino-ramka312-block { margin:24px 0; }
+    .pachino-ramka312 { background:var(--color-danger-light); border:1px solid rgba(192,57,43,0.25); border-left:4px solid var(--color-danger); border-radius:var(--radius-md); padding:18px 20px; color:var(--color-text); font-weight:500; box-shadow:none; margin:0; font-size:16px; line-height:1.6; position:relative; }
+    .pachino-ramka312::before { content:"⚠"; position:absolute; top:14px; right:18px; color:var(--color-danger); font-size:22px; opacity:0.7; }
+    .pachino-ramka312 .obertka-1 { display:block; }
+    .rev-block { margin:24px 0; padding:20px 22px; background:var(--color-primary-light); border:1px solid rgba(10,92,158,0.15); border-left:4px solid var(--color-primary); border-radius:var(--radius-md); box-shadow:none; }
+    .rev-block p { font-size:16px; line-height:1.6; margin-bottom:12px; }
+    .rev-block img { border-radius:var(--radius-md); margin-bottom:14px; max-width:100%; }
+    .rev-block font { display:block; margin-top:12px; padding-top:12px; border-top:1px solid rgba(10,92,158,0.15); color:var(--color-primary-dark); font-size:15px; }
+    .rev-block font b { font-weight:600; }
+    .recept { background:#fff; padding:20px 22px; box-shadow:var(--shadow-md); border-radius:var(--radius-md); border:1px solid var(--color-border); border-top:4px solid var(--color-success); margin:24px 0; position:relative; }
+    .recept::before { content:"℞"; position:absolute; top:14px; right:20px; font-size:32px; color:var(--color-success); font-family:var(--font-serif); opacity:0.4; line-height:1; }
+    .recept p b { color:var(--color-primary-dark); font-size:16px; }
+    .my-ul-0-green { margin:12px 0 0 !important; padding:0 !important; background:transparent !important; border:0 !important; list-style:none; }
+    .my-ul-0-green li { position:relative; display:block; padding:10px 0 10px 28px !important; margin:0 !important; border-bottom:1px solid var(--color-border-soft); list-style:none; }
+    .my-ul-0-green li::before { content:"✓" !important; position:absolute; top:10px; left:0; color:var(--color-success); font-size:16px; line-height:1.5; font-weight:700; border:0 !important; background:transparent !important; width:auto !important; height:auto !important; border-radius:0 !important; }
+    .my-ul-0-green li:last-child { border-bottom:0; }
+    .my-ul-0-green li b { color:var(--color-primary-dark); font-size:16px; }
+    .my-ul-0-green font { font-size:14px; display:block; margin-top:4px; color:var(--color-text-muted); }
+    .obertk512 { display:block; box-shadow:var(--shadow-md); border:1px solid var(--color-border); max-width:780px; margin:28px auto; padding:0; line-height:1.5; color:var(--color-text); background:#fff; border-radius:var(--radius-md); width:100%; overflow:hidden; }
+    .obertk512 h1 { font-family:var(--font-serif); line-height:1.3; margin:0; color:#fff; font-size:18px; padding:16px 20px; font-weight:600; background:var(--color-primary); border:0; border-radius:0; }
+    .block-offer-actions-block { padding:10px 22px 22px; border:0; }
+    .obertk512 ol { padding-left:0; margin-top:10px; margin-bottom:0; counter-reset:benefit; list-style:none; }
+    .obertk512 li { line-height:1.4; padding:16px 0 16px 50px; border-bottom:1px solid var(--color-border-soft); position:relative; counter-increment:benefit; }
+    .obertk512 li::before { content:counter(benefit); position:absolute; left:0; top:14px; width:36px; height:36px; background:var(--color-primary-light); color:var(--color-primary-dark); border-radius:50%; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; border:2px solid var(--color-primary); }
+    .obertk512 li::marker { content:none; }
+    .obertk512 li:last-child { border-bottom:0; }
+    .obertk512 li font { line-height:1.3; color:var(--color-primary-dark); text-align:left; font-weight:600; font-size:17px; display:block; margin-bottom:6px; }
+    .block-offer-actions-block li span { display:block; font-size:15px; line-height:1.5; font-weight:400; color:var(--color-text-muted); margin:0; padding:0; border-bottom:0; }
+    .table-block { display:block; box-shadow:var(--shadow-md); border:1px solid var(--color-border); border-radius:var(--radius-md); max-width:700px; margin:28px auto; padding:0; font-size:16px; line-height:1.5; color:var(--color-text); background:#fff; width:100%; overflow:hidden; }
+    .table-block h1 { font-family:var(--font-serif); line-height:1.35; margin:0; color:#fff; font-size:17px; padding:16px 20px; font-weight:600; background:var(--color-primary); border:0; border-radius:0; }
+    .table { width:100%; max-width:100%; border-collapse:collapse; font-family:var(--font-sans); margin:0; background:#fff; }
+    .table tr:nth-child(even) td { background:var(--color-bg-soft) !important; }
+    .table td { border:0 !important; border-bottom:1px solid var(--color-border-soft) !important; padding:12px 16px !important; vertical-align:middle; background:#fff !important; }
+    .table tr:last-child td { border-bottom:0 !important; }
+    .table td.one { text-align:left; width:75%; font-size:15px; font-weight:500; color:var(--color-text); }
+    .table td.two { font-size:18px; color:var(--color-success); text-align:right; font-weight:700; width:25%; white-space:nowrap; }
+    @media (max-width:560px) { .table td.one { font-size:14px; } .table td.two { font-size:16px; } .table td { padding:10px 12px !important; } }
+    .pachino-ramka2 { text-align:left; color:var(--color-success); font-weight:600; border:1px solid rgba(30,132,73,0.25); border-left:4px solid var(--color-success); border-radius:var(--radius-md); padding:18px 20px; background:var(--color-success-light); box-shadow:none; margin:20px 0; font-size:16px; line-height:1.55; }
+    .pachino-ramka { border:1px solid rgba(183,121,31,0.3); border-left:4px solid var(--color-warning); padding:18px 20px; border-radius:var(--radius-md); background:#fff9ef; margin:20px 0; font-size:16px; line-height:1.55; position:relative; }
+    .pachino-ramka::before { content:"🕐"; position:absolute; top:14px; right:18px; font-size:22px; opacity:0.8; }
+    .ramka-title { display:block; color:var(--color-warning); padding:0; margin-bottom:10px; font-weight:700 !important; background:transparent; text-transform:uppercase; font-size:13px; letter-spacing:0.06em; }
+    .pachino-ramka font { color:var(--color-danger); font-weight:600; }
+    .noclose-cta { font-size:15px; max-width:780px; margin:16px auto; display:block; background:var(--color-danger-light); border:1px solid rgba(192,57,43,0.2); padding:12px 16px; border-radius:var(--radius-md); line-height:1.5; }
+    .pre-cta { display:block; color:var(--color-success); font-weight:500; font-size:16px; margin-top:12px; }
+    .nowrap { white-space:nowrap; }
+    .pachinoform { padding:0; font-size:17px; line-height:1.5; color:var(--color-text); border:1px solid var(--color-border); background:#fff; display:block; border-radius:var(--radius-lg); width:100%; max-width:780px; margin:24px auto; box-shadow:var(--shadow-lg); overflow:hidden; }
+    .pachinoform_title { display:flex; gap:16px; max-width:none; align-self:stretch; text-align:left; background:var(--color-primary); color:#fff; padding:20px 24px; align-items:center; }
+    .pachinoform_title_logo { flex-shrink:0; background:#fff; padding:6px; border-radius:50%; width:56px; height:56px; display:flex; align-items:center; justify-content:center; }
+    .pachinoform_title_logo img { max-width:100%; height:auto; }
+    .pachinoform_title_text { align-self:center; color:#fff; font-size:15px; line-height:1.4; }
+    .pachinoform_title_text>b { display:block; line-height:1.3; font-size:17px; margin-bottom:4px; color:#fff; font-weight:600; }
+    .pachinoform_order { max-width:none; font-weight:500; font-size:15px; margin:0; text-align:center; padding:16px 24px; background:var(--color-primary-light); border-bottom:1px solid var(--color-border-soft); color:var(--color-text); line-height:1.5; }
+    .pachinoform_order>b { color:var(--color-danger); font-weight:700; }
+    .pachinoform_value { display:flex; color:var(--color-text); font-weight:600; font-size:15px; align-items:center; justify-content:center; padding:16px 24px 0; flex-wrap:wrap; gap:10px; }
+    .pachinoform_value_current { border:2px solid var(--color-danger); color:var(--color-danger); line-height:1; font-size:22px; padding:6px 18px; margin:0 6px; border-radius:var(--radius-sm); background:var(--color-danger-light); font-weight:700; }
+    .pachinoform_value_total { font-size:18px; color:var(--color-text-muted); }
+    .pachinoform_price { display:flex; align-items:center; justify-content:center; gap:24px; margin:20px 0 0; padding:0 24px; }
+    .pachinoform_price_old span { display:block; font-size:24px; font-weight:600; letter-spacing:-0.5px; color:var(--color-text-light); position:relative; line-height:1; }
+    .pachinoform_price_old span::before { position:absolute; content:""; left:-4px; top:50%; right:-4px; border-top:2px solid var(--color-danger); transform:rotate(-12deg); }
+    .pachinoform_price_new span { display:inline-block; background:var(--color-success); color:#fff; text-shadow:none; font-size:32px; padding:8px 20px; font-weight:700; line-height:1; border-radius:var(--radius-sm); box-shadow:0 4px 12px rgba(30,132,73,0.25); }
+    .pachinoform form { padding:22px 24px 20px; }
+    .pachinoform .name-input, .pachinoform .phone-input { color:var(--color-text); font-size:15px; margin-bottom:14px; }
+    .pachinoform .name-input label, .pachinoform .phone-input label { font-weight:500; font-size:14px; color:var(--color-text-muted); margin-bottom:6px; display:block; text-transform:uppercase; letter-spacing:0.04em; }
+    .pachinoform .name-input input, .pachinoform .phone-input input { font:inherit; color:var(--color-text); box-sizing:border-box; width:100%; border-radius:var(--radius-sm); padding:12px 16px; min-width:0; background:#fff; border:1.5px solid var(--color-border); font-size:16px !important; transition:border-color 0.15s ease, box-shadow 0.15s ease; }
+    .pachinoform .name-input input:focus, .pachinoform .phone-input input:focus, .pachinoform input:focus { outline:0; border-color:var(--color-primary); box-shadow:0 0 0 3px rgba(10,92,158,0.15); }
+    .pachinoform .button-submit { text-align:center; width:100%; margin:6px auto 0; text-decoration:none; border-radius:var(--radius-sm); color:#fff; border:0; padding:16px 20px; cursor:pointer; background:var(--color-primary); font-size:17px; line-height:1.3; font-weight:600; letter-spacing:0.02em; text-transform:uppercase; transition:background 0.15s ease, transform 0.05s ease; box-shadow:0 4px 12px rgba(10,92,158,0.25); font-family:var(--font-sans); }
+    .pachinoform .button-submit:hover { background:var(--color-primary-dark); }
+    .pachinoform .button-submit:active { transform:translateY(1px); }
+    .pachinoform .button-submit:focus { outline:0; box-shadow:0 0 0 3px rgba(10,92,158,0.25); }
+    .pachinoform ::placeholder { color:var(--color-text-light); opacity:1; font-size:15px !important; }
+    .pachinoform_footer { text-align:center; color:var(--color-text-muted); font-size:13px; padding:14px 24px 20px; background:var(--color-bg-soft); border-top:1px solid var(--color-border-soft); line-height:1.5; }
+    .pachinoform_footer img { margin-top:10px; max-width:100%; height:auto; opacity:0.85; }
+    @media (max-width:500px) { .pachinoform_title { gap:10px; padding:16px 18px; } .pachinoform_title_text { font-size:13px; } .pachinoform_title_text>b { font-size:15px; } .pachinoform_value { flex-wrap:wrap; justify-content:center; font-size:14px; } .pachinoform_price_new span { font-size:26px; } .pachinoform_price_old span { font-size:20px; } .pachinoform form { padding:18px 18px 18px; } .pachinoform_order { padding:14px 18px; font-size:14px; } .blc-pck { display:block; width:100%; text-align:center; margin-top:8px; } .pachinoform_value_current { margin:0; } }
+    .comments { max-width:900px; margin:32px auto 20px; background:#fff; border-radius:var(--radius-md); border:1px solid var(--color-border); overflow:hidden; }
+    .comments__header { padding:16px 20px; background:var(--color-primary); color:#fff; display:flex; align-items:center; justify-content:space-between; }
+    .comments__header-title { font-family:var(--font-serif); font-size:18px; font-weight:600; margin:0; color:#fff; letter-spacing:0.02em; }
+    .comments__item-list { padding:8px 20px; }
+    .comments__item { padding:16px 0; border-bottom:1px solid var(--color-border-soft); }
+    .comments__item:last-child { border-bottom:0; }
+    .comments__item-header { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+    .comments__item-avatar { width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; border:1px solid var(--color-border); }
+    .comments__item-info { flex:1; min-width:0; }
+    .comments__item-name { font-weight:600; font-size:15px; color:var(--color-primary-dark); margin:0 0 2px; }
+    .comments__item-info p:last-child, .comments__item-info .startdate, .comments__item-info .nowdate { font-size:12px; color:var(--color-text-light); margin:0; }
+    .comments__item-body { padding-left:56px; }
+    .comments__item-content { font-size:15px; line-height:1.55; color:var(--color-text); margin:0; }
+    .comments__item-content img { border-radius:var(--radius-sm); margin-top:10px; }
+    .comm-obert-reply { padding-left:28px; border-left:2px solid var(--color-primary-light); margin-left:8px; }
+    .comm-obert-reply .comments__item.reply { border-bottom:1px solid var(--color-border-soft); }
+    @media (max-width:560px) { .comments__item-body { padding-left:0; } .comm-obert-reply { padding-left:16px; } }
+    .form-container { max-width:900px; margin:0 auto; padding:0 20px; }
+    .custom-form { max-width:100%; margin:0 auto; padding:18px; box-shadow:var(--shadow-sm); border:1px solid var(--color-border); box-sizing:border-box; font-family:var(--font-sans) !important; display:flex; flex-direction:column; gap:12px; background:var(--color-bg-soft); border-radius:var(--radius-md); }
+    .custom-form__top-field { display:flex; gap:16px; align-items:center; }
+    .custom-form__ava-block { position:relative; width:54px; height:54px; overflow:hidden; border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px dashed var(--color-border); transition:0.2s; flex:0 0 auto; background:#fff; }
+    .custom-form__ava-label { font-size:11px; text-align:center; line-height:1.2; cursor:pointer; font-family:inherit; font-weight:400; color:var(--color-text-light); padding:4px; }
+    .custom-form__ava-label_red-text { color:var(--color-danger); }
+    .custom-form__name { width:100%; max-width:320px; display:inline-block; outline:none; border:1.5px solid var(--color-border); padding:10px 14px; font-size:14px; height:42px; box-sizing:border-box; font-family:inherit; border-radius:var(--radius-sm); background:#fff; }
+    .custom-form__message { resize:none; width:100%; outline:none; border:1.5px solid var(--color-border); padding:12px 14px; min-height:90px; font-size:14px; line-height:1.5; font-family:inherit; box-sizing:border-box; border-radius:var(--radius-sm); background:#fff; }
+    .custom-form__bottom-field { display:flex; flex-direction:row; gap:14px; align-items:center; flex-wrap:wrap; }
+    .custom-form__btn { outline:none; padding:10px 24px; background:var(--color-primary); color:#fff; font-weight:600; font-size:14px; transition:background 0.15s ease; cursor:pointer; text-transform:uppercase; border:0; font-family:var(--font-sans); border-radius:var(--radius-sm); text-decoration:none !important; letter-spacing:0.04em; }
+    .custom-form__btn:hover { background:var(--color-primary-dark); }
+    .custom-form__photo-label { cursor:pointer; font-size:13px; font-weight:400; border:none; color:var(--color-primary); text-decoration:underline; }
+    .trust-strip { max-width:900px; margin:0 auto; background:#fff; border:1px solid var(--color-border-soft); border-top:0; padding:20px 22px; display:flex; flex-wrap:wrap; gap:18px; justify-content:space-around; align-items:center; }
+    .trust-item { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--color-text-muted); font-weight:500; }
+    .trust-item-icon { color:var(--color-primary); font-size:18px; }
+    .clinical-footer { max-width:900px; margin:0 auto 0; padding:24px 22px 36px; background:#fff; border:1px solid var(--color-border-soft); border-top:1px solid var(--color-border); text-align:center; font-size:12px; color:var(--color-text-light); line-height:1.6; }
+    .clinical-footer a { color:var(--color-primary); text-decoration:none; }
+    .product-center { display:block; max-width:220px; width:100%; margin:16px auto; }
+    #overlay { position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:100; transition:opacity 0.3s ease; }
+    #popup3 { background-size:cover; background-position:center; position:fixed; top:50%; left:50%; padding:20px; background-color:white; box-shadow:var(--shadow-lg); transition:opacity 0.3s ease, transform 0.3s ease; max-width:800px; width:93%; height:87%; overflow-y:auto; max-height:100vh; z-index:999999; }
+    body input[name="phone"] { background-repeat:no-repeat !important; background-position:left 15px center !important; }
+    main center { display:block; text-align:center; }
+    .sf-hidden { display:none !important; }
+    .quote-inline { margin:20px 0; padding:16px 20px; background:var(--color-bg-soft); border-left:4px solid var(--color-text-light); border-radius:0 var(--radius-md) var(--radius-md) 0; font-style:italic; color:var(--color-text-muted); font-size:16px; line-height:1.6; }
+    .quote-inline .quote-name { display:block; margin-top:10px; font-style:normal; font-weight:600; color:var(--color-primary-dark); font-size:14px; }
+    @media (max-width:480px) { body { font-size:16px; } main p { font-size:16px; } .doc-block { padding:16px; } .rev-block { padding:16px; } .recept { padding:16px; } .block-offer-actions-block { padding:6px 16px 16px; } .obertk512 li { padding-left:44px; } .obertk512 li::before { width:30px; height:30px; font-size:14px; } }
+    @keyframes example { 0% { opacity:0; } 100% { opacity:1; } }
+    @keyframes blinker { from { opacity:1.0; } to { opacity:0.7; } }
+  </style>
+
+  <script src="js/dtime.js"></script>
+</head>
+
+<body>
+
+  <div class="clinical-topbar">Специален репортаж · Здраве и Общество</div>
+
+  <div class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-logo">
+        <span class="masthead-logo-icon">+</span>
+        <span>ЗдравеИнфо България</span>
+      </div>
+      <div class="masthead-tagline">Репортажи от света на общественото здраве</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="bg-image"></div>
+  </header>
+  <div class="text-container"></div>
+  <div class="h1-bg split">
+    <h1 class="title_h1">
+      <span class="head-one-part">„КОГАТО ВЕЧЕ НЕ МОЖЕШ ДА ХОДИШ, СЕМЕЙСТВОТО ТЕ ЗАБРАВЯ."</span>
+      <span class="head-two-part">ТОЗИ СВЕЩЕНИК ОБИКАЛЯ ДОМОВЕТЕ ЗА СТАРИ ХОРА, ВРЪЩАЙКИ НА ИЗОСТАВЕНИТЕ СТАРЦИ ТОВА, КОЕТО НИКОЙ ДРУГ НЕ МОЖЕ ДА ВЪРНЕ: ПОДВИЖНОСТТА НА СТАВИТЕ И ЧУВСТВОТО ЗА ДОСТОЙНСТВО. НЕГОВАТА СТАРИННА МАНАСТИРСКА РЕЦЕПТА СМАЯ ВСИЧКИ.</span>
+    </h1>
+
+    <div class="tdate head-main-date">
+      <span class="head-main-date-title">Публикувано: </span>
+      <span class="startdate"><script>dtime_nums(-3, true)</script>, 09:36</span>
+    </div>
+
+    <div class="main-subtitle">
+      Как 50-годишният отец Стефан напусна удобството на своята енория в София, за да помогне на пенсионерите, забравени в домовете за стари хора — тези стари хора, които семействата им са изоставили именно защото вече не можели да ходят, да стоят, да правят нищо сами. И как им върна двигателната способност със старинна манастирска рецепта — без операция и без доживотно медикаментозно лечение.
+    </div>
+  </div>
+
+  <main>
+
+    <img alt="Отец Стефан посещава стар човек в дома за стари хора" src="https://static.joxi.pro/1778142925769-2045c9ea-f00c-48ab-ae5d-6e56aec020f0.jpg" style="margin-bottom:14px;margin-top:0">
+
+    <p>
+      В сряда сутринта пристигнахме в Разград, Разградска област. Пътят към дома за стари хора минава по калдъръмена улица, покрай стари огради и лаещи кучета. „Търсите ли свещеника?" — попита ни продавачката в магазина. „Идва всеки четвъртък. Старците го чакат на портата. Има хора, които плачат, когато го видят."
+    </p>
+    <p>
+      Така за пръв път чухме за отец Стефан — 50-годишния свещеник, който напусна удобството на своята енория в София, за да прави това, което никой друг не иска: обикаля из домовете за стари хора из цяла България и помага на пенсионерите, изоставени от семействата им.
+    </p>
+    <p>
+      Причината за изоставянето? Почти винаги е една и съща: <b>старите хора вече не можели да ходят.</b> Коленете им се провалили. Гръбнакът им се изкривил. Ръцете им треперели толкова, че не можели да държат лъжица. И точно в онзи момент — точно когато имали най-голяма нужда от помощ — семейството решило, че това е твърде много. Твърде трудно. Твърде скъпо. И ги настанили в дом за стари хора.
+    </p>
+
+    <div class="quote-inline">
+      „Синът ми каза: «Мамо, не мога да те вдигам от стола всеки път. Не ми се получава.» На следващия ден ме откара в дома за стари хора. 3 години не ме е посещавал."
+      <span class="quote-name">— баба Елена, 79 години, дом за стари хора в Разград</span>
+    </div>
+
+    <div class="quote-inline">
+      „Когато коленете ми напълно се блокираха, жена ми каза, че не може да живее с инвалид. Тръгна си. Децата застанаха на нейна страна. Докараха ме тук и изчезнаха."
+      <span class="quote-name">— чичо Павел, 73 години, дом за стари хора в Плевен</span>
+    </div>
+
+    <h2>
+      „Видях как изглежда забравеността. И реших, че не мога да стоя безучастен"
+      <span>Ексклузивно интервю с отец Стефан — свещеникът, който напусна удобството на своята енория, за да помогне на тези, за които никой не се грижи</span>
+    </h2>
+
+    <div class="doc-block">
+      <img alt="Отец Стефан" src="https://static.joxi.pro/1778142925769-8d31ed89-cd31-449a-8c51-6ff1a0bfb48e.jpg">
+      <p>Отец Стефан: „За пръв път влязох в дом за стари хора преди много години, посещавайки най-възрастните си енориаши. Не бях подготвен за това, което видях. Една 76-годишна жена, баба Иляна, седеше на ръба на леглото, с отекнали крака и колена, които не се огъваха. 4 месеца не беше напускала стаята. Хвана ме за ръка и каза:
+        <b>«Отче, дъщеря ми ме доведе тук, когато вече не можех да слизам по стълбите. Каза, че не може да се грижи за мен. Това беше преди две години. Оттогава не е идвала.»</b>
+      </p>
+      <p><b>В ОНЗ МОМЕНТ РАЗБРАХ, ЧЕ ИМЕННО ТЕЗИ ХОРА СЕ НУЖДАЯТ НАЙ-МНОГО ОТ МЕН —
+          <span class="red-txt">ОНЕЗИ, ЗАБРАВЕНИ ОТ ЦЕЛИЯ СВЯТ, ТОЧНО ЗАЩОТО ВЕЧЕ НЕ МОГАТ ДА ХОДЯТ."</span></b>
+      </p>
+    </div>
+
+    <p>
+      Отец Стефан говори спокойно, но с интензивност, която не може да бъде пренебрегната. От две години обикаля домовете за стари хора из цяла България — от Черноморския бряг до Балкана, от Видинско до Родопите. И навсякъде открива една и съща тревожна картина: стари хора с разрушени стави, които не получават никакво реално лечение, само противовъзпалителни таблетки, които съсипват стомаха и бъбреците им.
+    </p>
+
+    <p>
+      „Повечето от тези хора са попаднали тук заради ставите. Коляното се е провалило. Гръбнакът се е вкоравил. Бедрото се е износило. И в момента, в който вече не можели да ходят сами, семейството решило, че са станали тежест. Тази дума я чувам най-често в домовете за стари хора: <b>„тежест"</b>. Собствените им деца ги наричат тежест."
+    </p>
+
+    <div class="quote-inline">
+      „Не ме доведоха тук, защото не ме обичат. Доведоха ме, защото се събуждах в три сутринта с крещяща болка в коляното и никой не можеше да спи. Снаха ми каза: или аз отивам, или тя. Синът ми избра нея."
+      <span class="quote-name">— чичо Янко, 71 години, дом за стари хора в Ловеч</span>
+    </div>
+
+    <h2>
+      „Ставните таблетки не решават нищо — само прикриват разрушаването"
+      <span>Отец Стефан обяснява защо традиционното лечение в домовете за стари хора и в аптеките се проваля</span>
+    </h2>
+
+    <p><b>Отец Стефан:</b></p>
+    <p>— Ще кажа откровено: това, което видях в тези домове за стари хора, ме уплаши. Хора на 55-80 години, на които от години дават едни и същи противовъзпалителни таблетки — таблетки, които прикриват болката за няколко часа, без да решават причината. Хрущялите им продължават да се разрушават. Ставната течност изчезва. Ставите им се трият кост в кост. А химията на таблетките ден след ден съсипва стомаха, черния им дроб и бъбреците.
+    </p>
+
+    <p>Това е един порочен кръг: болка → таблетки → болката се връща по-силна → по-силни таблетки → стомахът се проваля → защитни за стомаха таблетки → бъбрекът се проваля. И никой не им казва истината: <b>че съществува метод за регенерация на ставата отвътре, а не само за обезболяване.</b>
+    </p>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-a94978b4-3738-4aeb-950e-312b652009ac.jpg">
+      <figcaption>
+        Коленете на баба Мария, 74 години, дом за стари хора в Плевен. Артроза 3-та степен, хрущялът е почти напълно разрушен. 5 месеца не напуска стаята. На нощното шкафче — 6 вида таблетки, които не са променили нищо.
+      </figcaption>
+    </figure>
+
+    <div class="pachino-ramka312-block">
+      <p class="pachino-ramka312">
+        <span class="obertka-1">
+          Болката в коляното, гръбнака или бедрото след 45-годишна възраст не е „нормална за тази възраст" — тя е признак, че ставният хрущял се разрушава, а ставната течност изчезва.
+          <br><br>
+          Противовъзпалителните таблетки само блокират сигнала за болка, докато разрушаването тихо продължава. Без реална регенерация на хрущяла ставата се износва напълно — и тогава единствената възможност е инвалидна количка или операция за протеза.
+        </span>
+      </p>
+    </div>
+
+    <p><b>Отец Стефан:</b></p>
+
+    <p>— Моля ви, разберете сериозността на ситуацията. При повечето от тези стари хора хрущялът на коляното, гръбнака или бедрото е разрушен с 70-90%. Ходят — ако въобще ходят — кост в кост. Всяка крачка е мъчение. <b>ТРАДИЦИОННИТЕ ТАБЛЕТКИ НЕ МОГАТ ДА ВЪЗСТАНОВЯТ ХРУЩЯЛА — ТЕ САМО ПРИКРИВАТ БОЛКАТА, ДОКАТО ВСИЧКО НЕ СЕ СРУТИ!</b>
+    </p>
+
+    <p>
+      И това, което ме боли най-много: тези хора нямат никой. Семейството ги е изоставило точно когато ставите им са се провалили. Сами са, в леглото, в малка стая, и чакат. Някои вече не знаят за какво чакат.
+    </p>
+
+    <div class="quote-inline">
+      „Отгледах три деца. 40 години работих на нивата. Когато коленете ми се провалиха и не можех сама да ходя до банята — ме откараха в дома за стари хора. Сякаш вече не съществувам за тях. Сякаш вече съм умряла."
+      <span class="quote-name">— баба Маргарита, 82 години, дом за стари хора в Габрово</span>
+    </div>
+
+    <div class="quote-inline">
+      „35 години бях бригадир в завода. Гръбнакът ми се провали на 62 — херния на диска, ишиас, не можех да стоя прав. Синът ми каза, че не може да стои вкъщи и да ме гледа. Има си собствена работа, собствено семейство. Разбирам. Но боли повече от гръбнака."
+      <span class="quote-name">— чичо Георги, 68 години, дом за стари хора в Стара Загора</span>
+    </div>
+
+    <figure class="Figure" style="text-align:center">
+      <img src="https://static.joxi.pro/1778142925769-057465eb-7a53-45e0-ba84-1b9038913030.jpg" style="margin:0 auto">
+      <figcaption>
+        <b>Вляво: здрава става с непокътнат хрущял и достатъчна ставна течност. Вдясно: разрушена става — износен хрущял, хронично възпаление, кост в кост. Това е реалността за повече от 80% от обитателите на домовете за стари хора. Противовъзпалителните таблетки не възстановяват хрущяла.</b>
+      </figcaption>
+    </figure>
+
+    <p class="red-txt">
+      Важно е да се подчертае: в 2/3 от случаите, дори при ежедневен прием на болкоуспокояващи таблетки, ставите продължават да се влошават, тъй като истинската причина — разрушаването на хрущяла и изчезването на ставната течност — остава нерешена.
+    </p>
+
+    <p class="red-txt">
+      След години прием на противовъзпалителни много пациенти губят не само двигателната си способност, но и стомаха, черния дроб и бъбреците. Язви, чернодробна недостатъчност, отичане на бъбреците — такава е цената, когато никой не се е сетил да предложи реална алтернатива.
+    </p>
+
+    <h2>
+      Истории, които промениха живота ми — и ще променят начина, по който гледате на старостта
+    </h2>
+
+    <p><b>Отец Стефан:</b></p>
+
+    <p>— Позволете ми да разкажа какво виждам седмица след седмица. Не числа. Не статистики. Хора. Хора с имена, с истории, с деца, които вече не идват.</p>
+
+    <figure class="cap-bold">
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-ab7d1e11-8df2-44ee-b472-2a3be72bb7b3.jpg">
+      <figcaption>
+        Баба Катерина, 77 години. Ревматоиден артрит и в двете ръце — не може да държи чаша, не може сама да се облече. Дъщеря й я е настанила в дома за стари хора преди 2 години: „Не мога да я обличам всяка сутрин, аз също имам живот."
+      </figcaption>
+    </figure>
+
+    <div class="quote-inline">
+      „Вече не мога дори да се сресна сама. Не мога да налея вода. Ръцете ми не слушат. Сутрин ги гледам и не ги познавам — отекнали, изкривени, сякаш не са мои. Снаха ми веднъж каза: «Как да ти поверя внуците, когато не можеш дори да държиш лъжица?» Беше права. Но тези думи ме убиха отвътре."
+      <span class="quote-name">— баба Катерина, 77 години</span>
+    </div>
+
+    <figure class="cap-bold">
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-980707f6-6c1c-40ec-96a5-61c8c9dcde54.jpg">
+      <figcaption>
+        Чичо Лазар, 75 години. Херния на диска L4-L5, двустранна коксартроза. 8 месеца не стъпва на краката си. „Казаха, че е твърде стар за операция. Казаха, да се примири."
+      </figcaption>
+    </figure>
+
+    <div class="quote-inline">
+      „Бях тракторист. Изорах хиляди хектари. Сега не мога сам да се обърна в леглото. Гръбнакът ми е вкоравен, бедрото ми се е споило. Синовете ми работят в Австрия. Изпращат пари за дома за стари хора, това е. Не ги обвинявам. Но нощем, когато боли и никой не идва… мисля си дали това е краят."
+      <span class="quote-name">— чичо Лазар, 75 години</span>
+    </div>
+
+    <p><b>Ето симптомите, с които се сблъсквам най-често в домовете за стари хора — и които милиони хора пренебрегват в България:</b></p>
+    <ul>
+      <li>Силна болка в коляното при качване по стълби — или при всяко движение;</li>
+      <li>Сутрешна скованост — усещане за „дървени крака", тялото не се движи 30-60 минути след събуждане;</li>
+      <li>Хронична болка в гръбнака — не могат да се наведат, не могат да станат от леглото;</li>
+      <li>Отекнали колена, глезени или пръсти;</li>
+      <li>Скърцане и хрускане в ставите при всяко движение;</li>
+      <li>Болка в бедрото, която излъчва към бедрената кост — не могат да минат повече от 50 метра;</li>
+      <li>Деформирани, набъбрали пръсти на ръцете — не могат да хващат предмети;</li>
+      <li>Изтръпване в краката или ръцете — признак на херния на диска или нервен проблем;</li>
+      <li>Усещане за „нож" в кръста при ставане;</li>
+      <li>Изкривен гръбнак, прегърбена стойка — напредваща кифоза;</li>
+      <li>Нощна болка, която не дава сън — събуждат се 4-5 пъти нощем;</li>
+    </ul>
+
+    <p>
+      Всеки от тези симптоми е предупредителен знак. Пренебрегването им след 45-50-годишна възраст води до един единствен изход:
+      <b class="red-txt">ПЪЛНА НЕПОДВИЖНОСТ, ИНВАЛИДНА КОЛИЧКА, ПЪЛНА ЗАВИСИМОСТ ОТ ДРУГИТЕ — И В МНОГО СЛУЧАИ ДОМ ЗА СТАРИ ХОРА.</b>
+    </p>
+
+    <div class="pachino-ramka312-block">
+      <p class="pachino-ramka312">
+        <span class="obertka-1">
+          Всеки ден, прекаран с нелекувани стави, ви приближава към окончателна неподвижност!
+          Хиляди пенсионери в домовете за стари хора са попаднали там именно защото са пренебрегвали болката — или са приемали само таблетки, които не са решавали причината.
+          Действайте сега — за себе си или за близките си — преди да е станало твърде късно!
+        </span>
+      </p>
+    </div>
+
+    <h2>
+      „Реших, че трябва да съществува метод за регенерация на ставите — а не само за обезболяване"
+      <span>Как един скромен свещеник откри в стар манастир нещо, което фармацевтичната индустрия не иска да знаем</span>
+    </h2>
+
+    <p><b>Отец Стефан:</b></p>
+    <p>
+      — След една година посещения в домовете за стари хора осъзнах една болезнена истина: с противовъзпалителни таблетки няма да спася никого. Тези лекарства просто заглушават предупредителния сигнал на организма, докато ставата продължава да се разрушава. Имах нужда от нещо напълно различно: метод, който да регенерира хрущяла отвътре, да възстанови ставната течност и да спре възпалението на клетъчно ниво.
+    </p>
+    <p>
+      Отидох в един стар манастир, където монасите от векове пазят знанието за лечебните билки. Представих им случаите, снимките, историите на моите подопечни от домовете за стари хора. Взех монасите със себе си в домовете за стари хора — за да видят с очите си какво се случва там. Останаха дълбоко потресени.
+    </p>
+    <p>
+      Седмици наред проучвахме манастирските записи — повече от 300 години рецепти и лечения на монасите. И накрая намерихме точната формула — спрей, който се нанася на болната става и прониква на клетъчно ниво, активирайки естествената регенерация на хрущяла. Не таблетка, която преминава през стомаха и разрушава черния дроб. Спрей, който действа точно там, където е необходимо.
+    </p>
+
+    <div class="recept">
+      <p><b>Манастирската рецепта на отец Стефан съдържа следните активни вещества:</b></p>
+      <ul class="my-ul-0-green size1">
+        <li><b>Arnica montana (планинска арника)</b>
+          <font>Естествено противовъзпалително и болкоуспокояващо средство с мощен ефект</font>
+        </li>
+        <li><b>Ментол</b>
+          <font>Естествено охлаждащо и болкоуспокояващо средство: незабавно облекчаване на болката</font>
+        </li>
+        <li><b>Harpagophytum procumbens (дяволски нокет)</b>
+          <font>Коренов екстракт: мощно противовъзпалително действие и регенерация на ставите</font>
+        </li>
+        <li><b>Robinia pseudoacacia (бяла акация)</b>
+          <font>Цветен екстракт: успокояващо, противооточно и регенеративно действие</font>
+        </li>
+        <li><b>Boswellia serrata (индийски тамян)</b>
+          <font>Смоляен екстракт: концентрирана босвелиева киселина, инхибираща възпалението</font>
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      Тези съставки са трудни за набавяне в необходимата концентрация. Смесването им в правилните пропорции изисква специална технология — ако пропорциите се отклонят дори с 0,1%, спреят не прониква достатъчно дълбоко и не активира регенерацията на хрущяла.
+    </p>
+
+    <h2>
+      Така се роди Nautubone — единственият спрей, съдържащ всички тези активни вещества в идеални пропорции за комплексна регенерация на ставите
+    </h2>
+    <p><b>Отец Стефан:</b></p>
+    <p>
+      — Заедно с монасите и надеждна лаборатория успяхме да произведем този продукт: спрей за външно приложение, който се нанася директно върху болната става — коляно, гръбнак, бедро, ръка, врат. Казва се Nautubone. Трябва да се нанася два пъти на ден, сутрин и вечер, с лек масаж от 2-3 минути. Активните вещества проникват директно в ставата, заобикаляйки стомаха и черния дроб — като по този начин се елиминират всички странични ефекти на таблетките.
+    </p>
+
+    <img src="images/product.png?=v1" style="width:78%;max-width:540px;display:block;margin:18px auto">
+
+    <p>
+      Тайната се крие в старинната манастирска рецепта, пазена от векове, усъвършенствана в лабораторията. Тя позволява на активните вещества да достигнат директно до ставната капсула — там, където се разрушава хрущялът — с 5 пъти по-висока ефективност от всеки конвенционален пазарен спрей.
+    </p>
+    <p class="pachino-ramka2">
+      „Nautubone" е уникален. Всяка съставка — в точна концентрация — активира регенерацията на хрущяла, възстановяването на ставната течност и спирането на възпалението. Това е единственият спрей, действащ на клетъчно ниво, директно върху засегнатото място — коляно, гръбнак, бедро, ръка, врат — без да преминава през стомаха. Най-важното: действа дори при хора на 70, 80, 85 години. Изпробвах го първо при хората в домовете за стари хора — онези, за които никой друг вече не се грижеше.
+    </p>
+
+    <p><b>Отец Стефан:</b></p>
+    <p>
+      — Първите пациенти бяха изоставените стари хора в домовете. Нанасях спрея върху отеклите колена, гръбнака, бедрото. И чаках. На третия ден — баба Маргарита, която 4 месеца не ставаше от леглото, направи първите самостоятелни крачки. И двамата заплакахме.
+    </p>
+
+    <h2>
+      4 механизма, с които Nautubone регенерира ставите и връща двигателната способност — на всяка възраст
+    </h2>
+
+    <div class="obertk512">
+      <h1>4-те основни ефекта на спрея „Nautubone":</h1>
+      <div class="block-offer-actions-block">
+        <ol>
+          <li>
+            <font>Елиминиране на болката и възпалението:</font>
+            <span>Още в първите 15-30 минути след нанасянето комплексът от планинска арника, тамян и ментол елиминира болката и намалява възпалението. Не чрез блокиране на нервния сигнал (като таблетките) — а чрез спиране на възпалителния процес при самия му извор.</span>
+          </li>
+          <li>
+            <font>Регенерация на ставния хрущял:</font>
+            <span>Екстрактите от дяволски нокет и тамян проникват в ставната капсула и активират работата на хондроцитите (хрущялните клетки), стимулирайки производството на ново хрущялно ткиво. Този процес започва на 3-5-ия ден от редовна употреба.</span>
+          </li>
+          <li>
+            <font>Възстановяване на ставната течност:</font>
+            <span>Активните вещества проникват трансдермално и възстановяват ставната течност — естествената „смазка" на ставата. Благодарение на това костите вече не се трият една в друга, а движението отново става плавно и безболезнено.</span>
+          </li>
+          <li>
+            <font>Дългосрочна защита и превенция:</font>
+            <span>Екстрактът от акация и минералният комплекс укрепват лигаментите и сухожилията около ставата, предотвратявайки бъдещи увреди. След 30-60 дни употреба ставата получава стабилна защита, която се запазва за месеци.</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <h2>
+      „Nautubone първо изпробвах при хората в домовете за стари хора — резултатите надминаха всичко, което видях през всичките години на моето свещеническо служение"
+      <span>Свидетелства от над 2340 души, на възраст 45-86 години</span>
+    </h2>
+
+    <p><b>Отец Стефан:</b></p>
+    <p>
+      — Първите бяха изоставените стари хора от домовете. Онези, за които никой вече не помагаше. Резултатите бяха толкова впечатляващи, че свидетелствата се разпространиха до над 2300 души от цяла България — с всички видове ставни проблеми: коляно, гръбнак, бедро, ръка, врат.
+    </p>
+    <p>
+      Видях 80-годишни хора, които не можеха да ходят — а 6 седмици по-късно излизаха сами в двора на дома за стари хора. Медицинските сестри плачеха. Аз плаках с тях.
+    </p>
+
+    <div class="table-block">
+      <h1 class="title_h1">
+        Свидетелства и резултати за „Nautubone" — над 2340 души, 45-86 години
+      </h1>
+      <table class="table">
+        <tbody>
+          <tr><td class="one">Пълно елиминиране на болката в коляното</td><td class="two">96,2%</td></tr>
+          <tr><td class="one">Елиминиране на болката в гръбнака и сутрешната скованост</td><td class="two">94,7%</td></tr>
+          <tr><td class="one">Артроза 1-2 степен (пълно възстановяване на двигателната способност)</td><td class="two">98,1%</td></tr>
+          <tr><td class="one">Артроза 3 степен (значително подобрение)</td><td class="two">87,3%</td></tr>
+          <tr><td class="one">Коксартроза (болка в бедрото)</td><td class="two">91,5%</td></tr>
+          <tr><td class="one">Херния на диска (намаляване на болката и изтръпването)</td><td class="two">89,4%</td></tr>
+          <tr><td class="one">Ревматоиден артрит (пръсти)</td><td class="two">93,8%</td></tr>
+          <tr><td class="one">Пълно възстановяване на ставната подвижност</td><td class="two">95,6%</td></tr>
+          <tr><td class="one">Елиминиране на отоците и нощните крампи</td><td class="two">97,0%</td></tr>
+          <tr><td class="one">Способност за ходене без помощ</td><td class="two">94,3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>
+      Случаи, които разбиха сърцето ми — и дадоха най-голяма надежда
+      <span>
+        Баба Иляна, 84 години. Изоставена в дома за стари хора, когато коленете й се провалили. След 2 месеца употреба на Nautubone — сама излезе в градината, за пръв път от 3 години.
+      </span>
+    </h2>
+
+    <p>
+      Баба Иляна беше първата, на която отец Стефан помогна в дома за стари хора, в Старозагорска област. На 84 години, с артроза 3-та степен и в двете колена и коксартроза в лявото бедро, от 14 месеца не можеше да ходи. Синът й я е довел, защото „не можел да я носи до банята". Две години не я е посещавал.
+    </p>
+
+    <div class="gray-bg rev-block">
+      <img class="img-card2" src="https://static.joxi.pro/1778142925769-b234c916-2418-43cd-a09b-52da3b198c19.jpg">
+      <p>
+        „Не вярвах, че някога ще мога отново да ходя. Коленете ми бяха толкова отекнали, че не можех да ги огъна. Каращи ме в количка из стаята. Сутрин се събуждах и час не можех да мърдам дори пръстите. Беше като тялото ми да е умряло, а аз все още да живея.
+      </p>
+      <p>
+        <b>
+          Синът ми ме доведе тук, защото не можел да ме вдига от леглото. Каза: «Мамо, ще те посещавам всяка неделя.» Две години не е дошъл. Не го обвинявам — има си живот. Но нощем, когато болката ме събуди и никой не е до мен… трудно е.
+        </b>
+      </p>
+      <p>
+        <b>
+          После дойде отец Стефан. Той беше първият човек, който докосна коленете ми без погнуса. Обясни какво се случва в ставите. И нанесе спрея. Седмица по-късно можех да огъна лявото коляно. Месец по-късно сама станах от леглото. Два месеца по-късно — излязох в градината. 3 години не бях излизала.
+        </b>
+      </p>
+      <p>
+        Медицинската сестра заплака, когато ме видя. Аз — още повече. Не защото ходех. А защото някой — свещеник, когото никога не бях познавала — ми даде повече, отколкото ми даде собственият ми син.
+      </p>
+      <font>
+        <b>Баба Иляна, 84 години, дом за стари хора в Старозагорска област</b>
+      </font>
+    </div>
+
+    <p>
+      Друг случай: Любен, 58 години, цял живот строителен работник, с разрушен гръбнак поради херния на диска. Жена му го е изоставила, когато вече не можел да работи.
+    </p>
+
+    <div class="gray-bg rev-block">
+      <img class="img-card2" src="https://static.joxi.pro/1778142925769-f6ae7d5d-d93a-42f5-8684-d3c285fbc8bf.jpg">
+      <p>
+        „30 години бях зидар. Гръбнакът ми се провали на 54 — две хернии на диска и ишиас. Не можех нито да стоя, нито да лежа. Всичко болеше. Жена ми тръгна — каза, че не може да гледа инвалид. Не я обвинявам.
+      </p>
+      <p>
+        <b>
+          Сестра ми чу за отец Стефан от съседката. Изпрати ми спрей Nautubone. Започнах да го нанасям на гръбнака, сутрин и вечер. На третия ден усетих първото облекчение. 3 седмици по-късно успях да отида до магазина. 2 месеца по-късно — върнах се на работа на половин ставка.
+        </b>
+      </p>
+      <p>
+        Понякога сутринта се събуждам, ставам от леглото без болка и се спирам за миг. Стоя и не мога да повярвам, че е вярно. Че вече не боли. Без отец Стефан може би сега щях да съм в дом за стари хора."
+      </p>
+    </div>
+
+    <h2>
+      „Nautubone не лекува само болката — регенерира цялата става отвътре"
+      <span>
+        Не само обитателите на домовете за стари хора получават полза. Всеки над 45 години, усещащ първите признаци, може да предотврати катастрофата.
+      </span>
+    </h2>
+
+    <p><b>Отец Стефан:</b></p>
+
+    <p>
+      — Минималният период на употреба е 30 дни, но при тежка артроза или херния на диска може да са необходими 2-3 месеца. Но при всички случаи — без изключение — се наблюдава намаляване на болката, регенерация на хрущяла и възстановяване на двигателната способност.
+    </p>
+
+    <p>
+      Nautubone действа от първото нанасяне: болката намалява, възпалението отшумява, движението се улеснява. Но истинското чудо се случва с времето: хрущялът се регенерира, ставната течност се връща, ставата се „подмладява" отвътре.
+      <b class="red-txt">
+        Видях 80-годишни хора, които отново проходиха. Видях ръце, които не можеха дори да държат чаша, да вдигат лъжица към устата. Видях прегърбени гръбнаци, изправили се. И при всеки случай — видях сълзи от радост.
+      </b>
+    </p>
+
+    <center>
+      <p><b>
+          Благодарение на манастирската рецепта на отец Стефан повече от 12 000 души в България са си върнали ставната подвижност. Ето някои от случаите:
+        </b></p>
+    </center>
+
+    <figure>
+      <img src="https://static.joxi.pro/1778142925769-baf151ad-77dc-450d-9a89-3293efafacfa.jpg">
+      <figcaption>Мъж, 65 години. Артроза 3-та степен и в двете колена — не можеше да се качва по стълби. Nautubone за 60 дни: пълна двигателна способност, без болка.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-f19f7f66-3e45-449a-87f2-78884ec5e6e1.jpg">
+      <figcaption>Жена, 58 години. Хронична болка в гръбнака и херния на диска L5-S1. Nautubone за 45 дни: болката елиминирана, може отново да върши домакинска работа.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-7d23b447-1714-413e-b3dd-921918111aa3.jpg">
+      <figcaption>Жена, 72 години. Тежък ревматоиден артрит в пръстите — не можеше дори да държи чаша. Nautubone за 2 месеца: пръстите се движат, отокът изчезна.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-4a9900ea-fa77-4c81-a40e-dff210ebf7df.jpg">
+      <figcaption>Мъж, 70 години. Напреднала коксартроза — можеше да се движи само с проходилка. Nautubone за 2,5 месеца: ходи самостоятелно, без болка.</figcaption>
+    </figure>
+
+    <p><b>Отец Стефан:</b></p>
+    <p>
+      — Тези случаи са живо доказателство, че ставите са способни да се регенерират — дори когато диагнозата изглеждаше като присъда. Без операция. Без таблетки, разрушаващи стомаха. А това, което ми носи най-голяма радост: повечето от тези хора са обитатели на домовете за стари хора — онези, за които светът е забравил. <b>Но Бог не ги е забравил. И Nautubone не ги забравя.</b>
+    </p>
+
+    <div id="overlay" style="display:none;opacity:0"></div>
+    <div id="popup3" style="display:none;opacity:0;transform:translate(-50%,-50%) scale(0.8)"></div>
+
+    <h2>
+      Защо Nautubone не се продава в аптеките? И как може да се набави?
+    </h2>
+
+    <p><b>Отец Стефан:</b></p>
+
+    <p>За съжаление производството на Nautubone е сложен и скъп процес. Съставките са редки — екстракт от дяволски нокет, концентрирана босвелиева киселина, планинска арника във висока концентрация — и трудни за набавяне в необходимото количество. Не сме в състояние да задоволим цялото търсене.</p>
+
+    <p>Нужни са поне 2-3 години, преди Nautubone да може да се появи в аптеките. Дотогава продуктът се разпространява изключително онлайн, в рамките на програми за подкрепа, два пъти в годината. Но
+      <font class="red-txt">отстъпката може да достигне 50%</font>
+      — което е от жизненоважно значение за пенсионерите.
+    </p>
+
+    <p>
+      Моля: НЕ ПРОПУСКАЙТЕ ПРОГРАМАТА ЗА ПОДКРЕПА. Не само за себе си — но и за родителите, бабите и дядовците, близките ви, които може би страдат мълчаливо. Или за онези, вече в дом за стари хора, сами, на които никой не изпраща нищо. Бъдете онзи човек, който прави разлика.
+    </p>
+
+    <p class="red-txt"><b>За да направите поръчката, използвайте формуляра по-долу.</b></p>
+
+    <h2>
+      Последният шанс да се сдобиете с Nautubone тази година — за себе си или за близък, страдащ мълчаливо
+    </h2>
+
+    <img alt="Nautubone" src="https://static.joxi.pro/1779114411129-23c372a1-ac38-4687-a0ad-2589ae0ebc50.jpg"
+      style="margin:0 auto;display:block;max-width:500px;width:100%;margin-top:24px;margin-bottom:20px">
+
+    <p><b>Отец Стефан:</b></p>
+
+    <p>
+      — Запазих 20 000 броя изключително за читателите на този портал. Всеки български гражданин над 40 години може да получи <font class="red-txt">до 50% отстъпка</font>, но програмата е валидна до <span><script>dtime_nums(0, true)</script></span>.
+    </p>
+
+    <p>Не чакайте, докато не можете да се качите по стълбите. Докато коленете напълно се провалят. Докато гръбнакът се вкорави. И най-вече — не чакайте, докато станете „тежест" в очите на семейството. Nautubone има кумулативен ефект и прилаган веднъж годишно, като превенция, е достатъчен.</p>
+
+    <p>Напишете вашето име и телефонен номер. Нашият консултант ще се свърже с вас, ще избере подходящата програма и ще организира доставката в рамките на 2-3 дни с куриер или по пощата, директно на посочения адрес.</p>
+
+    <p><b>С молитва и уважение — отец Стефан. Грижете се за близките си. Може би единственото от което се нуждаят е да знаят, че не са забравени.</b></p>
+
+    <p class="pachino-ramka">
+      <span class="ramka-title">Актуализация: <span><script>dtime_nums(-3, true)</script></span>:</span>
+      Поради огромния интерес запасите могат да се изчерпят по-рано от очакваното! Днес —
+      <font><span><script>dtime_nums(1, true)</script></span> — последният ден на програмата</font> или до изчерпване на запасите.
+    </p>
+
+    <center><img src="images/product.png?=v1" style="max-width:500px;width:200%"></center><br>
+
+    <center>
+      <p class="noclose-cta red-txt">
+        Внимание! Не затваряйте и не обновявайте страницата, в противен случай резервираният за вас брой Nautubone ще бъде предоставен на друго лице!
+      </p>
+      <span class="pre-cta">
+        Възползвайте се от офертата — вашето място е запазено:
+        <span class="nowrap">Бр. <font class="number-me" style="border-bottom:2px solid var(--color-danger);font-weight:700">19&nbsp;974</font></span>
+      </span>
+    </center>
+
+    <span id="form"></span>
+    <span id="oneform"></span>
+    <div class="pachinoform">
+      <div class="pachinoform_title">
+        <div class="pachinoform_title_logo">
+          <img alt="" src="images/56d9b0017d1d_d58505c9.png">
+        </div>
+        <div class="pachinoform_title_text">
+          <b>Официален формуляр за поръчка</b>
+          № <font class="number-me nowrap">19&nbsp;974</font> / <font class="nowrap">20 000</font>
+        </div>
+      </div>
+      <div class="pachinoform_order">
+        За да се възползвате от <b>50% отстъпка</b>, въведете вашето име и телефонен номер в полетата по-долу, след което натиснете бутона „ПОРЪЧВАМ".
+      </div>
+      <div class="pachinoform_value">
+        На склад:
+        <span class="blc-pck">
+          <strong class="pachinoform_value_current left-pack">33</strong>
+          <strong class="pachinoform_value_total"> /1000</strong>
+        </span>
+      </div>
+      <div class="pachinoform_price">
+        <div class="pachinoform_price_old"><span class="price_old">78 EUR</span></div>
+        <div class="pachinoform_price_new"><span class="price_main">39 EUR</span></div>
+      </div>
+      <form action="/order.php" method="post">
+        <input type="hidden" name="fbpx" value="{fbpx}">
+        <input type="hidden" name="utm_code" value="{subid}">
+        <input type="hidden" name="cid" value="{campaign_id}">
+        <input type="hidden" name="sid" value="2804">
+        <input type="hidden" name="hash" value="{hash}">
+        <input type="hidden" name="country" value="BG">
+        <div class="name-input">
+          <label for="name-input">Име</label>
+          <input autocomplete="name" id="name-input" name="name" placeholder="Вашето име" required="" type="text" value="">
+        </div>
+        <div class="phone-input">
+          <label for="phone-input">Телефонен номер</label>
+          <input autocomplete="tel" id="phone-input" maxlength="20" name="phone" pattern="^[\-+() 0-9]{8,20}$" placeholder="Вашият телефонен номер" required="" type="tel" value="">
+        </div>
+        <button class="button-submit" type="submit">ПОРЪЧВАМ</button>
+      </form>
+      <div class="pachinoform_footer">
+        ✔️ Доставката се извършва от Националния здравен център<br> директно на посочения адрес
+        <br>
+        <img alt="" src="images/b0110a32ff2e_8322b1b5.png" style="width:auto">
+      </div>
+    </div>
+
+    <!-- COMMENTS SECTION -->
+    <div class="comments comments-fb" id="pluginComments">
+      <div class="comments__header">
+        <div class="comments__left-box">
+          <p class="comments__header-title">КОМЕНТАРИ</p>
+        </div>
+      </div>
+
+      <div class="comments__item-list">
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7da17fc86c6c_2f1260d0.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Димитрова Мария</p>
+              <p class="startdate" daysago="8" format="day/month/year"><script>dtime_nums(-8, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Заплаках, когато прочетох тази статия. Майка ми е на 76 години и е в дома за стари хора от 2 години — именно защото коленете й се провалиха и не можахме да се грижим за нея. Това е моята най-голяма вина. Поръчах й Nautubone. Може би все още не е твърде късно. Боже, надявам се да помогне.</p>
+          </div>
+        </div>
+
+        <div id="first-comment">
+          <div class="comments__item">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/8ba73d45c164_4ede289a.jpg">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Станева Ева</p>
+                <p class="startdate" daysago="7" format="day/month/year"><script>dtime_nums(-7, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Миналия петък получих Nautubone. Нанасям го сутрин и вечер на коленете. 5 дни след — болката намаля значително, мога да слизам по стълбите без да се хващам! Историята на свещеника ме убеди да поръчам. Удивителен човек.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/fa7f61c1431c_7946ff6c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Колева Анна</p>
+              <p class="startdate" daysago="6" format="day/month/year"><script>dtime_nums(-6, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">На 69 години съм. Гръбнакът ме измъчваше 4 години — херния на диска и ишиас. Не можех да се наведа да си завържа обувките. Лекарите ми дадоха противовъзпалителни, които съсипаха стомаха ми. 3 седмици с Nautubone — болката почти напълно изчезна. Сама ходя на пазара, пазарувам, готвя. Върнах си живота.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/dcc5cfe80d60_5aa7f8f7.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Петров Стефан</p>
+              <p class="startdate" daysago="5" format="day/month/year"><script>dtime_nums(-5, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Работя по 10 часа на ден в офис. Гръбнакът и врата ми се провалиха. Лекарят каза: „Или се откажете, или операция." Аз избрах Nautubone. 5 седмици след — никаква болка. И огромно уважение към отец Стефан — в свят, в който всички искат пари, той пътува при забравените стари хора.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/bcbe20e0b5d2_b241da99.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Стоянов Петър</p>
+              <p class="startdate" daysago="5" format="day/month/year"><script>dtime_nums(-5, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Поръчах 3 броя — за себе си (коляно), за жена ми (ръка, артрит) и за свекър ми в дома за стари хора. Не можем да посещаваме често, но поне му изпращаме това, от което се нуждае. Надявам се да помогне и при него. Благодаря за статията.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/73d3a879cef9_4a9ce85c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Михайлова Андреа</p>
+              <p class="startdate" daysago="4" format="day/month/year"><script>dtime_nums(-4, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Размишлявам дали да поръчам за баща ми. От 3 години е в дома за стари хора — коленете му изобщо не работят. Отказа се от живота, почти не говори. Смятате ли, че Nautubone може да помогне на 78 години?</p>
+          </div>
+        </div>
+
+        <div class="comm-obert-reply">
+          <div class="comments__item reply">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/71deaf909b4e_ea30d07c.jpg">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Тодорова Юлия</p>
+                <p class="startdate" daysago="4" format="day/month/year"><script>dtime_nums(-4, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Андреа, майка ми е на 82 години! Тежка артроза и в двете колена, не можеше да стане от леглото. Използва Nautubone 2 месеца — сега сама излиза в двора. Не преувеличавам. Най-хубавото: когато я посетих, ме посрещна права на портата. И двете заплакахме. Поръчай без колебание, баща ти заслужава шанс.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comm-obert-reply">
+          <div class="comments__item reply">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/66ebad51123a_206d5fba.png">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Маринов Лазар</p>
+                <p class="startdate" daysago="3" format="day/month/year"><script>dtime_nums(-3, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Андреа, поръчай спокойно. На 78 години бях на крачка от инвалидна количка — коксартроза. Nautubone ме постави на крака за 2 месеца. Буквално. Баща ти има нужда от него повече, отколкото мислиш.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/d61700bc0961_28c03d39.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Белева Катерина</p>
+              <p class="startdate" daysago="3" format="day/month/year"><script>dtime_nums(-3, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">От седмица го използвам за коленете и кръста. Сутринта вече не съм „дървена нога". Мога да се наведа, да стана без „ах!". Поръчах и за съседката ми — 73-годишна е, живее сама и се хващаше за стената, когато ходеше из апартамента.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7db2eed8e880_6ecfd92a.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Недева Елизабета</p>
+              <p class="startdate" daysago="2" format="day/month/year"><script>dtime_nums(-2, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">На 68 години смятах, че никога повече няма да мога да градинарствам. Коленете и гръбнакът ме парализираха. Nautubone промени всичко — 4 седмици след това разкопах първата леха тази година. Историята на отец Стефан ме трогна дълбоко. Има още добросърдечни хора по света.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/a49c7ec0724d_6f186c1c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Балев Йосиф</p>
+              <p class="startdate" daysago="2" format="day/month/year"><script>dtime_nums(-2, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">На 82 години съм. Миналата година не можех сам да отида до банята. Децата говореха за дом за стари хора. Изпробвах Nautubone — без особена надежда. И работи! Ходя сам, обличам се сам, излизам сам до портата. Децата ми вече не говорят за дом за стари хора. Това е моята най-голяма радост.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7099c502f996_b89c4cc9.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Тодоров Тодор</p>
+              <p class="startdate" daysago="1" format="day/month/year"><script>dtime_nums(-1, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Жена ми не можеше да слиза по стълбите. Хващаше се за стената и плачеше от болка. Страхувах се, че ще я загубя — не от болестта, а от отчаянието. Поръчах Nautubone с отстъпка. 4 седмици след — вчера слезе сама на пазара и се върна с цветя. С цветя! Благодаря от сърце.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/47a8cb9cf088_09555b8e.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Петрова Ивелина</p>
+              <p class="startdate" daysago="1" format="day/month/year"><script>dtime_nums(-1, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Поръчах 4 броя — за мама (дом за стари хора, коляно), за татко (вкъщи, гръб) и 2 за себе си (ръка, ставно възпаление на пръстите, не можех да пиша). Историите в статията ми разбиха сърцето. Трябваше да го направя отдавна. Нямам повече извинения.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/f021e0a36f8b_7c282874.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Лазарова Сузана</p>
+              <p class="nowdate" daysago="0" format="day/month/year"><script>dtime_nums(0, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Получих Nautubone — куриерът го донесе за 2 дни! Веднага го нанесох на коляното на мама в дома за стари хора. Държа палци от сърце. Изпращам тази статия и на персонала — може да се свържат с отец Стефан.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/d770c7a4cbdf_467ee117.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Вълчев Гавраил</p>
+              <p class="nowdate" daysago="0" format="day/month/year"><script>dtime_nums(0, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Търсих Nautubone в аптеката — няма го. Казаха, че трябва да се поръча от този сайт. Надявам се, че е все още налично. На дядо ми е спешно необходимо — на 81 години е и изобщо не може да ходи.</p>
+          </div>
+        </div>
+
+        <div class="custom-commetns-container"></div>
+
+        <a href="#" style="text-decoration: none;">
+          <div class="form-container">
+            <form class="custom-form" id="custom-form">
+              <div class="custom-form__top-field">
+                <div class="custom-form__ava-block">
+                  <input disabled class="custom-form__ava-input sf-hidden" id="avatar" name="avatar" type="file" value="">
+                  <label class="custom-form__ava-label"><span class="custom-form__ava-label_red-text">*</span>Снимка на профила</label>
+                </div>
+                <input disabled class="custom-form__name" placeholder="Вашето име" required="" type="text" value="">
+              </div>
+              <textarea disabled class="custom-form__message" placeholder="Вашият коментар" required=""></textarea>
+              <div class="custom-form__bottom-field">
+                <div class="custom-form__photo-block">
+                  <input disabled class="custom-form__photo-input sf-hidden" id="photo" type="file" value="">
+                  <label class="custom-form__photo-label" for="photo">Прикачете снимка</label>
+                </div>
+                <button disabled class="custom-form__btn">ИЗПРАТИ</button>
+              </div>
+            </form>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </main>
+
+  <div class="trust-strip">
+    <div class="trust-item"><span class="trust-item-icon">🛡️</span> Сертифицирано качество</div>
+    <div class="trust-item"><span class="trust-item-icon">🚚</span> Доставка за 2–3 дни</div>
+    <div class="trust-item"><span class="trust-item-icon">⚕️</span> Без рецепта</div>
+    <div class="trust-item"><span class="trust-item-icon">🔒</span> Сигурна поръчка</div>
+  </div>
+
+  <footer class="clinical-footer">
+    © ЗдравеИнфо България — специален репортаж<br>
+    Информацията на сайта е с информационен характер и не замества лекарска консултация.
+  </footer>
+
+  <div class="ffl ffl__anim sf-hidden" data-name="div-gc0zvidej" style="display:block"></div>
+
+<script async>
+const LAZY = document.querySelectorAll('img');
+for (let i = 0; i < LAZY.length; i++) {
+LAZY[i].setAttribute('loading', 'lazy');
+} </script>
+
+<script>
+    $("a").on("touchend, click", function(e) {
+            e.preventDefault();
+            $('body,html').animate({
+            scrollTop: $('#oneform').offset().top
+            }, 400);
+        });
+ </script>
+
+<script>
+$('[name="name"]').on("input", function () {
+    var val = $(this).val();
+    
+    var cleaned = val
+        .replace(/[^\p{L}\s]/gu, "") 
+        .replace(/^\s+/, "")
+        .replace(/\s\s+/, " ");
+        
+    var parts = cleaned.split(" ");
+    if (parts.length > 2) {
+        cleaned = parts[0] + " " + parts[1];
+    }
+    
+    $(this).val(cleaned);
+});
+
+$('[name="name"]').on("change blur", function () {
+    $(this).val($(this).val().trim());
+});
+
+$('[name="phone"]').on("input change", function(e) {
+    var val = $(this).val();
+    $(this).val(val.replace(/\D/g, ""));
+    $(e.currentTarget).attr("pattern", "[0-9]{6,}");
+});
+</script>
+<p style="opacity: 0;">{_box:696Vgj23}</p>
+</body>
+
+</html>
