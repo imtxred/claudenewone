@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <meta charset="utf-8">
+  <title>„Navštěvuji ty, které už nikdo nenavštěvuje“ — český kněz, který léčí klouby opuštěných seniorů v domovech důchodců</title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="no-cache" http-equiv="Cache-Control">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="no-referrer" name="referrer">
+  <meta content="noindex, nofollow" name="robots">
+
+  <link rel="icon" href="images/product.png?=v1">
+
+  <style>
+    :root {
+      --color-primary: #0a5c9e;
+      --color-primary-dark: #084678;
+      --color-primary-light: #e8f2fa;
+      --color-accent: #0284c7;
+      --color-danger: #c0392b;
+      --color-danger-light: #fdecea;
+      --color-success: #1e8449;
+      --color-success-light: #e8f5ee;
+      --color-warning: #b7791f;
+      --color-text: #1a2b42;
+      --color-text-muted: #4a5a70;
+      --color-text-light: #6b7a8f;
+      --color-bg: #ffffff;
+      --color-bg-soft: #f7fafc;
+      --color-bg-alt: #eef4f9;
+      --color-border: #d9e2ec;
+      --color-border-soft: #e4ebf2;
+      --shadow-sm: 0 1px 2px rgba(10, 92, 158, 0.04), 0 1px 3px rgba(10, 92, 158, 0.06);
+      --shadow-md: 0 4px 12px rgba(10, 92, 158, 0.08), 0 2px 4px rgba(10, 92, 158, 0.04);
+      --shadow-lg: 0 10px 25px rgba(10, 92, 158, 0.10), 0 4px 10px rgba(10, 92, 158, 0.05);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-serif: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin:0; padding:0; font-family:var(--font-sans); font-size:17px; line-height:1.65; color:var(--color-text); background:var(--color-bg-soft); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    .clinical-topbar { background:var(--color-primary-dark); color:#fff; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; padding:8px 16px; text-align:center; font-weight:500; }
+    .clinical-topbar::before { content:"⚕ "; margin-right:6px; }
+    .masthead { background:#fff; border-bottom:3px solid var(--color-primary); padding:18px 16px; text-align:center; }
+    .masthead-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
+    .masthead-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--font-serif); font-weight:700; font-size:22px; color:var(--color-primary-dark); letter-spacing:-0.01em; }
+    .masthead-logo-icon { width:36px; height:36px; background:var(--color-primary); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; font-size:20px; font-weight:700; }
+    .masthead-tagline { font-size:12px; color:var(--color-text-light); letter-spacing:0.08em; text-transform:uppercase; border-left:1px solid var(--color-border); padding-left:14px; font-weight:500; }
+    @media (max-width:560px) { .masthead-tagline { border-left:0; padding-left:0; font-size:11px; width:100%; border-top:1px solid var(--color-border); padding-top:8px; margin-top:4px; } }
+    header { max-width:900px; margin:0 auto; padding:0; }
+    .bg-image { text-align:center; }
+    .bg-image img { max-width:100%; height:auto; display:inline-block; }
+    .text-container { display:block; }
+    .h1-bg { position:relative; max-width:900px; margin:0 auto; padding:28px 22px 20px; background:#fff; border-bottom:1px solid var(--color-border); }
+    .h1-bg::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%); }
+    .title_h1 { font-family:var(--font-serif); font-size:26px; line-height:1.25; color:var(--color-text); font-weight:700; margin:0 0 14px; letter-spacing:-0.01em; }
+    .head-one-part { color:var(--color-danger); }
+    .head-two-part { display:block; }
+    .head-main-date { font-size:13px; color:var(--color-text-light); padding:0; display:flex; align-items:center; gap:8px; margin-bottom:16px; padding-bottom:14px; border-bottom:1px dashed var(--color-border); }
+    .head-main-date::before { content:"📅"; font-size:14px; }
+    .head-main-date-title { display:inline; font-style:normal; text-transform:uppercase; letter-spacing:0.05em; font-weight:500; }
+    .main-subtitle { display:block; padding:16px 18px; color:var(--color-text); font-size:17px; border-radius:var(--radius-md); font-weight:500; border-left:4px solid var(--color-primary); background:var(--color-primary-light); line-height:1.55; font-style:normal; margin:0; box-shadow:none; }
+    @media (max-width:640px) { .title_h1 { font-size:20px; } .main-subtitle { font-size:15px; padding:14px 14px; } .h1-bg { padding:22px 16px 18px; } }
+    main { max-width:900px; margin:0 auto; padding:24px 22px 40px; background:#fff; border-left:1px solid var(--color-border-soft); border-right:1px solid var(--color-border-soft); }
+    @media (max-width:640px) { main { padding:18px 14px 30px; } }
+    main p { margin:0 0 16px; color:var(--color-text); }
+    main img { max-width:100%; height:auto; border-radius:var(--radius-md); }
+    main h2 { font-family:var(--font-serif); font-size:24px; line-height:1.3; font-weight:700; color:var(--color-primary-dark); margin:32px 0 16px; padding-bottom:12px; border-bottom:2px solid var(--color-primary-light); letter-spacing:-0.01em; }
+    main h2 span { display:block; font-family:var(--font-sans); font-size:16px; font-weight:500; color:var(--color-text-muted); margin-top:10px; margin-bottom:0; line-height:1.5; }
+    main h3 { font-family:var(--font-serif); font-size:19px; color:var(--color-primary-dark); margin:22px 0 12px; font-weight:600; }
+    @media (max-width:640px) { main h2 { font-size:19px; } main h2 span { font-size:15px; } }
+    main ul { padding-left:0; list-style:none; margin:16px 0; background:var(--color-bg-soft); border:1px solid var(--color-border-soft); border-radius:var(--radius-md); padding:14px 18px 14px 20px; }
+    main ul li { position:relative; padding-left:22px; margin-bottom:8px; line-height:1.5; }
+    main ul li::before { content:""; position:absolute; left:0; top:10px; width:10px; height:10px; border:2px solid var(--color-primary); border-radius:50%; background:#fff; }
+    main ul li:last-child { margin-bottom:0; }
+    .red-txt { color:var(--color-danger); font-weight:600; }
+    .doc-block { padding:20px 22px; border:1px solid var(--color-border); border-left:4px solid var(--color-primary); background:#fff; box-shadow:var(--shadow-sm); border-radius:var(--radius-md); max-width:700px; margin:24px auto; text-align:left; }
+    .doc-block img { border-radius:var(--radius-md); margin-bottom:14px; }
+    .doc-block p { padding:0; margin:0 0 12px; font-size:16px; line-height:1.6; }
+    .doc-block p:last-child { margin-bottom:0; }
+    .doc-block p b { color:var(--color-primary-dark); }
+    figure { margin:22px 0; padding:0; text-align:center; }
+    figure img { border-radius:var(--radius-md); box-shadow:var(--shadow-md); max-width:100%; height:auto; }
+    figure figcaption { margin-top:12px; padding:10px 14px; font-size:14px; line-height:1.5; color:var(--color-text-muted); background:var(--color-bg-soft); border-left:3px solid var(--color-primary); border-radius:0 var(--radius-sm) var(--radius-sm) 0; text-align:left; font-style:italic; }
+    figure.cap-bold figcaption { font-style:normal; font-weight:500; color:var(--color-text); }
+    .img-card { border:1px solid var(--color-border); padding:6px; background:#fff; box-shadow:var(--shadow-md); border-radius:var(--radius-md); }
+    .img-card2 { border:1px solid var(--color-border); padding:6px; background:#fff; border-radius:var(--radius-md); }
+    .pachino-ramka312-block { margin:24px 0; }
+    .pachino-ramka312 { background:var(--color-danger-light); border:1px solid rgba(192,57,43,0.25); border-left:4px solid var(--color-danger); border-radius:var(--radius-md); padding:18px 20px; color:var(--color-text); font-weight:500; box-shadow:none; margin:0; font-size:16px; line-height:1.6; position:relative; }
+    .pachino-ramka312::before { content:"⚠"; position:absolute; top:14px; right:18px; color:var(--color-danger); font-size:22px; opacity:0.7; }
+    .pachino-ramka312 .obertka-1 { display:block; }
+    .rev-block { margin:24px 0; padding:20px 22px; background:var(--color-primary-light); border:1px solid rgba(10,92,158,0.15); border-left:4px solid var(--color-primary); border-radius:var(--radius-md); box-shadow:none; }
+    .rev-block p { font-size:16px; line-height:1.6; margin-bottom:12px; }
+    .rev-block img { border-radius:var(--radius-md); margin-bottom:14px; max-width:100%; }
+    .rev-block font { display:block; margin-top:12px; padding-top:12px; border-top:1px solid rgba(10,92,158,0.15); color:var(--color-primary-dark); font-size:15px; }
+    .rev-block font b { font-weight:600; }
+    .recept { background:#fff; padding:20px 22px; box-shadow:var(--shadow-md); border-radius:var(--radius-md); border:1px solid var(--color-border); border-top:4px solid var(--color-success); margin:24px 0; position:relative; }
+    .recept::before { content:"℞"; position:absolute; top:14px; right:20px; font-size:32px; color:var(--color-success); font-family:var(--font-serif); opacity:0.4; line-height:1; }
+    .recept p b { color:var(--color-primary-dark); font-size:16px; }
+    .my-ul-0-green { margin:12px 0 0 !important; padding:0 !important; background:transparent !important; border:0 !important; list-style:none; }
+    .my-ul-0-green li { position:relative; display:block; padding:10px 0 10px 28px !important; margin:0 !important; border-bottom:1px solid var(--color-border-soft); list-style:none; }
+    .my-ul-0-green li::before { content:"✓" !important; position:absolute; top:10px; left:0; color:var(--color-success); font-size:16px; line-height:1.5; font-weight:700; border:0 !important; background:transparent !important; width:auto !important; height:auto !important; border-radius:0 !important; }
+    .my-ul-0-green li:last-child { border-bottom:0; }
+    .my-ul-0-green li b { color:var(--color-primary-dark); font-size:16px; }
+    .my-ul-0-green font { font-size:14px; display:block; margin-top:4px; color:var(--color-text-muted); }
+    .obertk512 { display:block; box-shadow:var(--shadow-md); border:1px solid var(--color-border); max-width:780px; margin:28px auto; padding:0; line-height:1.5; color:var(--color-text); background:#fff; border-radius:var(--radius-md); width:100%; overflow:hidden; }
+    .obertk512 h1 { font-family:var(--font-serif); line-height:1.3; margin:0; color:#fff; font-size:18px; padding:16px 20px; font-weight:600; background:var(--color-primary); border:0; border-radius:0; }
+    .block-offer-actions-block { padding:10px 22px 22px; border:0; }
+    .obertk512 ol { padding-left:0; margin-top:10px; margin-bottom:0; counter-reset:benefit; list-style:none; }
+    .obertk512 li { line-height:1.4; padding:16px 0 16px 50px; border-bottom:1px solid var(--color-border-soft); position:relative; counter-increment:benefit; }
+    .obertk512 li::before { content:counter(benefit); position:absolute; left:0; top:14px; width:36px; height:36px; background:var(--color-primary-light); color:var(--color-primary-dark); border-radius:50%; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; border:2px solid var(--color-primary); }
+    .obertk512 li::marker { content:none; }
+    .obertk512 li:last-child { border-bottom:0; }
+    .obertk512 li font { line-height:1.3; color:var(--color-primary-dark); text-align:left; font-weight:600; font-size:17px; display:block; margin-bottom:6px; }
+    .block-offer-actions-block li span { display:block; font-size:15px; line-height:1.5; font-weight:400; color:var(--color-text-muted); margin:0; padding:0; border-bottom:0; }
+    .table-block { display:block; box-shadow:var(--shadow-md); border:1px solid var(--color-border); border-radius:var(--radius-md); max-width:700px; margin:28px auto; padding:0; font-size:16px; line-height:1.5; color:var(--color-text); background:#fff; width:100%; overflow:hidden; }
+    .table-block h1 { font-family:var(--font-serif); line-height:1.35; margin:0; color:#fff; font-size:17px; padding:16px 20px; font-weight:600; background:var(--color-primary); border:0; border-radius:0; }
+    .table { width:100%; max-width:100%; border-collapse:collapse; font-family:var(--font-sans); margin:0; background:#fff; }
+    .table tr:nth-child(even) td { background:var(--color-bg-soft) !important; }
+    .table td { border:0 !important; border-bottom:1px solid var(--color-border-soft) !important; padding:12px 16px !important; vertical-align:middle; background:#fff !important; }
+    .table tr:last-child td { border-bottom:0 !important; }
+    .table td.one { text-align:left; width:75%; font-size:15px; font-weight:500; color:var(--color-text); }
+    .table td.two { font-size:18px; color:var(--color-success); text-align:right; font-weight:700; width:25%; white-space:nowrap; }
+    @media (max-width:560px) { .table td.one { font-size:14px; } .table td.two { font-size:16px; } .table td { padding:10px 12px !important; } }
+    .pachino-ramka2 { text-align:left; color:var(--color-success); font-weight:600; border:1px solid rgba(30,132,73,0.25); border-left:4px solid var(--color-success); border-radius:var(--radius-md); padding:18px 20px; background:var(--color-success-light); box-shadow:none; margin:20px 0; font-size:16px; line-height:1.55; }
+    .pachino-ramka { border:1px solid rgba(183,121,31,0.3); border-left:4px solid var(--color-warning); padding:18px 20px; border-radius:var(--radius-md); background:#fff9ef; margin:20px 0; font-size:16px; line-height:1.55; position:relative; }
+    .pachino-ramka::before { content:"🕐"; position:absolute; top:14px; right:18px; font-size:22px; opacity:0.8; }
+    .ramka-title { display:block; color:var(--color-warning); padding:0; margin-bottom:10px; font-weight:700 !important; background:transparent; text-transform:uppercase; font-size:13px; letter-spacing:0.06em; }
+    .pachino-ramka font { color:var(--color-danger); font-weight:600; }
+    .noclose-cta { font-size:15px; max-width:780px; margin:16px auto; display:block; background:var(--color-danger-light); border:1px solid rgba(192,57,43,0.2); padding:12px 16px; border-radius:var(--radius-md); line-height:1.5; }
+    .pre-cta { display:block; color:var(--color-success); font-weight:500; font-size:16px; margin-top:12px; }
+    .nowrap { white-space:nowrap; }
+    .pachinoform { padding:0; font-size:17px; line-height:1.5; color:var(--color-text); border:1px solid var(--color-border); background:#fff; display:block; border-radius:var(--radius-lg); width:100%; max-width:780px; margin:24px auto; box-shadow:var(--shadow-lg); overflow:hidden; }
+    .pachinoform_title { display:flex; gap:16px; max-width:none; align-self:stretch; text-align:left; background:var(--color-primary); color:#fff; padding:20px 24px; align-items:center; }
+    .pachinoform_title_logo { flex-shrink:0; background:#fff; padding:6px; border-radius:50%; width:56px; height:56px; display:flex; align-items:center; justify-content:center; }
+    .pachinoform_title_logo img { max-width:100%; height:auto; }
+    .pachinoform_title_text { align-self:center; color:#fff; font-size:15px; line-height:1.4; }
+    .pachinoform_title_text>b { display:block; line-height:1.3; font-size:17px; margin-bottom:4px; color:#fff; font-weight:600; }
+    .pachinoform_order { max-width:none; font-weight:500; font-size:15px; margin:0; text-align:center; padding:16px 24px; background:var(--color-primary-light); border-bottom:1px solid var(--color-border-soft); color:var(--color-text); line-height:1.5; }
+    .pachinoform_order>b { color:var(--color-danger); font-weight:700; }
+    .pachinoform_value { display:flex; color:var(--color-text); font-weight:600; font-size:15px; align-items:center; justify-content:center; padding:16px 24px 0; flex-wrap:wrap; gap:10px; }
+    .pachinoform_value_current { border:2px solid var(--color-danger); color:var(--color-danger); line-height:1; font-size:22px; padding:6px 18px; margin:0 6px; border-radius:var(--radius-sm); background:var(--color-danger-light); font-weight:700; }
+    .pachinoform_value_total { font-size:18px; color:var(--color-text-muted); }
+    .pachinoform_price { display:flex; align-items:center; justify-content:center; gap:24px; margin:20px 0 0; padding:0 24px; }
+    .pachinoform_price_old span { display:block; font-size:24px; font-weight:600; letter-spacing:-0.5px; color:var(--color-text-light); position:relative; line-height:1; }
+    .pachinoform_price_old span::before { position:absolute; content:""; left:-4px; top:50%; right:-4px; border-top:2px solid var(--color-danger); transform:rotate(-12deg); }
+    .pachinoform_price_new span { display:inline-block; background:var(--color-success); color:#fff; text-shadow:none; font-size:32px; padding:8px 20px; font-weight:700; line-height:1; border-radius:var(--radius-sm); box-shadow:0 4px 12px rgba(30,132,73,0.25); }
+    .pachinoform form { padding:22px 24px 20px; }
+    .pachinoform .name-input, .pachinoform .phone-input { color:var(--color-text); font-size:15px; margin-bottom:14px; }
+    .pachinoform .name-input label, .pachinoform .phone-input label { font-weight:500; font-size:14px; color:var(--color-text-muted); margin-bottom:6px; display:block; text-transform:uppercase; letter-spacing:0.04em; }
+    .pachinoform .name-input input, .pachinoform .phone-input input { font:inherit; color:var(--color-text); box-sizing:border-box; width:100%; border-radius:var(--radius-sm); padding:12px 16px; min-width:0; background:#fff; border:1.5px solid var(--color-border); font-size:16px !important; transition:border-color 0.15s ease, box-shadow 0.15s ease; }
+    .pachinoform .name-input input:focus, .pachinoform .phone-input input:focus, .pachinoform input:focus { outline:0; border-color:var(--color-primary); box-shadow:0 0 0 3px rgba(10,92,158,0.15); }
+    .pachinoform .button-submit { text-align:center; width:100%; margin:6px auto 0; text-decoration:none; border-radius:var(--radius-sm); color:#fff; border:0; padding:16px 20px; cursor:pointer; background:var(--color-primary); font-size:17px; line-height:1.3; font-weight:600; letter-spacing:0.02em; text-transform:uppercase; transition:background 0.15s ease, transform 0.05s ease; box-shadow:0 4px 12px rgba(10,92,158,0.25); font-family:var(--font-sans); }
+    .pachinoform .button-submit:hover { background:var(--color-primary-dark); }
+    .pachinoform .button-submit:active { transform:translateY(1px); }
+    .pachinoform .button-submit:focus { outline:0; box-shadow:0 0 0 3px rgba(10,92,158,0.25); }
+    .pachinoform ::placeholder { color:var(--color-text-light); opacity:1; font-size:15px !important; }
+    .pachinoform_footer { text-align:center; color:var(--color-text-muted); font-size:13px; padding:14px 24px 20px; background:var(--color-bg-soft); border-top:1px solid var(--color-border-soft); line-height:1.5; }
+    .pachinoform_footer img { margin-top:10px; max-width:100%; height:auto; opacity:0.85; }
+    @media (max-width:500px) { .pachinoform_title { gap:10px; padding:16px 18px; } .pachinoform_title_text { font-size:13px; } .pachinoform_title_text>b { font-size:15px; } .pachinoform_value { flex-wrap:wrap; justify-content:center; font-size:14px; } .pachinoform_price_new span { font-size:26px; } .pachinoform_price_old span { font-size:20px; } .pachinoform form { padding:18px 18px 18px; } .pachinoform_order { padding:14px 18px; font-size:14px; } .blc-pck { display:block; width:100%; text-align:center; margin-top:8px; } .pachinoform_value_current { margin:0; } }
+    .comments { max-width:900px; margin:32px auto 20px; background:#fff; border-radius:var(--radius-md); border:1px solid var(--color-border); overflow:hidden; }
+    .comments__header { padding:16px 20px; background:var(--color-primary); color:#fff; display:flex; align-items:center; justify-content:space-between; }
+    .comments__header-title { font-family:var(--font-serif); font-size:18px; font-weight:600; margin:0; color:#fff; letter-spacing:0.02em; }
+    .comments__item-list { padding:8px 20px; }
+    .comments__item { padding:16px 0; border-bottom:1px solid var(--color-border-soft); }
+    .comments__item:last-child { border-bottom:0; }
+    .comments__item-header { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+    .comments__item-avatar { width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; border:1px solid var(--color-border); }
+    .comments__item-info { flex:1; min-width:0; }
+    .comments__item-name { font-weight:600; font-size:15px; color:var(--color-primary-dark); margin:0 0 2px; }
+    .comments__item-info p:last-child, .comments__item-info .startdate, .comments__item-info .nowdate { font-size:12px; color:var(--color-text-light); margin:0; }
+    .comments__item-body { padding-left:56px; }
+    .comments__item-content { font-size:15px; line-height:1.55; color:var(--color-text); margin:0; }
+    .comments__item-content img { border-radius:var(--radius-sm); margin-top:10px; }
+    .comm-obert-reply { padding-left:28px; border-left:2px solid var(--color-primary-light); margin-left:8px; }
+    .comm-obert-reply .comments__item.reply { border-bottom:1px solid var(--color-border-soft); }
+    @media (max-width:560px) { .comments__item-body { padding-left:0; } .comm-obert-reply { padding-left:16px; } }
+    .form-container { max-width:900px; margin:0 auto; padding:0 20px; }
+    .custom-form { max-width:100%; margin:0 auto; padding:18px; box-shadow:var(--shadow-sm); border:1px solid var(--color-border); box-sizing:border-box; font-family:var(--font-sans) !important; display:flex; flex-direction:column; gap:12px; background:var(--color-bg-soft); border-radius:var(--radius-md); }
+    .custom-form__top-field { display:flex; gap:16px; align-items:center; }
+    .custom-form__ava-block { position:relative; width:54px; height:54px; overflow:hidden; border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px dashed var(--color-border); transition:0.2s; flex:0 0 auto; background:#fff; }
+    .custom-form__ava-label { font-size:11px; text-align:center; line-height:1.2; cursor:pointer; font-family:inherit; font-weight:400; color:var(--color-text-light); padding:4px; }
+    .custom-form__ava-label_red-text { color:var(--color-danger); }
+    .custom-form__name { width:100%; max-width:320px; display:inline-block; outline:none; border:1.5px solid var(--color-border); padding:10px 14px; font-size:14px; height:42px; box-sizing:border-box; font-family:inherit; border-radius:var(--radius-sm); background:#fff; }
+    .custom-form__message { resize:none; width:100%; outline:none; border:1.5px solid var(--color-border); padding:12px 14px; min-height:90px; font-size:14px; line-height:1.5; font-family:inherit; box-sizing:border-box; border-radius:var(--radius-sm); background:#fff; }
+    .custom-form__bottom-field { display:flex; flex-direction:row; gap:14px; align-items:center; flex-wrap:wrap; }
+    .custom-form__btn { outline:none; padding:10px 24px; background:var(--color-primary); color:#fff; font-weight:600; font-size:14px; transition:background 0.15s ease; cursor:pointer; text-transform:uppercase; border:0; font-family:var(--font-sans); border-radius:var(--radius-sm); text-decoration:none !important; letter-spacing:0.04em; }
+    .custom-form__btn:hover { background:var(--color-primary-dark); }
+    .custom-form__photo-label { cursor:pointer; font-size:13px; font-weight:400; border:none; color:var(--color-primary); text-decoration:underline; }
+    .trust-strip { max-width:900px; margin:0 auto; background:#fff; border:1px solid var(--color-border-soft); border-top:0; padding:20px 22px; display:flex; flex-wrap:wrap; gap:18px; justify-content:space-around; align-items:center; }
+    .trust-item { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--color-text-muted); font-weight:500; }
+    .trust-item-icon { color:var(--color-primary); font-size:18px; }
+    .clinical-footer { max-width:900px; margin:0 auto 0; padding:24px 22px 36px; background:#fff; border:1px solid var(--color-border-soft); border-top:1px solid var(--color-border); text-align:center; font-size:12px; color:var(--color-text-light); line-height:1.6; }
+    .clinical-footer a { color:var(--color-primary); text-decoration:none; }
+    .product-center { display:block; max-width:220px; width:100%; margin:16px auto; }
+    #overlay { position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:100; transition:opacity 0.3s ease; }
+    #popup3 { background-size:cover; background-position:center; position:fixed; top:50%; left:50%; padding:20px; background-color:white; box-shadow:var(--shadow-lg); transition:opacity 0.3s ease, transform 0.3s ease; max-width:800px; width:93%; height:87%; overflow-y:auto; max-height:100vh; z-index:999999; }
+    body input[name="phone"] { background-repeat:no-repeat !important; background-position:left 15px center !important; }
+    main center { display:block; text-align:center; }
+    .sf-hidden { display:none !important; }
+    .quote-inline { margin:20px 0; padding:16px 20px; background:var(--color-bg-soft); border-left:4px solid var(--color-text-light); border-radius:0 var(--radius-md) var(--radius-md) 0; font-style:italic; color:var(--color-text-muted); font-size:16px; line-height:1.6; }
+    .quote-inline .quote-name { display:block; margin-top:10px; font-style:normal; font-weight:600; color:var(--color-primary-dark); font-size:14px; }
+    @media (max-width:480px) { body { font-size:16px; } main p { font-size:16px; } .doc-block { padding:16px; } .rev-block { padding:16px; } .recept { padding:16px; } .block-offer-actions-block { padding:6px 16px 16px; } .obertk512 li { padding-left:44px; } .obertk512 li::before { width:30px; height:30px; font-size:14px; } }
+    @keyframes example { 0% { opacity:0; } 100% { opacity:1; } }
+    @keyframes blinker { from { opacity:1.0; } to { opacity:0.7; } }
+  </style>
+
+  <script src="js/dtime.js"></script>
+</head>
+
+<body>
+
+  <div class="clinical-topbar">Speciální reportáž · Zdraví a Společnost</div>
+
+  <div class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-logo">
+        <span class="masthead-logo-icon">+</span>
+        <span>ZdravíInfo Česko</span>
+      </div>
+      <div class="masthead-tagline">Reportáž ze světa zdravotnictví</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="bg-image"></div>
+  </header>
+  <div class="text-container"></div>
+  <div class="h1-bg split">
+    <h1 class="title_h1">
+      <span class="head-one-part">«KDYŽ UŽ NEMŮŽETE CHODIT, RODINA NA VÁS ZAPOMENE.»</span>
+      <span class="head-two-part">MLADÝ LÉKAŘ, KTERÝ CHODÍ PO DOMOVECH DŮCHODCŮ A VRACÍ OPUŠTĚNÝM SENIORŮM TO, CO JIM NIKDO JINÝ NEDOKÁŽE: KLOUBY A DŮSTOJNOST. JEHO METODA ŠOKOVALA CELOU LÉKAŘSKOU KOMUNITU.</span>
+    </h1>
+
+    <div class="tdate head-main-date">
+      <span class="head-main-date-title">Publikováno: </span>
+      <span class="startdate"><script>dtime_nums(-3, true)</script>, 09:36</span>
+    </div>
+
+    <div class="main-subtitle">
+      Jak 50letý kněz, otec Tomáš, opustil klid své farnosti v Praze, aby pomáhal zapomenutým důchodcům v domovech sociálních služeb — seniorům opuštěným rodinami právě proto, že už nemohli chodit, nemohli stát, nemohli nic udělat sami. A jak starý klášterní recept, který znovu oživil, jim vrátil pohyblivost — bez operace a bez tablet na celý život.
+    </div>
+  </div>
+
+  <main>
+
+    <!-- 📸 FOTO 1 -->
+    <img alt="otec Tomáš vyšetřuje koleno pacientky v domově důchodců" src="https://static.joxi.pro/1778142925769-2045c9ea-f00c-48ab-ae5d-6e56aec020f0.jpg" style="margin-bottom:14px;margin-top:0">
+
+    <p>
+      Přijeli jsme do Brna v úterý ráno. Cesta k domovu důchodců vedla úzkou ulicí, mezi domy se starými brankami a štěkajícími psy. «Hledáte toho kněze?» — zeptala se žena z místního obchodu. «Chodí sem každý čtvrtek. Senioři na něj čekají u brány. Někteří pláčou, když ho uvidí.»
+    </p>
+    <p>
+      Takto jsme poprvé slyšeli o otci Tomášovi — 50letém knězi, který opustil klid své farnosti v Praze, aby dělal to, co nikdo jiný nechtěl: chodil po domovech důchodců po celém Česku a léčil seniory, které jejich rodiny opustily.
+    </p>
+    <p>
+      Důvod opuštění? Téměř vždy stejný: <b>senioři už nemohli chodit.</b> Kolena odmítla poslouchat. Záda se zkroutila. Ruce se třásly tak, že nedokázaly udržet lžíci. A v tom momentě — přesně tehdy, když nejvíce potřebovali pomoc — rodiny usoudily, že je to příliš. Příliš těžké. Příliš drahé. A odvezli je do domova.
+    </p>
+
+    <div class="quote-inline">
+      «Můj syn mi řekl: "Mami, nedokážu tě zvedat ze židle pokaždé. Nezvládám to." Následující den mě odvezl do domova. Nenavštívil mě 3 roky.»
+      <span class="quote-name">— Paní Alžběta, 79 let, domov důchodců v Brně</span>
+    </div>
+
+    <div class="quote-inline">
+      «Když se mi kolena úplně zablokovala, manželka řekla, že nemůže žít s invalidou. Odešla. Děti se postavily na její stranu. Přivezli mě sem a zmizeli.»
+      <span class="quote-name">— Pan Pavel, 73 let, domov důchodců v Moravskoslezském kraji</span>
+    </div>
+
+    <h2>
+      «Viděl jsem, jak vypadá opuštěnost. A rozhodl jsem se, že nemohu jen nečinně přihlížet»
+      <span>Exkluzivní rozhovor s otcem Tomášem — knězem, který opustil klid své farnosti, aby pomáhal těm, kteří už nemají nikoho</span>
+    </h2>
+
+    <!-- 📸 FOTO 2 -->
+    <div class="doc-block">
+      <img alt="otec Tomáš" src="https://static.joxi.pro/1778142925769-8d31ed89-cd31-449a-8c51-6ff1a0bfb48e.jpg">
+      <p>otec Tomáš: «Poprvé jsem vstoupil do domova důchodců před mnoha lety, abych navštívil nemocné a pomodlil se s nimi. A nebyl jsem připraven na to, co jsem uviděl. 76letá žena, paní Růžena, seděla na okraji postele s oteklýma nohama a koleny, která se už neohýbala. 4 měsíce nevyšla z pokoje. Chytila mě za ruku a řekla:
+        <b>«Otče, dcera mě sem přivezla, když jsem už nemohla sejít po schodech. Řekla, že se o mě nemůže dál starat. To bylo před dvěma lety. Od té doby nepřišla.»</b>
+      </p>
+      <p><b>V TOM OKAMŽIKU JSEM POCHOPIL, ŽE TOHLE JSOU LIDÉ, KTEŘÍ MNE NEJVÍCE POTŘEBUJÍ —
+          <span class="red-txt">TI, NA KTERÉ CELÝ SVĚT ZAPOMENUL PRÁVĚ PROTO, ŽE UŽ NEMOHOU CHODIT.»</span></b>
+      </p>
+    </div>
+
+    <p>
+      otec Tomáš mluví klidně, ale s intenzitou, kterou nelze ignorovat. Dva roky chodí po domovech důchodců po celém Česku — od Prahy po Ostravu, od Olomouce po Hradec Králové. A všude nachází stejný zdrcující obraz: seniory se zničenými klouby, kteří nedostávají žádnou skutečnou léčbu, jen protizánětlivé tablety, které jim ničí žaludek a ledviny.
+    </p>
+
+    <p>
+      «Většina těchto lidí se sem dostala kvůli kloubům. Kolena odmítla poslouchat. Záda se zablokovala. Kyčelní kloub se opotřeboval. A v okamžiku, kdy už nemohli chodit samostatně, rodiny usoudily, že jsou přítěží. To je slovo, které v domovech slýchám nejčastěji: <b>„přítěž"</b>. Popisují vlastní rodiče jako přítěž.»
+    </p>
+
+    <div class="quote-inline">
+      «Nepřivezli mě sem proto, že mě nemilovali. Přivezli mě sem proto, že jsem se budil ve 3 ráno s křikem od bolesti v koleni a nikdo nemohl spát. Snacha řekla, že buď se odstěhuji já, nebo ona. Syn si vybral ji.»
+      <span class="quote-name">— Pan Daniel, 71 let, domov důchodců v Olomouckém kraji</span>
+    </div>
+
+    <h2>
+      «Tablety na klouby nic neřeší — pouze maskují ničení»
+      <span>otec Tomáš vysvětluje, proč konvenční terapie v domovech a lékárnách selhávají</span>
+    </h2>
+
+    <p><b>otec Tomáš:</b></p>
+    <p>— Mluvím upřímně: to, co jsem v těchto domovech viděl, mnou otřáslo. Osobám od 55 do 80 let se roky podávají stejné protizánětlivé léky — tablety, které maskují bolest na pár hodin, bez léčení příčiny. Jejich chrupavka se dál ničí. Kloubní tekutina mizí. Klouby se dřou kost o kost. A chemie tablet jim každý den ničí žaludek, játra a ledviny.
+    </p>
+
+    <p>Je to začarovaný kruh: bolest → tablety → bolest se vrátí silnější → silnější tablety → žaludek odmítne → přidají se tablety na žaludek → ledviny odmítnou. A nikdo jim neřekne pravdu: <b>že existuje způsob, jak regenerovat kloub zevnitř, ne jen znecitlivět bolest.</b>
+    </p>
+
+    <!-- 📸 FOTO 3 -->
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-a94978b4-3738-4aeb-950e-312b652009ac.jpg">
+      <figcaption>
+        Kolena paní Marie, 74 let, domov důchodců v Jihočeském kraji. Artróza 3. stupně, chrupavka téměř zcela zničená. 5 měsíců nevychází z pokoje. Na nočním stolku — 6 druhů tablet, které nic nezměnily.
+      </figcaption>
+    </figure>
+
+    <div class="pachino-ramka312-block">
+      <p class="pachino-ramka312">
+        <span class="obertka-1">
+          Bolest kolene, zad nebo kyčle po 45. roce života není „normální pro tento věk" — je to signál, že kloubní chrupavka se ničí a kloubní tekutina mizí.
+          <br><br>
+          Protizánětlivé tablety blokují pouze bolestivý signál, zatímco ničení postupuje v tichosti. Bez skutečné regenerace chrupavky se kloub zcela opotřebuje — a pak jedinou možností zůstává invalidní vozík nebo operace endoprotézy.
+        </span>
+      </p>
+    </div>
+
+    <p><b>otec Tomáš:</b></p>
+
+    <p>— Prosím, pochopte závažnost situace. U většiny těchto seniorů je chrupavka kolene, páteře nebo kyčle zničena na 70–90 %. Chodí — pokud ještě chodí — kost o kost. Každý krok je utrpení. <b>KONVENČNÍ TABLETY NEDOKÁŽOU OBNOVIT CHRUPAVKU — POUZE MASKLUJÍ BOLEST, DOKUD SE VŠECHNO NEZŘÍTÍ!</b>
+    </p>
+
+    <p>
+      A to, co mi trhá duši: tito lidé nemají nikoho. Rodina je opustila přesně v okamžiku, kdy klouby odmítly sloužit. Jsou sami, v posteli, v malém pokoji a čekají. Někteří už nevědí, na co čekají.
+    </p>
+
+    <div class="quote-inline">
+      «Vychovala jsem tři děti. 40 let jsem pracovala na poli. A když mi kolena odmítla a nemohla jsem sama jít na záchod — odvezli mě do domova. Jako bych pro ně už neexistovala. Jako bych už zemřela.»
+      <span class="quote-name">— Paní Hedvika, 82 let, domov důchodců v Jihomoravském kraji</span>
+    </div>
+
+    <div class="quote-inline">
+      «35 let jsem byl mistr v továrně. Záda odmítla ve věku 62 let. Výhřez ploténky, ischias, nemohl jsem stát. Syn řekl, že nemůže sedět doma a starat se o mě. Má svou práci, svou rodinu. Chápu to. Ale bolí to víc než záda.»
+      <span class="quote-name">— Pan Josef, 68 let, domov důchodců v Královéhradeckém kraji</span>
+    </div>
+
+    <!-- 📸 FOTO 4 -->
+    <figure class="Figure" style="text-align:center">
+      <img src="https://static.joxi.pro/1778142925769-057465eb-7a53-45e0-ba84-1b9038913030.jpg" style="margin:0 auto">
+      <figcaption>
+        <b>Vlevo: zdravý kloub s neporušenou chrupavkou a dostatečným množstvím kloubní tekutiny. Vpravo: zničený kloub — chrupavka opotřebovaná, chronický zánět, kost se dře o kost. Toto je realita více než 80 % seniorů v domovech důchodců. Protizánětlivé tablety chrupavku neobnoví.</b>
+      </figcaption>
+    </figure>
+
+    <p class="red-txt">
+      Důležité: ve 2/3 případů, i při každodenním užívání léků proti bolesti, se klouby nadále zhoršují, protože skutečná příčina — ničení chrupavky a úbytek kloubní tekutiny — zůstává nevyřešena.
+    </p>
+
+    <p class="red-txt">
+      Po letech užívání protizánětlivých léků mnozí pacienti ztrácejí nejen pohyblivost, ale i žaludek, játra a ledviny. Vředy, selhání jater, otok ledvin — to je cena, kterou platí ti, kterým nikdo nikdy nenabídl skutečnou alternativu.
+    </p>
+
+    <h2>
+      Příběhy, které změnily můj život — a které změní způsob, jakým se díváte na stáří
+    </h2>
+
+    <p><b>otec Tomáš:</b></p>
+
+    <p>— Dovolte mi říct vám, co vidím každý týden. Ne čísla. Ne statistiky. Lidi. Lidi se jmény, s příběhy, s dětmi, které už nepřicházejí.</p>
+
+    <!-- 📸 FOTO 5 -->
+    <figure class="cap-bold">
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-ab7d1e11-8df2-44ee-b472-2a3be72bb7b3.jpg">
+      <figcaption>
+        Paní Helena, 77 let. Revmatoidní artritida obou rukou — nedokáže držet šálek ani se sama obléct. Dcera ji odvezla do domova před 2 lety: «Nemůžu tě oblékat každé ráno, mám i svůj život.»
+      </figcaption>
+    </figure>
+
+    <div class="quote-inline">
+      «Nedokážu se ani učesat. Ani si nalít vodu. Moje ruce neposlouchají. Ráno se na ně dívám a nepoznávám je — oteklé, zkroucené, jako by nebyly moje. Snacha mi jednou řekla: "Jak ti mám nechat vnoučata, když nedokážeš udržet lžíci?" Měla pravdu. Ale ta slova mě zabila zevnitř.»
+      <span class="quote-name">— Paní Helena, 77 let</span>
+    </div>
+
+    <!-- 📸 FOTO 6 -->
+    <figure class="cap-bold">
+      <img class="img-card" src="https://static.joxi.pro/1778142925769-980707f6-6c1c-40ec-96a5-61c8c9dcde54.jpg">
+      <figcaption>
+        Pan Richard, 75 let. Výhřez ploténky L4-L5, oboustranná koxartróza. 8 měsíců se nepostaví na nohy. «Řekli, že jsem příliš starý na operaci. Řekli, ať se s tím smířím.»
+      </figcaption>
+    </figure>
+
+    <div class="quote-inline">
+      «Byl jsem traktorista. Zoral jsem tisíce hektarů. Teď se nedokážu sám otočit v posteli. Záda se zablokovala, kyčle srostla. Moje děti pracují v Anglii. Posílají peníze na domov a to je vše. Neodsuzuji je. Ale v noci, když to bolí a nikdo nepřijde… přemýšlím, jestli takhle vypadá konec.»
+      <span class="quote-name">— Pan Richard, 75 let</span>
+    </div>
+
+    <p><b>Zde jsou příznaky, se kterými se v domovech setkávám nejčastěji — a které miliony Čechů ignorují:</b></p>
+    <ul>
+      <li>Silná bolest kolene při chůzi do schodů — nebo při jakémkoli pohybu;</li>
+      <li>Ranní ztuhlost — tělo „dřevěné", neschopné pohybu 30–60 minut po probuzení;</li>
+      <li>Chronická bolest zad — nemohou se ohnout, nemohou vstát z postele;</li>
+      <li>Otok kolen, kotníků nebo prstů;</li>
+      <li>Praskání a lupání v kloubech při každém pohybu;</li>
+      <li>Bolest kyčle vyzařující do stehna — nedokážou ujít více než 50 metrů;</li>
+      <li>Deformované, hrbolkaté prsty rukou — nedokážou uchopit předměty;</li>
+      <li>Mrtvění nohou nebo rukou — příznak výhřezu nebo stlačeného nervu;</li>
+      <li>Pocit „bodnutí nožem" v bederní oblasti při vstávání;</li>
+      <li>Ohnutá záda, shrbený postoj — postupující kyfóza;</li>
+      <li>Noční bolest, která nedovolí spát — budí se 4–5krát za noc;</li>
+    </ul>
+
+    <p>
+      Každý z těchto příznaků je varovný signál. A po 45.–50. roce života jejich ignorování vede k jedinému výsledku:
+      <b class="red-txt">ÚPLNÁ ZTRÁTA POHYBLIVOSTI, INVALIDNÍ VOZÍK, ÚPLNÁ ZÁVISLOST NA OSTATNÍCH — A V MNOHÝCH PŘÍPADECH DOMOV DŮCHODCŮ.</b>
+    </p>
+
+    <div class="pachino-ramka312-block">
+      <p class="pachino-ramka312">
+        <span class="obertka-1">
+          Každý den strávený s neléčenými klouby vás přibližuje k trvalé ztrátě pohyblivosti!
+          Tisíce důchodců v domovech se tam dostaly právě proto, že ignorovaly bolest — nebo braly jen tablety, které neléčily příčinu.
+          Jednejte hned — pro sebe nebo pro své blízké — dokud není příliš pozdě!
+        </span>
+      </p>
+    </div>
+
+    <h2>
+      «Rozhodl jsem se, že musí existovat způsob regenerace kloubů — ne jen znecitlivění bolesti»
+      <span>Jak 50letý kněz znovu oživil starý zapomenutý klášterní recept, který farmaceutický průmysl odmítá vyrábět</span>
+    </h2>
+
+    <p><b>otec Tomáš:</b></p>
+    <p>
+      — Po roce návštěv v domovech důchodců jsem si uvědomil bolestivou pravdu: protizánětlivými tabletami nedokážu nikoho zachránit. Tyto léky hasí pouze varovný signál organismu, zatímco kloub se dál ničí. Potřeboval jsem něco úplně jiného: metodu, která regeneruje chrupavku zevnitř, obnovuje kloubní tekutinu a zastavuje zánět na buněčné úrovni.
+    </p>
+    <p>
+      Tehdy jsem si vzpomněl na starý recept, o kterém jsem četl ve starých klášterních rukopisech — bylinný recept na léčbu kloubů, který mniši po staletí opatrovali a který upadl v zapomnění. Prostudoval jsem ty staré záznamy, poskládal jejich roztroušené stránky a s pomocí lidí, jimž důvěřuji, jsem porozuměl jeho složkám a přesným poměrům.
+    </p>
+    <p>
+      Na jeho oživení jsem pracoval více než 10 měsíců. Otestoval jsem více než 180 kombinací, dokud jsem přesně nevyladil poměry tak, jak byly zapsány ve starém receptu. A nakonec jsem našel přesnou formuli — krém, který po nanesení na postižený kloub proniká na buněčnou úroveň a aktivuje přirozenou regeneraci chrupavky. Ne tableta, která prochází žaludkem a ničí játra. Krém, který působí přesně tam, kde je třeba.
+    </p>
+
+    <div class="recept">
+      <p><b>Formule krému, který otec Tomáš oživil ze starého klášterního receptu, obsahuje následující účinné látky:</b></p>
+      <ul class="my-ul-0-green size1">
+        <li><b>Glukosamin sulfát</b>
+          <font>Čištěná mořská surovina: 1500 mg/dávku</font>
+        </li>
+        <li><b>Chondroitin sulfát</b>
+          <font>Extrakt s vysokou biologickou dostupností: 1200 mg/dávku</font>
+        </li>
+        <li><b>Extrakt z Boswellia serrata</b>
+          <font>Kyselina boswelliová koncentrovaná na 65 %: 800 mg</font>
+        </li>
+        <li><b>Kyselina hyaluronová s nízkou molekulovou hmotností</b>
+          <font>Transdermální penetrace: 200 mg</font>
+        </li>
+        <li><b>Hydrolyzovaný kolagen typu II</b>
+          <font>Certifikovaný hovězí zdroj: 2000 mg</font>
+        </li>
+        <li><b>Extrakt z arniky horské</b>
+          <font>Přírodní protizánětlivý prostředek: 500 mg</font>
+        </li>
+        <li><b>MSM (Methylsulfonylmethan)</b>
+          <font>Biologicky dostupná organická síra: 1000 mg</font>
+        </li>
+        <li><b>Kafr a mentol</b>
+          <font>Přírodní analgetický komplex s termickým efektem</font>
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      Tyto složky je těžké získat v požadované koncentraci. Jejich kombinace ve správných poměrech vyžaduje speciální technologii — pokud jsou poměry chybné byť jen o 0,1 %, krém neproniká dostatečně hluboko a neaktivuje regeneraci chrupavky.
+    </p>
+
+    <h2>
+      Tak vznikl Arthrovia — jediný krém obsahující všechny tyto složky v ideálních poměrech pro úplnou regeneraci kloubů
+    </h2>
+    <p><b>otec Tomáš:</b></p>
+    <p>
+      — Ve spolupráci s důvěryhodnou laboratoří se nám podle starého receptu podařilo vyrobit tento produkt: krém pro vnější použití, který se nanáší přímo na postižený kloub — koleno, záda, kyčle, ruce, krk. Jmenuje se Arthrovia. Aplikuje se dvakrát denně, ráno a večer, jemným masírováním 2–3 minuty. Účinné látky pronikají přímo do kloubu, obcházejí žaludek a játra — čímž se eliminují všechny vedlejší účinky tablet.
+    </p>
+
+    <!-- 📸 FOTO 7 -->
+    <img src="images/product.png" style="width:78%;max-width:540px;display:block;margin:18px auto">
+
+    <p>
+      Tajemství spočívá v přesných poměrech starého klášterního bylinného receptu. Tyto poměry umožňují účinným látkám proniknout přímo do kloubního pouzdra — tam, kde se chrupavka ničí — s 5násobně vyšší účinností než jakýkoli běžně dostupný produkt na trhu.
+    </p>
+    <p class="pachino-ramka2">
+      «Arthrovia» nemá konkurenci. Každá složka — v přesné koncentraci — aktivuje regeneraci chrupavky, obnovení kloubní tekutiny a zastavení zánětu. Je to jediný krém, který působí na buněčné úrovni, přímo na postiženou oblast — koleno, záda, kyčle, ruce, krk — bez průchodu žaludkem. A co je nejdůležitější: funguje i ve věku 70, 80, 85 let. Poprvé jsem ho testoval na mých pacientech v domovech důchodců — na lidech, které už nikdo jiný neléčil.
+    </p>
+
+    <p><b>otec Tomáš:</b></p>
+    <p>
+      — Prvními pacienty byli opuštění senioři z domovů. Lidé, které jejich rodiny opustily. Nanášel jsem krém na oteklá kolena, záda, kyčle. A čekal jsem. Třetí den — paní Hedvika, která 4 měsíce nevstala z postele, udělala první kroky sama. Oba jsme plakali.
+    </p>
+
+    <h2>
+      4 mechanismy, díky kterým Arthrovia regeneruje klouby a vrací pohyblivost — v jakémkoli věku
+    </h2>
+
+    <div class="obertk512">
+      <h1>4 hlavní účinky krému «Arthrovia»:</h1>
+      <div class="block-offer-actions-block">
+        <ol>
+          <li>
+            <font>Odstranění bolesti a zánětu:</font>
+            <span>Již za 15–30 minut od aplikace komplex boswellie, arniky a kafru odstraňuje bolest a snižuje zánět. Ne blokováním nervového signálu (jako to dělají tablety) — ale zastavením zánětlivého procesu u zdroje.</span>
+          </li>
+          <li>
+            <font>Regenerace kloubní chrupavky:</font>
+            <span>Glukosamin, chondroitin a kolagen typu II pronikají do kloubního pouzdra a aktivují buňky chrupavky (chondrocyty), čímž stimulují tvorbu nové chrupavkové tkáně. Tento proces začíná po 3–5 dnech pravidelného používání.</span>
+          </li>
+          <li>
+            <font>Obnovení kloubní tekutiny:</font>
+            <span>Kyselina hyaluronová s nízkou molekulovou hmotností proniká transdermálně a obnovuje kloubní tekutinu — přirozené „mazivo" kloubu. Díky tomu se kosti již nedřou o sebe a pohyb se stává plynulým a bezbolestným.</span>
+          </li>
+          <li>
+            <font>Dlouhodobá ochrana a prevence:</font>
+            <span>MSM a minerální komplex posilují vazy a šlachy okolo kloubu, čímž zabraňují dalšímu zhoršování stavu. Po 30–60 dnech používání kloub získává stabilní ochranu, která přetrvává měsíce.</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <h2>
+      «Arthrovia jsem nejprve vyzkoušel na svých pacientech z domovů — výsledky předčily vše, co jsem za dlouhá léta své služby mezi seniory viděl»
+      <span>Svědectví 2 340 osob ve věku od 45 do 86 let</span>
+    </h2>
+
+    <p><b>otec Tomáš:</b></p>
+    <p>
+      — Prvními pacienty byli opuštění senioři z domovů. Ti, které nikdo neléčil. Výsledky byly natolik působivé, že zpráva o receptu se rozšířila a zkušenost zahrnula více než 2 300 lidí z celého Česka — pokrývající všechny typy kloubních problémů: kolena, záda, kyčle, ruce, krk.
+    </p>
+    <p>
+      Viděl jsem 80leté lidi, kteří nemohli chodit — a po 6 týdnech sami vyšli na dvůr domova. Sestřičky plakaly. Já plakal s nimi.
+    </p>
+
+    <div class="table-block">
+      <h1 class="title_h1">
+        Výsledky «Arthrovia» — 2 340 osob, 45–86 let
+      </h1>
+      <table class="table">
+        <tbody>
+          <tr><td class="one">Úplné odstranění bolesti kolene</td><td class="two">96,2 %</td></tr>
+          <tr><td class="one">Odstranění bolesti zad a ranní ztuhlosti</td><td class="two">94,7 %</td></tr>
+          <tr><td class="one">Artróza 1.–2. stupně (úplné obnovení pohyblivosti)</td><td class="two">98,1 %</td></tr>
+          <tr><td class="one">Artróza 3. stupně (výrazné zlepšení)</td><td class="two">87,3 %</td></tr>
+          <tr><td class="one">Koxartróza (bolest kyčle)</td><td class="two">91,5 %</td></tr>
+          <tr><td class="one">Výhřez ploténky (snížení bolesti a mrtvění)</td><td class="two">89,4 %</td></tr>
+          <tr><td class="one">Revmatoidní artritida (prsty rukou)</td><td class="two">93,8 %</td></tr>
+          <tr><td class="one">Úplné obnovení pohyblivosti kloubu</td><td class="two">95,6 %</td></tr>
+          <tr><td class="one">Odstranění otoku a nočních křečí</td><td class="two">97,0 %</td></tr>
+          <tr><td class="one">Schopnost samostatné chůze</td><td class="two">94,3 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>
+      Případy, které mi zlomily srdce — a daly největší naději
+      <span>
+        Paní Viktorie, 84 let. Opuštěná v domově, když kolena odmítla sloužit. Po 2 měsících používání Arthrovia — vyšla sama do zahrady, poprvé po 3 letech.
+      </span>
+    </h2>
+
+    <p>
+      Paní Viktorie Procházková byla první pacientkou otce Tomáše v domově důchodců v Moravskoslezském kraji. Ve věku 84 let, s artrózou 3. stupně na obou kolenou a koxartrózou levé kyčle, nemohla chodit 14 měsíců. Syn ji odvezl do domova, když „nedokázal ji odnést do koupelny". Nenavštívil ji dva roky.
+    </p>
+
+    <div class="gray-bg rev-block">
+      <!-- 📸 FOTO 8 -->
+      <img class="img-card2" src="https://static.joxi.pro/1778142925769-b234c916-2418-43cd-a09b-52da3b198c19.jpg">
+      <p>
+        «Nevěřila jsem, že ještě někdy budu moci chodit. Má kolena byla tak oteklá, že jsem je nemohla ohnout. Vozili mě po pokoji na invalidním vozíku. Ráno jsem se probudila a hodinu jsem nemohla pohnout ani prstem. Jako by moje tělo zemřelo, ale já ještě žila.
+      </p>
+      <p>
+        <b>
+          Syn mě odvezl do domova, protože mě nedokázal zvednout z postele. Řekl: "Mami, budu tě navštěvovat každou neděli." Nepřišel dva roky. Neodsuzuji ho — má svůj život. Ale v noci, když mě budí bolest a nikdo u mě není… je to těžké.
+        </b>
+      </p>
+      <p>
+        <b>
+          A pak přišel otec Tomáš. Byl první člověk, který se dotkl mých kolen bez znechucení ve tváři. Vysvětlil mi, co se děje s klouby. A nanesl krém. Po týdnu jsem mohla ohnout levé koleno. Po měsíci jsem vstala z postele sama. Po dvou měsících — vyšla jsem do zahrady. Nevyšla jsem 3 roky.
+        </b>
+      </p>
+      <p>
+        Sestřička plakala, když mě uviděla. Já plakala ještě víc. Ne proto, že jsem chodila. Ale proto, že někdo — kněz, kterého jsem předtím nikdy neznala — mi dal víc než můj vlastní syn.
+      </p>
+      <font>
+        <b>Viktorie Procházková, 84 let, domov důchodců v Moravskoslezském kraji</b>
+      </font>
+    </div>
+
+    <p>
+      Další případ: pan Antonín, 58 let, celý život zedník, se zničenými zády kvůli výhřezu ploténky. Manželka odešla, když už nemohl pracovat.
+    </p>
+
+    <div class="gray-bg rev-block">
+      <!-- 📸 FOTO 9 -->
+      <img class="img-card2" src="https://static.joxi.pro/1778142925769-f6ae7d5d-d93a-42f5-8684-d3c285fbc8bf.jpg">
+      <p>
+        «30 let jsem byl zedník. Záda odmítla ve věku 54 let — dva výhřezy ploténky a ischias. Nemohl jsem ani stát, ani ležet. Všechno bolelo. Manželka odešla — řekla, že se nemůže starat o invalidu. Neodsuzuji ji.
+      </p>
+      <p>
+        <b>
+          Moje sestra slyšela o otci Tomášovi od sousedky. Poslala mi krém Arthrovia. Začal jsem nanášet na záda, ráno a večer. Třetí den jsem pocítil první úlevu. Po 3 týdnech — mohl jsem zase jít do obchodu. Po 2 měsících — vrátil jsem se do práce na poloviční úvazek.
+        </b>
+      </p>
+      <p>
+        Někdy ráno se probudím, vstanu z postele bez bolesti a zastavím se na vteřinu. Stojím a nemůžu uvěřit, že je to pravda. Že už to nebolí. Kdyby nebylo otce Tomáše, možná bych teď byl v domově důchodců také.»
+      </p>
+    </div>
+
+    <h2>
+      «Arthrovia nejen léčí bolest — regeneruje celý kloub zevnitř»
+      <span>
+        Nejen obyvatelé domovů z toho mohou mít užitek. Každý nad 45 let, kdo cítí první signály, může zabránit katastrofě.
+      </span>
+    </h2>
+
+    <p><b>otec Tomáš:</b></p>
+
+    <p>
+      — Minimální doba používání je 30 dní, ale v těžkých případech artrózy nebo výhřezu mohou být potřeba 2–3 měsíce. Nicméně v každém případě — bez výjimky — pozorujeme snížení bolesti, regeneraci chrupavky a obnovení pohyblivosti.
+    </p>
+
+    <p>
+      Arthrovia působí od první aplikace: bolest klesá, zánět se snižuje, pohyb se stává lehčím. Ale skutečná magie se děje časem: chrupavka se regeneruje, kloubní tekutina se vrací, kloub „omládne" zevnitř.
+      <b class="red-txt">
+        Viděl jsem 80leté lidi znovu chodit. Viděl jsem ruce, které nedokázaly udržet šálek, zvednout lžíci k ústům. Viděl jsem zkroucená záda narovnat se. A v každém případě — viděl jsem slzy radosti.
+      </b>
+    </p>
+
+    <center>
+      <p><b>
+          Díky starému klášternímu receptu otce Tomáše více než 12 000 lidí v Česku získalo zpět funkčnost kloubů. Zde jsou některé případy:
+        </b></p>
+    </center>
+
+    <!-- 📸 FOTO 10 -->
+    <figure>
+      <img src="https://static.joxi.pro/1778142925769-baf151ad-77dc-450d-9a89-3293efafacfa.jpg">
+      <figcaption>Muž, 65 let. Artróza 3. stupně na obou kolenou — nemohl vyjít po schodech. Arthrovia za 60 dní: plná pohyblivost, bez bolesti.</figcaption>
+    </figure>
+
+    <!-- 📸 FOTO 11 -->
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-f19f7f66-3e45-449a-87f2-78884ec5e6e1.jpg">
+      <figcaption>Žena, 58 let. Chronická bolest zad a výhřez L5-S1. Arthrovia za 45 dní: bolest odstraněna, opět může dělat domácí práce.</figcaption>
+    </figure>
+
+    <!-- 📸 FOTO 12 -->
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-7d23b447-1714-413e-b3dd-921918111aa3.jpg">
+      <figcaption>Žena, 72 let. Těžká revmatoidní artritida prstů — nedokázala udržet šálek. Arthrovia za 2 měsíce: prsty pohyblivé, otok zmizel.</figcaption>
+    </figure>
+
+    <!-- 📸 FOTO 13 -->
+    <figure>
+      <img class="img-card" src="https://static.joxi.pro/1778142925768-4a9900ea-fa77-4c81-a40e-dff210ebf7df.jpg">
+      <figcaption>Muž, 70 let. Pokročilá koxartróza — chodil jen s chodítkem. Arthrovia za 2,5 měsíce: chodí sám, bez bolesti.</figcaption>
+    </figure>
+
+    <p><b>otec Tomáš:</b></p>
+    <p>
+      — Tyto případy jsou živým důkazem, že klouby se dokážou regenerovat — i když diagnóza zněla jako rozsudek. Bez operace. Bez tablet ničících žaludek. A to, co mi přináší největší radost: mnozí z těchto lidí jsou obyvatelé domovů — ti, na které svět zapomněl. <b>Ale já na ně nezapomněl. A Bůh na ně nezapomněl. A Arthrovia na ně nezapomněla také.</b>
+    </p>
+
+    <div id="overlay" style="display:none;opacity:0"></div>
+    <div id="popup3" style="display:none;opacity:0;transform:translate(-50%,-50%) scale(0.8)"></div>
+
+    <h2>
+      Proč Arthrovia není dostupný v lékárně? A jak ho lze získat?
+    </h2>
+
+    <p><b>otec Tomáš:</b></p>
+
+    <p>Bohužel, výroba Arthrovia je komplikovaný a nákladný proces. Suroviny jsou vzácné — kyselina hyaluronová s nízkou molekulovou hmotností, čištěný kolagen typu II, koncentrovaný extrakt z Boswellia — a těžko je získat v požadovaných množstvích. Nedokážeme uspokojit celou poptávku.</p>
+
+    <p>Bude potřeba nejméně 2–3 roky, než se Arthrovia dostane do lékáren. Do té doby je produkt distribuován výhradně online, v rámci podpůrných programů, dvakrát ročně. Ale
+      <font class="red-txt">slevy mohou dosáhnout až 50 %</font>
+      — což je klíčové pro důchodce.
+    </p>
+
+    <p>
+      Prosím: NEPROMEŠKEJTE PODPŮRNÝ PROGRAM. Nejen pro sebe — ale i pro rodiče, prarodiče, blízké, kteří možná trpí v tichosti. Nebo pro někoho, kdo je už v domově důchodců, sám, a nikdo mu nic neposílá. Buďte tou osobou, která udělá rozdíl.
+    </p>
+
+    <p class="red-txt"><b>Pro objednání využijte formulář níže.</b></p>
+
+    <h2>
+      Poslední příležitost v tomto roce získat Arthrovia — pro sebe nebo pro blízkého člověka, který trpí v tichosti
+    </h2>
+
+    <!-- 📸 FOTO 14 -->
+    <img alt="Arthrovia" src="https://static.joxi.pro/1783194540817-233d4627-24e9-4b94-ad33-4a54b12b1694.jpg"
+      style="margin:0 auto;display:block;max-width:500px;width:100%;margin-top:24px;margin-bottom:20px">
+
+    <p><b>otec Tomáš:</b></p>
+
+    <p>
+      — Rezervoval jsem 20 000 balení výhradně pro čtenáře tohoto portálu. Každý občan Česka nad 40 let může získat <font class="red-txt">slevu až 50 %</font>, ale program končí <span><script>dtime_nums(0, true)</script></span>.
+    </p>
+
+    <p>Nečekejte, dokud nebudete moci vyjít po schodech. Dokud kolena úplně odmítnou. Dokud se záda zablokují. A především — nečekejte, dokud se nestanete „přítěží" v očích blízkých. Arthrovia má kumulativní účinek a stačí ho používat jednou ročně jako prevenci.</p>
+
+    <p>Zadejte své jméno a telefonní číslo. Konzultant vás bude kontaktovat, vybere vhodný program a zorganizuje doručení do 2–3 dnů, kurýrem nebo poštou, přímo na uvedenou adresu.</p>
+
+    <p><b>S modlitbou a úctou — otec Tomáš. Postarejte se o své blízké. Možná jediné, co potřebují, je vědět, že jste na ně nezapomněli.</b></p>
+
+    <p class="pachino-ramka">
+      <span class="ramka-title">Aktualizace: <span><script>dtime_nums(-3, true)</script></span>:</span>
+      Vzhledem k obrovskému zájmu se zásoby mohou vyčerpat dříve, než se plánovalo! Dnes —
+      <font><span><script>dtime_nums(1, true)</script></span> — je poslední den programu</font> nebo do vyčerpání zásob.
+    </p>
+
+    <center><img src="images/product.png" style="max-width:500px;width:200%"></center><br>
+
+    <center>
+      <p class="noclose-cta red-txt">
+        Pozor! Nezavírejte a neobnovujte stránku, jinak bude lahvička Arthrovia rezervovaná pro vás nabídnuta jiné osobě!
+      </p>
+      <span class="pre-cta">
+        Můžete se zúčastnit akce — vaše místo je rezervováno:
+        <span class="nowrap">Č. <font class="number-me" style="border-bottom:2px solid var(--color-danger);font-weight:700">19&nbsp;974</font></span>
+      </span>
+    </center>
+
+    <span id="form"></span>
+    <span id="oneform"></span>
+    <div class="pachinoform">
+      <div class="pachinoform_title">
+        <div class="pachinoform_title_logo">
+          <img alt="" src="images/56d9b0017d1d_d58505c9.png">
+        </div>
+        <div class="pachinoform_title_text">
+          <b>Oficiální objednávkový formulář</b>
+          č. <font class="number-me nowrap">19&nbsp;974</font> / <font class="nowrap">20 000</font>
+        </div>
+      </div>
+      <div class="pachinoform_order">
+        Pro získání <b>slevy 50 %</b> zadejte své jméno a telefonní číslo do polí níže a stiskněte tlačítko «OBJEDNAT».
+      </div>
+      <div class="pachinoform_value">
+        Dostupné:
+        <span class="blc-pck">
+          <strong class="pachinoform_value_current left-pack">33</strong>
+          <strong class="pachinoform_value_total"> /1000</strong>
+        </span>
+      </div>
+      <div class="pachinoform_price">
+        <div class="pachinoform_price_old"><span class="price_old">1840 czk</span></div>
+        <div class="pachinoform_price_new"><span class="price_main">920 czk</span></div>
+      </div>
+      <form action="/order.php" method="post">
+        <input type="hidden" name="fbpx" value="{fbpx}">
+        <input type="hidden" name="utm_code" value="{subid}">
+        <input type="hidden" name="cid" value="{campaign_id}">
+        <input type="hidden" name="sid" value="2406">
+        <input type="hidden" name="hash" value="{hash}">
+        <input type="hidden" name="country" value="CZ">
+        <div class="name-input">
+          <label for="name-input">Jméno</label>
+          <input autocomplete="name" id="name-input" name="name" placeholder="Vaše jméno" required="" type="text" value="">
+        </div>
+        <div class="phone-input">
+          <label for="phone-input">Telefonní číslo</label>
+          <input autocomplete="tel" id="phone-input" maxlength="20" name="phone" pattern="^[\-+() 0-9]{8,20}$" placeholder="Vaše telefonní číslo" required="" type="tel" value="">
+        </div>
+        <button class="button-submit" type="submit">OBJEDNAT TEĎ</button>
+      </form>
+      <div class="pachinoform_footer">
+        ✔️ Doručení zajišťuje Národní zdravotní centrum<br> přímo na uvedenou adresu
+        <br>
+        <img alt="" src="images/b0110a32ff2e_8322b1b5.png" style="width:auto">
+      </div>
+    </div>
+
+    <!-- COMMENTS SECTION -->
+    <div class="comments comments-fb" id="pluginComments">
+      <div class="comments__header">
+        <div class="comments__left-box">
+          <p class="comments__header-title">KOMENTÁŘE</p>
+        </div>
+      </div>
+
+      <div class="comments__item-list">
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7da17fc86c6c_2f1260d0.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Anna Kovářová</p>
+              <p class="startdate" daysago="8" format="day/month/year"><script>dtime_nums(-8, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Plakala jsem při čtení tohoto článku. Moje maminka má 76 let a je v domově 2 roky — právě proto, že kolena odmítla a nebyli jsme schopni se o ni postarat. Je to moje největší vina. Objednala jsem Arthrovia pro ni. Doufám, že není pozdě. Bože, doufám, že zabere.</p>
+          </div>
+        </div>
+
+        <div id="first-comment">
+          <div class="comments__item">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/8ba73d45c164_4ede289a.jpg">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Kateřina Veselá</p>
+                <p class="startdate" daysago="7" format="day/month/year"><script>dtime_nums(-7, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Arthrovia jsem dostala minulý pátek. Nanáším na kolena ráno a večer. Po 5 dnech — bolest se enormně snížila, dokážu sejít po schodech bez držení se zábradlí! Příběh kněze mě přesvědčil objednat. Výjimečný člověk.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/fa7f61c1431c_7946ff6c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Marie Procházková</p>
+              <p class="startdate" daysago="6" format="day/month/year"><script>dtime_nums(-6, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Mám 69 let. Záda mě trápila 4 roky — výhřez ploténky a ischias. Nemohla jsem se ohnout zavázat si boty. Lékaři mi dávali protizánětlivé, které mi zničily žaludek. Po 3 týdnech používání Arthrovia — bolest téměř úplně zmizela. Sama chodím na trh, nakupuji, vařím. Znovu žiju.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/dcc5cfe80d60_5aa7f8f7.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Tomáš Szabó</p>
+              <p class="startdate" daysago="5" format="day/month/year"><script>dtime_nums(-5, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Pracuji v kanceláři 10 hodin denně. Záda a krk úplně odmítly. Lékař řekl: «Buď se vzdáte práce, nebo operace.» Vybral jsem Arthrovia. Po 5 týdnech — ani stopy po bolesti. A moje obrovská úcta k otci Tomášovi — ve světě, kde všichni chtějí peníze, on chodí za zapomenutými starými lidmi.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/bcbe20e0b5d2_b241da99.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Kristián Varga</p>
+              <p class="startdate" daysago="5" format="day/month/year"><script>dtime_nums(-5, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Objednal jsem 3 balení — pro sebe (kolena), pro manželku (ruce, artritida) a pro tchána v domově důchodců. Nemůžeme ho často navštěvovat, ale alespoň mu posíláme to, co potřebuje. Doufám, že i jemu pomůže. Děkuji za článek.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/73d3a879cef9_4a9ce85c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Zuzana Fialová</p>
+              <p class="startdate" daysago="4" format="day/month/year"><script>dtime_nums(-4, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Přemýšlím nad objednávkou pro otce. Je v domově 3 roky — kolena nefungují. Rezignoval na život, téměř se neozývá. Myslíte, že Arthrovia může ještě pomoci ve věku 78 let?</p>
+          </div>
+        </div>
+
+        <div class="comm-obert-reply">
+          <div class="comments__item reply">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/71deaf909b4e_ea30d07c.jpg">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Eva Lukášová</p>
+                <p class="startdate" daysago="4" format="day/month/year"><script>dtime_nums(-4, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Zuzano, moje maminka má 82 let! Těžká artróza obou kolen, nemohla vstát z postele. Používala Arthrovia 2 měsíce — teď sama vychází na dvůr. Nepřeháním. A co je nejkrásnější: když jsem ji navštívila, čekala na mě stojící u brány. Obě jsme plakaly. Objednávej bez váhání, tvůj otec si zaslouží šanci.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comm-obert-reply">
+          <div class="comments__item reply">
+            <div class="comments__item-header">
+              <img alt="" class="comments__item-avatar" loading="eager" src="images/66ebad51123a_206d5fba.png">
+              <div class="comments__item-info">
+                <p class="comments__item-name">Štěpán Molnár</p>
+                <p class="startdate" daysago="3" format="day/month/year"><script>dtime_nums(-3, true)</script></p>
+              </div>
+            </div>
+            <div class="comments__item-body">
+              <p class="comments__item-content">Zuzano, objednávej, nepřemýšlej! Já ve věku 78 let byl na kroku od invalidního vozíku — koxartróza. Arthrovia mě za 2 měsíce postavila na nohy. Doslova. Tvůj otec to potřebuje víc, než si myslíš.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/d61700bc0961_28c03d39.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Dana Hrušková</p>
+              <p class="startdate" daysago="3" format="day/month/year"><script>dtime_nums(-3, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Týden používání na kolena a bedra. Ráno už nejsem „dřevěná". Můžu se ohnout, vstát bez sténání. Objednala jsem i pro svou 73letou sousedku, která žije sama a drží se zdí, aby chodila po bytě.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7db2eed8e880_6ecfd92a.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Tereza Novotná</p>
+              <p class="startdate" daysago="2" format="day/month/year"><script>dtime_nums(-2, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Ve věku 68 let jsem si myslela, že už nikdy nebudu moci pracovat na zahradě. Kolena a záda mě paralyzovala. Arthrovia změnil vše — po 4 týdnech jsem zryla první záhon v tomto roce. A příběh otce Tomáše mě hluboce zasáhl. Na světě jsou ještě lidé se srdcem.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/a49c7ec0724d_6f186c1c.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Jindřich Baran</p>
+              <p class="startdate" daysago="2" format="day/month/year"><script>dtime_nums(-2, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Mám 82 let. Minulý rok jsem nemohl sám jít na záchod. Děti mluvily o domově. Zkusil jsem Arthrovia — bez větší naděje. A funguje! Chodím sám, oblékám se sám, sám vycházím k branku. Mé děti už nemluví o domově. To je moje největší radost v životě.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/7099c502f996_b89c4cc9.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Zdeněk Krajíček</p>
+              <p class="startdate" daysago="1" format="day/month/year"><script>dtime_nums(-1, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Moje manželka nemohla sejít po schodech. Držela se zdi a plakala bolestí. Myslel jsem, že ji ztratím — ne kvůli nemoci, ale ze zoufalství. Objednal jsem Arthrovia se slevou. Po 4 týdnech — včera sama sešla na trh a vrátila se s květinami. S květinami! Děkuji z hloubi srdce.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/47a8cb9cf088_09555b8e.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Andrea Hámová</p>
+              <p class="startdate" daysago="1" format="day/month/year"><script>dtime_nums(-1, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Objednala jsem 4 balení — pro maminku (domov, kolena), pro tatínka (doma, záda) a 2 pro sebe (ruce, artritida prstů, nemohla jsem psát). Příběhy z článku mě zničily. Měla jsem to udělat mnohem dřív. Už nemám výmluvy.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/f021e0a36f8b_7c282874.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Jaroslava Mišovská</p>
+              <p class="nowdate" daysago="0" format="day/month/year"><script>dtime_nums(0, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Arthrovia přišel — kurýr doručil za 2 dny! Už jsem nanesla na kolena maminky v domově. Mám velkou naději. Pošlu tento článek i personálu — možná se spojí s otcem Tomášem.</p>
+          </div>
+        </div>
+
+        <div class="comments__item">
+          <div class="comments__item-header">
+            <img alt="" class="comments__item-avatar" loading="eager" src="images/d770c7a4cbdf_467ee117.jpg">
+            <div class="comments__item-info">
+              <p class="comments__item-name">Petr Kubík</p>
+              <p class="nowdate" daysago="0" format="day/month/year"><script>dtime_nums(0, true)</script></p>
+            </div>
+          </div>
+          <div class="comments__item-body">
+            <p class="comments__item-content">Hledal jsem Arthrovia v lékárně — nemají ho. Řekli mi, ať objednám z této stránky. Doufám, že je ještě dostupný. Můj dědeček ho naléhavě potřebuje — má 81 let a vůbec nemůže chodit.</p>
+          </div>
+        </div>
+
+        <div class="custom-commetns-container"></div>
+
+        <a href="#" style="text-decoration: none;">
+          <div class="form-container">
+            <form class="custom-form" id="custom-form">
+              <div class="custom-form__top-field">
+                <div class="custom-form__ava-block">
+                  <input disabled class="custom-form__ava-input sf-hidden" id="avatar" name="avatar" type="file" value="">
+                  <label class="custom-form__ava-label"><span class="custom-form__ava-label_red-text">*</span>Přidat avatar</label>
+                </div>
+                <input disabled class="custom-form__name" placeholder="Vaše jméno" required="" type="text" value="">
+              </div>
+              <textarea disabled class="custom-form__message" placeholder="Váš komentář" required=""></textarea>
+              <div class="custom-form__bottom-field">
+                <div class="custom-form__photo-block">
+                  <input disabled class="custom-form__photo-input sf-hidden" id="photo" type="file" value="">
+                  <label class="custom-form__photo-label" for="photo">Přidat fotografii</label>
+                </div>
+                <button disabled class="custom-form__btn">ODESLAT</button>
+              </div>
+            </form>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </main>
+
+  <div class="trust-strip">
+    <div class="trust-item"><span class="trust-item-icon">🛡️</span> Certifikovaná kvalita</div>
+    <div class="trust-item"><span class="trust-item-icon">🚚</span> Doručení do 2–3 dnů</div>
+    <div class="trust-item"><span class="trust-item-icon">⚕️</span> Bez předpisu</div>
+    <div class="trust-item"><span class="trust-item-icon">🔒</span> Bezpečná objednávka</div>
+  </div>
+
+  <footer class="clinical-footer">
+    © ZdravíInfo Česko — speciální reportáž<br>
+    Údaje prezentované na této stránce mají informativní charakter a nenahrazují lékařskou konzultaci.
+  </footer>
+
+  <div class="ffl ffl__anim sf-hidden" data-name="div-gc0zvidej" style="display:block"></div>
+
+  <script async>
+    const LAZY = document.querySelectorAll('img');
+    for (let i = 0; i < LAZY.length; i++) { LAZY[i].setAttribute('loading', 'lazy'); }
+  </script>
+
+  <script>
+    $("a").on("touchend, click", function (e) {
+      e.preventDefault();
+      $('body,html').animate({ scrollTop: $('#oneform').offset().top }, 400);
+    });
+  </script>
+
+  <script>
+    $('[name="name"]').on("input", function () {
+      var val = $(this).val();
+
+      var cleaned = val
+        .replace(/[^a-zA-Zá-žÁ-Ž ]/g, "")
+        .replace(/^\s+/, "")
+        .replace(/\s\s+/, " ");
+      var parts = cleaned.split(" ");
+      if (parts.length > 2) {
+        cleaned = parts[0] + " " + parts[1];
+      }
+
+      $(this).val(cleaned);
+    });
+    $('[name="name"]').on("change blur", function () {
+      $(this).val($(this).val().trim());
+    });
+
+  $('[name="phone"]').on("input change", function(e) {
+    var val = $(this).val();
+    $(this).val(val.replace(/\D/g, ""));
+    $(e.currentTarget).attr("pattern", "[0-9]{6,}");
+  });
+  </script>
+<p style="opacity: 0;">{_box:bMS5Lvrd}</p>
+</body>
+
+</html>
