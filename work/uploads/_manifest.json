@@ -1,0 +1,733 @@
+[
+ {
+  "file": "TH_moryasamunprai.html",
+  "alias": "0002691b-TH_moryasamunprai.html",
+  "sha256": "3cf3022d00c96b55",
+  "bytes": 140983
+ },
+ {
+  "file": "landingBDnautubone.html",
+  "alias": "0132c82f-landingBDnautubone.html",
+  "sha256": "10ae4ceb93d6ac27",
+  "bytes": 144739
+ },
+ {
+  "file": "landingCLnautubone.html",
+  "alias": "055251bf-landingCLnautubone.html",
+  "sha256": "879663516649c6cc",
+  "bytes": 99325
+ },
+ {
+  "file": "storytale_patronazhna_sestra_BG.txt",
+  "alias": "07e65fcd-storytale_patronazhna_sestra_BG.txt",
+  "sha256": "456592a93a383f02",
+  "bytes": 24594
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "0c5de66f-BGorig.txt",
+  "sha256": "268765228ae68e46",
+  "bytes": 23451
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "0dfddb1b-BG_bilkar.html",
+  "sha256": "b552d6288767ba77",
+  "bytes": 120687
+ },
+ {
+  "file": "storytale_ortoped_RU.txt",
+  "alias": "0ec86af0-storytale_ortoped_RU.txt",
+  "sha256": "9e5a226c644dd4aa",
+  "bytes": 25310
+ },
+ {
+  "file": "FI_yrttiparantaja.html",
+  "alias": "14314f10-FI_yrttiparantaja.html",
+  "sha256": "c6242920865f99d8",
+  "bytes": 98412
+ },
+ {
+  "file": "NL_kruidendokter_nl.html",
+  "alias": "14963a7d-NL_kruidendokter_nl.html",
+  "sha256": "d41ceddfe48542eb",
+  "bytes": 99543
+ },
+ {
+  "file": "MX_yerbero.html",
+  "alias": "1672dc9a-MX_yerbero.html",
+  "sha256": "2005b2f25f0a606d",
+  "bytes": 99517
+ },
+ {
+  "file": "BGtrav.html",
+  "alias": "188538ff-BGtrav.html",
+  "sha256": "9114726b626740b8",
+  "bytes": 120682
+ },
+ {
+  "file": "PH_herbolaryo.html",
+  "alias": "19d1f1ec-PH_herbolaryo.html",
+  "sha256": "326b85ab787eb3d0",
+  "bytes": 102705
+ },
+ {
+  "file": "storytale_sestra_vina_BG.txt",
+  "alias": "1a8370ec-storytale_sestra_vina_BG.txt",
+  "sha256": "c58a06a5cf99417b",
+  "bytes": 25181
+ },
+ {
+  "file": "storytale_medpred_RU.txt",
+  "alias": "1b7464bf-storytale_medpred_RU.txt",
+  "sha256": "79821cba9535b27d",
+  "bytes": 25093
+ },
+ {
+  "file": "storytale_skeptik_RS_sr.txt",
+  "alias": "1d96e47a-storytale_skeptik_RS_sr.txt",
+  "sha256": "b448b7b3a35433a7",
+  "bytes": 23661
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "1fc79c3d-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "21063bae-RSlongread.rtf",
+  "sha256": "86346688d5a8e26c",
+  "bytes": 77883
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "2785d248-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "storytale_skeptik_BG_bg.txt",
+  "alias": "2a2b037b-storytale_skeptik_BG_bg.txt",
+  "sha256": "2849e8c62b598b8f",
+  "bytes": 24340
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "2abb6823-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "CR_yerbatero.html",
+  "alias": "2c1bae0d-CR_yerbatero.html",
+  "sha256": "c86d23b6a043e3f9",
+  "bytes": 99605
+ },
+ {
+  "file": "FR_Nautubone_fr.html",
+  "alias": "2d1bff5e-FR_Nautubone_fr.html",
+  "sha256": "34927f5f74c87e9d",
+  "bytes": 103085
+ },
+ {
+  "file": "kepviseloHUhu.txt",
+  "alias": "2dae68bb-kepviseloHUhu.txt",
+  "sha256": "bc00cbb4f19096c2",
+  "bytes": 15580
+ },
+ {
+  "file": "landingSEnautubone.html",
+  "alias": "2e604c79-landingSEnautubone.html",
+  "sha256": "2e1f724b7cf3285f",
+  "bytes": 97246
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "357a6745-RSlongread.rtf",
+  "dup": true
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "3b3495cc-RSlongread.rtf",
+  "dup": true
+ },
+ {
+  "file": "storytale_konyar_BG_bg.txt",
+  "alias": "3b5f1d29-storytale_konyar_BG_bg.txt",
+  "sha256": "b36f033e8fc97902",
+  "bytes": 24394
+ },
+ {
+  "file": "RS_travnik.html",
+  "alias": "3c03e42f-RS_travnik.html",
+  "sha256": "75f47f97ceacc520",
+  "bytes": 118655
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "3fdf31dc-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "RSveter.html",
+  "alias": "4096e745-RSveter.html",
+  "sha256": "6c7550c4d459dbc1",
+  "bytes": 120815
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "42a7d9ce-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "BGarch.html",
+  "alias": "42c54ccf-BGarch.html",
+  "sha256": "fba066a50a9e0be5",
+  "bytes": 74782
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "42cfad74-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "BGarch__1.html",
+  "alias": "43a25451-BGarch.html",
+  "sha256": "049dc5243c094ff1",
+  "bytes": 73709
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "44068ea9-RSlongread.rtf",
+  "dup": true
+ },
+ {
+  "file": "landingNOnautubone.html",
+  "alias": "4641ee96-landingNOnautubone.html",
+  "sha256": "2a776e102a7fe13d",
+  "bytes": 96557
+ },
+ {
+  "file": "PR_yerbatero.html",
+  "alias": "4a5e2017-PR_yerbatero.html",
+  "sha256": "6c5e4ad85121ad2c",
+  "bytes": 99597
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "4de07906-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "at_aggressive_incontinence_AT.txt",
+  "alias": "4ed77ec5-at_aggressive_incontinence_AT.txt",
+  "sha256": "6f9a2b1b0ec8437f",
+  "bytes": 14598
+ },
+ {
+  "file": "landingIQnautubone.html",
+  "alias": "5042169d-landingIQnautubone.html",
+  "sha256": "a7c37fd8c9464033",
+  "bytes": 109809
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "5052b974-RSlongread.rtf",
+  "dup": true
+ },
+ {
+  "file": "storytale_sestra_vina_BG.txt",
+  "alias": "51a80620-storytale_sestra_vina_BG.txt",
+  "dup": true
+ },
+ {
+  "file": "IE_Certoflex_en.html",
+  "alias": "51a9554b-IE_Certoflex_en.html",
+  "sha256": "ef9fc8e0180a8e2e",
+  "bytes": 97710
+ },
+ {
+  "file": "BGtrav.html",
+  "alias": "54eb82bd-BGtrav.html",
+  "dup": true
+ },
+ {
+  "file": "storytale_sestra_vina_BG.txt",
+  "alias": "5521595c-storytale_sestra_vina_BG.txt",
+  "dup": true
+ },
+ {
+  "file": "landingCOnautubone.html",
+  "alias": "57a1e49f-landingCOnautubone.html",
+  "sha256": "6532d4ed10f78bf0",
+  "bytes": 99304
+ },
+ {
+  "file": "konjusarRSsr.txt",
+  "alias": "5f3eafc0-konjusarRSsr.txt",
+  "sha256": "3098833baf43ca0d",
+  "bytes": 23100
+ },
+ {
+  "file": "at_aggressive_incontinence_AT.txt",
+  "alias": "62b11505-at_aggressive_incontinence_AT.txt",
+  "dup": true
+ },
+ {
+  "file": "FR_Nautubone_fr__1.html",
+  "alias": "6666c888-FR_Nautubone_fr.html",
+  "sha256": "f312a654a4f2ffb7",
+  "bytes": 103003
+ },
+ {
+  "file": "HUtrav.html",
+  "alias": "68041c19-HUtrav.html",
+  "sha256": "db963c3b606498b2",
+  "bytes": 100416
+ },
+ {
+  "file": "BGtrav.html",
+  "alias": "687e8f74-BGtrav.html",
+  "dup": true
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "6bea1afc-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "konjusarRSsr.txt",
+  "alias": "6d1c4b4b-konjusarRSsr.txt",
+  "dup": true
+ },
+ {
+  "file": "storytale_sestra_vina_BG.txt",
+  "alias": "7448fc5c-storytale_sestra_vina_BG.txt",
+  "dup": true
+ },
+ {
+  "file": "SV_yerbatero.html",
+  "alias": "754f7f42-SV_yerbatero.html",
+  "sha256": "4412672cc4af0234",
+  "bytes": 99627
+ },
+ {
+  "file": "patikatulajHUhu.txt",
+  "alias": "7841fa28-patikatulajHUhu.txt",
+  "sha256": "9fe08d7c54924109",
+  "bytes": 15456
+ },
+ {
+  "file": "BGarch.html",
+  "alias": "786f9cca-BGarch.html",
+  "dup": true
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "79b4840e-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "BGtrav.html",
+  "alias": "7a9b69c4-BGtrav.html",
+  "dup": true
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "7ad2103f-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "landingPYnautubone.html",
+  "alias": "7b25d811-landingPYnautubone.html",
+  "sha256": "4fd75b485bc33abb",
+  "bytes": 99534
+ },
+ {
+  "file": "RS_travnik.html",
+  "alias": "7d2b6141-RS_travnik.html",
+  "dup": true
+ },
+ {
+  "file": "RS_veterinar_sr.html",
+  "alias": "826ab900-RS_veterinar_sr.html",
+  "sha256": "c89406d51e1bc437",
+  "bytes": 119930
+ },
+ {
+  "file": "storytale_sestra_vina_BG.txt",
+  "alias": "83f74b70-storytale_sestra_vina_BG.txt",
+  "dup": true
+ },
+ {
+  "file": "storytale_vtoroy_vizit_BG.txt",
+  "alias": "85ddda71-storytale_vtoroy_vizit_BG.txt",
+  "sha256": "046b8ba4f95466f5",
+  "bytes": 29082
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "86478eb3-RSlongread.rtf",
+  "dup": true
+ },
+ {
+  "file": "RSveter.html",
+  "alias": "88693793-RSveter.html",
+  "dup": true
+ },
+ {
+  "file": "komercijalistaRSsr.txt",
+  "alias": "8bbdd900-komercijalistaRSsr.txt",
+  "sha256": "2812ee1effabdde4",
+  "bytes": 23670
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "8c892e99-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "8e1eef86-RSlongread.rtf",
+  "dup": true
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "8ebf05f1-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "BGtrav.html",
+  "alias": "928d7dce-BGtrav.html",
+  "dup": true
+ },
+ {
+  "file": "BGarch.html",
+  "alias": "96202cef-BGarch.html",
+  "dup": true
+ },
+ {
+  "file": "UY_yuyero.html",
+  "alias": "97083ea5-UY_yuyero.html",
+  "sha256": "86bc0833f35ead0f",
+  "bytes": 99449
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "988541bb-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "9aecd6c2-RSlongread.rtf",
+  "dup": true
+ },
+ {
+  "file": "storytale_aptekar_cena_BG.txt",
+  "alias": "9b071113-storytale_aptekar_cena_BG.txt",
+  "sha256": "48bfae2fb7feaf09",
+  "bytes": 25939
+ },
+ {
+  "file": "storytale_aptekar_BG.txt",
+  "alias": "9e7a72dd-storytale_aptekar_BG.txt",
+  "sha256": "22f6497c6c234c6e",
+  "bytes": 24379
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "9ee12be8-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "landingMYnautubone.html",
+  "alias": "9f277732-landingMYnautubone.html",
+  "sha256": "05cfee1793b84db8",
+  "bytes": 99599
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "a0188a04-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "landingCHcertoflex.html",
+  "alias": "a38fa2f5-landingCHcertoflex.html",
+  "sha256": "5e483f99a168a650",
+  "bytes": 100579
+ },
+ {
+  "file": "BG____.html",
+  "alias": "a5fd20e7-BG____.html",
+  "sha256": "7a30045d864ae2c8",
+  "bytes": 144920
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "a6c69354-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "EC_yerbatero.html",
+  "alias": "a74399f7-EC_yerbatero.html",
+  "sha256": "8f311f4979ec04f1",
+  "bytes": 99336
+ },
+ {
+  "file": "BGtrav.html",
+  "alias": "a79716f7-BGtrav.html",
+  "dup": true
+ },
+ {
+  "file": "BGtext.rtf",
+  "alias": "a8f1fd92-BGtext.rtf",
+  "sha256": "a848f88afaaadf89",
+  "bytes": 79677
+ },
+ {
+  "file": "storytale_pravilo_BG.txt",
+  "alias": "a94ef27c-storytale_pravilo_BG.txt",
+  "sha256": "018c32c6b7b71e3b",
+  "bytes": 27584
+ },
+ {
+  "file": "gondozoHUhu.txt",
+  "alias": "aa420c79-gondozoHUhu.txt",
+  "sha256": "ee49c77f83e7e5d4",
+  "bytes": 16047
+ },
+ {
+  "file": "landingBEnlcertoflex.html",
+  "alias": "ae0b0f12-landingBEnlcertoflex.html",
+  "sha256": "bd3f970140844f1d",
+  "bytes": 98571
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "af0d5e22-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "storytale_veterinar_zalba_RS_sr.txt",
+  "alias": "af1a1e94-storytale_veterinar_zalba_RS_sr.txt",
+  "sha256": "213ed182c133a1b0",
+  "bytes": 24447
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "b05e8757-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "b0818fc4-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "__.rtf",
+  "alias": "b3953815-__.rtf",
+  "sha256": "137e69d89dcca90f",
+  "bytes": 77410
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "b412bd80-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "IN_bilkar_hi.html",
+  "alias": "b50cdea3-IN_bilkar_hi.html",
+  "sha256": "7dc2ca02eeed1dc6",
+  "bytes": 142518
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "b7de39c2-RSlongread.rtf",
+  "dup": true
+ },
+ {
+  "file": "HU_trav.html",
+  "alias": "b80f893e-HU_trav.html",
+  "sha256": "1e5248d0d57ee2d1",
+  "bytes": 99953
+ },
+ {
+  "file": "34979_offer_archive.zip",
+  "alias": "b948c2dc-34979_offer_archive.zip",
+  "sha256": "a1a2f158fe153ad8",
+  "bytes": 15144899
+ },
+ {
+  "file": "RS_travnik.html",
+  "alias": "b9a4c5ea-RSvet.html",
+  "dup": true
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "bd7d98c1-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "RSveter.html",
+  "alias": "bd9d3e32-RSveter.html",
+  "dup": true
+ },
+ {
+  "file": "rehabHUhu.txt",
+  "alias": "bdc249f2-rehabHUhu.txt",
+  "sha256": "d24340534b14a8e4",
+  "bytes": 15293
+ },
+ {
+  "file": "2222_B.html",
+  "alias": "bed57091-2222_B.html",
+  "sha256": "e891732a5c73469d",
+  "bytes": 66837
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "bf0f93ed-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "c4dc6fd2-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "c553dd5c-RSlongread.rtf",
+  "dup": true
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "c5b80369-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "d06c3d9d-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "d2827f9c-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "korhazHUhu.txt",
+  "alias": "d57b40ca-korhazHUhu.txt",
+  "sha256": "49b88ad0e4277a41",
+  "bytes": 15802
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "d5d7565f-RSlongread.rtf",
+  "dup": true
+ },
+ {
+  "file": "IE_Certoflex_en.html",
+  "alias": "db66e91e-IE_Certoflex_en.html",
+  "dup": true
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "dbc8992e-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "BG_veterinar_bg.html",
+  "alias": "dd1174e0-BG_veterinar_bg.html",
+  "sha256": "bd89be4f4246b743",
+  "bytes": 123388
+ },
+ {
+  "file": "RSlongread.rtf",
+  "alias": "dd963b57-RSlongread.rtf",
+  "dup": true
+ },
+ {
+  "file": "patikatulajHUhu.txt",
+  "alias": "e287b980-patikatulajHUhu.txt",
+  "dup": true
+ },
+ {
+  "file": "NG_Nautubone_en.html",
+  "alias": "e3197132-NG_Nautubone_en.html",
+  "sha256": "3e451f308df7db80",
+  "bytes": 98033
+ },
+ {
+  "file": "BG_veterinar_bg.html",
+  "alias": "e3755ead-BG_veterinar_bg.html",
+  "dup": true
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "e4058344-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "BGorig.txt",
+  "alias": "e4f40b51-BGorig.txt",
+  "dup": true
+ },
+ {
+  "file": "storytale_koordinator_BG.txt",
+  "alias": "e620761a-storytale_koordinator_BG.txt",
+  "sha256": "d36d311d579fc70a",
+  "bytes": 27836
+ },
+ {
+  "file": "BGarch.html",
+  "alias": "e6fb70df-BGarch.html",
+  "dup": true
+ },
+ {
+  "file": "asszisztensHUhu.txt",
+  "alias": "e75fc8fc-asszisztensHUhu.txt",
+  "sha256": "bed8c4543176f30e",
+  "bytes": 15195
+ },
+ {
+  "file": "RS_travnik.html",
+  "alias": "ea963012-RS_travnik.html",
+  "dup": true
+ },
+ {
+  "file": "RS_travnik.html",
+  "alias": "eb4d5c81-RStrav.html",
+  "dup": true
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "eee70615-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "landnew.html",
+  "alias": "f139561c-landnew.html",
+  "sha256": "7f8f67e7dc3df027",
+  "bytes": 69778
+ },
+ {
+  "file": "BGarch.html",
+  "alias": "f3ac2783-BGarch.html",
+  "dup": true
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "f5ce19c5-BG_bilkar.html",
+  "dup": true
+ },
+ {
+  "file": "ID_ahliherbal.html",
+  "alias": "ff379dc0-ID_ahliherbal.html",
+  "sha256": "832cd265f8be9f47",
+  "bytes": 100058
+ },
+ {
+  "file": "BG_bilkar.html",
+  "alias": "ff455165-BG_bilkar.html",
+  "dup": true
+ }
+]

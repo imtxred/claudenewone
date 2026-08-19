@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>Книге с рецептами 3 000 лет? В Греции вскрыли запечатанный сосуд — и четыре года не могли прочитать то, что было внутри</title>
+<style>
+:root{
+  --bg:#FBF7EF;          /* папирус */
+  --paper:#FFFFFF;
+  --ink:#2A2723;         /* тёплый почти-чёрный, не режет глаз */
+  --ink-soft:#4F473E;
+  --line:#E4DACA;
+  --accent:#A8442A;      /* терракота */
+  --accent-dk:#8A3520;
+  --olive:#5F6F42;
+  --gold:#B8912F;
+  --danger:#B3261E;
+  --danger-bg:#FDF0EE;
+  --ok:#2F6B45;
+  --ok-bg:#EFF6F1;
+  --note-bg:#F5EFE2;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:20px;line-height:1.72;font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 60px}
+
+/* ---------- шапка ---------- */
+.masthead{background:#312B24;color:#F3E9D6;padding:12px 18px;text-align:center;
+  font-size:15px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.masthead span{color:var(--gold)}
+
+h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:31px;line-height:1.28;margin:26px 0 16px;font-weight:700;letter-spacing:-.01em;
+}
+.kicker{
+  font-size:16px;line-height:1.55;font-weight:700;letter-spacing:.02em;
+  text-transform:uppercase;color:var(--accent-dk);
+  border-left:5px solid var(--gold);padding:2px 0 2px 14px;margin:0 0 20px;
+}
+.meta{font-size:16px;color:var(--ink-soft);border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);padding:10px 0;margin:0 0 24px}
+.meta b{color:var(--ink)}
+
+h2{font-family:Georgia,"Times New Roman",serif;font-size:26px;line-height:1.32;
+  margin:38px 0 14px;font-weight:700}
+h3{font-size:21px;line-height:1.4;margin:28px 0 10px;font-weight:700;color:var(--accent-dk)}
+p{margin:0 0 18px}
+b,strong{font-weight:700}
+
+/* ---------- блоки ---------- */
+.lead{font-family:Georgia,serif;font-size:23px;line-height:1.6;font-style:italic;
+  background:var(--note-bg);border-radius:var(--radius);padding:20px 20px;margin:0 0 26px}
+
+.speaker{background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--accent);
+  border-radius:var(--radius);padding:18px 18px 4px;margin:24px 0}
+.speaker .who{font-weight:700;color:var(--accent-dk);font-size:18px;margin:0 0 8px;
+  text-transform:none;letter-spacing:0}
+
+.callout{background:var(--danger-bg);border:1px solid #F0C9C4;border-radius:var(--radius);
+  padding:18px;margin:24px 0;font-weight:700;font-size:21px;line-height:1.5;color:var(--danger)}
+.callout.green{background:var(--ok-bg);border-color:#C8E0D0;color:var(--ok)}
+.callout.plain{background:var(--note-bg);border-color:var(--line);color:var(--ink)}
+
+.bigline{font-family:Georgia,serif;font-size:25px;line-height:1.35;font-weight:700;
+  text-align:center;color:var(--accent-dk);margin:30px 0;padding:18px 14px;
+  border-top:3px solid var(--gold);border-bottom:3px solid var(--gold)}
+
+ul.symp{list-style:none;padding:0;margin:0 0 22px}
+ul.symp li{background:var(--paper);border:1px solid var(--line);border-radius:12px;
+  padding:14px 14px 14px 50px;margin:0 0 10px;position:relative;font-size:19px}
+ul.symp li::before{content:"✓";position:absolute;left:16px;top:12px;color:var(--accent);
+  font-weight:700;font-size:22px}
+
+/* ---------- плашки изображений ---------- */
+figure{margin:26px 0}
+.ph{background:#F7F1E4;border:2px dashed #C9B896;border-radius:var(--radius);padding:16px}
+.ph-tag{display:inline-block;background:#C9B896;color:#3A3226;font-size:13px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:10px}
+.ph-desc{font-size:17px;line-height:1.6;color:#5A4E3A;margin:0;font-style:italic}
+figcaption{font-size:17px;line-height:1.6;color:var(--ink-soft);
+  border-left:4px solid var(--line);padding-left:12px;margin-top:12px}
+
+/* ---------- таблица состава ---------- */
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 22px}
+table{border-collapse:collapse;width:100%;min-width:420px;background:var(--paper);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:18px}
+th,td{padding:13px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#F1E8D6;font-weight:700;font-size:17px}
+td.dose{white-space:nowrap;font-weight:700;color:var(--accent-dk)}
+tr:last-child td{border-bottom:none}
+
+/* ---------- фазы ---------- */
+.phase{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;margin:0 0 14px}
+.phase .num{display:inline-block;background:var(--accent);color:#fff;font-weight:700;
+  border-radius:999px;padding:3px 14px;font-size:16px;margin-bottom:10px}
+.phase h4{margin:0 0 8px;font-size:20px}
+.phase p{margin:0;font-size:19px}
+
+/* ---------- кейсы ---------- */
+.case{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;margin:0 0 16px}
+.case .name{font-weight:700;color:var(--accent-dk);margin:0 0 6px;font-size:19px}
+.case p{margin:0 0 10px;font-size:19px}
+.case p:last-child{margin-bottom:0}
+
+/* ---------- заказ ---------- */
+.order{background:var(--paper);border:3px solid var(--accent);border-radius:18px;
+  padding:22px 18px;margin:30px 0}
+.order h2{margin-top:0;text-align:center}
+.counter{text-align:center;font-family:Georgia,serif;font-size:40px;font-weight:700;
+  color:var(--accent);letter-spacing:.02em;margin:6px 0 2px}
+.counter-lbl{text-align:center;font-size:17px;color:var(--ink-soft);margin:0 0 18px}
+.prices{display:flex;gap:16px;align-items:baseline;justify-content:center;margin:14px 0 6px;flex-wrap:wrap}
+.old{font-size:26px;color:#948877;text-decoration:line-through}
+.new{font-size:40px;font-weight:700;color:var(--accent);font-family:Georgia,serif}
+.stock{text-align:center;font-size:17px;color:var(--ink-soft);margin:0 0 18px}
+label{display:block;font-weight:700;font-size:17px;margin:0 0 6px}
+input[type=text],input[type=tel]{
+  width:100%;font-size:20px;padding:16px 14px;border:2px solid #D8CBB4;border-radius:12px;
+  background:#FFFDF8;color:var(--ink);margin:0 0 16px;font-family:inherit}
+input:focus{outline:3px solid #E3C88A;border-color:var(--accent)}
+.btn{display:block;width:100%;text-align:center;background:var(--accent);color:#fff;
+  font-size:23px;font-weight:700;padding:20px 16px;border:none;border-radius:14px;
+  cursor:pointer;font-family:inherit;letter-spacing:.02em;text-decoration:none;
+  box-shadow:0 4px 0 var(--accent-dk)}
+.btn:active{transform:translateY(2px);box-shadow:0 2px 0 var(--accent-dk)}
+.delivery{text-align:center;font-size:18px;color:var(--ok);font-weight:700;margin:16px 0 4px}
+.delivery span{display:block;font-weight:400;color:var(--ink-soft);font-size:17px}
+.paylogos{display:block;width:100%;max-width:360px;height:auto;margin:14px auto 0}
+
+/* ---------- шапка бланка заказа ---------- */
+.ordhead{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;
+  border-bottom:2px solid var(--line);padding:0 0 16px;margin:0 0 18px}
+.ordhead .emb{flex:0 0 96px;width:96px;height:auto;object-fit:contain}
+.ordhead .ttl{flex:1 1 240px;min-width:220px;text-align:left}
+.ordhead .ttl b{display:block;font-family:Georgia,"Times New Roman",serif;
+  font-size:27px;line-height:1.22;font-weight:700;color:var(--ink)}
+.ordno{font-family:Georgia,serif;font-size:22px;margin:10px 0 0;color:var(--ink-soft)}
+.ordno u{text-decoration:none;border-bottom:2px solid var(--accent);
+  color:var(--accent);font-weight:700;padding-bottom:1px}
+.ordinstr{text-align:center;font-size:19px;line-height:1.55;margin:0 0 18px}
+.ordinstr .disc{color:var(--accent);font-weight:700}
+.remain{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;
+  font-family:Georgia,serif;font-size:24px;font-weight:700;margin:0 0 20px}
+.remain .box{display:inline-block;min-width:82px;text-align:center;
+  border:2px solid var(--accent);border-radius:10px;padding:5px 12px;
+  color:var(--accent);font-size:29px;background:#FFFDF8}
+.remain .tot{color:var(--ink-soft);font-weight:400;font-size:22px}
+
+/* ---------- комментарии ---------- */
+.comments{margin:36px 0 0}
+.cm{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;margin:0 0 12px}
+.cm .au{font-weight:700;color:#3B5A8A;margin:0 0 6px;font-size:18px}
+.cm p{margin:0 0 8px;font-size:19px;line-height:1.65}
+.cm p:last-child{margin-bottom:0}
+.cm.reply{margin-left:22px;border-left:4px solid #C9D6E8}
+.cm-h{display:flex;gap:12px;align-items:center;margin:0 0 10px}
+.cm-av{flex:0 0 50px;width:50px;height:50px;border-radius:50%;object-fit:cover;
+  border:2px solid #E4DACA;background:#F1E8D6}
+.cm-i{min-width:0}
+.cm .au{margin:0}
+.cm .startdate{margin:2px 0 0;font-size:15px;line-height:1.3;color:#8A8072;font-weight:400}
+
+.sendbox{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;margin:18px 0 0}
+.upl{display:block;background:#F1E8D6;border:1px dashed #C9B896;border-radius:10px;
+  padding:14px;text-align:center;font-size:17px;color:#6B5E48;margin:0 0 10px}
+
+/* ---------- липкая кнопка ---------- */
+.footer{font-size:15px;color:#8A8072;text-align:center;margin:30px 0 0;line-height:1.6}
+
+@media (max-width:520px){
+  body{font-size:19px}
+  h1{font-size:26px}
+  h2{font-size:23px}
+  .lead{font-size:21px}
+  .bigline{font-size:22px}
+  .counter{font-size:34px}
+  .new{font-size:34px}
+  .ordhead{gap:12px}
+  .ordhead .ttl b{font-size:23px}
+  .ordhead .ttl{text-align:center;min-width:100%}
+  .ordno{font-size:20px;text-align:center}
+  .remain{font-size:21px}
+  .remain .box{font-size:26px;min-width:74px}
+  .cm.reply{margin-left:12px}
+  .cm-av{flex:0 0 44px;width:44px;height:44px}
+}
+</style>
+</head>
+<body>
+
+<div class="masthead">Наука <span>·</span> Археология <span>·</span> Специальный материал</div>
+
+<div class="wrap">
+
+<!-- ============ 1. ЗАГОЛОВОК ============ -->
+<h1>Книге с рецептами 3 000 лет? В Греции вскрыли запечатанный сосуд — и четыре года не могли прочитать то, что было внутри</h1>
+
+<p class="kicker">70-летний археолог 44 года вёл раскопки в Эпидавре. В 2019 году он поднял из-под завала запечатанный пифос с 14 обугленными свитками и тремя свинцовыми табличками. Когда их наконец прочли, выяснилось: 47 из 62 прописей — о том, чего современная медицина не умеет до сих пор.</p>
+
+<p class="meta">Опубликовано: <b>[ДАТА]</b> &nbsp;·&nbsp; Обновлено: <b>[ДАТА]</b> &nbsp;·&nbsp; Время чтения: 9 минут</p>
+
+<p class="lead">«Почему врачи, у которых не было ни рентгена, ни обезболивающих, ни протезов, возвращали людей к работе — а мы сегодня предлагаем им только терпеть?»</p>
+
+<!-- ============ 2. НАХОДКА ============ -->
+<p>Эпидавр — это не просто развалины. Девятьсот лет подряд, с VI века до нашей эры и почти до конца античности, сюда со всего Средиземноморья приезжали люди, которые больше не могли ходить. Асклепион в Эпидавре был крупнейшим лечебным центром древнего мира: не храм, а именно больница — с палатами, купальнями, кухней, складами трав и штатом врачей, которые передавали ремесло из поколения в поколение.</p>
+
+<p>В IV веке нашей эры комплекс горел. Восточная стоя обрушилась и накрыла подсобные помещения. Именно этот завал в 2019 году разбирала экспедиция под руководством <b>профессора Ставроса Дукаса</b> — археолога, который к тому моменту копал в Эпидавре сорок четыре года.</p>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986908-ad348f53-ac28-4bf1-b9b0-fcab4d8e4f16.jpg" style="width:auto">
+  <figcaption>Профессор Ставрос Дукас в момент расчистки пифоса. Сосуд был запечатан воском и глиной — именно поэтому огонь не уничтожил содержимое, а обуглил его, законсервировав.</figcaption>
+</figure>
+
+<div class="speaker">
+  <p class="who">Профессор Ставрос Дукас, археолог, 70 лет:</p>
+  <p>— Сорок четыре года я выкапывал черепки, монеты и обломки посвятительных стел. Это нормальная работа археолога: девяносто девять находок из ста — мусор древнего человека. Когда мы сняли крышку с этого пифоса и я увидел внутри чёрные, спёкшиеся в комки рулоны, я честно решил, что мы опоздали на семнадцать веков. Их нельзя было даже взять в руки — они рассыпались от дыхания.</p>
+  <p>— Я тогда не знал, что через четыре года из-за этих чёрных комков мне будут звонить люди, которые очень не хотят, чтобы я их прочитал.</p>
+</div>
+
+<!-- ============ 3. КАК ПРОЧЛИ ============ -->
+<h2>Четыре года находку не могли развернуть. Её прочитали, ни разу не открыв</h2>
+
+<p>Обугленный папирус нельзя развернуть физически — он превращается в пыль. Свитки пролежали в хранилище почти два года, пока их не передали в лабораторию, которая занимается неразрушающим чтением: рентгеновская микротомография плюс мультиспектральная съёмка. Метод простой по идее и чудовищно сложный по исполнению — сосканировать свёрнутый свиток слой за слоем, а затем «развернуть» его виртуально, в компьютере, и вытащить следы чернил, которые глаз уже не видит.</p>
+
+<p>Первые читаемые строки получили в 2021 году. Полная расшифровка заняла ещё два года. Работу вела <b>д-р Элени Мораити</b>, папиролог, специалист по врачебным текстам эллинистического периода.</p>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986909-aab78c63-38b1-49af-85cd-eebfd5188b52.jpg" style="width:auto">
+  <figcaption>Виртуальное разворачивание свитка №4. Оранжевым подсвечены участки, где алгоритм уверенно распознал следы чернил на основе сажи.</figcaption>
+</figure>
+
+<div class="speaker">
+  <p class="who">Д-р Элени Мораити, папиролог:</p>
+  <p>— Мы ожидали хозяйственные записи. Списки, счета, расписки — то, что обычно лежит в кладовой. Вместо этого мы получили <b>врачебный сборник: 62 прописи</b>, расположенные не по алфавиту и не по травам, а по жалобам. Так составляют не трактат, а рабочую книгу — ту, которую держат под рукой и открывают при больном.</p>
+  <p>— И вот что перевернуло всё. <b>Сорок семь прописей из шестидесяти двух</b> — про суставы, кости, позвоночник и «неподвижность членов». Три четверти книги. Асклепион в Эпидавре был, если говорить сегодняшним языком, ортопедической клиникой.</p>
+</div>
+
+<p>Самая старая часть сборника — переписанная. В тексте есть прямая ссылка на «египетские листы», с которых прописи скопированы. Это значит, что самим рецептам к моменту записи уже было не одно столетие, а возможно и больше тысячи лет. Отсюда и цифра, которая разошлась по заголовкам: <b>рецептам может быть около трёх тысяч лет</b>.</p>
+
+<!-- ============ 4. КЛЮЧЕВАЯ МЫСЛЬ ============ -->
+<h2>Почему древние лечили сустав, а мы лечим боль</h2>
+
+<div class="speaker">
+  <p class="who">Профессор Ставрос Дукас:</p>
+  <p>— У врача в Эпидавре не было того, что есть у любого нынешнего врача. Не было таблетки, которая на четыре часа выключает боль. И это, как ни странно, было его преимуществом.</p>
+  <p>— Потому что если ты не можешь заглушить боль, у тебя остаётся ровно один способ вернуть человека к работе: <b>восстановить сам сустав</b>. Не замаскировать, не отложить, не «наблюдать» — восстановить. Древняя медицина была вынуждена быть честной. У неё просто не было возможности обманывать.</p>
+  <p>— А теперь посмотрите на аптечную полку. Восемьдесят процентов того, что там стоит от суставов, делает ровно одно: убирает сигнал. Не причину. Сигнал. И человек ходит с разрушающимся хрящом ещё три года, потому что ему не больно.</p>
+</div>
+
+<p>Прежде чем рассказать, что именно было на табличках, разберём то, из-за чего эта находка вообще стала новостью, а не строчкой в научном вестнике.</p>
+
+<!-- ============ 5. ЛОЖЬ ============ -->
+<h2>Ложь, в которую верят почти все:<br>«обезболивающие лечат суставы»</h2>
+
+<div class="callout">ОШИБКА. Они не лечат — они ускоряют разрушение.</div>
+
+<p>Ни одно обезболивающее в истории медицины не восстановило <b>ни одного миллиметра хряща</b>. Ни одно. Они гасят боль, а хрящ в это время продолжает стираться — просто вы этого больше не чувствуете. И когда почувствуете снова — будет поздно.</p>
+
+<p>Но и это не самое скверное. Самое скверное — то, что эта химия делает с внутренними органами. Печень и почки не рассчитаны на то, чтобы десятилетиями перерабатывать противовоспалительные. А именно это и «прописывает» современная схема: годами, курсами, «по потребности».</p>
+
+<p>Особенно уязвим позвоночник. У межпозвонковых дисков нет собственного кровоснабжения — они питаются диффузией. Это значит, что их разрушение идёт молча, без боли, иногда годами. Когда боль наконец приходит, повреждение уже далеко зашло.</p>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986909-52a62dfe-03f2-421b-b22f-81cdd1362448.jpg" style="width:auto">
+  <figcaption>Позвоночник школьной учительницы 39 лет. Пришла с жалобой на «лёгкую усталость в пояснице» — снимок показал три повреждённых диска, начинающуюся грыжу и микротрещины в хрящевой пластине.</figcaption>
+</figure>
+
+<p>Если после сорока вы чувствуете боль, скованность или хруст в суставах — <b>ваш хрящ уже разрушается</b>. Это не «от усталости» и это не «нормально».</p>
+
+<div class="bigline">ДИСК ЕЩЁ МОЖЕТ ВЕРНУТЬСЯ.<br>НЕРВ — УЖЕ НЕТ.</div>
+
+<p>А что предлагает современная хирургия? Дорогие и рискованные операции с металлическими имплантами. Инфекции, несросшиеся блоки, хроническая боль и в итоге — повторная операция. Иногда — необратимые повреждения.</p>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986909-f76b7acd-3ae5-4d01-973d-2128e6dbc88a.jpg" style="width:auto">
+  <figcaption>Типичный результат: имплант не зафиксировался, ткани вокруг воспалены, боль сильнее, чем была до операции.</figcaption>
+</figure>
+
+<p>Статистика беспощадна: <b>у 60% прооперированных грыжа возвращается за 2–4 года.</b> Цена вопроса — месяцы неподвижности, [СУММА] и полная неопределённость. Многие признают: если бы можно было вернуть время, они бы не легли на стол.</p>
+
+<div class="callout plain">Только за [ГОД] в [СТРАНА] зарегистрировано более [ЧИСЛО] новых случаев тяжёлых заболеваний суставов — из них [ЧИСЛО] у людей от 38 до 48 лет. Это не проблема старости. Это проблема бездействия.</div>
+
+<!-- ============ 6. СИМПТОМЫ ============ -->
+<h2>Если организм подал хотя бы один из этих сигналов — не ждите ни дня</h2>
+
+<ul class="symp">
+  <li>Утренняя скованность, которая не проходит от движения</li>
+  <li>Хруст, щелчки или скрип при движении</li>
+  <li>Усиление боли при смене погоды</li>
+  <li>Трудно согнуть или разогнуть колено</li>
+  <li>Отёк, покраснение или жар вокруг сустава</li>
+  <li>Боль при подъёме или спуске по лестнице</li>
+  <li>Хроническая усталость и тяжесть в ногах</li>
+  <li>Боль в пояснице, «простреливающая» в бедро или стопу</li>
+  <li>Онемение или покалывание в пальцах</li>
+  <li>Изменение походки — хромота, неустойчивость</li>
+  <li>Невозможность стоять дольше 10–15 минут</li>
+</ul>
+
+<p>Если вы узнали себя хотя бы в двух пунктах — <b>хрящ уже разрушается</b>. А в позвоночнике процесс идёт в три-четыре раза быстрее, потому что диски находятся под постоянным давлением.</p>
+
+<div class="callout">ИТОГ: ГРЫЖА, ЗАЩЕМЛЁННЫЙ НЕРВ, ДЕФОРМАЦИЯ ПОЗВОНКОВ, ПОТЕРЯ ПОДВИЖНОСТИ — И ВСЁ ЭТО МОЖЕТ ПРОИЗОЙТИ ЗА НЕСКОЛЬКО НЕДЕЛЬ.</div>
+
+<h2>Посмотрите на этих людей. Каждый из них когда-то сказал «пройдёт»</h2>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986909-1323043b-5bae-4d77-a99d-86f14a35a349.jpg" style="width:auto">
+  <figcaption>Пациентка другой клиники, 58 лет, [ГОРОД]. Три смещённых позвонка более чем на 8 мм, спинной мозг под давлением. Дважды откладывала — когда наконец обратилась, была в шаге от паралича.</figcaption>
+</figure>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986909-e51deb3f-329b-42e5-bd5e-e7ca2d8ff0b0.jpg" style="width:auto">
+  <figcaption>Женщина 61 года из [ГОРОД]. Горб вырос до 4 см меньше чем за год. Шейные позвонки деформированы так, что голова уже не поворачивается в сторону. Обезболивающие перестали действовать 8 месяцев назад.</figcaption>
+</figure>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986909-159c1e09-9c69-43a8-a257-589b0ef5b3ad.jpg" style="width:auto">
+  <figcaption>Домохозяйка, 59 лет, [ГОРОД]. Хрящ истончился до менее чем 1 мм. Каждый шаг звучит как скрип старой двери. Три ортопеда сказали, что единственное решение — двойное протезирование за [СУММА].</figcaption>
+</figure>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986909-b4682455-f137-4eac-9221-303e3ff825e7.jpg" style="width:auto">
+  <figcaption>Бывший шахтёр, 68 лет, [ГОРОД]. Хрящ правого колена разрушен полностью, костная ткань вошла в стадию некроза. Четыре месяца промедления стоили ему ноги — ампутация выше колена и пожизненная зависимость от коляски.</figcaption>
+</figure>
+
+<div class="speaker">
+  <p class="who">Профессор Ставрос Дукас:</p>
+  <p>— В этих табличках нет ни одного слова про возраст. Это первое, что меня поразило как человека, которому семьдесят. Древний врач не писал «в вашем возрасте это нормально». Он писал, сколько дней держать сбор и когда прийти снова.</p>
+</div>
+
+<div class="callout">И ЕСЛИ ВАМ УЖЕ ЗА 50–60 — НЕ ЖДИТЕ НИ СЕКУНДЫ! Разрушение почти наверняка вошло в критическую фазу.</div>
+
+<!-- ============ 7. ИСТОРИИ ============ -->
+<h2>Случаи, которые врачи объявили безнадёжными</h2>
+
+<div class="case">
+  <p class="name">Нина Андреевна, 86 лет, [ГОРОД] — снова ходит без посторонней помощи</p>
+  <p>«Я жила как в тюрьме — собственный дом стал камерой. Не доходила до ванной, не могла простоять и минуты, даже чай себе не заваривала. Дети работали и не могли приезжать каждый день. Я лежала и смотрела в потолок. Врачи сказали, что в моём возрасте операция не имеет смысла, и выписали только обезболивающие.</p>
+  <p>Дочь прочитала про находку в Эпидавре и заказала мне то, что по ней восстановили. Сказала: хуже уже не будет. На третьей неделе, впервые за полтора года, <b>я встала с кровати сама</b>.</p>
+  <p>Сегодня, пять месяцев спустя, я хожу в магазин, готовлю, даже вожусь с цветами перед домом. В восемьдесят шесть лет! Когда соседи увидели меня во дворе, они не поверили глазам. Они думали, что больше меня не увидят.»</p>
+</div>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986910-b346b43c-c1fc-4a70-a8ed-4baa4e7df624.jpg" style="width:auto">
+  <figcaption>Нина Андреевна: январь и июнь того же года.</figcaption>
+</figure>
+
+<div class="case">
+  <p class="name">Виктор, 47 лет, каменщик — оставил коляску через 4 недели</p>
+  <p>«Двадцать лет я клал кирпич, но за собственной спиной не следил. Однажды утром проснулся и не смог повернуть поясницу. Жена вызвала скорую. Диагноз — три грыжи и сдавление нервного корешка. Врачи предложили операцию за [СУММА], но без всяких гарантий.</p>
+  <p>Месяцами я сидел дома в коляске. Дети смотрели на меня с жалостью, жена плакала по ночам. Я чувствовал себя обузой.</p>
+  <p>На четвёртый день я смог встать. Полный курс занял 80 дней. Сегодня я снова работаю — не на стройке, в конторе, но <b>я хожу</b>. Бегаю с детьми в парке. Живу. Снимок показывает, что диски восстановились на 90%.»</p>
+</div>
+
+<!-- ============ 8. ЧТО БЫЛО НА ТАБЛИЧКАХ ============ -->
+<h2>Что именно было на свинцовых табличках</h2>
+
+<p>Папирусы содержали описания жалоб и порядок лечения. А состав сборов был вынесен отдельно — на три свинцовые пластины. Свинец в античности использовали именно для того, что должно пережить века: он не горит, не гниёт и не выцветает.</p>
+
+<p>Пропись, которая на табличках обозначена словом <b>ἀνάπλασις</b> — «повторное образование», «отстройка заново», — идёт под номером один и повторяется трижды. Из семи её компонентов шесть растут на Средиземноморье, седьмой упомянут как привозной.</p>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986910-a33b2dfc-4da2-4d33-9eca-bc577f55f77f.jpg" style="width:auto">
+  <figcaption>Табличка №2. Семь строк — семь компонентов. В конце каждой строки — метка количества по античной весовой системе, что и позволило пересчитать пропорции.</figcaption>
+</figure>
+
+<div class="speaker">
+  <p class="who">Д-р Элени Мораити:</p>
+  <p>— Античные тексты обычно пишут «возьми пригоршню того-то». Здесь — нет. Здесь стоят точные весовые метки, вплоть до долей драхмы. Такую точность имеет смысл записывать только в одном случае: если от неё зависит результат. Именно поэтому пропись вообще удалось пересчитать в современные единицы.</p>
+</div>
+
+<h3>Состав, восстановленный по табличке №2 (действующие вещества на приём):</h3>
+
+<div class="tblwrap">
+<table>
+  <tr><th>Компонент</th><th>Источник</th></tr>
+  <tr><td>Босвеллиевая кислота (AKBA)</td><td>ладан, смола босвеллии</td></tr>
+  <tr><td>Гуггулстероны</td><td>мирра, смола коммифоры</td></tr>
+  <tr><td>Олеокантал</td><td>нефильтрованное оливковое масло</td></tr>
+  <tr><td>Аллантоин</td><td>окопник лекарственный, корень</td><</tr>
+  <tr><td>Салицин</td><td>кора белой ивы</td></tr>
+  <tr><td>Кремний</td><td>хвощ полевой, экстракт</td></tr>
+  <tr><td>Уртика-фактор</td><td>крапива двудомная, корень</td></tr>
+</table>
+</div>
+
+<p>Компоненты выглядят простыми. Но достать их в нужном качестве и из нужного источника крайне трудно. Большинства из них нет в аптеках, их везут из разных концов света. А смешать дома практически невозможно — потому что дозировки должны быть выдержаны до сотых долей миллиграмма. Не выдержаны пропорции — эффекта нет вовсе.</p>
+
+<div class="callout green">Самое интересное: шесть из семи компонентов за последние двадцать лет были независимо исследованы современной наукой — и по каждому есть публикации о влиянии на хрящевую и костную ткань. Древние получили этот набор без единого исследования. Просто наблюдая за людьми девятьсот лет подряд.</div>
+
+<!-- ============ 9. КАК СТАЛО ПРОДУКТОМ ============ -->
+<h2>Как расшифровка стала продуктом</h2>
+
+<p>Профессор Дукас не фармаколог и не собирался ничего производить. Расшифровку он передал в университетскую лабораторию — просто как исторический документ. Дальше вмешался его сын.</p>
+
+<div class="speaker">
+  <p class="who">Николас Дукас, фармаколог, сын профессора:</p>
+  <p>— Я вырос среди отцовских черепков и всю жизнь считал, что археология — это про прошлое. Когда я прочитал расшифровку, я понял, что держу в руках рабочую пропись, а не музейный экспонат.</p>
+  <p>— Пять лет мы с лабораторией пересчитывали античные весовые единицы в современные, подбирали сырьё, стандартизировали каждый экстракт по маркерным молекулам. Отдельная задача была — доставка. Древний больной пил отвар, лёжа в Асклепионе месяц. Современный человек не может пить отвар месяц и не может лечь в Эпидавр.</p>
+  <p>— Мы решили это <b>энтеросолюбильной микрокапсуляцией</b>: активные вещества заключены в оболочку, которая не разрушается в желудке, раскрывается в тонком кишечнике и через кровоток доставляет состав прямо в ткань сустава. Усвоение вырастает примерно на 380% по сравнению с обычными порошками и настоями.</p>
+</div>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786534648171-de489f58-57e6-490e-89cb-d2eb96c4285b.jpg" style="width:auto">
+  <figcaption>Николас Дукас в лаборатории, где пропись с таблички №2 пересчитывали в современные дозировки. Пять лет работы — от античных весовых меток до готовой формы.</figcaption>
+</figure>
+
+<div class="callout plain">Средство принимают по одной капсуле утром и вечером. Первое облегчение большинство отмечает в первые дни, заметное изменение подвижности — в течение первой недели.</div>
+
+<!-- ============ 10. ФАЗЫ ============ -->
+<h2>Четыре фазы восстановления — что происходит шаг за шагом</h2>
+
+<div class="phase">
+  <span class="num">Фаза 1</span>
+  <h4>Остановить боль и воспаление</h4>
+  <p>С первого приёма микрогранулы доставляют активные вещества прямо в повреждённую ткань и блокируют молекулы воспаления. Боль заметно снижается в течение 24–48 часов — без нагрузки на печень и почки, потому что оболочка обходит первичный печёночный метаболизм.</p>
+</div>
+
+<div class="phase">
+  <span class="num">Фаза 2</span>
+  <h4>Остановить разрушение</h4>
+  <p>С третьего по седьмой день организм прекращает разбирать хрящевую и костную ткань. Растёт выработка синовиальной жидкости — естественной «смазки» сустава. Трение падает, движение становится легче.</p>
+</div>
+
+<div class="phase">
+  <span class="num">Фаза 3</span>
+  <h4>Разбудить клетки-строители</h4>
+  <p>Сердце всего метода. «Спящие» хондроциты и остеобласты получают биохимический сигнал и начинают производить новый хрящ и новую костную ткань. Именно эту фазу античный текст и называет ἀνάπλασις — «отстройка заново».</p>
+</div>
+
+<div class="phase">
+  <span class="num">Фаза 4</span>
+  <h4>Стойкий защитный слой</h4>
+  <p>Через 30–60 дней вновь образованные ткани формируют прочный защитный слой, который делает сустав устойчивым даже к нагрузке. Эффект держится годами: однажды «разбуженные» клетки продолжают работать.</p>
+</div>
+
+<!-- ============ 11. ИССЛЕДОВАНИЕ ============ -->
+<h2>Результаты наблюдения: 2 340 человек от 38 до 89 лет</h2>
+
+<p>После первой публикации расшифровки исследовательские группы попросили разрешения на собственные испытания. Результаты на живых людях превзошли ожидания самой лаборатории.</p>
+
+<div class="tblwrap">
+<table>
+  <tr><th>Показатель</th><th>Результат</th></tr>
+  <tr><td>Полное устранение боли и воспаления</td><td class="dose">96%</td></tr>
+  <tr><td>Возврат полного объёма движения</td><td class="dose">94%</td></tr>
+  <tr><td>Остановка и обратное развитие дегенеративных изменений</td><td class="dose">91%</td></tr>
+  <tr><td>Тендинит, бурсит, периартрит</td><td class="dose">97%</td></tr>
+  <tr><td>Синовит, лигаментит</td><td class="dose">93%</td></tr>
+  <tr><td>Остеоартроз (все стадии)</td><td class="dose">89%</td></tr>
+  <tr><td>Остеопороз</td><td class="dose">87%</td></tr>
+  <tr><td>Ревматоидный артрит, подагра</td><td class="dose">85%</td></tr>
+  <tr><td>Документированная регенерация хрящевой ткани</td><td class="dose">83%</td></tr>
+</table>
+</div>
+
+<p>Люди, которым уже назначили дату протезирования, отменили операции. Люди, месяцами не встававшие с постели, снова пошли. Ортопеды не верили собственным снимкам.</p>
+
+<h3>Сроки восстановления</h3>
+<p>Минимальный курс — 30 дней. При более тяжёлых повреждениях — 60, иногда до 90 дней. Но самое ценное другое: <b>эффект длительный</b>. Один полный курс, по наблюдениям, даёт 5–6 лет здоровых суставов.</p>
+
+<h2>Реальные случаи</h2>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786535086075-f7a98f88-8464-4bba-abd6-c1b73c02be2d.jpg" style="width:auto">
+  <figcaption>Пенсионерка, 66 лет, [ГОРОД]. Четыре смещённых позвонка и хроническая радикулопатия. Сын привозил ей средство из [СТОЛИЦА]. Два месяца приёма — полный возврат позвоночника в нормальное положение. Её ортопед попросил название препарата.</figcaption>
+</figure>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986909-3364081d-b71b-460f-a99a-99314bcc6eb4.jpg" style="width:auto">
+  <figcaption>Бухгалтер, 41 год, [ГОРОД]. Колени деформировались внутрь после двух беременностей и набора веса. Ортопед сказал «привыкайте». 30 дней приёма дважды в день — ось коленей выпрямилась заметно уже на снимке.</figcaption>
+</figure>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786533986909-13534335-bab9-475f-a059-501770ccefec.jpg" style="width:auto">
+  <figcaption>Пенсионер, 73 года, [ГОРОД]. Артроз деформировал пальцы стоп так, что ни одна обувь не налезала. За 21 день пальцы выпрямились, и ботинки пятилетней давности снова подошли.</figcaption>
+</figure>
+
+<!-- ============ 12. ДАВЛЕНИЕ ============ -->
+<h2>Почему этого нет в аптеках</h2>
+
+<div class="speaker">
+  <p class="who">Профессор Ставрос Дукас:</p>
+  <p>— Через одиннадцать месяцев после первой публикации со мной связались представители трёх компаний. Разговор был вежливый. Мне предложили финансировать «дальнейшее изучение памятника» — сумму назвали такую, какой у моей кафедры не было за все сорок четыре года.</p>
+  <p>— Условие было одно: полный состав таблички №2 в научный оборот не выпускать. Формулировка была мягкая — «до окончания всесторонней верификации».</p>
+  <p>— Я не хочу приписывать им угроз, которых не было. Они были корректны. Они просто вслух сказали, как это устроено: пропись, которая работает один раз и надолго, невыгодна тому, кто живёт с продаж каждый месяц.</p>
+  <p>— Мне семьдесят лет. Мне нечего терять и некому продавать репутацию. Я опубликовал состав целиком.</p>
+</div>
+
+<p>Именно поэтому средство не продаётся в аптечной сети. Производство сложное, партии ограничены, распространение идёт напрямую — через программу, которая открывается дважды в год. Внутри программы скидка доходит до <b>50%</b>: цель не заработок, а доступность. Особенно для пенсионеров — на этом настоял лично профессор.</p>
+
+<figure class="ph">
+  <img alt="" src="https://static.joxi.pro/1786440429728-642c8ff8-ca43-4fa5-9565-abc462924431.jpg" style="width:auto">
+  <figcaption>Сертификат соответствия и протокол лабораторного анализа партии. Каждый экстракт стандартизирован по маркерной молекуле — именно это позволяет воспроизвести пропись таблички №2 с точностью до сотых долей миллиграмма.</figcaption>
+</figure>
+
+<div class="callout">Не упустите последнюю возможность в этом году — партия может закончиться раньше окончания программы!</div>
+
+<p>В этом году произведено <b>5 000 упаковок</b> специально для жителей [СТРАНА]. Учитывая спрос, количество разойдётся быстро. Следующая серия будет готова только в конце [ГОД].</p>
+
+<p>Программа поддержки действует до <b>[ДАТА]</b>. Каждый житель [СТРАНА] старше 40 лет может получить <b>до 50% скидки</b>. После этой даты придётся ждать как минимум 6 месяцев.</p>
+
+<!-- ============ 13. ЗАКАЗ ============ -->
+<div class="order" id="order">
+  <div class="ordhead">
+    <img class="emb" src="images/56d9b0017d1d_d58505c9.png" alt="Эмблема" width="96" height="96">
+    <div class="ttl">
+      <b>Официальный бланк заказа</b>
+      <!-- ДИНАМИЧЕСКИЙ СЧЁТЧИК №1 -->
+      <p class="ordno">№ <u>19&nbsp;974</u> / 20 000</p>
+    </div>
+  </div>
+
+  <p class="ordinstr">Чтобы получить <span class="disc">скидку 50%</span>, введите своё имя и номер телефона в поля ниже и нажмите кнопку «ЗАКАЗАТЬ».</p>
+
+  <!-- ДИНАМИЧЕСКИЙ СЧЁТЧИК №2 -->
+  <div class="remain">Оставшееся количество:<span class="box">33</span><span class="tot">/1000</span></div>
+
+  <div class="prices">
+    <span class="old">[СТАРАЯ ЦЕНА]</span>
+    <span class="new">[НОВАЯ ЦЕНА]</span>
+  </div>
+
+  <!-- ЗАМЕНИТЬ ПРИ ЗАЛИВЕ: action, sid, country -->
+  <form action="/order.php" method="post">
+    <input type="hidden" name="fbpx" value="{fbpx}">
+    <input type="hidden" name="utm_code" value="{subid}">
+    <input type="hidden" name="cid" value="{campaign_id}">
+    <input type="hidden" name="sid" value="0000">
+    <input type="hidden" name="hash" value="{hash}">
+    <input type="hidden" name="country" value="XX">
+
+    <label for="name-input">Ваше имя</label>
+    <input id="name-input" name="name" type="text" autocomplete="name" placeholder="Ваше имя" required>
+
+    <label for="phone-input">Ваш номер телефона</label>
+    <input id="phone-input" name="phone" type="tel" maxlength="20" autocomplete="tel" placeholder="Ваш номер телефона" required>
+
+    <button class="btn" type="submit">ЗАКАЗАТЬ СЕЙЧАС</button>
+  </form>
+
+  <p class="delivery">✔️ Доставка по всей [СТРАНА] за 2–3 дня
+    <span>почтой или курьером до двери, оплата при получении</span></p>
+  <div style="text-align: center;"><img alt="" src="images/b0110a32ff2e_8322b1b5.png" style="width:auto"></div>
+</div>
+
+<!-- ============ 14. КОММЕНТАРИИ ============ -->
+<div class="comments">
+<h2>Комментарии:</h2>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/7da17fc86c6c_2f1260d0.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Людмила Тарасовна</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>Месяцами ждала такую статью! Подруга ещё весной прислала мне ссылку на новость про этот сосуд в Греции, но там про суставы не было ни слова. А тут всё разложено. Заказала сразу, хорошо что успела на скидку!</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/8ba73d45c164_4ede289a.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Раиса Ковалёва</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>Курьер привёз в среду. Десять дней пью утром и вечером — и разница ОГРОМНАЯ! Встаю без этого ужасного хруста! Муж смотрит и не верит. Пропью полный курс 60 дней, но уже сейчас убеждена, что работает.</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/fa7f61c1431c_7946ff6c.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Тамара Ильинична</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>Мне 72 года и три года мучилась с тазобедренным. Ходить было пыткой. Ортопед сказал: «Протез или терпите». Не хотела ни того, ни другого. Помогло за два месяца — теперь хожу полтора километра каждый день! И на снимке улучшение, которое врач объяснить не может.</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/dcc5cfe80d60_5aa7f8f7.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Аркадий Северов</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>Как бывший спортсмен знаю, что значит жить с разрушенным хрящом. Колени были как у девяностолетнего — а мне 54. Вернулись движения, которых я не делал 10 лет. Снова могу присесть! Не знаю другого средства, которое так может.</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/73d3a879cef9_4a9ce85c.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Зоя Северова</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>Я немного сомневаюсь… Стоит ли? Мне 66, суставы хрустят при каждом движении и спина не даёт покоя. Но я столько раз обжигалась на всяких «чудо-средствах», что теперь трудно поверить. Правда помогает?</p></div>
+
+<div class="cm reply">
+  <div class="cm-h">
+    <img class="cm-av" src="images/71deaf909b4e_ea30d07c.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Пётр Дементьев</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>Зоя, прекрасно понимаю ваши сомнения — у меня были такие же. Но это отличается от всего, что я пробовал раньше. Пью 5 недель для коленей и поясницы — разница как день и ночь.</p>
+<p>Раньше не мог нагнуться завязать шнурки. Теперь делаю не задумываясь. Закажите хотя бы одну упаковку и судите сами — терять вам нечего!</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/d61700bc0961_28c03d39.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Валентина Гущина</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>Через три дня после начала боль в колене уменьшилась вдвое! Сегодня 12-й день и я уже поднимаюсь по лестнице, не держась за перила. Пропью весь курс — думаю, через два месяца буду как новая!</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/fd9eb915b838_59aa235e.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Эмма Разумовская</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>У меня на спине месяца два назад начал расти «горбик». Я перепугалась! Перепробовала разные аптечные мази — ноль. А тут совсем другое дело — за 40 дней горбик почти полностью ушёл! Продолжаю пить, но уже невероятно довольна. Вот так выглядит разница:</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/daeecf66dcf6_e1c9bf1a.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Софья Мещерская</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>У меня был защемлён нерв в пояснице — от боли не могла ни спать, ни стоять. Врач выписал сильные обезболивающие, от которых постоянно тошнило. Начала пить дважды в день — через неделю боль резко упала, а через месяц ушла совсем! Курс продолжаю, но жизнь уже изменилась!</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/a49c7ec0724d_6f186c1c.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Егор Пантелеев</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>Мне 79 и три года я еле ходил. Сын заказал — не спросив меня, потому что знал, что я откажусь. Даёт мне каждое утро и каждый вечер. И результат? Через полтора месяца хожу до парка каждый день! Чувствую себя на 60!</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/14fcabaa91a3_d3871213.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Борис Ушаков</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>До этого не мог поднять руки над головой — плечо хрустело и болело жутко. Два года ходил по врачам — никто не помог. Два месяца — и руки снова работают нормально. Вот мой снимок, врач сам не поверил:</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/c364fa7fabf3_734a4c7f.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Алла Городецкая</p>
+      <p class="startdate" daysago="1" format="day/month/year"><script !src="">dtime_nums(-1)</script></p>
+    </div>
+  </div>
+<p>Заказала свекрови — ей 81 и она почти не вставала с постели. Врачи отказывались что-либо делать — «в таком возрасте уже ничего не поможет», говорили. А тут за 2 месяца она уже ходит по двору и даже готовит! Мы глазам не верили.</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/7099c502f996_b89c4cc9.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Виталий Лапшин</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Жена четыре месяца пролежала — позвоночник просто сдался. Врачи предложили операцию за [СУММА] без всяких гарантий. Решили попробовать — терять было нечего. Давал ей дважды в день. Через 5 недель она встала. Вчера вместе ходили на рынок — впервые за полгода! Плакал от счастья.</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/658f969bb746_3d8e16cd.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Нелли Ковач</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Заказала на прошлой неделе, пришло на третий день. Начала сразу — и облегчение пришло на второй день! Как будто кто-то смазал суставы изнутри. Две недели пью дважды в день и не могу дождаться полного результата!</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/b35ad35f2989_d19c0bad.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Прасковья Ильина</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Мне 74. Пять лет мучилась с артрозом и болями в спине. Перепробовала буквально всё — мази, таблетки, уколы, физиотерапию. НИЧЕГО не помогало надолго. Это единственное, что дало РЕАЛЬНЫЙ результат — за полтора месяца суставы чувствуются совершенно иначе. Врач не верит снимкам!</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/5293353f6d37_ac335d19.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Инга Бельская</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Я вообще-то историк по образованию и сначала полезла проверять про Эпидавр. Асклепион там действительно был крупнейшим лечебным центром, это правда, и пожар в IV веке тоже был. Так что хотя бы фундамент у истории настоящий. Заказала.</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/df3e8c2eb745_86a29b61.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Клавдия Ремизова</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Отцу 84 года и три года он не выходил из дома. Суставы, спина, колени — болело всё. Говорил, что просто доживает. После двух месяцев — вчера вышел во двор и полил огород! Впервые за три года! Не могу описать, что я почувствовала. Спасибо от всего сердца!!!</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/95700a967e85_c7b9fe05.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Марина Дроздова</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Кто-нибудь знает, можно ли при аллергии? У меня реакция почти на всё — даже от обычного аспирина отекают пальцы. Боюсь пробовать что-то новое…</p></div>
+
+<div class="cm reply">
+  <div class="cm-h">
+    <img class="cm-av" src="images/d653e647ce29_c22febb7.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Семён Гладков</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Марина, у меня аллергия на четыре вида лекарств. Пью 50 дней — никакого раздражения, никаких отёков, никакой сыпи. Состав целиком из натуральных экстрактов — химии нет. Можете заказывать спокойно!</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/71bb14a12f9e_280a6001.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Дарья Полищук</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Раньше не было сил даже подняться — каждое движение было мукой, я думала, что жизнь кончилась. Дочь заказала и заставила попробовать — давала мне утром и вечером. Через два месяца? Я танцевала на свадьбе внука!!! Никогда в жизни не была так благодарна!</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/2d72d731d826_3ff382cb.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Ольга Кравчук</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Заказала маме. У неё были постоянные боли в шее, от которых кружилась голова и тошнило — жизнь стала невыносимой. На второй неделе боли резко упали, а головокружения прекратились совсем! Мама снова смеётся — давно её такой не видела.</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/1dcbfabe6827_57a19553.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Лариса Демьянова</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>А мне вот что интересно — если находка настоящая, почему об этом не трубят по всем каналам? Почему только в интернете? Почему аптеки не предлагают?</p></div>
+
+<div class="cm reply">
+  <div class="cm-h">
+    <img class="cm-av" src="images/ffd79a237d84_8971c06a.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Юрий Мокрушин</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Потому что аптеки зарабатывают на людях, которые покупают обезболивающие каждый месяц! Если все вылечат суставы раз и навсегда — кто будет покупать их дорогие лекарства? Подумайте логически! В статье же прямо написано, что профессору предлагали не публиковать состав.</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/47a8cb9cf088_09555b8e.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Галина Юрьева</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Прочитала все комментарии — и растрогалась. Заказываю прямо сейчас, себе и мужу. Взяла три упаковки, на полный курс. Если поможет хотя бы наполовину от того, что люди пишут — буду счастлива!</p></div>
+
+<div class="cm">
+  <div class="cm-h">
+    <img class="cm-av" src="images/a29369d9b077_c326beba.jpg" alt="">
+    <div class="cm-i">
+      <p class="au">Регина Островская</p>
+      <p class="startdate" daysago="2" format="day/month/year"><script !src="">dtime_nums(-2)</script></p>
+    </div>
+  </div>
+<p>Ортопед сказал мне, что в 63 года надо привыкать к боли — мол, лечения нет. Заказала назло всем. Посмотрим, кто прав!</p></div>
+
+<div class="sendbox">
+  <span class="upl">Загрузить аватар</span>
+  <span class="upl">Загрузить фото</span>
+  <button class="btn" type="button">ОТПРАВИТЬ</button>
+</div>
+</div>
+
+<p class="footer">Материал носит информационный характер. Индивидуальные результаты могут отличаться.<br></p>
+
+</div>
+  <p style="opacity: 0;">{_box:696Vgj23}</p>
+</body>
+</html>
