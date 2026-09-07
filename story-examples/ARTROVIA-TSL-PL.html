@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Artrovia — artykuł</title>
+<style>
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #f0f2f5; color: #1c1e21; line-height: 1.4;
+    }
+    .container {
+        width: 100%; max-width: 480px; margin: 0 auto; background: #f0f2f5;
+        min-height: 100vh; padding-bottom: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); position: relative;
+    }
+    .fb-topbar {
+        background: #fff; padding: 8px 10px; display: flex; align-items: center;
+        justify-content: space-between; gap: 8px; position: sticky; top: 0; z-index: 100;
+        border-bottom: 1px solid #dadde1;
+    }
+    .fb-topbar-side { display: flex; align-items: center; gap: 8px; }
+    .fb-brand { width: 40px; height: 40px; display: block; flex-shrink: 0; }
+    .fb-icon-btn {
+        width: 36px; height: 36px; border-radius: 50%; background: #e4e6eb;
+        display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .fb-icon-btn svg { width: 20px; height: 20px; fill: #050505; display: block; }
+
+    .fb-post { background: #fff; border-top: 1px solid #dadde1; border-bottom: 1px solid #dadde1; margin: 8px 0; }
+    .fb-post-head { display: flex; align-items: flex-start; gap: 10px; padding: 12px 12px 0; }
+    .fb-post-ava {
+        width: 44px; height: 44px; border-radius: 50%; background: #dbe4f0;
+        flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+        font-size: 18px; color: #0056b3; font-weight: 800;
+    }
+    .fb-post-meta { flex: 1; min-width: 0; padding-top: 1px; }
+    .fb-post-author { display: flex; align-items: center; gap: 4px; font-size: 15px; font-weight: 600; color: #050505; line-height: 1.2; }
+    .fb-verified { width: 15px; height: 15px; flex-shrink: 0; }
+    .fb-post-sub { font-size: 12px; color: #65676b; margin-top: 2px; }
+
+    .article-badge {
+        margin: 10px 12px 0; display: inline-flex; align-items: center; gap: 6px;
+        background: #eef3ff; color: #0056b3; font-size: 12px; font-weight: 700;
+        padding: 4px 9px; border-radius: 6px;
+    }
+
+    .fb-post-text {
+        padding: 10px 12px 4px; font-size: 22px; line-height: 1.28; font-weight: 800; color: #050505;
+    }
+    .fb-post-sub2 { padding: 0 12px 10px; font-size: 14px; color: #444; font-weight: 600; line-height: 1.4; }
+
+    .article-body { padding: 4px 14px 6px; font-size: 16px; color: #1c1e21; }
+    .article-body p { margin: 0 0 12px; }
+    .article-body h2 {
+        font-size: 19px; font-weight: 900; color: #050505; margin: 26px 0 10px; line-height: 1.3;
+    }
+    .article-body h3 {
+        font-size: 16px; font-weight: 800; color: #0056b3; margin: 18px 0 8px;
+    }
+    .article-body blockquote {
+        border-left: 3px solid #0056b3; background: #f7f9fc; padding: 10px 14px;
+        margin: 12px 0; font-style: italic; color: #333; font-size: 15px;
+    }
+    .article-body ul { margin: 0 0 14px 18px; }
+    .article-body li { margin-bottom: 6px; }
+    .article-body strong { color: #050505; }
+    .article-hr { border: none; border-top: 1px solid #e4e6eb; margin: 22px 0; }
+
+    .image-placeholder {
+        margin: 16px 0; border: 2px dashed #b7c4d8; border-radius: 10px;
+        background: #f5f8fc; padding: 16px; display: flex; gap: 12px; align-items: flex-start;
+    }
+    .image-placeholder-icon { font-size: 26px; line-height: 1; flex-shrink: 0; }
+    .image-placeholder-desc { font-size: 13px; color: #45536b; line-height: 1.45; }
+    .image-placeholder-desc b { display: block; color: #0056b3; font-size: 13px; margin-bottom: 3px; }
+
+    .fb-post-stats { display: flex; align-items: center; gap: 6px; padding: 10px 12px; font-size: 13px; color: #65676b; border-top: 1px solid #e4e6eb; margin-top: 10px; }
+    .fb-stats-right { margin-left: auto; display: flex; gap: 10px; }
+    .fb-stats-right span { text-decoration: underline; text-underline-offset: 2px; }
+    .fb-post-actions { display: flex; border-top: 1px solid #ced0d4; margin: 0 12px; padding: 4px 0 6px; }
+    .fb-action { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 0; font-size: 14px; font-weight: 600; color: #65676b; }
+
+    .order-container {
+        background: #fff; text-align: left; border: 1px solid #c8d4e3; border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin: 20px 15px; overflow: hidden;
+        scroll-margin-top: 70px;
+    }
+    .medical-header {
+        background: #0056b3; color: #fff; padding: 14px 15px; text-align: center;
+        font-weight: 900; font-size: 15px; text-transform: uppercase; letter-spacing: .5px;
+    }
+    .medical-body { padding: 20px 15px; }
+    .stock-warning-box {
+        background: rgba(139,0,0,.08); border: 2px dashed #8b0000; padding: 15px; margin-bottom: 20px;
+        border-radius: 4px; color: #111; font-size: 18px; font-weight: 700; text-align: center;
+    }
+    .stock-warning-box .warning-word { color: #d90000; font-weight: 900; text-transform: uppercase; margin-right: 3px; }
+    .stock-warning-box b { font-size: 26px; color: #d90000; }
+    .clean-discount-title { text-align: center; color: #444; font-size: 14px; margin-bottom: 15px; font-weight: bold; }
+    .clean-timer { display: flex; justify-content: center; align-items: flex-start; gap: 8px; margin-bottom: 22px; color: #1a73e8; }
+    .ct-block { display: flex; flex-direction: column; align-items: center; width: 70px; }
+    .ct-val { font-size: 34px; font-weight: 900; line-height: 1; margin-bottom: 6px; }
+    .ct-lbl { font-size: 10px; text-transform: uppercase; font-weight: bold; }
+    .ct-sep { font-size: 30px; font-weight: 900; margin-top: -4px; color: #1a73e8; }
+    .price-container { display: flex; justify-content: center; gap: 40px; margin-bottom: 22px; }
+    .price-col { text-align: center; }
+    .price-lbl { color: #666; font-size: 12px; margin-bottom: 6px; }
+    .price-old { color: #d90000; font-size: 19px; font-weight: 900; text-decoration: line-through; }
+    .price-new { color: #28a745; font-size: 19px; font-weight: 900; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 12px; font-weight: bold; color: #4a5568; margin-bottom: 6px; text-transform: uppercase; }
+    .order-form input { width: 100%; padding: 13px; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 16px; background: #f7fafc; color: #1a202c; font-weight: bold; }
+    .submit-btn {
+        width: 100%; background: #28a745; color: #fff; padding: 17px; font-size: 18px; font-weight: 900;
+        border: none; border-radius: 4px; cursor: pointer; box-shadow: 0 4px 0 #1e7e34; text-transform: uppercase; margin-top: 5px;
+    }
+    .trust-benefits { border-top: 1px dashed #cbd5e0; padding-top: 15px; margin-top: 20px; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: bold; color: #4a5568; margin-bottom: 8px; }
+    .trust-item span { color: #0056b3; font-size: 17px; }
+
+    footer { text-align: center; padding: 20px 15px 30px; background: #f0f2f5; }
+    .fb-comments { text-align: left; background: #fff; border-top: 1px solid #ddd; padding: 16px 12px 22px; margin-bottom: 4px; }
+    .fb-comments-title { font-size: 16px; font-weight: 700; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #e4e6eb; }
+    .fb-comment { display: flex; gap: 8px; margin-bottom: 14px; align-items: flex-start; }
+    .fb-comment-ava {
+        width: 36px; height: 36px; border-radius: 50%; background: #dbe4f0; flex-shrink: 0;
+        display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #45536b;
+    }
+    .fb-comment-body { flex: 1; min-width: 0; }
+    .fb-comment-bubble { background: #f0f2f5; border-radius: 16px; padding: 8px 12px; }
+    .fb-comment-name { font-size: 13px; font-weight: 700; color: #385898; margin-bottom: 1px; }
+    .fb-comment-text { font-size: 14px; color: #050505; line-height: 1.35; }
+    .fb-comment-meta { margin-top: 3px; padding-left: 12px; font-size: 12px; color: #65676b; font-weight: 600; }
+    .footer-copy { font-size: 12px; color: #888; font-weight: bold; margin-top: 18px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+    <div class="fb-topbar">
+        <div class="fb-topbar-side">
+            <svg class="fb-brand" viewBox="0 0 40 40" aria-hidden="true">
+                <circle cx="20" cy="20" r="20" fill="#1877f2"></circle>
+                <path fill="#fff" d="M22.6 32.4V22.1h3.6l.55-4.2h-4.15v-2.65c0-1.2.35-2.05 2.1-2.05h2.2V9.45c-.38-.05-1.72-.17-3.28-.17-3.25 0-5.47 1.98-5.47 5.62v3h-3.6v4.2h3.6v10.3h4.45z"></path>
+            </svg>
+            <div class="fb-icon-btn"><svg viewBox="0 0 24 24"><path d="M10.5 3a7.5 7.5 0 015.92 12.11l4.24 4.23a1.1 1.1 0 01-1.56 1.56l-4.23-4.24A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"></path></svg></div>
+        </div>
+        <div class="fb-topbar-side">
+            <div class="fb-icon-btn"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.2 2 11.3c0 2.9 1.5 5.5 3.8 7.2V22l3.5-1.9c.9.2 1.8.4 2.7.4 5.5 0 10-4.2 10-9.3S17.5 2 12 2z"></path></svg></div>
+        </div>
+    </div>
+
+    <!-- ==== ПОСТ: ШАПКА АВТОРА ==== -->
+    <div class="fb-post" style="border-bottom:none; margin-bottom:0;">
+        <div class="fb-post-head">
+            <div class="fb-post-ava">MW</div>
+            <div class="fb-post-meta">
+                <div class="fb-post-author">
+                    dr n. med. Marek Wysocki
+                    <svg class="fb-verified" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1877f2"/><path d="M9.5 12.5l1.8 1.8 3.7-4.2" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="fb-post-sub">Dzisiaj · 09:14 · publiczny post</div>
+            </div>
+        </div>
+        <span class="article-badge">📄 Artykuł · 9 min czytania</span>
+    </div>
+
+    <!-- ==== ТЕКСТОВЫЙ ПОСТ ==== -->
+    <div class="fb-post" style="margin-top:0; border-top:none;">
+
+        <div class="fb-post-text">PRZEZ 6 LAT NIE MOGŁA NORMALNIE CHODZIĆ. TYDZIEŃ PRZED OPERACJĄ KOLANA ZROBIŁA COŚ, CO SPRAWIŁO, ŻE ODWOŁAŁA ZABIEG</div>
+        <div class="fb-post-sub2">Polski ortopeda i reumatolog ujawnia, dlaczego u wielu osób po 50. roku życia ból kolan, bioder i kręgosłupa powraca mimo tabletek, fizjoterapii i zastrzyków — oraz na czym polega tzw. „impuls żelatynowy”.</div>
+
+        <div class="image-placeholder">
+            <div class="image-placeholder-icon">🖼️</div>
+            <div class="image-placeholder-desc">
+                <b>Zdjęcie 1 — okładka artykułu</b>
+                Kobieta ok. 60 lat stoi u podnóża schodów w domu, jedna ręka na poręczy, spogląda w górę z wahaniem, jakby oceniała, czy da radę wejść. Poranne, miękkie światło z okna. Kadr dokumentalny, bez pozowania, lekka ziarnistość — nie zdjęcie stockowe.
+            </div>
+        </div>
+
+        <div class="article-body">
+
+<p>„Przez sześć lat każde moje rano wyglądało tak samo.</p>
+<p>Najpierw otwierałam oczy, potem próbowałam poruszyć nogami i już wiedziałam, jaki będzie cały dzień.</p>
+<p>Ostrożne wstawanie. Powolne schodzenie po schodach. Żadnych zbędnych kroków.</p>
+<p>Lekarze powtarzali: wiek, artroza, zużycie stawu.</p>
+<p>W końcu usłyszałam, że potrzebuję protezy. Operacja była już zaplanowana.</p>
+<p>Ale tydzień przed nią ją odwołałam.</p>
+<p>Po raz pierwszy od lat wyszłam na dłuższy spacer i weszłam po schodach na swoje piętro bez tego bólu, który wcześniej zatrzymywał mnie przy każdym kroku.</p>
+<p>A wszystko zaczęło się od czegoś, co doktor Wysocki nazywał «impulsem żelatynowym».”</p>
+
+<h2>„KIEDY USŁYSZAŁEM O TYM PO RAZ PIERWSZY, SAM UZNAŁEM TO ZA INTERNETOWY MIT”</h2>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🖼️</div>
+    <div class="image-placeholder-desc">
+        <b>Zdjęcie 2 — portret lekarza</b>
+        Mężczyzna ok. 55 lat, siwiejące włosy, biały fartuch lekarski, spokojny, pewny siebie wyraz twarzy, patrzy prosto w obiektyw. Neutralne, jasne tło gabinetu (rozmyte regały/dyplomy w tle). Styl: profesjonalny portret, nie sztywny korporacyjny.
+    </div>
+</div>
+
+<p>Doktor Marek Wysocki przedstawia się jako ortopeda, reumatolog i doktor nauk medycznych, który od 25 lat zajmuje się chorobami stawów.</p>
+<p>Jak mówi, przez lata obserwował ten sam schemat.</p>
+<p>Pacjent zaczyna od tabletek. Przez jakiś czas jest lepiej. Potem ból wraca.</p>
+<p>Następnie pojawia się fizjoterapia. Znów poprawa. I ponownie nawrót.</p>
+<p>W końcu przychodzą zastrzyki, kolejne zabiegi, a u części osób — rozmowa o operacji.</p>
+
+<h3>Dlaczego?</h3>
+<p>Według doktora Wysockiego dlatego, że większość popularnych metod skupia się przede wszystkim na objawach, a nie na procesie, który według przedstawionej przez niego teorii zachodzi wewnątrz stawu.</p>
+<blockquote>„Nie interesowało mnie już, jak wyciszyć ból na kilka tygodni. Chciałem wiedzieć, dlaczego wraca i czy można uruchomić mechanizm, dzięki któremu organizm ponownie zacznie sam dbać o staw.”</blockquote>
+<p>To właśnie podczas tych poszukiwań zainteresował się połączeniem trzech pozornie bardzo prostych składników: <strong>żelatyny, imbiru i kurkumy.</strong></p>
+<p>Nie chodzi jednak — jak podkreśla — o zjedzenie zwykłej galaretki z supermarketu. Klucz ma tkwić w odpowiednich formach składników, ich czystości i bardzo dokładnych proporcjach.</p>
+
+<hr class="article-hr">
+
+<h2>DLACZEGO PO 50. ROKU ŻYCIA PROBLEM ZE STAWAMI POTRAFI NAGLE PRZYSPIESZYĆ?</h2>
+
+<p>Wiele osób pamięta dokładnie moment, w którym ból przestał być czymś okazjonalnym.</p>
+<p>Najpierw kolano boli tylko po dłuższym spacerze. Później podczas wchodzenia po schodach. Potem po wstaniu z fotela.</p>
+<p>Aż pewnego dnia człowiek budzi się rano i pierwszą rzeczą, o której myśli, są własne stawy.</p>
+
+<p>Pojawiają się:</p>
+<ul>
+    <li>poranna sztywność;</li>
+    <li>trzaski i chrupanie;</li>
+    <li>ból podczas wchodzenia po schodach;</li>
+    <li>obrzęk;</li>
+    <li>trudność z wyprostowaniem kolana;</li>
+    <li>sztywność pleców po siedzeniu;</li>
+    <li>konieczność „rozchodzenia się” po przebudzeniu;</li>
+    <li>coraz mniejsza chęć wychodzenia z domu;</li>
+    <li>rezygnowanie ze spacerów, wyjazdów i aktywności.</li>
+</ul>
+
+<p>Najłatwiej powiedzieć: <strong>„Taki wiek.”</strong></p>
+<p>Doktor Wysocki twierdzi jednak, że wiek sam w sobie nie wyjaśnia wszystkiego. Przecież każdy zna osoby po 65 czy 70 roku życia, które nadal pracują w ogrodzie, podróżują, tańczą na weselach i wchodzą po schodach bez zastanawiania się nad każdym krokiem.</p>
+<p>Dlaczego jedna osoba w tym wieku praktycznie nie myśli o kolanach, a druga boi się zwykłego wyjścia do sklepu?</p>
+<p>Według teorii przedstawionej przez doktora odpowiedzi należy szukać wewnątrz samego stawu.</p>
+
+<hr class="article-hr">
+
+<h2>HISTORIA AGATY: „ROBIŁAM WSZYSTKO, CO KAZALI LEKARZE. A MIMO TO BYŁO CORAZ GORZEJ”</h2>
+
+<p>Jedną z najważniejszych historii przedstawionych przez doktora Wysockiego jest przypadek Agaty, 61-letniej prezenterki i dziennikarki.</p>
+<p>Na ekranie zawsze wyglądała na energiczną. Uśmiechnięta. Aktywna. W ciągłym ruchu.</p>
+<p>Ale — jak opowiada w materiale — za kamerami sytuacja wyglądała zupełnie inaczej.</p>
+<blockquote>„W domu czasami nie mogłam normalnie podnieść się z krzesła. Budziłam się w nocy przez ból. Zaczęłam zastanawiać się, czy dam radę dojść pieszo do sklepu. Najgorsze było to, że robiłam praktycznie wszystko, co mi zalecano. A mimo to problem wracał.”</blockquote>
+<p>Ból zaczął się niewinnie. Najpierw po długim chodzeniu. Potem na schodach. Później rano. Z czasem zaczął wpływać na całe jej życie.</p>
+<p><strong>Wtedy rozpoczęła się długa seria prób.</strong></p>
+
+<h3>PIERWSZA PRÓBA: TABLETKI PRZECIWZAPALNE</h3>
+<p>Pierwszy lekarz zalecił leki przeciwzapalne oraz masaże. Początkowo efekt wydawał się bardzo dobry. Ból się zmniejszył. Agata mogła się swobodniej poruszać.</p>
+<p>Pomyślała: <strong>„Wreszcie znaleźliśmy rozwiązanie.”</strong></p>
+<p>Ale po kilku tygodniach, kiedy przestała przyjmować preparaty, problem wrócił. Do tego pojawiły się dolegliwości żołądkowe. Znów znalazła się w punkcie wyjścia.</p>
+
+<h3>DRUGA PRÓBA: FIZJOTERAPIA</h3>
+<p>Następnie rozpoczęła długi cykl fizjoterapii. Masaże. Ćwiczenia. Regularne zabiegi.</p>
+<p>Podczas terapii rzeczywiście czuła poprawę. Ale około tygodnia po zakończeniu cyklu kolana znów zaczęły boleć.</p>
+<blockquote>„Miałam wrażenie, że kręcę się w kółko. Poświęcam czas, pieniądze i energię, jest trochę lepiej, a potem wszystko zaczyna się od początku.”</blockquote>
+
+<h3>TRZECIA PRÓBA: ZASTRZYKI DO STAWU</h3>
+<p>Kolejnym etapem były iniekcje kwasu hialuronowego. Tym razem rezultat utrzymał się znacznie dłużej. Przez kilka miesięcy Agata niemal zapomniała o problemie.</p>
+<p>Ale później efekt zaczął słabnąć. W ciągu kolejnych tygodni ból ponownie wrócił.</p>
+<p>I właśnie wtedy zadała sobie pytanie:</p>
+<blockquote><strong>„DLACZEGO KAŻDE LECZENIE POMAGA TYLKO DO MOMENTU, W KTÓRYM PRZESTAJĘ JE STOSOWAĆ?”</strong></blockquote>
+<p>To pytanie doprowadziło ją do doktora Wysockiego.</p>
+
+<hr class="article-hr">
+
+<h2>BÓL JEST JAK ALARM PRZECIWPOŻAROWY</h2>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🖼️</div>
+    <div class="image-placeholder-desc">
+        <b>Zdjęcie 3 — metafora alarmu</b>
+        Zbliżenie na białą czujkę dymu na suficie, dłoń sięga do niej, by wyjąć baterię. W tle lekko zamazany pokój. Chłodne, kontrastowe światło. Prosty, symboliczny kadr — ilustruje myśl „wyłączyłeś alarm, ale pożar nadal się pali”.
+    </div>
+</div>
+
+<p>Doktor tłumaczy to za pomocą prostego porównania.</p>
+<p>Wyobraź sobie, że w domu wybucha pożar. Uruchamia się alarm. Dźwięk jest nieznośny.</p>
+<p>Możesz wyjąć baterię z alarmu. Zapanuje cisza. Ale czy pożar zniknął?</p>
+<p><strong>Nie.</strong> Po prostu przestałeś słyszeć ostrzeżenie.</p>
+<p>Według doktora podobnie należy patrzeć na ból. <strong>Ból jest sygnałem.</strong> Środek przeciwbólowy może zmniejszyć ten sygnał, ale samo wyciszenie dolegliwości nie oznacza automatycznie odbudowy uszkodzonej tkanki.</p>
+
+<h3>A CO Z FIZJOTERAPIĄ?</h3>
+<p>Doktor używa kolejnego porównania. Chrząstkę można wyobrazić sobie jak wyspę.</p>
+<p>Fizjoterapia może poprawić funkcjonowanie mięśni wokół niej, zmniejszyć napięcie i poprawić ruchomość. To tak, jakby uporządkować całe wybrzeże wokół wyspy.</p>
+<p>Problem w tym, że — zgodnie z wyjaśnieniem doktora — najważniejsze pytanie brzmi: <strong>co dzieje się w samym stawie?</strong></p>
+<p>Dlatego część pacjentów odczuwa poprawę w czasie regularnych zabiegów, a po zakończeniu cyklu stopniowo wraca do wcześniejszych dolegliwości.</p>
+
+<h2>DLACZEGO ZASTRZYK POTRAFI DZIAŁAĆ, A PÓŹNIEJ EFEKT ZNIKA?</h2>
+
+<p>Zdrowy staw zawiera płyn maziowy. Można porównać go do naturalnego środka smarującego. Pomaga powierzchniom stawowym poruszać się względem siebie i uczestniczy w odżywianiu chrząstki.</p>
+<p>Dlatego dostarczenie kwasu hialuronowego do stawu może rzeczywiście poprawić jego funkcjonowanie.</p>
+<p>Tyle że — według doktora — wciąż pozostaje inne pytanie:</p>
+<blockquote><strong>DLACZEGO ORGANIZM SAM NIE UTRZYMUJE PRAWIDŁOWEGO ŚRODOWISKA W STAWIE?</strong></blockquote>
+<p>I tutaj zaczyna się najbardziej kontrowersyjna część jego teorii.</p>
+
+<hr class="article-hr">
+
+<h2>SUBSTANCJA, KTÓRĄ DOKTOR WYSOCKI UWAŻA ZA JEDEN Z KLUCZOWYCH ELEMENTÓW PROBLEMU</h2>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🖼️</div>
+    <div class="image-placeholder-desc">
+        <b>Zdjęcie 4 — schemat stawu</b>
+        Prosty, czysty schemat anatomiczny kolana w przekroju: chrząstka, płyn maziowy, błona maziowa — styl ilustracji medycznej (linie + delikatny kolor), bez zbędnych podpisów tekstowych, czytelny na małym ekranie telefonu.
+    </div>
+</div>
+
+<p>Doktor wskazuje na substancję, którą w swojej teorii nazywa <strong>chondrolizyną</strong> — związkiem, który jego zdaniem gromadzi się w tkance stawowej wraz z wiekiem.</p>
+<p>Według przedstawionej w materiale teorii jej nagromadzenie ma zakłócać prawidłowe funkcjonowanie komórek błony maziowej.</p>
+<p>Kiedy produkcja płynu spada: chrząstka otrzymuje gorsze warunki → zwiększa się tarcie → pojawia się stan zapalny → człowiek zaczyna odczuwać ból, sztywność i ograniczenie ruchu.</p>
+<p>Dlatego, jak przekonuje doktor, samo dostarczenie środka przeciwbólowego albo czasowe zwiększenie ilości „smarowania” nie rozwiązuje całego problemu.</p>
+<p>Porównuje to do dziurawej rury. Można stale dolewać do niej wodę. Ale dopóki nie zajmiemy się miejscem, przez które woda ucieka, problem będzie powracał.</p>
+<p><strong>I właśnie tutaj pojawia się „impuls żelatynowy”.</strong></p>
+
+<h2>„ALE PRZECIEŻ JADŁEM ŻELATYNĘ PRZEZ CAŁE ŻYCIE. DLACZEGO MOJE KOLANA NADAL BOLĄ?”</h2>
+
+<p>To jedno z pierwszych pytań, jakie — według doktora — zadawali mu pacjenci.</p>
+<p>Odpowiedź jest prosta: <strong>zwykła żelatyna nie jest tym samym, co opracowana przez niego kombinacja.</strong></p>
+<p>„Impuls żelatynowy” opiera się na kilku elementach działających razem.</p>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🖼️</div>
+    <div class="image-placeholder-desc">
+        <b>Zdjęcie 5 — składniki</b>
+        Widok z góry (flat lay): miska z żelatyną w proszku, świeży korzeń imbiru pokrojony w plasterki, korzeń i proszek kurkumy, na jasnym drewnianym blacie. Naturalne światło dzienne, styl zbliżony do zdjęć kulinarnych, nie apteczny.
+    </div>
+</div>
+
+<h3>1. ŻELATYNA — ŹRÓDŁO GLICYNY I PROLINY</h3>
+<p>Żelatyna zawiera aminokwasy będące składnikami tkanki łącznej. Szczególne znaczenie doktor przypisuje glicynie i prolinie. To właśnie one stanowią pierwszy element opracowanej formuły.</p>
+
+<h3>2. SKONCENTROWANY EKSTRAKT Z IMBIRU — GINGEROL</h3>
+<p>Drugim elementem jest gingerol. Doktor opisuje go jako wzmacniacz całego procesu oraz składnik wspierający kontrolę reakcji zapalnej.</p>
+
+<h3>3. KURKUMA + PIPERYNA</h3>
+<p>Trzecim filarem jest kurkumina. Problem polega na tym, że zwykła kurkuma charakteryzuje się słabą biodostępnością. Dlatego w formule połączono ją z piperyną. Według doktora ma to umożliwić znacznie lepsze wykorzystanie składników przez organizm.</p>
+
+<hr class="article-hr">
+
+<h2>CZTERY FAZY „IMPULSU ŻELATYNOWEGO”</h2>
+<p>Doktor Wysocki podzielił działanie opracowanego przez siebie podejścia na cztery etapy.</p>
+
+<h3>FAZA 1 — NEUTRALIZACJA</h3>
+<p>Glicyna i prolina stanowią podstawę pierwszego etapu. Celem jest stworzenie warunków, w których staw przestaje być nieustannie narażony na proces opisany przez doktora jako działanie nagromadzonej chondrolizyny.</p>
+
+<h3>FAZA 2 — OCZYSZCZANIE I WYCISZENIE</h3>
+<p>Tutaj kluczową rolę ma odgrywać skoncentrowany gingerol. Według koncepcji doktora wzmacnia pierwszy etap i jednocześnie pomaga ograniczać reakcję zapalną.</p>
+
+<h3>FAZA 3 — OCHRONA</h3>
+<p>Kurkumina w połączeniu z piperyną ma wspierać utrzymanie środowiska sprzyjającego prawidłowemu funkcjonowaniu tkanki stawowej.</p>
+
+<h3>FAZA 4 — REGENERACJA</h3>
+<p>Celem końcowym nie jest — według doktora — codzienne „wyłączanie” bólu. Chodzi o stworzenie takich warunków, aby własne mechanizmy organizmu mogły ponownie funkcjonować samodzielnie.</p>
+
+<hr class="article-hr">
+
+<h2>PIERWSZE ZMIANY PACJENCI OPISYWALI JUŻ W PIERWSZYCH DWÓCH TYGODNIACH</h2>
+
+<p>Według relacji zebranych przez doktora pierwsze zmiany pacjenci najczęściej opisywali w następujący sposób:</p>
+<p><strong>Około 3. dnia:</strong> poranna sztywność zaczynała trwać krócej.</p>
+<p><strong>Około 7. dnia:</strong> ruch, który wcześniej automatycznie kojarzył się z bólem, stawał się łatwiejszy.</p>
+<p><strong>Około 14. dnia:</strong> niektórzy zauważali, że po raz pierwszy od dawna przez większą część dnia w ogóle nie myśleli o swoich kolanach czy plecach.</p>
+<blockquote>„Weszłam po schodach i dopiero na górze uświadomiłam sobie, że ani razu nie pomyślałam o kolanach.”</blockquote>
+
+<h2>DLACZEGO NIE WYSTARCZY KUPIĆ ŻELATYNY, IMBIRU I KURKUMY W SKLEPIE?</h2>
+<p>W tym miejscu doktor Wysocki ostrzega przed najprostszym wnioskiem: <strong>„Skoro znam składniki, zrobię to sam.”</strong></p>
+<p>Jak twierdzi, właśnie tutaj pojawia się problem. W opracowanym przez niego podejściu znaczenie ma mieć:</p>
+<ul>
+    <li>czystość surowca;</li>
+    <li>stężenie substancji aktywnych;</li>
+    <li>standaryzacja ekstraktów;</li>
+    <li>odpowiednia forma kurkuminy;</li>
+    <li>dodatek piperyny;</li>
+    <li>dokładne proporcje poszczególnych składników.</li>
+</ul>
+<p>Różnica pomiędzy łyżeczką przyprawy z kuchni a standaryzowanym ekstraktem może być ogromna. Dlatego rozpoczęła się współpraca z laboratorium.</p>
+
+<hr class="article-hr">
+
+<h2>TAK POWSTAŁA ARTROVIA</h2>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🖼️</div>
+    <div class="image-placeholder-desc">
+        <b>Zdjęcie 6 — packshot produktu</b>
+        Słoiczek/tubka kremu z etykietą „Artrovia”, ustawiony na jasnym tle z delikatnym cieniem, lekko pod kątem 3/4. Czyste, produktowe światło studyjne, bez dodatkowych rekwizytów.
+    </div>
+</div>
+
+<p>Po miesiącach pracy nad stabilnością i proporcjami składników opracowano skoncentrowaną formułę do stosowania miejscowego. Nazwano ją <strong>ARTROVIA</strong>.</p>
+<p>Zamiast przygotowywania mieszaniny każdego dnia składniki zostały zamknięte w gotowej formule kremowej, którą nakłada się bezpośrednio w okolicy problematycznego stawu.</p>
+<p>Według informacji przedstawionych przez twórców preparatu formuła zawiera:</p>
+<ul>
+    <li>żelatynę będącą źródłem glicyny i proliny;</li>
+    <li>skoncentrowany ekstrakt gingerolu;</li>
+    <li>kurkuminę;</li>
+    <li>piperynę;</li>
+    <li>dodatkowy składnik zastosowany w finalnej wersji formuły — NAD+.</li>
+</ul>
+<p><strong>STOSOWANIE MA BYĆ PROSTE:</strong> nałożyć preparat na wybrany obszar raz dziennie. Bez przygotowywania domowych mieszanek. Bez odmierzania składników z dokładnością do miligrama.</p>
+
+<hr class="article-hr">
+
+<h2>„10. DNIA ZŁAPAŁAM SIĘ NA TYM, ŻE IDĘ DO KUCHNI I W OGÓLE NIE MYŚLĘ O BÓLU”</h2>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🖼️</div>
+    <div class="image-placeholder-desc">
+        <b>Zdjęcie 7 — świadectwo, kuchnia</b>
+        Kobieta ok. 60 lat w domowej kuchni, naturalny uśmiech, zdjęcie w stylu selfie trzymane na wyciągniętą rękę lub zrobione przez kogoś bliskiego. Ciepłe światło dzienne, brak pozowania, lekka ziarnistość telefonu — nie stockowe.
+    </div>
+</div>
+
+<p>Agata wspomina:</p>
+<blockquote>„Kiedy doktor opowiedział mi o tym po raz pierwszy, zaśmiałam się. Po wszystkim, czego wcześniej próbowałam, miałam uwierzyć w formułę opartą na żelatynie? Ale nie miałam już wiele do stracenia.<br><br>
+Nakładałam ją raz dziennie. Któregoś ranka, około dziesiątego dnia, wstałam z łóżka i poszłam do kuchni. W połowie korytarza zatrzymałam się.<br><br>
+Dotarło do mnie, że po prostu idę. Nie analizuję każdego kroku. Nie czekam na ból. Nie szukam ściany, żeby się podeprzeć.<br><br>
+Po dwóch tygodniach zaczęłam normalniej chodzić. Wyjęłam nawet buty na obcasie, których nie nosiłam od trzech lat.<br><br>
+Najważniejsze było jednak coś innego. Przestałam organizować całe życie wokół własnego bólu.”</blockquote>
+
+<h3>„BAŁAM SIĘ JUŻ NIE WYSTĘPU, ALE TEGO, CZY WYTRZYMAM NA NOGACH”</h3>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🖼️</div>
+    <div class="image-placeholder-desc">
+        <b>Zdjęcie 8 — świadectwo, ruch</b>
+        Kobieta w średnim wieku w swobodnym, pewnym ruchu — np. wychodzi zza kulis lub idzie energicznym krokiem korytarzem. Zdjęcie ma sugerować powrót do aktywności zawodowej wymagającej ruchu, bez wskazywania konkretnej znanej osoby.
+    </div>
+</div>
+
+<p>Kolejna kobieta opowiada:</p>
+<blockquote>„Po wielu latach pracy i ciągłego ruchu moje kolana i plecy zaczęły dawać o sobie znać. Doszło do momentu, w którym przed występem zastanawiałam się nie nad tym, czy wszystko pójdzie dobrze, lecz czy wytrzymam na nogach.<br><br>
+Po dwóch tygodniach stosowania formuły różnica była dla mnie ogromna. Znowu mogłam poruszać się bez tego ciągłego strachu przed następnym krokiem.”</blockquote>
+
+<h3>„ZNÓW WCHODZĘ PO SCHODACH NORMALNIE — NIE BOKIEM”</h3>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🖼️</div>
+    <div class="image-placeholder-desc">
+        <b>Zdjęcie 9 — buty z szafy</b>
+        Zbliżenie na dłonie wyciągające z szafy parę butów na obcasie/kozaków, które wyraźnie „stały nieużywane” (kurz na pudełku, wstążka). Ciepłe, domowe światło. Prosty, emocjonalny kadr przedmiotowy.
+    </div>
+</div>
+
+<p>Inna użytkowniczka mówi:</p>
+<blockquote>„Wcześniej wchodziłam po schodach bokiem, mocno trzymając się poręczy. Po około tygodniu zauważyłam, że zaczynam stawiać nogi normalnie. Dziesiątego dnia wyjęłam z szafy buty, których nie nosiłam od siedmiu lat.<br><br>
+Dla kogoś może to być drobiazg. Dla mnie oznaczało odzyskanie części życia.”</blockquote>
+
+<hr class="article-hr">
+
+<h2>DLA KOGO STWORZONO ARTROVIĘ?</h2>
+<p>Według twórców formuła została przygotowana przede wszystkim dla osób, które:</p>
+<ul>
+    <li>budzą się ze sztywnością stawów;</li>
+    <li>odczuwają ból kolan podczas chodzenia lub wchodzenia po schodach;</li>
+    <li>mają problemy z biodrami;</li>
+    <li>skarżą się na sztywność pleców;</li>
+    <li>słyszą trzaski i chrupanie;</li>
+    <li>odczuwają obrzęk;</li>
+    <li>próbowały już wielu preparatów;</li>
+    <li>regularnie wracają do leków przeciwbólowych;</li>
+    <li>przechodziły fizjoterapię, ale problem powracał;</li>
+    <li>korzystały z zastrzyków i nie chcą być od nich zależne;</li>
+    <li>zaczynają coraz częściej rezygnować z ruchu ze strachu przed bólem.</li>
+</ul>
+<p>Najważniejszym kryterium nie jest — według autora formuły — sam wiek. Chodzi o to, czy ból i ograniczenie ruchu zaczęły już wpływać na codzienne życie.</p>
+
+<h2>NIE CHODZI TYLKO O KOLANA. CHODZI O ŻYCIE, KTÓRE STOPNIOWO ROBI SIĘ CORAZ MNIEJSZE</h2>
+
+<p>Na początku człowiek rezygnuje z jednego spaceru. Potem z wyjazdu. Potem mówi rodzinie: <strong>„Idźcie beze mnie.”</strong></p>
+<p>Przestaje chodzić do lasu. Nie tańczy na weselu. Nie siada na podłodze z wnukiem, ponieważ boi się, że później nie będzie w stanie wstać.</p>
+<p>W sklepie zamiast patrzeć na ubrania, patrzy, czy jest gdzie usiąść. Na wakacjach zamiast zastanawiać się, co zobaczyć, liczy, ile trzeba będzie przejść.</p>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🖼️</div>
+    <div class="image-placeholder-desc">
+        <b>Zdjęcie 10 — pusta ławka</b>
+        Pusta ławka parkowa w tle, na dalszym planie rozmyte sylwetki ludzi spacerujących i biegających. Pochmurne, chłodne światło. Metafora osoby, która patrzy, jak inni są aktywni, siedząc z boku.
+    </div>
+</div>
+
+<p><strong>I właśnie to doktor Wysocki określa jako prawdziwą cenę przewlekłego bólu.</strong> Nie tylko pieniądze wydawane na kolejne środki. Ale utracona swoboda.</p>
+
+<hr class="article-hr">
+
+<h2>MASZ TRZY MOŻLIWOŚCI</h2>
+
+<h3>DROGA 1 — NICZEGO NIE ZMIENIAĆ</h3>
+<p>Możesz funkcjonować dokładnie tak jak do tej pory. Rano sprawdzać, jak bardzo boli dzisiaj. Planować trasę tak, aby było jak najmniej schodów. Odmawiać wyjazdów. Patrzeć z ławki, jak inni są aktywni. I mieć nadzieję, że problem sam się zatrzyma.</p>
+
+<h3>DROGA 2 — POWTARZAĆ TO, CO ROBIŁEŚ DOTYCHCZAS</h3>
+<p>Kolejne tabletki. Kolejne zabiegi. Kolejne cykle. Kolejne zastrzyki.</p>
+<p>Jeśli jesteś zadowolony z efektu — możesz oczywiście pozostać przy obecnym postępowaniu. Ale jeśli czytasz ten tekst, prawdopodobnie szukasz czegoś właśnie dlatego, że dotychczasowe rozwiązania nie dały Ci oczekiwanego rezultatu.</p>
+
+<h3>DROGA 3 — SPRÓBOWAĆ INNEGO PODEJŚCIA</h3>
+<p>Podejścia, którego celem — według twórców Artrovii — nie jest jedynie chwilowe wyciszenie sygnału bólowego, ale oddziaływanie na proces opisany przez doktora Wysockiego jako źródło problemu.</p>
+<p>Decyzja należy do Ciebie.</p>
+
+<hr class="article-hr">
+
+<h2>DLACZEGO ARTROVII NIE ZNAJDZIESZ W ZWYKŁEJ APTECE?</h2>
+<p>Doktor Wysocki twierdzi, że początkowo rozważano klasyczną dystrybucję apteczną. Ostatecznie wybrano sprzedaż bezpośrednią. Powód miał być prosty: uniknąć dodatkowych marż pośredników i zachować możliwie niską cenę.</p>
+<p>Według informacji przedstawionych w materiale Artrovia jest obecnie dostępna dla uczestników specjalnego programu w cenie <strong>147 zł</strong>. Bez przedpłaty. Bez podawania numeru karty.</p>
+<p>Aby zgłosić chęć zamówienia, wystarczy pozostawić imię oraz numer telefonu. Konsultant kontaktuje się telefonicznie, odpowiada na pytania i potwierdza zamówienie.</p>
+
+<h3>PEŁNA GWARANCJA</h3>
+<p>Twórcy programu deklarują również gwarancję zwrotu pieniędzy. Jeżeli podczas kuracji użytkownik nie odczuje oczekiwanej poprawy, może skontaktować się z obsługą i poprosić o zwrot zgodnie z zasadami programu.</p>
+
+<h3>WAŻNA INFORMACJA DOTYCZĄCA DOSTĘPNOŚCI</h3>
+<p>Producent deklaruje, że liczba opakowań przeznaczonych do sprzedaży w promocyjnej cenie jest ograniczona. W momencie publikacji materiału dla programu zarezerwowano <strong>ostatnie 100 opakowań Artrovii w cenie 147 zł</strong>. Kolejna partia może być dostępna później i na innych warunkach cenowych.</p>
+
+<h2>JAK OTRZYMAĆ ARTROVIĘ?</h2>
+<p><strong>KROK 1</strong> — Wypełnij oficjalny formularz poniżej. Podaj swoje imię i aktualny numer telefonu.</p>
+<p><strong>KROK 2</strong> — Poczekaj na telefon konsultanta. Specjalista potwierdzi dane, odpowie na pytania i ustali szczegóły dostawy.</p>
+<p><strong>KROK 3</strong> — Odbierz przesyłkę. Dostawa realizowana jest na terenie całej Polski. Nie jest wymagana przedpłata.</p>
+
+<hr class="article-hr">
+
+<h2>POMYŚL, JAK MOŻE WYGLĄDAĆ ZWYKŁY DZIEŃ, JEŚLI STAWY PRZESTANĄ DECYDOWAĆ ZA CIEBIE</h2>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🖼️</div>
+    <div class="image-placeholder-desc">
+        <b>Zdjęcie 11 — finałowy, lifestyle</b>
+        Starsza para spaceruje razem alejką parkową, trzymając się pod ramię, oboje się śmieją, naturalny, niepozowany kadr z dużą ilością światła. Radosny, ciepły klimat — kontrast do zdjęcia okładkowego.
+    </div>
+</div>
+
+<p>Wstać rano i od razu pójść do kuchni. Wejść po schodach bez zatrzymywania się przy poręczy. Wyjść do ogrodu.</p>
+<p>Pojechać na wakacje bez sprawdzania, ile kilometrów będzie trzeba przejść. Usiąść obok wnuka na podłodze. Samodzielnie wstać. Pójść na spacer tylko dlatego, że masz na niego ochotę.</p>
+<p>Założyć ubrania i buty, które Ci się podobają. Zatańczyć na weselu. Pójść do lasu.</p>
+<p>Nie zastanawiać się rano: <strong>„Jak bardzo będzie bolało dzisiaj?”</strong></p>
+<p>To właśnie tę zmianę osoby opisane w materiale uznawały za najważniejszą. Nie samo „mniej boli”.</p>
+<p style="font-size:20px; font-weight:900; text-align:center; margin:16px 0;">ODZYSKANIE SWOBODY.</p>
+<p>Jeżeli chcesz sprawdzić, czy Artrovia jest jeszcze dostępna w cenie programu, wypełnij formularz poniżej.</p>
+
+        </div>
+    </div>
+
+    <!-- ==== ФОРМА ЗАКАЗА ==== -->
+    <div class="order-container" id="order-form-container">
+        <div class="medical-header">🏥 OFICJALNY FORMULARZ ZAMÓWIENIA</div>
+        <div class="medical-body">
+
+            <div class="stock-warning-box">
+                <span class="warning-word">UWAGA!</span> Pozostało tylko <b id="live-stock-count">36</b> dostępnych paczek
+            </div>
+
+            <div class="clean-discount-title">Cena w ramach programu ważna do wyczerpania puli:</div>
+
+            <div class="clean-timer">
+                <div class="ct-block"><div class="ct-val" id="hour-val">00</div><div class="ct-lbl">GODZ.</div></div>
+                <div class="ct-sep">:</div>
+                <div class="ct-block"><div class="ct-val" id="min-val">29</div><div class="ct-lbl">MIN.</div></div>
+                <div class="ct-sep">:</div>
+                <div class="ct-block"><div class="ct-val" id="sec-val">59</div><div class="ct-lbl">SEK.</div></div>
+            </div>
+
+            <div class="price-container">
+                <div class="price-col"><div class="price-lbl">Poprzednia cena:</div><div class="price-old">294 zł</div></div>
+                <div class="price-col"><div class="price-lbl">Cena programu:</div><div class="price-new">147 zł</div></div>
+            </div>
+
+            <form class="order-form" id="order_form">
+                <div class="form-group"><label>👤 Twoje imię:</label>
+                    <input type="text" name="name" placeholder="Np. Jan Kowalski" required></div>
+                <div class="form-group"><label>📱 Numer telefonu:</label>
+                    <input type="tel" name="phone" placeholder="+48 500 000 000" required></div>
+                <button type="submit" class="submit-btn">ZAMAWIAM ZE ZNIŻKĄ</button>
+            </form>
+
+            <div class="trust-benefits">
+                <div class="trust-item"><span>✅</span> Bez przedpłaty i bez podawania karty</div>
+                <div class="trust-item"><span>📦</span> Dostawa na terenie całej Polski</div>
+                <div class="trust-item"><span>🔒</span> Twoje dane są w 100% chronione</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="fb-comments">
+            <div class="fb-comments-title">Komentarze</div>
+
+            <div class="fb-comment">
+                <div class="fb-comment-ava">MS</div>
+                <div class="fb-comment-body">
+                    <div class="fb-comment-bubble">
+                        <div class="fb-comment-name">Michał Szymański</div>
+                        <div class="fb-comment-text">3 lata kolana tak bolały, że rano wstawać z łóżka to była katorga. przeczytałem cały artykuł, choć na początku myślałem że to kolejna bujda. po tygodniu idę po schodach bez tego strachu w kolanie.</div>
+                    </div>
+                    <div class="fb-comment-meta">Lubię to · Odpowiedz · 2 min</div>
+                </div>
+            </div>
+
+            <div class="fb-comment">
+                <div class="fb-comment-ava">TL</div>
+                <div class="fb-comment-body">
+                    <div class="fb-comment-bubble">
+                        <div class="fb-comment-name">Tomasz Lewandowski</div>
+                        <div class="fb-comment-text">hej a u was tez tak jest ze rano pierwsze 20 minut to chodzenie jak po rozbitym szkle?? bo ja już nie wiem czy to wiek czy coś gorszego</div>
+                    </div>
+                    <div class="fb-comment-meta">Lubię to · Odpowiedz · 6 min</div>
+                </div>
+            </div>
+
+            <div class="fb-comment">
+                <div class="fb-comment-ava">MK</div>
+                <div class="fb-comment-body">
+                    <div class="fb-comment-bubble">
+                        <div class="fb-comment-name">Maria Kwiatkowska</div>
+                        <div class="fb-comment-text">proszę przeczytajcie do końca, bo ja prawie zamknęłam po połowie i potem żal że nie doczytałam. tam pod koniec jest cała rozmowa o tym sposobie.</div>
+                    </div>
+                    <div class="fb-comment-meta">Lubię to · Odpowiedz · 11 min</div>
+                </div>
+            </div>
+
+            <div class="fb-comment">
+                <div class="fb-comment-ava">WK</div>
+                <div class="fb-comment-body">
+                    <div class="fb-comment-bubble">
+                        <div class="fb-comment-name">Władysław Kowalczyk</div>
+                        <div class="fb-comment-text">lekarz mi powiedział że to na całe życie i tyle. a tu pan doktor w artykule mówi że można spróbować inaczej. nie wiem komu wierzyć, szczerze mówiąc.</div>
+                    </div>
+                    <div class="fb-comment-meta">Lubię to · Odpowiedz · 18 min</div>
+                </div>
+            </div>
+
+            <div class="fb-comment">
+                <div class="fb-comment-ava">RD</div>
+                <div class="fb-comment-body">
+                    <div class="fb-comment-bubble">
+                        <div class="fb-comment-name">Ryszard Dąbrowski</div>
+                        <div class="fb-comment-text">po 2 tygodniach mogę w końcu usiąść na niskim taborecie bez jęku. drobnostka a jak cieszy.</div>
+                    </div>
+                    <div class="fb-comment-meta">Lubię to · Odpowiedz · 35 min</div>
+                </div>
+            </div>
+
+            <div class="fb-comment">
+                <div class="fb-comment-ava">JL</div>
+                <div class="fb-comment-body">
+                    <div class="fb-comment-bubble">
+                        <div class="fb-comment-name">Jadwiga Lis</div>
+                        <div class="fb-comment-text">ja już nie mam siły na kolejne zastrzyki w kolano. czy komuś też lekarz mówił że to jedyne wyjście??</div>
+                    </div>
+                    <div class="fb-comment-meta">Lubię to · Odpowiedz · 41 min</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-copy">Meta © 2026</div>
+    </footer>
+</div>
+
+<script>
+// Обратный отсчёт (демонстрационный, 30 минут)
+(function () {
+    var end = Date.now() + 30 * 60 * 1000;
+    var h = document.getElementById('hour-val'), m = document.getElementById('min-val'), s = document.getElementById('sec-val');
+    function tick() {
+        var left = Math.max(0, end - Date.now());
+        var hh = Math.floor(left / 3600000);
+        var mm = Math.floor((left % 3600000) / 60000);
+        var ss = Math.floor((left % 60000) / 1000);
+        h.textContent = String(hh).padStart(2, '0');
+        m.textContent = String(mm).padStart(2, '0');
+        s.textContent = String(ss).padStart(2, '0');
+        if (left > 0) requestAnimationFrame(tick);
+    }
+    tick();
+})();
+
+// Форма — заглушка отправки
+document.getElementById('order_form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('order-form-container').scrollIntoView({behavior:'smooth'});
+});
+</script>
+
+</body>
+</html>
