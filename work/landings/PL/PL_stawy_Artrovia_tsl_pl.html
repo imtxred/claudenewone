@@ -1,0 +1,4489 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark" data-theme-preference="system" style="--fb-topbar-h: 57px;">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Wpis na zywo | Facebook</title>
+
+
+    <link rel="preload" as="image" href="https://track.offene-herzen.life/caching/landings/PLsimbioz/poster.jpg">
+
+
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+
+            -webkit-tap-highlight-color: transparent;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+
+        body {
+
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+            background-color: #f0f2f5;
+
+            color: #1c1e21;
+
+            line-height: 1.4;
+
+        }
+
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 480px;
+
+            margin: 0 auto;
+
+            background: #f0f2f5;
+
+            min-height: 100vh;
+
+            padding-bottom: 20px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            position: relative;
+
+        }
+
+
+
+        .fb-topbar {
+
+            background: #fff;
+
+            padding: 8px 10px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 8px;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            border-bottom: 1px solid #dadde1;
+
+        }
+
+
+
+        .fb-topbar-side {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+        }
+
+
+
+        .fb-brand {
+
+            width: 40px;
+
+            height: 40px;
+
+            display: block;
+
+            flex-shrink: 0;
+
+        }
+
+
+
+        .fb-topbar a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+        }
+
+        .fb-icon-btn {
+
+            width: 36px;
+
+            height: 36px;
+
+            border-radius: 50%;
+
+            background: #e4e6eb;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            flex-shrink: 0;
+
+            cursor: pointer;
+
+        }
+
+        .fb-brand {
+            cursor: pointer;
+        }
+
+
+
+        .fb-icon-btn svg {
+
+            width: 20px;
+
+            height: 20px;
+
+            fill: #050505;
+
+            display: block;
+
+        }
+
+
+
+        .fb-icon-badge {
+
+            position: absolute;
+
+            top: -3px;
+
+            right: -5px;
+
+            background: #f02849;
+
+            color: #fff;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            line-height: 1;
+
+            padding: 3px 5px;
+
+            border-radius: 10px;
+
+            border: 2px solid #fff;
+
+        }
+
+
+
+        .fb-post-head {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            padding: 12px 12px 0;
+
+        }
+
+
+
+        .fb-post-ava {
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            background: #e4e6eb;
+
+            flex-shrink: 0;
+
+        }
+
+
+
+        .fb-post-meta {
+
+            flex: 1;
+
+            min-width: 0;
+
+            padding-top: 1px;
+
+        }
+
+
+
+        .fb-post-author {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            color: #050505;
+
+            line-height: 1.2;
+
+        }
+
+
+
+        .fb-verified {
+
+            width: 15px;
+
+            height: 15px;
+
+            flex-shrink: 0;
+
+            display: block;
+
+            object-fit: contain;
+
+        }
+
+
+
+        .fb-post-sub {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+            font-size: 12px;
+
+            color: #65676b;
+
+            margin-top: 2px;
+
+        }
+
+
+
+        .fb-post-sub svg {
+
+            width: 12px;
+
+            height: 12px;
+
+            fill: #65676b;
+
+            display: block;
+
+        }
+
+
+
+        .fb-post-more svg {
+
+            width: 20px;
+
+            height: 20px;
+
+            fill: #65676b;
+
+            display: block;
+
+            flex-shrink: 0;
+
+        }
+
+
+
+        .fb-post-text {
+
+            padding: 10px 12px 12px;
+
+            font-size: 24px;
+
+            line-height: 1.28;
+
+            font-weight: 800;
+
+            color: #050505;
+
+            text-align: left;
+
+        }
+
+
+
+        .fb-post-text .hl {
+
+            color: #d90000;
+
+            font-weight: 800;
+
+        }
+
+
+
+        .fb-post {
+
+            background: #fff;
+
+            border-top: 1px solid #dadde1;
+
+            border-bottom: 1px solid #dadde1;
+
+            margin: 8px 0;
+
+        }
+
+
+
+        .fb-post-media {
+
+            position: relative;
+
+            width: 100%;
+
+            padding-top: 56.25%;
+
+            background: #000;
+
+        }
+
+
+
+        .fb-post-head-only {
+
+            border-bottom: none;
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        .fb-post-bottom {
+
+            border-top: none;
+
+            margin-top: 0;
+
+            padding-top: 0;
+
+        }
+
+
+
+
+
+
+        body.noscroll {
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        #container_video {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            background: #111;
+            z-index: 2;
+        }
+
+        #container_video.fullscreen {
+            background: #000;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10000;
+        }
+
+
+
+        .fb-post-stats {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            padding: 10px 12px;
+
+            font-size: 13px;
+
+            color: #65676b;
+
+        }
+
+
+
+        .fb-post-stats .fb-react-icons {
+
+            margin-right: 2px;
+
+        }
+
+
+
+        .fb-stats-total {
+
+            font-size: 15px;
+
+            color: #65676b;
+
+        }
+
+
+
+        .fb-stats-right {
+
+            margin-left: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 15px;
+
+        }
+
+
+
+        .fb-stats-right span {
+
+            text-decoration: underline;
+
+            text-underline-offset: 2px;
+
+        }
+
+
+
+        .fb-post-actions {
+
+            display: flex;
+
+            align-items: stretch;
+
+            border-top: 1px solid #ced0d4;
+
+            margin: 0 12px;
+
+            padding: 4px 0 6px;
+
+        }
+
+
+
+        .fb-action {
+
+            flex: 1;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 8px 0;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            color: #65676b;
+
+            border-radius: 6px;
+
+        }
+
+
+
+        .fb-action svg {
+
+            width: 18px;
+
+            height: 18px;
+
+            fill: none;
+
+            stroke: #65676b;
+
+            stroke-width: 1.6;
+
+            stroke-linecap: round;
+
+            stroke-linejoin: round;
+
+            display: block;
+
+        }
+
+
+
+        #container_video video,
+        #video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+            background: #000;
+            pointer-events: none;
+        }
+
+        #container_video.fullscreen #video {
+            max-width: none;
+        }
+
+
+
+        .live-stats {
+
+            position: absolute;
+
+            top: 8px;
+
+            left: 8px;
+
+            display: flex;
+
+            gap: 6px;
+
+            z-index: 20;
+
+        }
+
+
+
+        .badge-live {
+
+            background: #f02849;
+
+            color: #fff;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            padding: 3px 6px;
+
+            border-radius: 4px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.3px;
+
+            animation: pulse-live 1.5s infinite;
+
+        }
+
+
+
+        .badge-viewers {
+
+            background: rgba(0, 0, 0, 0.55);
+
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            padding: 3px 8px 3px 6px;
+
+            border-radius: 4px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+        }
+
+
+
+        .badge-eye {
+
+            width: 14px;
+
+            height: 14px;
+
+            flex-shrink: 0;
+
+            fill: none;
+
+            stroke: #fff;
+
+            stroke-width: 2;
+
+            stroke-linecap: round;
+
+            stroke-linejoin: round;
+
+            opacity: 0.95;
+
+        }
+
+
+
+        #open-video,
+        #popup,
+        #play {
+            display: none;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            text-align: center;
+            z-index: 2;
+            height: 150px;
+        }
+
+        @media screen and (max-width: 500px) {
+            #open-video {
+                height: auto;
+                min-height: 90px;
+            }
+        }
+
+        #play {
+            display: block;
+        }
+
+        #play h4:first-child {
+            margin-bottom: 70px;
+        }
+
+        #container_video h2,
+        #container_video h4 {
+            color: #fff;
+            font-weight: 800;
+            line-height: 1.25;
+        }
+
+        #container_video h4 {
+            font-size: 15px;
+        }
+
+        #open-video h4:first-child,
+        #popup h2:first-child {
+            margin-bottom: 6px;
+        }
+
+        #container_video h2 {
+            font-size: 18px;
+        }
+
+        #open-video > div,
+        #popup > div,
+        #play > div {
+            position: relative;
+            background-color: rgba(0, 130, 0, 0.92);
+            padding: 10px 16px;
+            margin: 0 auto;
+            width: 30%;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 200, 0, 0.55);
+        }
+
+        #play > div {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M3 10v4h4l5 5V5L7 10H3zm13.5 2c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center 72px;
+            background-size: 52px;
+        }
+
+        #popup > div {
+            width: 40%;
+            background-color: rgba(217, 0, 0, 0.92);
+            box-shadow: 0 0 20px rgba(217, 0, 0, 0.45);
+        }
+
+        @media (max-width: 600px) {
+            #popup > div,
+            #play > div {
+                width: 80%;
+            }
+
+            #open-video > div {
+                width: 70%;
+            }
+        }
+
+        #close {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 10001;
+        }
+
+        #close img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        #container_video.fullscreen #close {
+            filter: invert(1);
+        }
+
+        #video-overlay {
+            display: none;
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        #container_video.fullscreen #video-overlay {
+            display: block;
+        }
+
+        .order-container {
+
+            display: none;
+
+            background: #fff;
+
+            text-align: left;
+
+            border: 1px solid #c8d4e3;
+
+            border-radius: 8px;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+            margin: 20px 15px;
+
+            overflow: hidden;
+
+            scroll-margin-top: calc(var(--fb-topbar-h, 57px) + 12px);
+
+        }
+
+
+
+        .medical-header {
+
+            background: #0056b3;
+
+            color: #fff;
+
+            padding: 14px 15px;
+
+            text-align: center;
+
+            font-weight: 900;
+
+            font-size: 16px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+        }
+
+
+
+        .medical-body {
+
+            padding: 20px 15px;
+
+        }
+
+
+
+        /* === НОВЫЙ БЛОК ОСТАТКОВ (Адаптирован под ФБ) === */
+
+        .stock-warning-box {
+
+            background: rgba(139, 0, 0, 0.08);
+
+            border: 2px dashed #8b0000;
+
+            padding: 15px;
+
+            margin-bottom: 20px;
+
+            border-radius: 4px;
+
+            color: #111;
+
+            font-size: 19px;
+
+            font-weight: 700;
+
+            text-align: center;
+
+            animation: pulse-stock-bg 1.5s infinite;
+
+            box-shadow: inset 0 0 10px rgba(139, 0, 0, 0.05);
+
+        }
+
+
+
+        .stock-warning-box .warning-word {
+
+            color: #d90000;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-right: 3px;
+
+        }
+
+
+
+        .stock-warning-box b {
+
+            font-size: 28px;
+
+            color: #d90000;
+
+            display: inline-block;
+
+            transition: all 0.3s ease;
+
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+
+        @keyframes pulse-stock-bg {
+
+            0% {
+                background: rgba(139, 0, 0, 0.03);
+                border-color: #8b0000;
+            }
+
+            50% {
+                background: rgba(139, 0, 0, 0.12);
+                border-color: #d90000;
+            }
+
+            100% {
+                background: rgba(139, 0, 0, 0.03);
+                border-color: #8b0000;
+            }
+
+        }
+
+        /* ========================================= */
+
+
+
+        .clean-discount-title {
+
+            text-align: center;
+
+            color: #444;
+
+            font-size: 15px;
+
+            margin-bottom: 15px;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .clean-timer {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: flex-start;
+
+            gap: 8px;
+
+            margin-bottom: 25px;
+
+            color: #1a73e8;
+
+        }
+
+
+
+        .ct-block {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            width: 75px;
+
+        }
+
+
+
+        .ct-val {
+
+            font-size: 38px;
+
+            font-weight: 900;
+
+            line-height: 1;
+
+            margin-bottom: 8px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+
+        .ct-lbl {
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .ct-sep {
+
+            font-size: 34px;
+
+            font-weight: 900;
+
+            line-height: 1;
+
+            margin-top: -4px;
+
+            color: #1a73e8;
+
+        }
+
+
+
+        .price-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 40px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+
+        .price-col {
+
+            text-align: center;
+
+        }
+
+
+
+        .price-lbl {
+
+            color: #666;
+
+            font-size: 13px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .price-old {
+
+            color: #d90000;
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+            text-decoration: line-through;
+
+        }
+
+
+
+        .price-new {
+
+            color: #28a745;
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+        }
+
+
+
+        .form-group {
+
+            margin-bottom: 16px;
+
+        }
+
+
+
+        .form-group label {
+
+            display: block;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            color: #4a5568;
+
+            margin-bottom: 6px;
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        .order-form input {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #cbd5e0;
+
+            border-radius: 4px;
+
+            font-size: 16px;
+
+            background: #f7fafc;
+
+            color: #1a202c;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .order-form input:focus {
+
+            outline: none;
+
+            border-color: #0056b3;
+
+            background: #fff;
+
+        }
+
+
+
+        .submit-btn {
+
+            width: 100%;
+
+            background: #28a745;
+
+            color: #fff;
+
+            padding: 18px;
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+            border: none;
+
+            border-radius: 4px;
+
+            cursor: pointer;
+
+            box-shadow: 0 4px 0 #1e7e34;
+
+            animation: pulse-green 2s infinite;
+
+            text-transform: uppercase;
+
+            margin-top: 5px;
+
+        }
+
+
+
+        .trust-benefits {
+
+            background: transparent;
+
+            border: none;
+
+            border-top: 1px dashed #cbd5e0;
+
+            padding: 15px 0 0 0;
+
+            margin-top: 20px;
+
+        }
+
+
+
+        .trust-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            color: #4a5568;
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .trust-item span {
+
+            color: #0056b3;
+
+            font-size: 18px;
+
+        }
+
+
+
+        footer {
+
+            text-align: center;
+
+            padding: 25px 15px 30px;
+
+            background: #f0f2f5;
+
+        }
+
+
+
+        .footer-warning {
+
+            color: #d90000;
+
+            font-weight: 900;
+
+            font-size: 14px;
+
+            margin-bottom: 10px;
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        .footer-copy {
+
+            font-size: 12px;
+
+            color: #888;
+
+            font-weight: bold;
+
+            margin-top: 22px;
+
+            padding-top: 16px;
+
+        }
+
+
+
+        .fb-comments {
+
+            text-align: left;
+
+            background: #fff;
+
+            border-top: 1px solid #ddd;
+
+            padding: 16px 12px 22px;
+
+            margin-bottom: 4px;
+
+        }
+
+
+
+        .fb-comments-title {
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            color: #050505;
+
+            margin-bottom: 14px;
+
+            padding-bottom: 10px;
+
+            border-bottom: 1px solid #e4e6eb;
+
+        }
+
+
+
+        .fb-comment {
+
+            display: none;
+
+            gap: 8px;
+
+            margin-bottom: 14px;
+
+            align-items: flex-start;
+
+            opacity: 0;
+
+        }
+
+        .fb-comment.is-visible {
+
+            display: flex;
+
+            animation: fb-comment-in 0.45s ease forwards;
+
+        }
+
+        @keyframes fb-comment-in {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+
+
+        .fb-comment-ava {
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            flex-shrink: 0;
+
+            background: #e4e6eb;
+
+        }
+
+
+
+        .fb-comment-body {
+
+            flex: 1;
+
+            min-width: 0;
+
+        }
+
+
+
+        .fb-comment-bubble {
+
+            position: relative;
+
+            display: inline-block;
+
+            max-width: 100%;
+
+            background: #f0f2f5;
+
+            border-radius: 18px;
+
+            padding: 8px 12px 16px;
+
+        }
+
+
+
+        .fb-comment-name {
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: #385898;
+
+            line-height: 1.2;
+
+            margin-bottom: 1px;
+
+        }
+
+
+
+        .fb-comment-text {
+
+            font-size: 15px;
+
+            color: #050505;
+
+            line-height: 1.3333;
+
+            word-wrap: break-word;
+
+        }
+
+
+
+        .fb-comment-reactions {
+
+            position: absolute;
+
+            right: 6px;
+
+            bottom: -10px;
+
+            background: #fff;
+
+            border-radius: 10px;
+
+            padding: 1px 5px 1px 1px;
+
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+            line-height: 1;
+
+            z-index: 2;
+
+        }
+
+
+
+        .fb-react-icons {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            height: 18px;
+
+        }
+
+
+
+        .fb-react-img {
+
+            width: 18px;
+
+            height: 18px;
+
+            border-radius: 50%;
+
+            border: 2px solid #fff;
+
+            box-sizing: border-box;
+
+            flex-shrink: 0;
+
+            display: block;
+
+            object-fit: cover;
+
+        }
+
+
+
+        .fb-react-img-2 {
+
+            margin-left: -5px;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+
+        .fb-react-count {
+
+            font-size: 13px;
+
+            color: #65676b;
+
+            font-weight: 400;
+
+            padding-right: 2px;
+
+            line-height: 18px;
+
+        }
+
+
+
+        .fb-comment-meta {
+
+            margin-top: 2px;
+
+            padding-left: 12px;
+
+            font-size: 12px;
+
+            color: #65676b;
+
+            font-weight: 600;
+
+        }
+
+
+
+        .fb-comment-meta a {
+
+            color: #65676b;
+
+            text-decoration: none;
+
+            cursor: default;
+
+        }
+
+
+
+        .fb-comment-meta a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+
+        .fb-comment-meta .dot {
+
+            margin: 0 4px;
+
+        }
+
+
+
+        #backfix-overlay {
+
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.85);
+
+            z-index: 2147483647;
+
+            justify-content: center;
+
+            align-items: center;
+
+            backdrop-filter: blur(5px);
+
+        }
+
+
+
+        .backfix-modal {
+
+            background: #fff;
+
+            width: 92%;
+
+            max-width: 420px;
+
+            border-radius: 12px;
+
+            padding: 0;
+
+            position: relative;
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+            animation: slideDown 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            overflow: hidden;
+
+            border: 3px solid #d90000;
+
+        }
+
+
+
+        .bf-header {
+
+            background: #d90000;
+
+            color: #fff;
+
+            text-align: center;
+
+            padding: 18px;
+
+            font-size: 26px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+        }
+
+
+
+        .bf-body {
+
+            padding: 25px 20px;
+
+            text-align: center;
+
+        }
+
+
+
+        .bf-text {
+
+            font-size: 17px;
+
+            color: #222;
+
+            line-height: 1.4;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .bf-promo-box {
+
+            background: #fff5f5;
+
+            border: 2px dashed #d90000;
+
+            padding: 15px;
+
+            border-radius: 8px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .bf-timer {
+
+            font-size: 46px;
+
+            font-weight: 900;
+
+            color: #000;
+
+            background: #f0f2f5;
+
+            border-radius: 8px;
+
+            padding: 10px;
+
+            font-family: monospace;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+
+            border: 1px solid #ccd0d5;
+
+        }
+
+
+
+        .bf-btn {
+
+            display: block;
+
+            width: 100%;
+
+            background: #28a745;
+
+            color: #fff;
+
+            border: none;
+
+            padding: 20px;
+
+            font-size: 18px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            box-shadow: 0 6px 0 #1e7e34;
+
+            animation: pulseBtn 1.5s infinite;
+
+        }
+
+
+
+        .bf-trust {
+
+            margin-top: 20px;
+
+            font-size: 14px;
+
+            color: #65676b;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            align-items: center;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .bf-close {
+
+            position: absolute;
+
+            top: 8px;
+
+            right: 15px;
+
+            color: #fff;
+
+            font-size: 32px;
+
+            cursor: pointer;
+
+            opacity: 0.9;
+
+            line-height: 1;
+
+            font-weight: bold;
+
+        }
+
+
+
+        @keyframes pulse-green {
+
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+            }
+
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 0 20px rgba(40, 167, 69, 0.9);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+            }
+
+        }
+
+
+
+        @keyframes pulse-live {
+
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+
+
+        @keyframes slideDown {
+
+            from {
+                transform: translateY(-100px) scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+        }
+
+
+
+        @keyframes pulseBtn {
+
+            0% {
+                transform: scale(1);
+                box-shadow: 0 6px 0 #1e7e34, 0 0 10px rgba(40, 167, 69, 0.5);
+            }
+
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 6px 0 #1e7e34, 0 0 25px rgba(40, 167, 69, 0.9);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 6px 0 #1e7e34, 0 0 10px rgba(40, 167, 69, 0.5);
+            }
+
+        }
+    </style>
+
+    <style>
+        /* ---------- TSL: текстовая статья вместо видео ---------- */
+        .fb-post-body {
+            padding: 0;
+        }
+
+        .tsl {
+            background: #fff;
+            padding: 14px 16px 20px;
+            font-size: 17px;
+            line-height: 1.62;
+            color: #1c1e21;
+            text-align: left;
+            word-wrap: break-word;
+        }
+
+        .tsl p {
+            margin: 0 0 14px;
+        }
+
+        .tsl-live {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .tsl-live .badge-live,
+        .tsl-live .badge-viewers {
+            position: static;
+        }
+
+        .tsl-h1 {
+            font-size: 23px;
+            line-height: 1.28;
+            font-weight: 800;
+            margin: 0 0 14px;
+            color: #050505;
+        }
+
+        .tsl h2 {
+            font-size: 20px;
+            line-height: 1.3;
+            font-weight: 800;
+            margin: 30px 0 14px;
+            padding-left: 12px;
+            border-left: 4px solid #1877f2;
+            color: #050505;
+        }
+
+        .tsl h3 {
+            font-size: 17.5px;
+            font-weight: 800;
+            margin: 24px 0 10px;
+            color: #050505;
+        }
+
+        .tsl-lead {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1c1e21;
+        }
+
+        .tsl-sign {
+            font-size: 14px;
+            color: #65676b;
+            font-style: italic;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #e4e6eb;
+        }
+
+        .tsl-ava {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            background: #dfe3ee;
+        }
+
+        .tsl-doc {
+            margin: 0 0 6px;
+        }
+
+        .tsl-doc-head,
+        .tsl-quote-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .tsl-doc-name,
+        .tsl-quote-name {
+            font-weight: 700;
+            font-size: 15.5px;
+            color: #050505;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .tsl-doc-role,
+        .tsl-quote-role {
+            font-size: 13px;
+            color: #65676b;
+        }
+
+        .tsl-quote,
+        .tsl-story {
+            background: #f0f2f5;
+            border-left: 3px solid #1877f2;
+            border-radius: 0 10px 10px 0;
+            padding: 14px 14px 2px;
+            margin: 18px 0;
+            font-size: 16.5px;
+        }
+
+        .tsl-quote-user {
+            border-left-color: #28a745;
+        }
+
+        .tsl-story {
+            background: #fff9ec;
+            border-left-color: #f7b500;
+        }
+
+        .tsl-promise {
+            font-weight: 700;
+            color: #1877f2;
+        }
+
+        .tsl-underline {
+            font-weight: 700;
+            box-shadow: inset 0 -10px 0 #ffe9a8;
+            display: inline-block;
+        }
+
+        .tsl-note {
+            font-size: 15.5px;
+            color: #65676b;
+            font-style: italic;
+        }
+
+        .tsl-ask {
+            font-weight: 700;
+            color: #050505;
+        }
+
+        .tsl-key {
+            background: #fff8e1;
+            border: 1px solid #f2d68a;
+            border-left: 4px solid #f7b500;
+            border-radius: 8px;
+            padding: 14px 14px 2px;
+            margin: 18px 0;
+        }
+
+        .tsl-key-title {
+            font-weight: 800;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: .3px;
+            color: #8a6100;
+            margin-bottom: 8px;
+        }
+
+        .tsl-danger {
+            background: #fff0f0;
+            border: 1px solid #f3c2c2;
+            border-left: 4px solid #d90000;
+            border-radius: 8px;
+            padding: 14px 14px 2px;
+            margin: 18px 0;
+        }
+
+        .tsl-danger-title {
+            font-weight: 900;
+            font-size: 19px;
+            color: #d90000;
+            margin-bottom: 8px;
+        }
+
+        .tsl-fact {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            background: #eef4ff;
+            border: 1px solid #c6d8f7;
+            border-radius: 8px;
+            padding: 14px;
+            margin: 18px 0;
+        }
+
+        .tsl-fact p {
+            margin: 0;
+            font-size: 15.5px;
+        }
+
+        .tsl-fact-num {
+            font-size: 27px;
+            font-weight: 900;
+            color: #1877f2;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .tsl-step {
+            border: 1px solid #e4c98a;
+            border-radius: 8px;
+            background: #fff;
+            padding: 12px 12px 2px;
+            margin: 0 0 14px;
+        }
+
+        .tsl-step-num {
+            font-weight: 800;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: .3px;
+            color: #b06f00;
+            margin-bottom: 6px;
+        }
+
+        .tsl-ing {
+            display: flex;
+            gap: 12px;
+            margin: 0 0 18px;
+        }
+
+        .tsl-ing-num {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #1877f2;
+            color: #fff;
+            font-weight: 800;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .tsl-ing-body {
+            flex: 1;
+        }
+
+        .tsl-ing-name {
+            font-weight: 800;
+            font-size: 16.5px;
+            margin-bottom: 6px;
+            color: #050505;
+        }
+
+        .tsl-mini {
+            font-size: 14.5px;
+            color: #3a3b3c;
+            background: #f0f2f5;
+            border-radius: 6px;
+            padding: 10px 12px;
+        }
+
+        .tsl-phases {
+            margin: 0 0 18px;
+        }
+
+        .tsl-phase {
+            border-left: 3px solid #28a745;
+            padding: 8px 0 8px 12px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .tsl-phase span {
+            display: block;
+            font-weight: 800;
+            color: #1e7e34;
+            font-size: 14.5px;
+            text-transform: uppercase;
+            letter-spacing: .3px;
+            margin-bottom: 2px;
+        }
+
+        .tsl-days {
+            background: #f0f2f5;
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin: 0 0 18px;
+        }
+
+        .tsl-day {
+            padding: 6px 0;
+            border-bottom: 1px dashed #d5d8dd;
+            font-size: 16px;
+        }
+
+        .tsl-day:last-child {
+            border-bottom: none;
+        }
+
+        .tsl-ul {
+            margin: 0 0 14px 18px;
+            font-size: 16px;
+        }
+
+        .tsl-ul li {
+            margin-bottom: 5px;
+        }
+
+        .tsl-brand {
+            font-size: 20px;
+            font-weight: 800;
+            text-align: center;
+            color: #050505;
+        }
+
+        .tsl-price {
+            background: #f6fff8;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            padding: 16px 14px 2px;
+            margin: 18px 0;
+            text-align: center;
+        }
+
+        .tsl-price-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tsl-price-old {
+            font-size: 22px;
+            color: #90949c;
+            text-decoration: line-through;
+            font-weight: 700;
+        }
+
+        .tsl-price-arrow {
+            font-size: 20px;
+            color: #28a745;
+        }
+
+        .tsl-price-new {
+            font-size: 34px;
+            font-weight: 900;
+            color: #28a745;
+            line-height: 1;
+        }
+
+        .tsl-price p {
+            text-align: left;
+        }
+
+        .tsl-cta {
+            display: block;
+            text-align: center;
+            background: #28a745;
+            color: #fff !important;
+            font-weight: 800;
+            font-size: 17px;
+            text-decoration: none;
+            padding: 16px 12px;
+            border-radius: 10px;
+            box-shadow: 0 5px 0 #1e7e34;
+            margin: 22px 0 26px;
+            letter-spacing: .2px;
+        }
+
+        .tsl-road {
+            border: 1px solid #dcdfe3;
+            border-radius: 8px;
+            padding: 12px 14px 2px;
+            margin: 0 0 14px;
+            background: #fafbfc;
+        }
+
+        .tsl-road-good {
+            border-color: #28a745;
+            background: #f6fff8;
+        }
+
+        .tsl-road-num {
+            font-weight: 800;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: .3px;
+            color: #65676b;
+            margin-bottom: 6px;
+        }
+
+        .tsl-road-good .tsl-road-num {
+            color: #1e7e34;
+        }
+
+        .tsl-final {
+            font-weight: 700;
+            font-size: 17.5px;
+        }
+
+        .tsl-scrollhint {
+            display: none;
+            text-align: center;
+            font-size: 14px;
+            color: #65676b;
+            margin-top: 10px;
+        }
+
+        .tsl-scrollhint.is-on {
+            display: block;
+        }
+
+        .tsl-arrow {
+            font-size: 18px;
+            color: #28a745;
+            animation: tsl-bounce 1.2s infinite;
+        }
+
+        @keyframes tsl-bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(5px);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .tsl {
+                font-size: 16.5px;
+                padding: 12px 13px 18px;
+            }
+
+            .tsl-h1 {
+                font-size: 21px;
+            }
+
+            .tsl h2 {
+                font-size: 18.5px;
+            }
+        }
+    </style>
+
+    <script src="js/evdate.js"></script>
+</head>
+
+
+
+<body>
+
+    <div class="container">
+
+
+
+        <div class="fb-topbar">
+
+            <div class="fb-topbar-side">
+
+                <a href="#">
+                <svg class="fb-brand" viewBox="0 0 40 40" aria-hidden="true">
+
+                    <circle cx="20" cy="20" r="20" fill="#1877f2"></circle>
+
+                    <path fill="#fff"
+                        d="M22.6 32.4V22.1h3.6l.55-4.2h-4.15v-2.65c0-1.2.35-2.05 2.1-2.05h2.2V9.45c-.38-.05-1.72-.17-3.28-.17-3.25 0-5.47 1.98-5.47 5.62v3h-3.6v4.2h3.6v10.3h4.45z">
+                    </path>
+
+                </svg>
+                </a>
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M10.5 3a7.5 7.5 0 015.92 12.11l4.24 4.23a1.1 1.1 0 01-1.56 1.56l-4.23-4.24A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z">
+                        </path>
+                    </svg>
+
+                </a>
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5.4" width="18" height="2.2" rx="1.1"></rect>
+                        <rect x="3" y="10.9" width="18" height="2.2" rx="1.1"></rect>
+                        <rect x="3" y="16.4" width="18" height="2.2" rx="1.1"></rect>
+                    </svg>
+
+                </a>
+
+            </div>
+
+            <div class="fb-topbar-side">
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z"></path>
+                    </svg>
+
+                </a>
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 2C6.5 2 2 6.2 2 11.3c0 2.9 1.5 5.5 3.8 7.2V22l3.5-1.9c.9.2 1.8.4 2.7.4 5.5 0 10-4.2 10-9.3S17.5 2 12 2zm.6 12.5l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7-5.4 5.7z">
+                        </path>
+                    </svg>
+
+                </a>
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 2a6 6 0 00-6 6v3.3c0 .8-.3 1.5-.8 2.1l-.9 1a1.5 1.5 0 001.1 2.5h13.2a1.5 1.5 0 001.1-2.5l-.9-1c-.5-.6-.8-1.3-.8-2.1V8a6 6 0 00-6-6zm0 18.5a2.8 2.8 0 002.7-2H9.3a2.8 2.8 0 002.7 2z">
+                        </path>
+                    </svg>
+
+                    <span class="fb-icon-badge">20+</span>
+
+                </a>
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 15.2L6.4 9.6h11.2z"></path>
+                    </svg>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="fb-post fb-post-head-only">
+
+            <div class="fb-post-head">
+
+                <img class="fb-post-ava" src="images/author.jpg" alt="">
+
+                <div class="fb-post-meta">
+
+                    <div class="fb-post-author">
+
+                        dr. Władysław Gaweł
+
+                        <img class="fb-verified" src="images/verif.png" alt="">
+
+                    </div>
+
+                    <div class="fb-post-sub">
+
+                        <span id="fb-post-date" class="date-0" data-format="dd month"> </span> 11:02
+
+                        <span>·</span>c
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 1.8c.9 0 2 1.6 2.6 4.2H9.4C10 5.4 11.1 3.8 12 3.8zM4 12c0-.8.1-1.5.3-2.2h3.3c-.1.7-.1 1.4-.1 2.2s0 1.5.1 2.2H4.3C4.1 13.5 4 12.8 4 12zm1.1 4.2h2.9c.4 1.7 1 3.1 1.7 4a8.2 8.2 0 01-4.6-4zm2.9-8.4H5.1a8.2 8.2 0 014.6-4c-.7.9-1.3 2.3-1.7 4zM12 20.2c-.9 0-2-1.6-2.6-4.2h5.2c-.6 2.6-1.7 4.2-2.6 4.2zm2.9-6.2H9.1c-.1-.7-.1-1.4-.1-2s0-1.4.1-2h5.8c.1.6.1 1.3.1 2s0 1.3-.1 2zm-.6 6.2c.7-.9 1.3-2.3 1.7-4h2.9a8.2 8.2 0 01-4.6 4zm2.1-6.2c.1-.7.1-1.4.1-2s0-1.4-.1-2h3.3c.2.7.3 1.4.3 2s-.1 1.5-.3 2.2h-3.3zm-.4-6.2c-.4-1.7-1-3.1-1.7-4a8.2 8.2 0 014.6 4h-2.9z">
+                            </path>
+                        </svg>
+
+                    </div>
+
+                </div>
+
+                <div class="fb-post-more">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M6 10a2 2 0 100 4 2 2 0 000-4zm6 0a2 2 0 100 4 2 2 0 000-4zm6 0a2 2 0 100 4 2 2 0 000-4z">
+                        </path>
+                    </svg>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    
+        <span id="tsl-top"></span>
+
+        <div class="fb-post fb-post-body">
+
+            <div class="tsl" id="tsl-article">
+
+                <div class="tsl-live">
+                    <span class="badge-live">Na żywo</span>
+                    <span class="badge-viewers">
+                        <svg class="badge-eye" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"></path>
+                            <circle cx="12" cy="12" r="2.6"></circle>
+                        </svg>
+                        <b id="live-viewers">21 486</b>&nbsp;czyta teraz
+                    </span>
+                </div>
+
+                <!-- ================= BLOK 0. HOOK ================= -->
+
+                <h1 class="tsl-h1">„Przez 6 lat nie mogłam normalnie chodzić. Tydzień przed wszczepieniem
+                    protezy odwołałam operację”</h1>
+
+                <p class="tsl-lead">Każdego ranka budziłam się z bólem kolan i już wiedziałam, jak będzie wyglądał
+                    cały dzień. Ostrożnie. Bez zbędnych kroków. Lekarze mówili: wiek, diagnoza, artroza. Miesiąc temu
+                    miałam mieć operację wszczepienia protezy. Tydzień przed nią ją odwołałam — bo udało mi się wyjść
+                    na spacer i wejść po schodach na swoje piętro. Jeden prosty trik z żelatyną i nic więcej.</p>
+
+                <div class="tsl-sign">Iwona Stelmach, 59 lat, aktorka teatralna</div>
+
+                <!-- ============ BLOK 1. DOWODY PRZED MECHANIZMEM ============ -->
+
+                <div class="tsl-doc">
+                    <div class="tsl-doc-head">
+                        <img class="tsl-ava" src="images/author.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-doc-name">dr n. med. Władysław Gaweł <img class="fb-verified"
+                                    src="images/verif.png" alt=""></div>
+                            <div class="tsl-doc-role">ortopeda, reumatolog · 25 lat praktyki</div>
+                        </div>
+                    </div>
+                    <p>Jeśli właśnie to przeczytaliście i pomyśleliście „niemożliwe” — rozumiem Was. Sam byłem
+                        sceptykiem, dopóki nie zobaczyłem zdjęć rezonansu.</p>
+                    <p>Oto fakt. Naprawdę możliwe jest odbudowanie chrząstki, która została uznana za nieodwracalnie
+                        zniszczoną. Tak samo naprawdę możliwe jest odwołanie operacji, która została już zaplanowana.
+                        <b>Nie „tymczasowo zagłuszyć ból”. Odbudować.</b></p>
+                    <p>Właśnie to dzieje się z ludźmi, którzy stosują tak zwaną sztuczkę z żelatyną. Tę samą metodę,
+                        którą dwie znane polskie aktorki nazwały swoim największym odkryciem dla stawów i która dziś
+                        rozprzestrzenia się w polskich mediach społecznościowych szybciej niż jakakolwiek inna metoda
+                        leczenia stawów w ciągu ostatnich 20 lat.</p>
+                    <p class="tsl-promise">Za chwilę wyjaśnię, dlaczego to działa na poziomie biochemii — i dlaczego
+                        nigdy nie usłyszeliście o tym od swojego lekarza.</p>
+                </div>
+
+                <div class="tsl-quote">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av03.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Iwona Stelmach</div>
+                            <div class="tsl-quote-role">aktorka, 59 lat</div>
+                        </div>
+                    </div>
+                    <p>Przez ostatnie 10 lat odrzucałam role. Nie dlatego, że mi się nie podobały. Bałam się scen,
+                        w których trzeba było dużo się poruszać, biegać albo tańczyć. Kolana mi na to nie pozwalały.
+                        Teraz znowu podejmuję się każdej roli. Sztuczka z żelatyną to jedyna rzecz, która naprawdę
+                        przywróciła mi wolność.</p>
+                </div>
+
+                <div class="tsl-quote">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av05.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Beata Rogowska</div>
+                            <div class="tsl-quote-role">prezenterka telewizyjna, 56 lat</div>
+                        </div>
+                    </div>
+                    <p>W zeszłym tygodniu ludzie pisali do mnie: „Beata, stosujesz jakiś przepis z różową solą albo
+                        sodą?”. Ludzie, skąd wy to bierzecie? Słuchajcie uważnie. Jedyne, czego używam, to sztuczka
+                        z żelatyną. <b>Osobiście od doktora Gawła.</b> To on dał mi ją osobiście. Nie ma żadnych innych
+                        sekretów.</p>
+                </div>
+
+                <div class="tsl-doc">
+                    <p>Zwróćcie uwagę na jeden szczegół. <b>Obie kobiety mają ponad 50 lat. To nie przypadek.</b></p>
+                    <p>Sztuczka z żelatyną działa na każdego, ale u osób po pięćdziesiątce działa ze szczególną
+                        precyzją. Przyczyna tkwi w jednej substancji, o której nigdy nie powiedział Wam żaden lekarz.
+                        Gromadzi się ona w Waszym organizmie przez lata i to właśnie ona niszczy Wasze stawy — podczas
+                        gdy Wy leczycie objawy.</p>
+                    <p>Po pięćdziesiątce jej poziom staje się krytyczny. Wtedy niszczenie stawu gwałtownie przyspiesza,
+                        a ból z epizodycznego staje się stały.</p>
+                    <p class="tsl-promise">Jeśli rozpoznajecie w tym siebie — kolejne akapity są dla Was szczególnie
+                        ważne. Wyjaśnię, co to za substancja i dlaczego bez jej neutralizacji każde leczenie jest
+                        skazane na porażkę.</p>
+                </div>
+
+                <div class="tsl-quote">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av08.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Alicja Wieczorek</div>
+                            <div class="tsl-quote-role">aktorka, 54 lata</div>
+                        </div>
+                    </div>
+                    <p>Dwa tygodnie temu przyjechałam na festiwal filmowy i myślałam tylko o jednym: jak przejść po
+                        czerwonym dywanie, żeby nikt nie zauważył, że każdy krok przychodzi mi z trudem. Ból kolana był
+                        ciągły. Nauczyłam się go ukrywać. Dziś — żadnego bólu. Jeden przepis z żelatyną. 14 dni. To
+                        wszystko.</p>
+                </div>
+
+                <!-- ============ BLOK 2. LEKARZ I PRZEPIS ============ -->
+
+                <h2>Ten wpis wyświetlono ponad 21 milionów razy — a większość ludzi i tak przeoczyła
+                    najważniejsze</h2>
+
+                <div class="tsl-doc">
+                    <p>Przeoczyli sam przepis. Dlatego pokazuję go ponownie.</p>
+                    <div class="tsl-key">
+                        <div class="tsl-key-title">Trzy składniki</div>
+                        <p><b>Żelatyna. Imbir. Kurkuma.</b><br>Żadnych tabletek. Żadnych zastrzyków. Żadnych
+                            operacji.</p>
+                    </div>
+                    <p>Kiedy zobaczyłem to po raz pierwszy, pomyślałem, że to kolejny internetowy mit. Jestem lekarzem
+                        ortopedą i reumatologiem. Zajmuję się stawami. Z zawodu jestem sceptykiem. Ale potem sięgnąłem
+                        do badań. Harvard. Uniwersytet Johnsa Hopkinsa. <b>Mechanizm jest prawdziwy</b> — potwierdzony
+                        klinicznie — i wyjaśnia, dlaczego osoby po pięćdziesiątce mimo tabletek, zastrzyków
+                        i fizjoterapii nadal cierpią z powodu bólu stawów.</p>
+                    <p>Nie chodzi o wiek. Chodzi o biochemię.</p>
+                    <p>Nazywam się doktor Władysław Gaweł. Jestem ortopedą, reumatologiem i doktorem nauk medycznych.
+                        Od 25 lat leczę choroby stawów, artrozę i zapalenie stawów. Poza praktyką kliniczną wykładam na
+                        uniwersytetach w Warszawie — o tym, jak niszczą się stawy i dlaczego standardowe metody
+                        leczenia u większości pacjentów nie działają biologicznie.</p>
+                    <p class="tsl-underline">Nie dlatego, że lekarze są niekompetentni. Dlatego, że walczą z objawem
+                        i ignorują przyczynę.</p>
+                    <p>Przez 25 lat badałem jedno pytanie: jak uruchomić naturalną regenerację stawu bez uzależnienia
+                        od leków przeciwbólowych, bez kortyzonu, bez operacji? I oto, co odkryłem.</p>
+                    <p>Istnieje metoda, która na początkowym etapie daje odczuwalne zmniejszenie bólu w ciągu 7 dni
+                        oraz pełną regenerację ruchomości w ciągu 2 tygodni. Nazywam ją <b>żelatyną ortopedyczną</b>
+                        albo <b>impulsem żelatynowym</b>. Używają jej osoby, które — wydawałoby się — nie mają już
+                        żadnych szans. Artroza trzeciego stopnia. Zaplanowana operacja. Wiek. I to właśnie one
+                        przysyłają mi zdjęcia rezonansu, na których widzę coś, czego według podręczników być nie
+                        powinno.</p>
+                    <p>Osoby w wieku 60 i 70 lat stosują to w domu, rano, w kilka minut. A jedyny problem, o którym do
+                        mnie piszą, to co zrobić z niepotrzebnym obuwiem ortopedycznym, które nosiły przez lata.</p>
+                </div>
+
+                <div class="tsl-quote">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av05.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Beata Rogowska</div>
+                            <div class="tsl-quote-role">prezenterka telewizyjna, 56 lat</div>
+                        </div>
+                    </div>
+                    <p>Nigdy nie myślałam, że w moim wieku można znowu poruszać się tak swobodnie. Nawet w młodości nie
+                        doceniałam tego tak, jak doceniam teraz. Impuls żelatynowy jest niesamowity. Dziękuję,
+                        doktorze Gawle.</p>
+                </div>
+
+                <div class="tsl-doc">
+                    <p>Pozwólcie, że wymienię jeszcze kilka osób. Piosenkarka, dziennikarka telewizyjna, aktorka
+                        filmowa — nazwiska, które znacie z ekranu. Każda z nich przyszła do mnie z tą samą historią:
+                        próbowała wszystkiego i nic nie działało. Każda z nich dziś porusza się inaczej niż dwa, trzy
+                        miesiące temu.</p>
+                    <p>Nie mówię tego dla efektu. Mówię, ponieważ widzę ten sam schemat raz za razem i już mnie to nie
+                        dziwi. <b>To mnie zobowiązuje.</b> Zwłaszcza po tym, co napisała do mnie Agnieszka — po tym,
+                        jak pozbyła się bólu stawów, który prześladował ją przez ponad 7 lat.</p>
+                </div>
+
+                <div class="tsl-quote">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av11.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Agnieszka Ostrowska</div>
+                            <div class="tsl-quote-role">dziennikarka telewizyjna, 61 lat</div>
+                        </div>
+                    </div>
+                    <p>Doktorze Gawle, próbowałam wszystkiego. Tabletek, fizjoterapii, zastrzyków. Coś przynosiło ulgę
+                        na miesiąc, potem wszystko wracało. Pański przepis to jedyna rzecz, która naprawdę zadziałała.
+                        Kolana i plecy przestały boleć w ciągu kilku tygodni. Nie stopniowo — wyraźnie. I już nie dają
+                        o sobie znać. Cały czas myślałam o jednym: dlaczego nie możemy podzielić się tym z każdym
+                        człowiekiem w Polsce?</p>
+                </div>
+
+                <!-- ============ BLOK 3. DŁUGIE ŚWIADECTWO ============ -->
+
+                <h2>„Wydałam 130 tysięcy złotych na trzech lekarzy. I wróciłam dokładnie tam, skąd
+                    zaczęłam”</h2>
+
+                <p class="tsl-note">Mógłbym sam wyjaśnić Wam mechanizm. Ale jest coś, co wyjaśni to lepiej ode mnie.
+                    Nie badanie. Nie liczby. Żywy człowiek. Poprosiłem Agnieszkę, żeby własnymi słowami opowiedziała,
+                    jak jej ciało wróciło do sprawności po tym, jak wypróbowała już wszystko inne.</p>
+
+                <div class="tsl-story">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av11.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Agnieszka Ostrowska</div>
+                            <div class="tsl-quote-role">dziennikarka, 61 lat</div>
+                        </div>
+                    </div>
+
+                    <p>Cześć wszystkim. Mam 61 lat i chcę opowiedzieć Wam o czymś, o czym milczałam przez wiele lat.</p>
+                    <p>Znacie mnie z telewizji. Dziennikarka, prowadząca. Ta, która zawsze jest w ruchu. Energiczna,
+                        aktywna. Ale prawda jest taka: <b>kiedy uśmiechałam się do Was na ekranie, w domu nie mogłam
+                            normalnie wstać z krzesła.</b></p>
+                    <p>Płakałam z bólu w nocy. Płakałam, kiedy nie mogłam dojść pieszo do sklepu. Płakałam nie dlatego,
+                        że byłam słaba — dlatego, że robiłam wszystko, co mówili lekarze, a mimo to było coraz
+                        gorzej.</p>
+                    <p>Nie wiedziałam, że problem nie tkwił we mnie. Problem polegał na tym, że nikt nie dał mi
+                        odpowiedniego narzędzia — dopóki nie pojawił się doktor Gaweł.</p>
+                    <p>Ból zaczął się niepostrzeżenie. Najpierw po długim chodzeniu. Nawet tego nie zauważałam. Potem
+                        po schodach. Później po prostu rano. I im więcej się leczyłam, tym gorzej się czułam.
+                        A specjaliści powtarzali: wiek, geny, styl życia, dieta.</p>
+                    <p>Wiecie, co było najbardziej okrutne w tych słowach? <b>Były nieprawdziwe — a ja zaczynałam
+                            w nie wierzyć.</b></p>
+                    <p>Robiłam wszystkie ćwiczenia, które mi zalecano. Przestrzegałam wszystkich ograniczeń. Chodziłam
+                        na wszystkie zabiegi. Przez lata. A ból wciąż powracał. W pewnym momencie powiedziałam sobie:
+                        dosyć. Rozwiążę ten problem bez względu na cenę, nawet jeśli będę musiała zawiesić karierę.</p>
+
+                    <div class="tsl-step">
+                        <div class="tsl-step-num">Lekarz pierwszy · 40 000 zł</div>
+                        <p>Zalecił kurację lekami przeciwzapalnymi i pięć sesji masażu. „Agnieszko, diklofenak to
+                            klasyka. Zmniejszy stan zapalny, zmniejszy ból. Działa u każdego”. Nie rozumiałam, dlaczego
+                            konsultacje kosztowały tak dużo, skoro miałam usłyszeć to samo, co mówi farmaceuta
+                            w aptece. Ale ból rzeczywiście ustąpił — i byłam szczęśliwa. Na kilka tygodni. Potem
+                            przestałam przyjmować tabletki i wszystko wróciło. Do tego zaczął boleć mnie żołądek.
+                            Zapalenie żołądka. Straciłam pieniądze, zdrowie i wróciłam do punktu wyjścia.</p>
+                    </div>
+
+                    <div class="tsl-step">
+                        <div class="tsl-step-num">Lekarz drugi · 40 sesji fizjoterapii</div>
+                        <p>Podczas zabiegów było lepiej. Kiedy kuracja się skończyła, ból kolan wrócił po tygodniu. Nie
+                            tylko zrobiłam koło — straciłam miesiące, zdrowie i pieniądze, i znalazłam się dokładnie
+                            w tym samym miejscu.</p>
+                    </div>
+
+                    <div class="tsl-step">
+                        <div class="tsl-step-num">Lekarz trzeci · 90 000 zł</div>
+                        <p>Najdroższy. W tamtym czasie znany w mediach. „Agnieszko, zastrzyki z kwasu hialuronowego
+                            postawią każdego na nogi. Trzy zastrzyki do stawu, raz w tygodniu. Gwarantowany rezultat”.
+                            I wiecie co? Miał rację. Przez pół roku nie odczuwałam bólu. Niesamowite. Potem działanie
+                            się skończyło. W ciągu trzech tygodni wszystko wróciło tak, jak przed zastrzykami.</p>
+                    </div>
+
+                    <p>Wtedy zrozumiałam coś strasznego. <b>Moje ciało wraca do bólu i traktuje go jak normę.</b> Niweczy
+                        każde leczenie, jakby ból nie był chorobą, lecz naturalnym stanem. Nie rozumiałam dlaczego —
+                        dopóki nie zadzwoniła do mnie Beata.</p>
+                </div>
+
+                <div class="tsl-quote">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av05.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Beata Rogowska</div>
+                            <div class="tsl-quote-role">prezenterka telewizyjna, 56 lat</div>
+                        </div>
+                    </div>
+                    <p>Agnieszko, ja też próbowałam wszystkiego, o czym wspominałaś, i nic nie działało. Ale potem
+                        poznałam doktora Władysława Gawła. I wiesz co? Zapomniałam o bólu stawów dzięki galaretce. Tak,
+                        dobrze usłyszałaś. <b>Galaretce.</b> To nie tabletka ani zastrzyk. To dosłownie galaretka.</p>
+                </div>
+
+                <div class="tsl-story">
+                    <p>Kiedy to powiedziała, pomyślałam, że sobie ze mnie żartuje. Galaretka. Po wszystkich zastrzykach
+                        i dziesiątkach tysięcy złotych wydanych na fizjoterapię.</p>
+                    <p>Ale zadzwoniłam do doktora Gawła. Umówiłam się. Spróbowałam. Nie miałam już nic do stracenia.
+                        Dwa tygodnie później ból zniknął — i nie wrócił. Po raz pierwszy od wielu lat nie wrócił.</p>
+                    <p class="tsl-ask">Doktorze Gawle, chcę, żeby wyjaśnił Pan to ludziom. Dlaczego trzech lekarzy
+                        i lata leczenia nie dały tego, co dała żelatynowa galaretka? Co dzieje się wewnątrz stawu
+                        i dlaczego to działa tam, gdzie wszystko inne zawodzi?</p>
+                </div>
+
+                <!-- ============ BLOK 4. MECHANIZM ============ -->
+
+                <h2>Dlaczego Agnieszka trzy razy poniosła porażkę — i dlaczego Wy prawdopodobnie
+                    ponosiliście ją z dokładnie tego samego powodu</h2>
+
+                <h3>Metoda pierwsza: tabletki przeciwzapalne</h3>
+                <div class="tsl-doc">
+                    <p>Diklofenak, ibuprofen i ich odpowiedniki. Kiedy je przyjmujecie, ból ustępuje. Ciało przestaje
+                        boleć, wyłączając sygnał alarmowy. Myślicie: działa.</p>
+                    <p>Ale oto, co dzieje się naprawdę. <b>Ból nie jest chorobą. To sygnał.</b> Sygnał, że staw się
+                        niszczy. Tabletka wyłącza ten sygnał.</p>
+                    <div class="tsl-key">
+                        <p>To tak, jakby w Waszym domu włączył się alarm przeciwpożarowy, a Wy — zamiast gasić pożar —
+                            po prostu wyjęli baterie. Cicho. Spokojnie. A ogień nadal płonie.</p>
+                    </div>
+                    <p>Znacie tę osobę, która w wieku 70 lat wspina się po górach, pracuje w ogrodzie, tańczy na
+                        uroczystościach i ani razu w życiu nie myślała o swoich stawach? To nie kwestia szczęścia
+                        genetycznego. To stan chrząstki. Jej staw działa jak dobrze nasmarowany mechanizm. Bez tarcia,
+                        bez bólu, bez porannej sztywności.</p>
+                    <p>U Agnieszki po miesiącach przyjmowania tabletek staw stał się przeciwieństwem tego —
+                        mechanizmem, który niszczył się przy każdym ruchu. Dlatego kiedy tabletki przestały działać,
+                        ból wrócił silniejszy niż wcześniej. Ciało nie tylko wróciło do punktu wyjścia. Było w gorszym
+                        stanie, ponieważ zniszczenie postępowało przez cały czas, gdy ból był tłumiony.</p>
+                    <p class="tsl-underline">To nie słaba wola. To biologia. I właśnie z tą biologią walczy większość
+                        leków przeciwbólowych. I przegrywa.</p>
+                </div>
+
+                <h3>Metoda druga: fizjoterapia</h3>
+                <div class="tsl-doc">
+                    <p>Masaż, elektroforeza, ultradźwięki, gimnastyka lecznicza. Mięśnie wokół stawu wzmacniają się,
+                        obrzęk się zmniejsza, ból ustępuje.</p>
+                    <p>Problem polega na tym, że fizjoterapia działa <b>wokół</b> stawu, ale nie <b>wewnątrz</b> niego.
+                        Tkanka chrzęstna jest zbudowana inaczej niż wszystko inne w naszym ciele. Nie ma w niej naczyń
+                        krwionośnych. W ogóle.</p>
+                    <div class="tsl-key">
+                        <p>Wyobraźcie sobie, że chrząstka to wyspa, do której można dotrzeć tylko łodzią — przez płyn
+                            maziowy. Fizjoterapia wzmacnia brzeg, buduje piękną promenadę, ale na wyspę wciąż nie
+                            dociera.</p>
+                    </div>
+                    <p>To jak podlewanie trawy wokół wyschniętego drzewa. Trawa zielenieje i wydaje się, że wszystko
+                        jest w porządku — ale drzewo w środku nadal usycha. A potem, kiedy przestajecie chodzić na
+                        zabiegi, wszystko wraca. Czasami szybciej, niż się spodziewaliście.</p>
+                    <p>Wtedy dochodzi do tego, co nazywam <b>reumatologicznym efektem odbicia</b>. Zabiegów już nie ma,
+                        więc ciało może znów swobodnie wysyłać sygnał, że staw ulega deformacji. Sygnał w postaci bólu
+                        wraca z nową siłą.</p>
+                    <p>I bądźmy szczerzy: kto może chodzić na fizjoterapię bez końca, trzy razy w tygodniu, przez lata?
+                        To czas, pieniądze, dojazdy i harmonogram, któremu trzeba podporządkować całe życie.</p>
+                </div>
+
+                <h3>Metoda trzecia: zastrzyki z kwasu hialuronowego</h3>
+                <div class="tsl-doc">
+                    <p>I tutaj zaczyna się najważniejsza część. Bo kwas hialuronowy to nie szarlataneria. To prawdziwa
+                        ortopedia. Ten preparat <b>naprawdę działa</b>. I właśnie dlatego jego niepowodzenie jest tak
+                        wymowne.</p>
+                    <p>Zastrzyk dostarcza do stawu płyn maziowy — naturalny środek smarujący, którego tam brakuje.
+                        Zapamiętajcie tę nazwę. Jest kluczowa nie tylko dla zrozumienia działania zastrzyków, ale też
+                        tego, dlaczego impuls żelatynowy robi to samo — bez igły i bez dziesiątek tysięcy złotych za
+                        serię iniekcji.</p>
+                    <p>W zdrowym stawie organizm nieustannie produkuje płyn maziowy. Smaruje powierzchnie stawowe,
+                        odżywia chrząstkę, chroni kości przed tarciem. To naturalny mechanizm umożliwiający ruch.
+                        Istnieje w każdym organizmie.</p>
+                    <p>Problem polega na tym, że u wielu osób po 50. roku życia w tkankach stawowych zaczyna gromadzić
+                        się coś, czego tam być nie powinno.</p>
+                </div>
+
+                <!-- ============ FOUND ENEMY ============ -->
+
+                <h2>Substancja, o której nigdy nie powiedział Wam lekarz</h2>
+
+                <div class="tsl-danger">
+                    <div class="tsl-danger-title">⚠️ Chlorek kadmu</div>
+                    <p>Toksyczna substancja. Znajduje się w pestycydach, którymi przetwarza się produkty przeznaczone
+                        do długiego przechowywania. Stosuje się je na owoce i warzywa, aby przyspieszyć wzrost — dodaje
+                        się je nawet do pasz dla zwierząt hodowlanych.</p>
+                    <p>Każdego dnia, przez lata, trafia do organizmu wraz z żywnością, wodą z kranu i wodą butelkowaną,
+                        a także z plastikowych opakowań produktów. Poprzez odpady przemysłowe przedostaje się do rzek
+                        i gleby — dosłownie stale go wdychamy.</p>
+                    <p><b>Odkłada się właśnie w miejscach styku kości. W stawach.</b> A po pięćdziesiątce organizm nie
+                        radzi sobie już tak dobrze z usuwaniem toksyn.</p>
+                </div>
+
+                <div class="tsl-doc">
+                    <p>To on niszczy komórki błony maziowej — te, które produkują płyn. Produkcja spada, staw wysycha,
+                        chrząstka zaczyna się ścieńczać, kości ocierają się o siebie. Stąd ból, trzaski i poranna
+                        sztywność.</p>
+                    <p>Iniekcja kwasu hialuronowego rozwiązuje ten problem doraźnie. Dostarcza płyn z zewnątrz, na
+                        siłę. Działa, dopóki wstrzykujecie go do stawu. Ale kiedy zastrzyki się kończą, jego
+                        pozostałości są usuwane z organizmu, a własny mechanizm nadal jest uszkodzony.
+                        <b>Chlorek kadmu nigdzie nie zniknął.</b> Ciało wraca do punktu wyjścia. Właśnie to przydarzyło
+                        się Agnieszce.</p>
+                    <p>Kiedy organizm sam skutecznie neutralizuje chlorek kadmu, staw jest bezpieczny. Błona maziowa
+                        produkuje płyn, chrząstka otrzymuje składniki odżywcze, ruch odbywa się bez bólu i trzasków.
+                        Regeneracja zachodzi nawet w nocy, nawet w spoczynku.</p>
+                    <p>Ale przy gromadzeniu się chlorku kadmu wbudowuje się on w komórki błony maziowej i niszczy je od
+                        wewnątrz. Produkcja płynu spada, sygnał do regeneracji zanika, a staw przechodzi w stan, który
+                        nazywam <b>kolapsem chrząstki</b>. Chrząstka przestaje otrzymywać składniki odżywcze, wysycha,
+                        staje się coraz cieńsza, kości zaczynają ocierać się o siebie — a organizm robi jedyną rzecz,
+                        jaką potrafi w takiej sytuacji. Rozwija stan zapalny. Obrzęk, ból, poranna sztywność.</p>
+                    <p>Nie ma znaczenia, jaką metodę leczenia stosujecie. Tabletki, zastrzyki, fizjoterapia, diety.
+                        Kadm nadal niszczy błonę maziową, ponieważ żadna z tych metod nie działa na jego usuwanie.
+                        Dosłownie tracicie pieniądze i czas na leczenie, podczas gdy trucizna nadal działa.</p>
+                </div>
+
+                <div class="tsl-key">
+                    <div class="tsl-key-title">Dlatego — słuchajcie uważnie</div>
+                    <p>Tabletki nie działają długoterminowo. Fizjoterapia nie działa długoterminowo. Zastrzyki nie
+                        działają długoterminowo. <b>Nie dlatego, że robicie coś nie tak</b> — tylko dlatego, że
+                        wszystkie te metody walczą z objawem i ignorują przyczynę.</p>
+                </div>
+
+                <div class="tsl-doc">
+                    <p>Staw z nagromadzonym kadmem jest jak rura z dziurą. Można wlewać wodę bez końca. Dopóki nie
+                        załata się dziury, będzie wyciekać. Zawsze.</p>
+                </div>
+
+                <div class="tsl-fact">
+                    <div class="tsl-fact-num">9,7×</div>
+                    <p>Badanie opublikowane w <i>Annals of the Rheumatic Diseases</i>, jednym z najbardziej
+                        autorytatywnych czasopism reumatologicznych na świecie, wykazało, że u osób z podwyższonym
+                        poziomem kadmu tkanka chrzęstna ulega zniszczeniu <b>9,7 razy szybciej</b> niż u osób,
+                        u których jego poziom jest prawidłowy.</p>
+                </div>
+
+                <div class="tsl-doc">
+                    <p>Innymi słowy: bez neutralizacji kadmu, niezależnie od tego, jak długo się leczycie, staw będzie
+                        nadal ulegał zniszczeniu — nawet jeśli stosujecie się do wszystkich zaleceń. Ponieważ sedno
+                        problemu nie tkwi w stanie zapalnym ani w niedoborze płynu maziowego. One są skutkiem.</p>
+                    <p><b>„Ale doktorze, dlaczego zastrzyki powodują tak silny efekt odbicia, kiedy się je
+                            przerywa?”</b></p>
+                    <p>Oto, czego nikt Wam nie mówi. Iniekcja kwasu hialuronowego nie stymuluje błony maziowej do
+                        produkcji płynu. Ona go <b>zastępuje</b>. Podczas gdy wprowadzacie syntetyczną wersję płynu,
+                        własny mechanizm jego produkcji nadal ulega degradacji. Wpadacie w cykl chemicznego
+                        uzależnienia.</p>
+                    <p>Dopóki robicie zastrzyki, stawy są nawilżane syntetycznym olejem i działają tak, jak powinny.
+                        Ale gdy tylko przestajecie, sztuczne smarowanie znika, a własny płyn nie jest produkowany.
+                        Często ból jest silniejszy niż przed leczeniem. To właśnie ten osławiony efekt odbicia. Ten
+                        sam, którego doświadczyła Agnieszka.</p>
+                </div>
+
+                <h3>A kortyzon? Tutaj sprawa jest jeszcze poważniejsza</h3>
+                <div class="tsl-doc">
+                    <p>Kortyzon to syntetyczny, agresywny steroid z długą listą skutków ubocznych: od podwyższonego
+                        ciśnienia, przybierania na wadze i obrzęku twarzy po ścieńczenie skóry, niszczenie tkanki
+                        kostnej i rozwój zaćmy.</p>
+                    <p>Są też udokumentowane, rzadkie, lecz poważne działania niepożądane: osteoporoza, zespół
+                        Cushinga, jaskra, cukrzyca, depresja, a także <b>jałowa martwica kości</b> — udokumentowane
+                        zniszczenie dużego stawu przez sam preparat, który miał go leczyć. Takie przypadki nie zdarzają
+                        się często, ale to nie jest hipotetyczne ryzyko. Jest ono uwzględnione w oficjalnej
+                        dokumentacji medycznej. Tym drobnym drukiem, którego nikt nie czyta.</p>
+                    <p>Widzieliście ludzi, którzy przez lata stosują blokady steroidowe i nagle zaczynają wyglądać
+                        dziwnie? Zaokrąglona twarz, obrzęk, ścieńczenie skóry, nienaturalny przyrost masy ciała przy
+                        jednoczesnym zaniku mięśni. Nazywa się to <b>twarzą kortyzonową</b>. Preparat nie tylko nie
+                        leczy stawu — systemowo obciąża cały organizm.</p>
+                    <p>Jakby tego było mało, seria zastrzyków kosztuje od 3 000 złotych, a zabiegi trzeba powtarzać.
+                        Cena, która opróżnia oszczędności przeciętnego polskiego pracownika. I wszystko to tylko po to,
+                        by utrzymać choć odrobinę sprawności.</p>
+                    <p class="tsl-underline">To nie jest leczenie. To abonament na uzależnienie.</p>
+                </div>
+
+                <!-- ============ MECHANIZM PRODUKTU ============ -->
+
+                <h2>„Doktorze, jadłam żelatynę przez całe życie, ale stawy nadal mnie bolą”</h2>
+
+                <div class="tsl-doc">
+                    <p>Dobrze. Pozwólcie, że wyjaśnię.</p>
+                    <p><b>Zwykła żelatyna ze sklepu to po prostu białko.</b> Nie robi nic z chlorkiem kadmu w Waszych
+                        stawach.</p>
+                    <p>Impuls żelatynowy to specyficzne połączenie: żelatyna plus imbir plus kurkuma w dokładnych
+                        proporcjach. Właśnie to połączenie aktywuje dwa aminokwasy — <b>glicynę i prolinę</b> — które
+                        bezpośrednio wiążą cząsteczki chlorku kadmu w tkance stawowej i usuwają je z organizmu. Nie
+                        syntetycznie, nie z zewnątrz. Od wewnątrz.</p>
+                    <div class="tsl-key">
+                        <div class="tsl-key-title">Różnica jest fundamentalna</div>
+                        <p><b>Zastrzyk</b> zastępuje płyn maziowy — organizm przestaje sam go produkować i staje się
+                            zależny.<br>
+                            <b>Impuls żelatynowy</b> neutralizuje przyczynę i reaktywuje własną produkcję. Organizm
+                            przypomina sobie, jak prawidłowo funkcjonować.</p>
+                    </div>
+                    <p>Dlatego kiedy przestajecie robić zastrzyki, ból wraca: przyczyna nie została usunięta. I dlatego
+                        kiedy Agnieszka przestała stosować impuls żelatynowy, ból nie wrócił. Mechanizm działa sam.</p>
+                </div>
+
+                <h3>Cztery składniki formuły</h3>
+
+                <div class="tsl-ing">
+                    <div class="tsl-ing-num">1</div>
+                    <div class="tsl-ing-body">
+                        <div class="tsl-ing-name">Żelatyna o najwyższym stopniu oczyszczenia</div>
+                        <p>Zawiera skoncentrowany poziom glicyny i proliny — aminokwasów, które działają jak główne
+                            klucze dla Waszych stawów. Pamiętacie, jak wyjaśniałem, że chlorek kadmu jest jak rdza
+                            wewnątrz mechanizmu, która wszystko blokuje? Glicyna i prolina to wyspecjalizowane środki
+                            oczyszczające, które wiążą cząsteczki kadmu i usuwają je z tkanki stawowej.</p>
+                        <p class="tsl-mini">Badanie z 2025 roku, przeprowadzone przez Europejskie Towarzystwo
+                            Reumatologiczne: glicyna neutralizuje chlorek kadmu w tkance stawowej w <b>97%</b>,
+                            a prolina przywraca produkcję płynu maziowego w <b>91%</b>. Naukowcy nazwali to
+                            <b>kaskadowym efektem chondrogennym</b> — po uruchomieniu proces regeneracji nasila się
+                            z godziny na godzinę.</p>
+                    </div>
+                </div>
+
+                <div class="tsl-ing">
+                    <div class="tsl-ing-num">2</div>
+                    <div class="tsl-ing-body">
+                        <div class="tsl-ing-name">Skoncentrowany ekstrakt gingerolu (imbir)</div>
+                        <p>Znany jako „cichy łowca”. Działa jak naturalny wzmacniacz neutralizacji kadmu. Wyobraźcie
+                            sobie swój staw jak zamek zardzewiały od środka: żelatyna dobiera odpowiedni klucz,
+                            a gingerol jest olejem, który wnika w każdą szczelinę i rozpuszcza rdzę do końca.
+                            Jednocześnie łagodzi ostry stan zapalny — ten sam, który powoduje ból i obrzęk.</p>
+                        <p class="tsl-mini">Badanie opublikowane w <i>Journal of Medicinal Food</i>: osoby stosujące
+                            ekstrakt z gingerolu doświadczały zmniejszenia bólu stawów o <b>83%</b> w porównaniu
+                            z osobami, które go nie stosowały.</p>
+                    </div>
+                </div>
+
+                <div class="tsl-ing">
+                    <div class="tsl-ing-num">3</div>
+                    <div class="tsl-ing-body">
+                        <div class="tsl-ing-name">Kurkuma z piperyną</div>
+                        <p>Kurkumina jednocześnie blokuje kaskadę zapalną, którą uruchamia chlorek kadmu,
+                            i regeneruje komórki błony maziowej. To jak dwie tarcze w jednej dłoni: żelatyna
+                            neutralizuje kadm, gingerol wzmacnia oczyszczanie, a kurkumina chroni zregenerowaną tkankę
+                            przed ponownym zniszczeniem.</p>
+                        <p>Jest jeden ważny niuans. Możecie zneutralizować kadm, możecie zmniejszyć stan zapalny — ale
+                            jeśli komórki tkanki stawowej są uszkodzone zbyt głęboko, sygnał do regeneracji jest
+                            wysyłany i nie dociera do celu. Po 50. roku życia dzieje się to praktycznie u każdego. Nie
+                            nagle. Niezauważalnie. Przewlekły stan mikrozapalny — cichy sabotażysta, który niweczy całą
+                            pozostałą pracę.</p>
+                        <p class="tsl-mini">Zwykła kurkuma jest bardzo słabo przyswajana — organizm usuwa jej
+                            większość, zanim zdąży zadziałać. Dlatego potrzebna jest piperyna: w odpowiednich
+                            proporcjach zwiększa biodostępność kurkuminoidów o <b>2000%</b>.</p>
+                        <p>Kurkuma z piperyną tworzy to, co nazywam <b>pamięcią tkankową</b>. Staw nie tylko przestaje
+                            boleć — zostaje przeprogramowany. Na nowo uczy się utrzymywać zdrowy stan jako normę,
+                            a nie jako tymczasową poprawę.</p>
+                    </div>
+                </div>
+
+                <div class="tsl-ing">
+                    <div class="tsl-ing-num">4</div>
+                    <div class="tsl-ing-body">
+                        <div class="tsl-ing-name">NAD+</div>
+                        <p>Mało znany koenzym o potężnych właściwościach regeneracyjnych. Aktywuje mitochondria
+                            w komórkach tkanki stawowej — te same centra energetyczne, które chlorek kadmu hamuje
+                            w pierwszej kolejności. Kiedy mitochondria znów pracują z pełną mocą, chondrocyty
+                            otrzymują energię potrzebną do regeneracji, stan zapalny zostaje wygaszony na poziomie
+                            komórkowym, a błona maziowa zaczyna ponownie produkować płyn.</p>
+                        <p class="tsl-mini">Gdy poziom kadmu spada, tkanka regeneruje się o <b>480%</b> szybciej.</p>
+                    </div>
+                </div>
+
+                <h3>Czterofazowa ścieżka regeneracji stawu</h3>
+
+                <div class="tsl-phases">
+                    <div class="tsl-phase"><span>Faza 1 · Neutralizacja</span> Żelatyna uwalnia glicynę i prolinę,
+                        które wiążą cząsteczki chlorku kadmu i zaczynają usuwać je z tkanki stawowej.</div>
+                    <div class="tsl-phase"><span>Faza 2 · Oczyszczanie</span> Gingerol wielokrotnie wzmacnia ten
+                        proces, jednocześnie łagodząc ostry stan zapalny i przywracając mikrokrążenie w stawie.</div>
+                    <div class="tsl-phase"><span>Faza 3 · Ochrona</span> Kurkuma z piperyną eliminuje przewlekły stan
+                        zapalny, gwarantując, że nic więcej nie zablokuje regeneracji.</div>
+                    <div class="tsl-phase"><span>Faza 4 · Transformacja</span> Staw przełącza się w naturalny tryb
+                        automatycznej samoregeneracji, 24 godziny na dobę.</div>
+                </div>
+
+                <h3>Co dzieje się dzień po dniu</h3>
+                <div class="tsl-days">
+                    <div class="tsl-day"><b>3. dzień</b> — poranna sztywność staje się krótsza.</div>
+                    <div class="tsl-day"><b>7. dzień</b> — pierwszy ruch, który wcześniej powodował ból, nagle odbywa
+                        się bez niego.</div>
+                    <div class="tsl-day"><b>14. dzień</b> — pojawia się myśl, że stawy przez cały dzień nie dawały
+                        o sobie znać. Po raz pierwszy od długiego czasu.</div>
+                </div>
+
+                <div class="tsl-doc">
+                    <p>To tak potężny proces, że pacjenci piszą do mnie rzeczy takie jak: „Mam wrażenie, jakby
+                        wszczepiono mi nowy staw, ale bez operacji”. „Wchodziłam po schodach i zdałam sobie sprawę, że
+                        w ogóle nie myślę o kolanach”. „Mój ortopeda patrzył na rezonans i milczał przez minutę”.</p>
+                    <p>I wszystkie te rezultaty są osiągane w naturalny sposób. Żadnych syntetycznych leków, żadnych
+                        skutków ubocznych, niczego sztucznego — tylko reaktywacja siły regeneracyjnej, która już
+                        istnieje w Waszym organizmie.</p>
+                </div>
+
+                <h3>Problem czystości składników</h3>
+                <div class="tsl-doc">
+                    <p>W Biedronce, Auchan i Kauflandzie można znaleźć żelatynę, imbir i kurkumę — ale nie w stężeniach
+                        terapeutycznych, których skuteczność przeciwko chlorkowi kadmu została potwierdzona klinicznie.
+                        99% tego, co jest sprzedawane, jest rozcieńczone, niestabilne lub źle skomponowane.</p>
+                    <p>Jest też drugi problem: proporcje składników muszą być dokładne co do miligrama, a większość
+                        ludzi nie ma sprzętu pozwalającego osiągnąć taką precyzję.</p>
+                    <p>Dzięki mojemu wykształceniu i znajomościom udało mi się skontaktować z laboratorium, które
+                        dysponowało odpowiednim sprzętem. Gdy tylko zakończyli testy, opublikowałem wyniki na
+                        Facebooku. Chciałem po prostu podzielić się nimi z kilkoma kolegami. I post wybuchł.
+                        <b>100 000 udostępnień w ciągu 24 godzin.</b></p>
+                    <p>Wtedy otrzymałem wiadomość od laboratorium <b>BioCor Labs</b>, które przygotowało pierwszą
+                        partię formuły. Ta amerykańska firma specjalizuje się w naukowo potwierdzonych naturalnych
+                        związkach. Od lat badali glicynę i prolinę, ale nigdy wcześniej nie widzieli tak skutecznego
+                        zastosowania przeciwko chlorkowi kadmu. Po dwóch tygodniach podpisaliśmy wyłączne
+                        partnerstwo.</p>
+                    <p>Opracowaliśmy ultraskoncentrowaną formułę <b>w kremie</b>, w której składniki aktywne są
+                        zamknięte w liposomalnych nanocząsteczkach. To pozwala im przenikać bezpośrednio przez skórę do
+                        tkanki stawowej, omijając żołądek i krwiobieg — dostarczając formułę dokładnie tam, gdzie
+                        nagromadził się chlorek kadmu. Dlatego taka forma nie tylko jest wygodniejsza, ale też
+                        <b>sześciokrotnie skuteczniej</b> neutralizuje kadm niż doustne przyjmowanie tych samych
+                        składników.</p>
+                    <p>Wystarczy jedno delikatne nałożenie kremu, aby uruchomić do 24 godzin aktywnej neutralizacji
+                        chlorku kadmu i regeneracji tkanki stawowej.</p>
+                    <p class="tsl-underline">To nie jest zwykła maść z apteki. To nie jest żelatyna ze sklepu.</p>
+                </div>
+
+                <!-- ============ BLOK 5. DOWODY W ŚRODKU ============ -->
+
+                <div class="tsl-quote">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av11.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Agnieszka Ostrowska</div>
+                            <div class="tsl-quote-role">dziennikarka, 61 lat</div>
+                        </div>
+                    </div>
+                    <p>Pamiętam dzień, kiedy doktor Gaweł opowiedział mi o impulsie żelatynowym. Zaśmiałam się.
+                        Myślałam, że to kolejna pusta obietnica, ale nie miałam nic do stracenia. Wszystko było takie
+                        proste: nałożyć krem na kolano raz dziennie.</p>
+                    <p>Dziesiątego dnia rano wstałam i zrozumiałam, że idę do kuchni i nie myślę o bólu. Po prostu idę.
+                        Zatrzymałam się na środku korytarza i rozpłakałam się.</p>
+                    <p>Po dwóch tygodniach znów zaczęłam normalnie chodzić. Żadnych zastrzyków, żadnej fizjoterapii,
+                        żadnych tabletek. Wyjęłam buty na obcasie, których nie zakładałam od trzech lat. Po raz
+                        pierwszy od dawna poczułam, że żyję, a nie tylko istnieję wokół swojego bólu.</p>
+                </div>
+
+                <div class="tsl-quote">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av14.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Hanna Ziębicka</div>
+                            <div class="tsl-quote-role">piosenkarka, 63 lata</div>
+                        </div>
+                    </div>
+                    <p>Po wielu latach koncertów moje stawy zapłaciły swoją cenę. Najgorsze było stać na scenie i czuć,
+                        że każdy ruch przychodzi z trudem. Zaczynałam bać się występów — nie z powodu tremy, ale
+                        z powodu bólu. Wydawało się, że ta część mojego życia się kończy. Ale spójrzcie na mnie teraz.
+                        Zaledwie po dwóch tygodniach stosowania żelatyny ortopedycznej przed snem ból ustąpił i już nie
+                        wrócił. Nie mogę uwierzyć, że żelatyna zrobiła to, czego nie były w stanie zrobić lata
+                        leczenia.</p>
+                </div>
+
+                <div class="tsl-quote">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av17.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Dorota Sowińska</div>
+                            <div class="tsl-quote-role">aktorka, 57 lat</div>
+                        </div>
+                    </div>
+                    <p>Dwa miesiące temu nie mogłam normalnie usiąść i wysiąść z samochodu. A oto ja dzisiaj — żywa
+                        i pełna energii. Transformacja jest oczywista. Doktorze Gawle, dziękuję, że odkrył Pan dla mnie
+                        żelatynę na nowo.</p>
+                </div>
+
+                <!-- ============ BLOK 6. MISJA, PRODUKT, CENA ============ -->
+
+                <h2>Dlaczego nie oddałem tej formuły aptekom</h2>
+
+                <div class="tsl-doc">
+                    <p>W tamtym momencie zrozumiałem, że odnalazłem swoje powołanie: zmieniać życie ludzi cierpiących
+                        w systemie, który zarabia na przewlekłym bólu.</p>
+                    <p>Po miesiącach negocjacji zapewniliśmy partnerstwo z BioCor Labs oraz posiadającą certyfikat GMP,
+                        zarejestrowaną produkcję, aby wytwarzać tę formułę bezpośrednio tutaj, w Polsce. Spędziliśmy
+                        miesiące, udoskonalając ją, aż osiągnęliśmy wersję gotową, by zmienić Wasze życie.</p>
+                    <p class="tsl-brand">Z dumą przedstawiam Wam <b>Artrovia</b>.</p>
+                    <p>Artrovia to pierwsza i jedyna formuła impulsu żelatynowego, specjalnie opracowana do całkowitej
+                        neutralizacji chlorku kadmu w tkance stawowej. Przestajecie niszczyć chrząstkę i zaczynacie ją
+                        regenerować — 24 godziny na dobę, nawet podczas snu.</p>
+                    <p>Przez 25 lat praktyki leczyłem ponad <b>17 000 pacjentów</b>. Widziałem wszystko. Każdą
+                        tabletkę, każdy NLPZ, każdy zastrzyk, każdą obietnicę. I mogę Wam szczerze powiedzieć: czegoś
+                        takiego jeszcze nie widziałem.</p>
+                    <p>Wszystkie pozostałe rozwiązania mają jeden wspólny problem — opierają się na silnej woli
+                        i powtarzaniu. Tabletki trzeba przyjmować codziennie. Zastrzyki powtarzać co pół roku. Na
+                        fizjoterapię trzeba chodzić stale. Wszystko to działa dokładnie tak długo, jak długo się tego
+                        trzymacie. A potem jeden pominięty cykl, jeden odwołany zabieg — i ból wraca, zwykle
+                        silniejszy. Jakby ciało karało Was za to, że ośmieliliście się przestać.</p>
+                    <p class="tsl-underline">To nie Wasza wina. To system zbudowany przeciwko Wam.</p>
+                    <p>Wszystko jest proste: nakładajcie preparat na dotknięty obszar raz dziennie. Kuracja do 14 dni.
+                        Nic więcej nie jest potrzebne.</p>
+                </div>
+
+                <div class="tsl-key">
+                    <div class="tsl-key-title">Artrovia działa, nawet jeśli</div>
+                    <ul class="tsl-ul">
+                        <li>tabletki nie działają;</li>
+                        <li>zastrzyki dają coraz słabszy efekt;</li>
+                        <li>fizjoterapia nie utrzymuje rezultatu;</li>
+                        <li>masz 40, 60 czy 80 lat;</li>
+                        <li>masz artrozę, zapalenie stawów, osteochondrozę, obrzęki i przewlekły stan zapalny;</li>
+                        <li>masz alergie lub nietolerancje — to w 100% naturalne ekstrakty.</li>
+                    </ul>
+                </div>
+
+                <h2>Cena, o której musiałem stoczyć walkę</h2>
+
+                <div class="tsl-doc">
+                    <p>Mógłbym sprzedawać Artrovię za pośrednictwem sieci aptek, podpisać umowy z dystrybutorami,
+                        siedzieć i otrzymywać tantiemy. To byłoby najprostsze. Nie zrobiłem tego. I oto dlaczego.</p>
+                    <p>Kiedy zakończyliśmy opracowywanie formuły, zacząłem otrzymywać telefony od dużych sieci
+                        aptecznych. Oferowali atrakcyjne liczby, szeroką dystrybucję, półki w całej Polsce. Brzmiało
+                        dobrze — dopóki nie usłyszałem ceny, jaką planowali ustalić za opakowanie.</p>
+                    <div class="tsl-danger">
+                        <div class="tsl-danger-title">1 500 złotych</div>
+                        <p>Zapytałem: dlaczego? Odpowiedź była bezpośrednia: <i>„Doktorze, ludzie przestaną kupować
+                                chondroprotektory i robić zastrzyki. Przestaną być stałymi klientami. Musimy
+                                zrekompensować te straty”.</i></p>
+                    </div>
+                    <p>Odłożyłem słuchawkę i już nie oddzwoniłem. Bo od 20 lat siedzę w gabinecie i patrzę na ludzi,
+                        którzy przychodzą do mnie z emeryturą w kieszeni i bólem w oczach. Którzy wybierają między
+                        zastrzykiem a jedzeniem.</p>
+                    <p>Dlatego wybrałem inną drogę. Jako współautor formuły otrzymałem prawo do dystrybucji produktu
+                        bezpośrednio, z pominięciem wszystkich pośredników. Żadnych dystrybutorów, żadnych aptecznych
+                        marż, żadnych prowizji.</p>
+                    <p>A dzięki wieloletniej pracy na uniwersytetach w Warszawie i kontaktom w środowisku medycznym
+                        udało mi się złożyć wniosek o włączenie Artrovii do <b>Państwowego Programu Zdrowia
+                            i Długowieczności</b>. Komitet do spraw Oceny Technologii Medycznych — po przeprowadzeniu
+                        wszystkich testów i atestacji — zatwierdził mój wniosek.</p>
+                    <p>W ramach tego programu państwo dotuje produkcję preparatów uznanych za istotne społecznie pod
+                        jednym warunkiem: sprzedaż w celu osiągania nadmiernych zysków jest zabroniona. Cena nie może
+                        przekraczać kosztów produkcji i dostawy.</p>
+                </div>
+
+                <div class="tsl-price">
+                    <div class="tsl-price-row">
+                        <span class="tsl-price-old">1 500 zł</span>
+                        <span class="tsl-price-arrow">→</span>
+                        <span class="tsl-price-new">147 zł</span>
+                    </div>
+                    <p>Nie półtora tysiąca. Nie tysiąc. Nawet nie 500. <b>147 złotych.</b> Mniej, niż wydajesz
+                        miesięcznie na leki przeciwbólowe. Mniej niż jeden zastrzyk, który — jeśli w ogóle działa — to
+                        niedługo.</p>
+                </div>
+
+                <div class="tsl-doc">
+                    <p>Bezpośrednio od producenta, bezpośrednio do Ciebie. Bez pośredników, bez przedpłaty. Po prostu
+                        wypełnij bezpieczny formularz, podając tylko imię i numer telefonu. Mój asystent zadzwoni do
+                        Ciebie i jeszcze raz wszystko dokładnie wyjaśni.</p>
+                    <p><b>Nie musisz płacić z góry ani podawać danych karty bankowej.</b></p>
+                    <p>Po zakończeniu kuracji daję Ci 100% gwarancję. Jeśli w trakcie kuracji nie poczujesz poprawy,
+                        zwrócimy pieniądze — bez pytań i bez konieczności podawania wyjaśnień. Jesteśmy pewni
+                        rezultatu, ponieważ widzieliśmy go ponad <b>37 000 razy</b>.</p>
+                </div>
+
+                <a href="#oneform" class="tsl-cta">➤ ZAREZERWUJ SWOJE OPAKOWANIE ZA 147 zł</a>
+
+                <!-- ============ BLOK 7. DOWODY PO CENIE ============ -->
+
+                <h2>Co napisali ci, którzy zamówili jako pierwsi</h2>
+
+                <div class="tsl-quote tsl-quote-user">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av06.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Jadwiga N.</div>
+                            <div class="tsl-quote-role">62 lata, Kielce</div>
+                        </div>
+                    </div>
+                    <p>W drugim tygodniu stosowania Artrovii obudziłam się rano i zrozumiałam: nic nie boli. Zupełnie
+                        nic. Po prostu wstaję — bez konieczności wcześniejszego leżenia i zbierania się na odwagę. Do
+                        dziś nie mogę w to uwierzyć. Pewnego wieczoru mąż zobaczył, jak przechodzę przez pokój lekko,
+                        bez utykania, i zatrzymał się. Spojrzał na mnie tak, jakby zobaczył dawną mnie. Powiedział:
+                        „Znowu chodzisz jak kiedyś”. Minęły lata, odkąd patrzył na mnie bez niepokoju w oczach.</p>
+                </div>
+
+                <div class="tsl-quote tsl-quote-user">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av09.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Zofia M.</div>
+                            <div class="tsl-quote-role">58 lat, Olsztyn</div>
+                        </div>
+                    </div>
+                    <p>Po tygodniu znów zaczęłam normalnie chodzić po schodach — nie bokiem i nie trzymając się
+                        poręczy. Na początku myślałam, że to przypadek, ale dziesiątego dnia założyłam kozaki na
+                        niewielkim obcasie, których nie wyjmowałam od siedmiu lat. Wcześniej poważnie rozważałam
+                        operację wymiany stawu kolanowego. Teraz widzę, że zregenerował się sam.</p>
+                </div>
+
+                <div class="tsl-quote tsl-quote-user">
+                    <div class="tsl-quote-head">
+                        <img class="tsl-ava" src="images/av13.jpg" alt="" loading="lazy">
+                        <div>
+                            <div class="tsl-quote-name">Barbara W.</div>
+                            <div class="tsl-quote-role">66 lat, Rzeszów</div>
+                        </div>
+                    </div>
+                    <p>Moja rodzina przestała patrzeć na mnie ze współczuciem, ponieważ znów stałam się sobą. Dzieci
+                        znów przyjeżdżają mnie odwiedzić, a nie po to, żeby mi w czymś pomóc. Przeszłam pełną kurację
+                        i nie odczułam ani jednego skutku ubocznego — w przeciwieństwie do wszystkich tabletek
+                        i zastrzyków, których próbowałam. Teraz mogę sama wiązać sznurówki, chodzić na zakupy
+                        i pracować w ogrodzie tak długo, jak chcę.</p>
+                </div>
+
+                <!-- ============ BLOK 8. ZAMKNIĘCIE ============ -->
+
+                <h2>Masz teraz trzy drogi</h2>
+
+                <div class="tsl-doc">
+                    <p>Ale jest coś, co tracisz właśnie teraz. I nie chodzi tylko o komfort. <b>Tracisz czas.</b>
+                        Każdego dnia bez leczenia chlorek kadmu nadal niszczy Twoją chrząstkę. Z każdym miesiącem
+                        sprawność się zmniejsza. Z każdym rokiem ból staje się nie tylko silniejszy, ale i bardziej
+                        znajomy. A to oznacza, że po prostu zaczynasz żyć mniej.</p>
+                </div>
+
+                <div class="tsl-road">
+                    <div class="tsl-road-num">Droga pierwsza</div>
+                    <p>Nic nie robić. Budzić się każdego ranka i w pierwszej kolejności oceniać palcem, jak bardzo boli
+                        dzisiaj. Rezygnować ze wszystkiego, co wymaga ruchu. Siedzieć na ławce i patrzeć, jak wnuki
+                        biegają, ponieważ wstanie i dogonienie ich nie jest już możliwe. Czerwienić się, gdy ktoś
+                        zauważy, że kulejesz. Planować dzień wokół bólu, a nie wokół życia. I z każdym rokiem chrząstka
+                        staje się coraz cieńsza, a operacja coraz bliżej.</p>
+                </div>
+
+                <div class="tsl-road">
+                    <div class="tsl-road-num">Droga druga</div>
+                    <p>Nadal robić to, co robiłeś wcześniej. Tabletki, zastrzyki, fizjoterapia. Już wiesz, czym to się
+                        kończy: tymczasowa ulga i nawrót. W kółko. Chlorek kadmu nigdzie nie zniknął — nadal działa,
+                        podczas gdy Ty tracisz pieniądze i czas na metody, które nie docierają do źródła pożaru. Stawy
+                        będą się zużywać, aż nadejdzie dzień, w którym żaden zastrzyk już nie pomoże.</p>
+                </div>
+
+                <div class="tsl-road tsl-road-good">
+                    <div class="tsl-road-num">Droga trzecia</div>
+                    <p>Przerwać ten błędny krąg właśnie teraz. Dać swoim stawom dokładnie to, czego im brakuje. Już po
+                        tygodniu poczuć pierwsze swobodne ruchy. Po dwóch tygodniach samodzielnie chodzić, załatwiać
+                        swoje sprawy i spędzać czas z bliskimi, a nie stać z boku. Żyć bez bólu jako normą, a nie jak
+                        z rzadkim, dobrym dniem.</p>
+                    <p>Wstawać rano i po prostu iść do kuchni. Chodzić po schodach bez trzymania się poręczy. Wyjść do
+                        ogrodu i posadzić swoje ulubione kwiaty. Usiąść na podłodze z wnukiem i samodzielnie wstać.
+                        Potańczyć na weselu. Wybrać się do lasu na grzyby.</p>
+                    <p><b>I wszystko to na zawsze — ponieważ przyczyna zniknęła, a to, co nie ma przyczyny, nie może
+                            powrócić.</b></p>
+                </div>
+
+                <div class="tsl-doc">
+                    <p>Artrovia pomogła już <b>37 748</b> mężczyznom i kobietom, którzy znów czują się potrzebni
+                        i samodzielni. Ale jest tu surowa rzeczywistość: państwowy program dofinansowania przydziela
+                        limity, a produkcja jest ograniczona surowymi standardami jakości.</p>
+                    <p>Teraz, specjalnie na potrzeby tego programu, zarezerwowałem <b>ostatnie 100 opakowań</b> po
+                        kosztach własnych — zaledwie za 147 złotych. Kolejna partia w tej cenie będzie dostępna nie
+                        wcześniej niż za dwa, trzy miesiące i najprawdopodobniej jej cena wzrośnie półtora- do
+                        dwukrotnie.</p>
+                    <p>Nie chodzi o to, czy chcesz odzyskać zdrowie. Pytanie brzmi: <b>czy jesteś gotowy zrobić to
+                            właśnie teraz, póki wciąż masz taką możliwość?</b></p>
+                    <p>Po wypełnieniu formularza mój asystent zadzwoni do Ciebie w celu konsultacji i potwierdzenia
+                        zamówienia. Za dwa, trzy dni otrzymasz oryginalny produkt. Dostawa do każdego regionu Polski.
+                        Nie musisz nic płacić z góry.</p>
+                    <p class="tsl-final">Nie ma bólu silniejszego niż ból żalu, że przegapiłeś okazję, by wszystko
+                        zmienić na lepsze. Ten wpis nie trafił do Ciebie przypadkiem. Złóż zamówienie już teraz —
+                        póki formularz jest jeszcze dostępny.</p>
+                </div>
+
+                <div class="tsl-scrollhint" id="tsl-scrollhint">
+                    <span>Formularz zamówienia otwiera się poniżej</span>
+                    <div class="tsl-arrow">▼</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="fb-post fb-post-bottom">
+
+
+
+            <div class="fb-post-stats">
+
+                <span class="fb-react-icons"><img class="fb-react-img" src="images/like1.svg"
+                        alt=""><img class="fb-react-img fb-react-img-2" src="images/like2.svg"
+                        alt=""></span>
+
+                <span class="fb-stats-total">70 tys.</span>
+
+                <span class="fb-stats-right"><span>2361 komentarzy</span><span>854 udostępnień</span></span>
+
+            </div>
+
+
+
+            <div class="fb-post-actions">
+
+                <div class="fb-action">
+
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 10.5v9H4.6A1.6 1.6 0 013 17.9v-5.8a1.6 1.6 0 011.6-1.6H7zm0 0l4.2-6.4a1.6 1.6 0 012.9 1v3.7h3.4a2 2 0 011.96 2.44l-1.2 5.2A2 2 0 0116.3 19.5H7">
+                        </path>
+                    </svg>
+
+                    Lubię to
+
+                </div>
+
+                <div class="fb-action">
+
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M21 11.5c0 4.1-4 7.5-9 7.5-1 0-2-.1-2.9-.4L4 21l1.2-3.3C3.8 16.3 3 14 3 11.5 3 7.4 7 4 12 4s9 3.4 9 7.5z">
+                        </path>
+                    </svg>
+
+                    Komentarz
+
+                </div>
+
+                <div class="fb-action">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9.5 15.5l-5-5 5-5v3h2.5a8.5 8.5 0 018.5 8.5v2a8.5 8.5 0 00-8.5-6.5H9.5v3z"></path>
+                    </svg>
+
+                    Udostępnij
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <span id="oneform"></span>
+
+        <div class="order-container" id="order-form-container">
+
+            <div class="medical-header">🏥 OFICJALNY FORMULARZ MEDYCZNY</div>
+
+            <div class="medical-body">
+
+
+
+                <div class="stock-warning-box">
+
+                    <span class="warning-word">UWAGA!</span> Pozostalo tylko <b id="live-stock-count">36</b> dostepnych
+                    paczek
+
+                </div>
+
+
+
+                
+
+                <div class="clean-discount-title">50% znizki wazne do: <span class="date-0"></span></div>
+
+
+
+                <div class="clean-timer">
+
+                    <div class="ct-block">
+
+                        <div class="ct-val" id="hour-val">00</div>
+
+                        <div class="ct-lbl">GODZINY</div>
+
+                    </div>
+
+                    <div class="ct-sep">:</div>
+
+                    <div class="ct-block">
+
+                        <div class="ct-val" id="min-val">05</div>
+
+                        <div class="ct-lbl">MINUTY</div>
+
+                    </div>
+
+                    <div class="ct-sep">:</div>
+
+                    <div class="ct-block">
+
+                        <div class="ct-val" id="sec-val">00</div>
+
+                        <div class="ct-lbl">SEKUNDY</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="price-container">
+
+                    <div class="price-col">
+
+                        <div class="price-lbl">Poprzednia cena:</div>
+
+                        <div class="price-old">294 zl</div>
+
+                    </div>
+
+                    <div class="price-col">
+
+                        <div class="price-lbl">Nowa cena:</div>
+
+                        <div class="price-new">147 zl</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <form class="order-form" action="/order.php" method="POST" id="order_form">
+                        <input type="hidden" name="fbpx" value="{fbpx}">
+                        <input type="hidden" name="utm_code" value="{subid}">
+                        <input type="hidden" name="cid" value="{campaign_id}">
+                        <input type="hidden" name="sid" value="2115">
+                        <input type="hidden" name="hash" value="{hash}">
+                        <input type="hidden" name="country" value="PL">
+
+
+                    <div class="form-group">
+
+                        <label>👤 Twoje imie:</label>
+
+                        <input autocomplete="name" type="text" name="name" id="name1" placeholder="Np. Jan Kowalski"
+                            required="">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>📱 Numer telefonu:</label>
+
+                        <input autocomplete="tel" type="tel" name="phone" id="phone1" placeholder="+48 500 000 000"
+                            required="">
+
+                    </div>
+
+
+
+                    <button type="submit" id="btn1" class="submit-btn">ZAMOW ZE ZNIZKA</button>
+
+                                    
+                    </form>
+
+
+
+
+
+
+                <div class="trust-benefits">
+
+                    <div class="trust-item"><span>✅</span> Bezpieczna platnosc przy odbiorze (gotowka)</div>
+
+                    <div class="trust-item"><span>📦</span> Gwarantowana dostawa w calej Polsce</div>
+
+                    <div class="trust-item"><span>🔒</span> Twoje dane sa chronione w 100%</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <footer>
+
+            <div class="footer-warning">UWAGA! Ten wpis NIE zostanie zarchiwizowany! Przeczytaj uwaznie do konca.
+            </div>
+
+
+
+            <div class="fb-comments">
+
+                <div class="fb-comments-title">Komentarze</div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av01.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Michał Szymański</div>
+
+                            <div class="fb-comment-text">3 lata kolana tak bolaly ze rano wstawac z lozka to byla
+                                katorga. zona mowila idz do lekarza a ja juz tam bylem ze 100 razy. usiadlem do tego
+                                filmu i prawie wylaczylem po 10 minutach ale cos kazalo zostac. dotrwalem do konca i po
+                                tygodniu ide po schodach bez tego okropnego strachu w kolanie. nie wiem co dokladnie
+                                pomoglo ale jak ktos ma tak jak ja to nie odchodzcie w polowie</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">53</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>2 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av02.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Tomasz Lewandowski</div>
+
+                            <div class="fb-comment-text">hej a u was tez tak jest ze rano pierwsze 20 minut to chodzenie
+                                jak po rozbitym szkle?? bo ja juz nie wiem czy to wiek czy cos gorszego</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">47</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>3 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av03.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Maria Kwiatkowska</div>
+
+                            <div class="fb-comment-text">prosze obejrzyjcie calosc bo ja prawie zamknela i potem zal ze
+                                wyszlam za wczesnie. tam pod koniec jest cala rozmowa o tym sposobie</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">39</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>5 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av04.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Elżbieta Jabłońska</div>
+
+                            <div class="fb-comment-text">sasiadka z pierwszego pietra miala tak ze ledwo do sklepu
+                                doszla. teraz widze ja na podworku i cos tam robi normalnie. zapytalam co zrobila a ona
+                                mowi ze cos obejrzala w internecie. dziwnie brzmi ale widze ze chodzi</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">41</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>8 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av05.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Zofia Mazur</div>
+
+                            <div class="fb-comment-text">mama ma 72 lata i caly czas narzeka na biodro. ktos wie czy w
+                                tym wieku w ogole mozna cos zrobic czy juz tylko zastrzyki zostaja</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">24</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>12 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av06.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Magdalena Kamińska</div>
+
+                            <div class="fb-comment-text">NIE ZAMYKAJCIE W POLOWIE!!! tam na koncu mowia o calym sekrecie
+                                i ja bym tego nie uslyszala jakbym wyszla</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">19</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>14 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av07.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Janina Nowak</div>
+
+                            <div class="fb-comment-text">Boze jaka ja placze jak rano wstaje i to kolano znowu.... 68
+                                lat mam a czuj sie jak 90 😔</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">31</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>16 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av08.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Władysław Kowalczyk</div>
+
+                            <div class="fb-comment-text">lekarz mi powiedzial ze to na cale zycie i tyle. a tu pan w
+                                filmie mowi ze mozna probowac inaczej. nie wiem komu wierzyc szczerze mowiac</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">28</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>18 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av09.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Krystyna Wójcik</div>
+
+                            <div class="fb-comment-text">ja.... dotrzylam do konca i dobrze ze dotrzylam bo na poczatku
+                                nic nie wiadomo a pod koniec wszystko sie sklada</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">36</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>21 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av10.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Stanisław Zieliński</div>
+
+                            <div class="fb-comment-text">wczoraj po raz pierwszy od pol roku normalnie poszedlem na
+                                spacer z wnukiem. bez zatrzymywania co 50 metrow. takie glupie szczescie</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">15</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>24 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av11.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Danuta Kaczmarek</div>
+
+                            <div class="fb-comment-text">ja w polowie wyszlam i potem musialam szukac od nowa bo kolega
+                                mowil ze tam cos waznego bylo. ktos ma link?? albo jak znalezc znowu</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">44</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>27 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av12.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Henryk Wiśniewski</div>
+
+                            <div class="fb-comment-text">zelatyna brzmi smiesznie ale obejrzyjcie do konca zanim bedzie
+                                za pozno bo nagranie zniknie</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">12</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>29 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av13.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Jadwiga Lis</div>
+
+                            <div class="fb-comment-text">ja juz nie mam sily na kolejne zastrzyki w kolano. czy komus
+                                tez lekarz mowil ze to jedyne wyjscie??</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">33</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>32 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av14.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Ryszard Dąbrowski</div>
+
+                            <div class="fb-comment-text">po 2 tygodniach moge w koncu usiasc na niskim taborecie bez
+                                jeku. drobnostka a jak cieszy</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">9</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>35 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av15.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Barbara Pawlak</div>
+
+                            <div class="fb-comment-text">widzialam w tv ze polska ma problem ze stawami i tu taki film
+                                wie siedze i mowie sobie obejrze calosc do konca bo moze w koncu cos zrozumiem</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">26</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>38 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av16.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Teresa Malinowska</div>
+
+                            <div class="fb-comment-text">😭 kolana 😭 biodro 😭 czasem mysle ze juz nigdy nie pojade na
+                                wycieczke z kolezankami z pracy</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">37</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>41 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av17.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Andrzej Jankowski</div>
+
+                            <div class="fb-comment-text">10 lat leczenia i zero efektu. czasem w nocy nie moge spac od
+                                bolu w barku. moze ktos ma podobnie</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">21</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>44 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av18.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Halina Sadowska</div>
+
+                            <div class="fb-comment-text">Dziekuje za transmisje. Najwazniejsze jest pod koniec jak pan
+                                doktor tlumaczy caly sposob. Warto obejrzec do konca.</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">17</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>47 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av19.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Czesław Rutkowski</div>
+
+                            <div class="fb-comment-text">zona mowila ze bedzie ogladac a ja usiadlem obok i teraz razem
+                                robimy te cwiczenia z filmu. smialismy sie ze w koncu cos robimy razem 😊</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">29</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>51 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av20.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Grażyna Michalska</div>
+
+                            <div class="fb-comment-text">prawie wylaczylam bo myslalam ze kolejna glupota z internetu a
+                                jednak cos tam mnie zaciekawilo. zobaczymy co dalej</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">14</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Lubię to</a><span
+                                class="dot">·</span><a
+                                href="#">Odpowiedz</a><span
+                                class="dot">·</span>54 min</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-copy">Meta © <span class="date-0" data-format="yyyy"></span></div>
+
+        </footer>
+
+    </div>
+
+
+
+    <div id="backfix-overlay">
+
+        <div class="backfix-modal">
+
+            <div class="bf-close" onclick="window.closeBackfixAndScroll()">×</div>
+
+            <div class="bf-header">ZACZEKAJ! 🛑</div>
+
+
+
+            <div class="bf-body">
+
+                <div id="bf-state-1">
+
+                    <p class="bf-text">
+
+                        Nie odchodz jeszcze! Ten poufny wpis <b>NIE ZOSTANIE ZAPISANY</b>.
+
+                    </p>
+
+                    <div class="bf-promo-box">
+
+                        <div
+                            style="font-size: 13px; color: #555; text-transform: uppercase; font-weight: bold; margin-bottom: 6px;">
+
+                            ⚠️ Wazne ostrzezenie:</div>
+
+                        <div style="color: #d90000; font-weight: 900; font-size: 18px; line-height: 1.2;">
+
+                            Jesli wyjdziesz teraz, stracisz dostep do metody 2026 na regeneracje stawow i ulge w bolu w
+                            kazdym wieku.
+
+                            Musisz przeczytac wpis do konca!
+
+                        </div>
+
+                    </div>
+
+                    <p style="margin-bottom: 10px; font-size: 15px; color: #333; font-weight: bold;">Twoj dostep do
+                        wpisu wygasa za:</p>
+
+                    <div class="bf-timer" id="bf-timer">02:00</div>
+
+                    <button onclick="window.closeBackfixAndScroll()" class="bf-btn">➤ KONTYNUUJ CZYTANIE</button>
+
+                    <div class="bf-trust">
+
+                        <span>🔴 Wpis na zywo</span><span>•</span><span>👁 +21 000 czytajacych</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div id="bf-state-2" style="display: none;">
+
+                    <p class="bf-text">
+
+                        Nie odchodz z pustymi rekami! System zarezerwowal Twoj kupon z <b>50% ZNIZKI</b>.
+
+                    </p>
+
+                    <div class="bf-promo-box" style="background: #fff0f0; border-color: #d90000;">
+
+                        <div
+                            style="font-size: 14px; color: #555; text-transform: uppercase; font-weight: bold; margin-bottom: 8px;">
+
+                            🔥 Alert magazynowy:</div>
+
+                        <div style="color: #111; font-weight: 900; font-size: 20px; line-height: 1.2;">
+
+                            Pozostaly tylko <span class="stock-highlight" id="bf-stock-count">36</span> paczki tego
+                            unikalnego żelatynowego sposobu na stawy.
+
+                        </div>
+
+                    </div>
+
+                    <p style="margin-bottom: 15px; font-size: 14px; color: #333;">
+
+                        Twoja paczka moze zostac przekazana innej osobie w kazdej chwili. Skompletuj zamowienie teraz!
+
+                    </p>
+
+                    <button onclick="window.closeBackfixAndScroll()" class="bf-btn"
+                        style="background: #28a745; box-shadow: 0 6px 0 #1e7e34;">
+
+                        👉 ZABEZPIECZ MOJA PACZKE
+
+                    </button>
+
+                    <div class="bf-trust" style="margin-top: 15px; display: flex; flex-direction: column; gap: 5px;">
+
+                        <span>✅ Platnosc przy odbiorze</span>
+
+                        <span>📦 Dostawa w calej Polsce</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+<script>
+/* TSL-контроллер: заменяет js/video.js.
+   Гейт формы — по глубине прокрутки статьи, а не по таймкоду видео. */
+(function () {
+    var REVEAL_AT = 0.60;      /* доля статьи, после которой открывается форма */
+    var TIMER_MIN = 5;         /* минут на таймере скидки */
+    var STOCK_START = 36;
+    var STOCK_FLOOR = 7;
+
+    var revealed = false;
+    var form = document.getElementById('order-form-container');
+    var article = document.getElementById('tsl-article');
+    var hint = document.getElementById('tsl-scrollhint');
+
+    /* ---------- счётчик «читают сейчас» ---------- */
+    var viewers = document.getElementById('live-viewers');
+    if (viewers) {
+        var base = 21486;
+        setInterval(function () {
+            base += Math.floor(Math.random() * 61) - 28;
+            if (base < 20800) base = 20800 + Math.floor(Math.random() * 60);
+            if (base > 22400) base = 22400 - Math.floor(Math.random() * 60);
+            viewers.textContent = String(base).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+        }, 4000);
+    }
+
+    /* ---------- таймер скидки ---------- */
+    var timerStarted = false;
+    function startTimer() {
+        if (timerStarted) return;
+        timerStarted = true;
+        var left = TIMER_MIN * 60;
+        var h = document.getElementById('hour-val');
+        var m = document.getElementById('min-val');
+        var s = document.getElementById('sec-val');
+        function pad(n) { return n < 10 ? '0' + n : '' + n; }
+        function tick() {
+            var hh = Math.floor(left / 3600);
+            var mm = Math.floor((left % 3600) / 60);
+            var ss = left % 60;
+            if (h) h.textContent = pad(hh);
+            if (m) m.textContent = pad(mm);
+            if (s) s.textContent = pad(ss);
+            if (left > 0) left--;
+        }
+        tick();
+        setInterval(tick, 1000);
+    }
+
+    /* ---------- остаток на складе ---------- */
+    var stockStarted = false;
+    function startStock() {
+        if (stockStarted) return;
+        stockStarted = true;
+        var n = STOCK_START;
+        var a = document.getElementById('live-stock-count');
+        var b = document.getElementById('bf-stock-count');
+        function step() {
+            if (n > STOCK_FLOOR) {
+                n--;
+                if (a) a.textContent = n;
+                if (b) b.textContent = n;
+            }
+            setTimeout(step, 22000 + Math.floor(Math.random() * 34000));
+        }
+        setTimeout(step, 26000);
+    }
+
+    /* ---------- открытие формы ---------- */
+    function reveal() {
+        if (revealed) return;
+        revealed = true;
+        if (form) form.style.display = 'block';
+        if (hint) hint.classList.add('is-on');
+        startTimer();
+        startStock();
+    }
+
+    function onScroll() {
+        if (revealed || !article) return;
+        var r = article.getBoundingClientRect();
+        var seen = (window.innerHeight - r.top) / (r.height || 1);
+        if (seen >= REVEAL_AT) reveal();
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    document.addEventListener('DOMContentLoaded', onScroll);
+    onScroll();
+
+    /* страховка: если читатель завис наверху, форма всё равно откроется */
+    setTimeout(function () { reveal(); }, 240000);
+
+    /* ---------- backfix ---------- */
+    var overlay = document.getElementById('backfix-overlay');
+    var st1 = document.getElementById('bf-state-1');
+    var st2 = document.getElementById('bf-state-2');
+    var bfShown = false;
+    var bfTimerId = null;
+
+    function showBackfix() {
+        if (!overlay || overlay.classList.contains('is-open')) return;
+        if (revealed) {
+            if (st1) st1.style.display = 'none';
+            if (st2) st2.style.display = 'block';
+        } else {
+            if (st1) st1.style.display = 'block';
+            if (st2) st2.style.display = 'none';
+            startBfTimer();
+        }
+        overlay.classList.add('is-open');
+        overlay.style.display = 'flex';
+        document.body.classList.add('noscroll');
+        bfShown = true;
+    }
+
+    function startBfTimer() {
+        if (bfTimerId) return;
+        var left = 120;
+        var el = document.getElementById('bf-timer');
+        bfTimerId = setInterval(function () {
+            var mm = Math.floor(left / 60), ss = left % 60;
+            if (el) el.textContent = (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
+            if (left > 0) left--;
+        }, 1000);
+    }
+
+    window.closeBackfixAndScroll = function () {
+        if (overlay) {
+            overlay.classList.remove('is-open');
+            overlay.style.display = 'none';
+        }
+        document.body.classList.remove('noscroll');
+        var target = revealed ? document.getElementById('oneform') : document.getElementById('tsl-article');
+        if (target && target.getBoundingClientRect) {
+            var top = window.pageYOffset + target.getBoundingClientRect().top - 60;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+    };
+
+    document.addEventListener('mouseout', function (e) {
+        if (!e.relatedTarget && e.clientY <= 0 && !bfShown) showBackfix();
+    });
+
+    try {
+        history.pushState(null, '', location.href);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, '', location.href);
+            showBackfix();
+        });
+    } catch (err) { }
+})();
+</script>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var comments = document.querySelectorAll('.fb-comment');
+            var delay = 8000;
+
+            function showComment(index) {
+                if (index >= comments.length) {
+                    return;
+                }
+                var comment = comments[index];
+                comment.classList.add('is-visible');
+                if (index > 0 && comments[index - 1].parentNode) {
+                    comments[index - 1].parentNode.insertBefore(comment, comments[index - 1]);
+                }
+                setTimeout(function () {
+                    showComment(index + 1);
+                }, delay);
+            }
+
+            showComment(0);
+        });
+    </script>
+  <script async>
+  const LAZY = document.querySelectorAll('img');
+  for (let i = 0; i < LAZY.length; i++) {
+    LAZY[i].setAttribute('loading', 'lazy');
+  }
+</script>
+  <script>
+  $("a").on("touchend click", function (e) {
+    e.preventDefault();
+    $('body,html').animate({
+      scrollTop: $('#oneform').offset().top
+    }, 400);
+  });
+</script>
+  <script>
+  $('[name="name"]').on("input", function () {
+    var val = $(this).val();
+    var cleaned = val
+      .replace(/[^\p{L}\s]/gu, "")
+      .replace(/^\s+/, "")
+      .replace(/\s\s+/, " ");
+    var parts = cleaned.split(" ");
+    if (parts.length > 2) {
+      cleaned = parts[0] + " " + parts[1];
+    }
+    $(this).val(cleaned);
+  });
+  $('[name="name"]').on("change blur", function () {
+    $(this).val($(this).val().trim());
+  });
+  $('[name="phone"]').on("input change", function (e) {
+    var val = $(this).val();
+    $(this).val(val.replace(/\D/g, ""));
+    $(e.currentTarget).attr("pattern", "[0-9]{6,}");
+  });
+</script>
+<p style="opacity: 0;">{_box:696Vgj23}</p>
+</body>
+
+</html>
