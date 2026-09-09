@@ -1,0 +1,3057 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr" data-theme="dark" data-theme-preference="system" style="--fb-topbar-h: 57px;">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Vídeo em direto | Facebook</title>
+
+
+    <link rel="preload" as="image" href="https://track.offene-herzen.life/caching/landings/PLsimbioz/poster.jpg">
+
+
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+
+            -webkit-tap-highlight-color: transparent;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+
+        body {
+
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+            background-color: #f0f2f5;
+
+            color: #1c1e21;
+
+            line-height: 1.4;
+
+        }
+
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 480px;
+
+            margin: 0 auto;
+
+            background: #f0f2f5;
+
+            min-height: 100vh;
+
+            padding-bottom: 20px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            position: relative;
+
+        }
+
+
+
+        .fb-topbar {
+
+            background: #fff;
+
+            padding: 8px 10px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 8px;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            border-bottom: 1px solid #dadde1;
+
+        }
+
+
+
+        .fb-topbar-side {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+        }
+
+
+
+        .fb-brand {
+
+            width: 40px;
+
+            height: 40px;
+
+            display: block;
+
+            flex-shrink: 0;
+
+        }
+
+
+
+        .fb-topbar a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+        }
+
+        .fb-icon-btn {
+
+            width: 36px;
+
+            height: 36px;
+
+            border-radius: 50%;
+
+            background: #e4e6eb;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            flex-shrink: 0;
+
+            cursor: pointer;
+
+        }
+
+        .fb-brand {
+            cursor: pointer;
+        }
+
+
+
+        .fb-icon-btn svg {
+
+            width: 20px;
+
+            height: 20px;
+
+            fill: #050505;
+
+            display: block;
+
+        }
+
+
+
+        .fb-icon-badge {
+
+            position: absolute;
+
+            top: -3px;
+
+            right: -5px;
+
+            background: #f02849;
+
+            color: #fff;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            line-height: 1;
+
+            padding: 3px 5px;
+
+            border-radius: 10px;
+
+            border: 2px solid #fff;
+
+        }
+
+
+
+        .fb-post-head {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            padding: 12px 12px 0;
+
+        }
+
+
+
+        .fb-post-ava {
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            background: #e4e6eb;
+
+            flex-shrink: 0;
+
+        }
+
+
+
+        .fb-post-meta {
+
+            flex: 1;
+
+            min-width: 0;
+
+            padding-top: 1px;
+
+        }
+
+
+
+        .fb-post-author {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            color: #050505;
+
+            line-height: 1.2;
+
+        }
+
+
+
+        .fb-verified {
+
+            width: 15px;
+
+            height: 15px;
+
+            flex-shrink: 0;
+
+            display: block;
+
+            object-fit: contain;
+
+        }
+
+
+
+        .fb-post-sub {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+            font-size: 12px;
+
+            color: #65676b;
+
+            margin-top: 2px;
+
+        }
+
+
+
+        .fb-post-sub svg {
+
+            width: 12px;
+
+            height: 12px;
+
+            fill: #65676b;
+
+            display: block;
+
+        }
+
+
+
+        .fb-post-more svg {
+
+            width: 20px;
+
+            height: 20px;
+
+            fill: #65676b;
+
+            display: block;
+
+            flex-shrink: 0;
+
+        }
+
+
+
+        .fb-post-text {
+
+            padding: 10px 12px 12px;
+
+            font-size: 24px;
+
+            line-height: 1.28;
+
+            font-weight: 800;
+
+            color: #050505;
+
+            text-align: left;
+
+        }
+
+
+
+        .fb-post-text .hl {
+
+            color: #d90000;
+
+            font-weight: 800;
+
+        }
+
+
+
+        .fb-post {
+
+            background: #fff;
+
+            border-top: 1px solid #dadde1;
+
+            border-bottom: 1px solid #dadde1;
+
+            margin: 8px 0;
+
+        }
+
+
+
+        .fb-post-media {
+
+            position: relative;
+
+            width: 100%;
+
+            padding-top: 56.25%;
+
+            background: #000;
+
+        }
+
+
+
+        .fb-post-head-only {
+
+            border-bottom: none;
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        .fb-post-bottom {
+
+            border-top: none;
+
+            margin-top: 0;
+
+            padding-top: 0;
+
+        }
+
+
+
+
+
+
+        body.noscroll {
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        #container_video {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            background: #111;
+            z-index: 2;
+        }
+
+        #container_video.fullscreen {
+            background: #000;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10000;
+        }
+
+
+
+        .fb-post-stats {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            padding: 10px 12px;
+
+            font-size: 13px;
+
+            color: #65676b;
+
+        }
+
+
+
+        .fb-post-stats .fb-react-icons {
+
+            margin-right: 2px;
+
+        }
+
+
+
+        .fb-stats-total {
+
+            font-size: 15px;
+
+            color: #65676b;
+
+        }
+
+
+
+        .fb-stats-right {
+
+            margin-left: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 15px;
+
+        }
+
+
+
+        .fb-stats-right span {
+
+            text-decoration: underline;
+
+            text-underline-offset: 2px;
+
+        }
+
+
+
+        .fb-post-actions {
+
+            display: flex;
+
+            align-items: stretch;
+
+            border-top: 1px solid #ced0d4;
+
+            margin: 0 12px;
+
+            padding: 4px 0 6px;
+
+        }
+
+
+
+        .fb-action {
+
+            flex: 1;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 8px 0;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            color: #65676b;
+
+            border-radius: 6px;
+
+        }
+
+
+
+        .fb-action svg {
+
+            width: 18px;
+
+            height: 18px;
+
+            fill: none;
+
+            stroke: #65676b;
+
+            stroke-width: 1.6;
+
+            stroke-linecap: round;
+
+            stroke-linejoin: round;
+
+            display: block;
+
+        }
+
+
+
+        #container_video video,
+        #video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+            background: #000;
+            pointer-events: none;
+        }
+
+        #container_video.fullscreen #video {
+            max-width: none;
+        }
+
+
+
+        .live-stats {
+
+            position: absolute;
+
+            top: 8px;
+
+            left: 8px;
+
+            display: flex;
+
+            gap: 6px;
+
+            z-index: 20;
+
+        }
+
+
+
+        .badge-live {
+
+            background: #f02849;
+
+            color: #fff;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            padding: 3px 6px;
+
+            border-radius: 4px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.3px;
+
+            animation: pulse-live 1.5s infinite;
+
+        }
+
+
+
+        .badge-viewers {
+
+            background: rgba(0, 0, 0, 0.55);
+
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            padding: 3px 8px 3px 6px;
+
+            border-radius: 4px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+        }
+
+
+
+        .badge-eye {
+
+            width: 14px;
+
+            height: 14px;
+
+            flex-shrink: 0;
+
+            fill: none;
+
+            stroke: #fff;
+
+            stroke-width: 2;
+
+            stroke-linecap: round;
+
+            stroke-linejoin: round;
+
+            opacity: 0.95;
+
+        }
+
+
+
+        #open-video,
+        #popup,
+        #play {
+            display: none;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            text-align: center;
+            z-index: 2;
+            height: 150px;
+        }
+
+        @media screen and (max-width: 500px) {
+            #open-video {
+                height: auto;
+                min-height: 90px;
+            }
+        }
+
+        #play {
+            display: block;
+        }
+
+        #play h4:first-child {
+            margin-bottom: 70px;
+        }
+
+        #container_video h2,
+        #container_video h4 {
+            color: #fff;
+            font-weight: 800;
+            line-height: 1.25;
+        }
+
+        #container_video h4 {
+            font-size: 15px;
+        }
+
+        #open-video h4:first-child,
+        #popup h2:first-child {
+            margin-bottom: 6px;
+        }
+
+        #container_video h2 {
+            font-size: 18px;
+        }
+
+        #open-video > div,
+        #popup > div,
+        #play > div {
+            position: relative;
+            background-color: rgba(0, 130, 0, 0.92);
+            padding: 10px 16px;
+            margin: 0 auto;
+            width: 30%;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 200, 0, 0.55);
+        }
+
+        #play > div {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M3 10v4h4l5 5V5L7 10H3zm13.5 2c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center 72px;
+            background-size: 52px;
+        }
+
+        #popup > div {
+            width: 40%;
+            background-color: rgba(217, 0, 0, 0.92);
+            box-shadow: 0 0 20px rgba(217, 0, 0, 0.45);
+        }
+
+        @media (max-width: 600px) {
+            #popup > div,
+            #play > div {
+                width: 80%;
+            }
+
+            #open-video > div {
+                width: 70%;
+            }
+        }
+
+        #close {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 10001;
+        }
+
+        #close img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        #container_video.fullscreen #close {
+            filter: invert(1);
+        }
+
+        #video-overlay {
+            display: none;
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        #container_video.fullscreen #video-overlay {
+            display: block;
+        }
+
+        .order-container {
+
+            display: none;
+
+            background: #fff;
+
+            text-align: left;
+
+            border: 1px solid #c8d4e3;
+
+            border-radius: 8px;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+            margin: 20px 15px;
+
+            overflow: hidden;
+
+            scroll-margin-top: calc(var(--fb-topbar-h, 57px) + 12px);
+
+        }
+
+
+
+        .medical-header {
+
+            background: #0056b3;
+
+            color: #fff;
+
+            padding: 14px 15px;
+
+            text-align: center;
+
+            font-weight: 900;
+
+            font-size: 16px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+        }
+
+
+
+        .medical-body {
+
+            padding: 20px 15px;
+
+        }
+
+
+
+        /* === НОВЫЙ БЛОК ОСТАТКОВ (Адаптирован под ФБ) === */
+
+        .stock-warning-box {
+
+            background: rgba(139, 0, 0, 0.08);
+
+            border: 2px dashed #8b0000;
+
+            padding: 15px;
+
+            margin-bottom: 20px;
+
+            border-radius: 4px;
+
+            color: #111;
+
+            font-size: 19px;
+
+            font-weight: 700;
+
+            text-align: center;
+
+            animation: pulse-stock-bg 1.5s infinite;
+
+            box-shadow: inset 0 0 10px rgba(139, 0, 0, 0.05);
+
+        }
+
+
+
+        .stock-warning-box .warning-word {
+
+            color: #d90000;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-right: 3px;
+
+        }
+
+
+
+        .stock-warning-box b {
+
+            font-size: 28px;
+
+            color: #d90000;
+
+            display: inline-block;
+
+            transition: all 0.3s ease;
+
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+
+        @keyframes pulse-stock-bg {
+
+            0% {
+                background: rgba(139, 0, 0, 0.03);
+                border-color: #8b0000;
+            }
+
+            50% {
+                background: rgba(139, 0, 0, 0.12);
+                border-color: #d90000;
+            }
+
+            100% {
+                background: rgba(139, 0, 0, 0.03);
+                border-color: #8b0000;
+            }
+
+        }
+
+        /* ========================================= */
+
+
+
+        .clean-discount-title {
+
+            text-align: center;
+
+            color: #444;
+
+            font-size: 15px;
+
+            margin-bottom: 15px;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .clean-timer {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: flex-start;
+
+            gap: 8px;
+
+            margin-bottom: 25px;
+
+            color: #1a73e8;
+
+        }
+
+
+
+        .ct-block {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            width: 75px;
+
+        }
+
+
+
+        .ct-val {
+
+            font-size: 38px;
+
+            font-weight: 900;
+
+            line-height: 1;
+
+            margin-bottom: 8px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+
+        .ct-lbl {
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .ct-sep {
+
+            font-size: 34px;
+
+            font-weight: 900;
+
+            line-height: 1;
+
+            margin-top: -4px;
+
+            color: #1a73e8;
+
+        }
+
+
+
+        .price-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 40px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+
+        .price-col {
+
+            text-align: center;
+
+        }
+
+
+
+        .price-lbl {
+
+            color: #666;
+
+            font-size: 13px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .price-old {
+
+            color: #d90000;
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+            text-decoration: line-through;
+
+        }
+
+
+
+        .price-new {
+
+            color: #28a745;
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+        }
+
+
+
+        .form-group {
+
+            margin-bottom: 16px;
+
+        }
+
+
+
+        .form-group label {
+
+            display: block;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            color: #4a5568;
+
+            margin-bottom: 6px;
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        .order-form input {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #cbd5e0;
+
+            border-radius: 4px;
+
+            font-size: 16px;
+
+            background: #f7fafc;
+
+            color: #1a202c;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .order-form input:focus {
+
+            outline: none;
+
+            border-color: #0056b3;
+
+            background: #fff;
+
+        }
+
+
+
+        .submit-btn {
+
+            width: 100%;
+
+            background: #28a745;
+
+            color: #fff;
+
+            padding: 18px;
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+            border: none;
+
+            border-radius: 4px;
+
+            cursor: pointer;
+
+            box-shadow: 0 4px 0 #1e7e34;
+
+            animation: pulse-green 2s infinite;
+
+            text-transform: uppercase;
+
+            margin-top: 5px;
+
+        }
+
+
+
+        .trust-benefits {
+
+            background: transparent;
+
+            border: none;
+
+            border-top: 1px dashed #cbd5e0;
+
+            padding: 15px 0 0 0;
+
+            margin-top: 20px;
+
+        }
+
+
+
+        .trust-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            color: #4a5568;
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .trust-item span {
+
+            color: #0056b3;
+
+            font-size: 18px;
+
+        }
+
+
+
+        footer {
+
+            text-align: center;
+
+            padding: 25px 15px 30px;
+
+            background: #f0f2f5;
+
+        }
+
+
+
+        .footer-warning {
+
+            color: #d90000;
+
+            font-weight: 900;
+
+            font-size: 14px;
+
+            margin-bottom: 10px;
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        .footer-copy {
+
+            font-size: 12px;
+
+            color: #888;
+
+            font-weight: bold;
+
+            margin-top: 22px;
+
+            padding-top: 16px;
+
+        }
+
+
+
+        .fb-comments {
+
+            text-align: left;
+
+            background: #fff;
+
+            border-top: 1px solid #ddd;
+
+            padding: 16px 12px 22px;
+
+            margin-bottom: 4px;
+
+        }
+
+
+
+        .fb-comments-title {
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            color: #050505;
+
+            margin-bottom: 14px;
+
+            padding-bottom: 10px;
+
+            border-bottom: 1px solid #e4e6eb;
+
+        }
+
+
+
+        .fb-comment {
+
+            display: none;
+
+            gap: 8px;
+
+            margin-bottom: 14px;
+
+            align-items: flex-start;
+
+            opacity: 0;
+
+        }
+
+        .fb-comment.is-visible {
+
+            display: flex;
+
+            animation: fb-comment-in 0.45s ease forwards;
+
+        }
+
+        @keyframes fb-comment-in {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+
+
+        .fb-comment-ava {
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            flex-shrink: 0;
+
+            background: #e4e6eb;
+
+        }
+
+
+
+        .fb-comment-body {
+
+            flex: 1;
+
+            min-width: 0;
+
+        }
+
+
+
+        .fb-comment-bubble {
+
+            position: relative;
+
+            display: inline-block;
+
+            max-width: 100%;
+
+            background: #f0f2f5;
+
+            border-radius: 18px;
+
+            padding: 8px 12px 16px;
+
+        }
+
+
+
+        .fb-comment-name {
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: #385898;
+
+            line-height: 1.2;
+
+            margin-bottom: 1px;
+
+        }
+
+
+
+        .fb-comment-text {
+
+            font-size: 15px;
+
+            color: #050505;
+
+            line-height: 1.3333;
+
+            word-wrap: break-word;
+
+        }
+
+
+
+        .fb-comment-reactions {
+
+            position: absolute;
+
+            right: 6px;
+
+            bottom: -10px;
+
+            background: #fff;
+
+            border-radius: 10px;
+
+            padding: 1px 5px 1px 1px;
+
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+            line-height: 1;
+
+            z-index: 2;
+
+        }
+
+
+
+        .fb-react-icons {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            height: 18px;
+
+        }
+
+
+
+        .fb-react-img {
+
+            width: 18px;
+
+            height: 18px;
+
+            border-radius: 50%;
+
+            border: 2px solid #fff;
+
+            box-sizing: border-box;
+
+            flex-shrink: 0;
+
+            display: block;
+
+            object-fit: cover;
+
+        }
+
+
+
+        .fb-react-img-2 {
+
+            margin-left: -5px;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+
+        .fb-react-count {
+
+            font-size: 13px;
+
+            color: #65676b;
+
+            font-weight: 400;
+
+            padding-right: 2px;
+
+            line-height: 18px;
+
+        }
+
+
+
+        .fb-comment-meta {
+
+            margin-top: 2px;
+
+            padding-left: 12px;
+
+            font-size: 12px;
+
+            color: #65676b;
+
+            font-weight: 600;
+
+        }
+
+
+
+        .fb-comment-meta a {
+
+            color: #65676b;
+
+            text-decoration: none;
+
+            cursor: default;
+
+        }
+
+
+
+        .fb-comment-meta a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+
+        .fb-comment-meta .dot {
+
+            margin: 0 4px;
+
+        }
+
+
+
+        #backfix-overlay {
+
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.85);
+
+            z-index: 2147483647;
+
+            justify-content: center;
+
+            align-items: center;
+
+            backdrop-filter: blur(5px);
+
+        }
+
+
+
+        .backfix-modal {
+
+            background: #fff;
+
+            width: 92%;
+
+            max-width: 420px;
+
+            border-radius: 12px;
+
+            padding: 0;
+
+            position: relative;
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+            animation: slideDown 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            overflow: hidden;
+
+            border: 3px solid #d90000;
+
+        }
+
+
+
+        .bf-header {
+
+            background: #d90000;
+
+            color: #fff;
+
+            text-align: center;
+
+            padding: 18px;
+
+            font-size: 26px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+        }
+
+
+
+        .bf-body {
+
+            padding: 25px 20px;
+
+            text-align: center;
+
+        }
+
+
+
+        .bf-text {
+
+            font-size: 17px;
+
+            color: #222;
+
+            line-height: 1.4;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .bf-promo-box {
+
+            background: #fff5f5;
+
+            border: 2px dashed #d90000;
+
+            padding: 15px;
+
+            border-radius: 8px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .bf-timer {
+
+            font-size: 46px;
+
+            font-weight: 900;
+
+            color: #000;
+
+            background: #f0f2f5;
+
+            border-radius: 8px;
+
+            padding: 10px;
+
+            font-family: monospace;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+
+            border: 1px solid #ccd0d5;
+
+        }
+
+
+
+        .bf-btn {
+
+            display: block;
+
+            width: 100%;
+
+            background: #28a745;
+
+            color: #fff;
+
+            border: none;
+
+            padding: 20px;
+
+            font-size: 18px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            box-shadow: 0 6px 0 #1e7e34;
+
+            animation: pulseBtn 1.5s infinite;
+
+        }
+
+
+
+        .bf-trust {
+
+            margin-top: 20px;
+
+            font-size: 14px;
+
+            color: #65676b;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            align-items: center;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .bf-close {
+
+            position: absolute;
+
+            top: 8px;
+
+            right: 15px;
+
+            color: #fff;
+
+            font-size: 32px;
+
+            cursor: pointer;
+
+            opacity: 0.9;
+
+            line-height: 1;
+
+            font-weight: bold;
+
+        }
+
+
+
+        @keyframes pulse-green {
+
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+            }
+
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 0 20px rgba(40, 167, 69, 0.9);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+            }
+
+        }
+
+
+
+        @keyframes pulse-live {
+
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+
+
+        @keyframes slideDown {
+
+            from {
+                transform: translateY(-100px) scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+        }
+
+
+
+        @keyframes pulseBtn {
+
+            0% {
+                transform: scale(1);
+                box-shadow: 0 6px 0 #1e7e34, 0 0 10px rgba(40, 167, 69, 0.5);
+            }
+
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 6px 0 #1e7e34, 0 0 25px rgba(40, 167, 69, 0.9);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 6px 0 #1e7e34, 0 0 10px rgba(40, 167, 69, 0.5);
+            }
+
+        }
+    </style>
+    <script src="js/evdate.js"></script>
+</head>
+
+
+
+<body>
+
+    <div class="container">
+
+
+
+        <div class="fb-topbar">
+
+            <div class="fb-topbar-side">
+
+                <a href="#">
+                <svg class="fb-brand" viewBox="0 0 40 40" aria-hidden="true">
+
+                    <circle cx="20" cy="20" r="20" fill="#1877f2"></circle>
+
+                    <path fill="#fff"
+                        d="M22.6 32.4V22.1h3.6l.55-4.2h-4.15v-2.65c0-1.2.35-2.05 2.1-2.05h2.2V9.45c-.38-.05-1.72-.17-3.28-.17-3.25 0-5.47 1.98-5.47 5.62v3h-3.6v4.2h3.6v10.3h4.45z">
+                    </path>
+
+                </svg>
+                </a>
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M10.5 3a7.5 7.5 0 015.92 12.11l4.24 4.23a1.1 1.1 0 01-1.56 1.56l-4.23-4.24A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z">
+                        </path>
+                    </svg>
+
+                </a>
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5.4" width="18" height="2.2" rx="1.1"></rect>
+                        <rect x="3" y="10.9" width="18" height="2.2" rx="1.1"></rect>
+                        <rect x="3" y="16.4" width="18" height="2.2" rx="1.1"></rect>
+                    </svg>
+
+                </a>
+
+            </div>
+
+            <div class="fb-topbar-side">
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z"></path>
+                    </svg>
+
+                </a>
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 2C6.5 2 2 6.2 2 11.3c0 2.9 1.5 5.5 3.8 7.2V22l3.5-1.9c.9.2 1.8.4 2.7.4 5.5 0 10-4.2 10-9.3S17.5 2 12 2zm.6 12.5l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7-5.4 5.7z">
+                        </path>
+                    </svg>
+
+                </a>
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 2a6 6 0 00-6 6v3.3c0 .8-.3 1.5-.8 2.1l-.9 1a1.5 1.5 0 001.1 2.5h13.2a1.5 1.5 0 001.1-2.5l-.9-1c-.5-.6-.8-1.3-.8-2.1V8a6 6 0 00-6-6zm0 18.5a2.8 2.8 0 002.7-2H9.3a2.8 2.8 0 002.7 2z">
+                        </path>
+                    </svg>
+
+                    <span class="fb-icon-badge">20+</span>
+
+                </a>
+
+                <a href="#" class="fb-icon-btn">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 15.2L6.4 9.6h11.2z"></path>
+                    </svg>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="fb-post fb-post-head-only">
+
+            <div class="fb-post-head">
+
+                <img class="fb-post-ava" src="images/author.jpg" alt="">
+
+                <div class="fb-post-meta">
+
+                    <div class="fb-post-author">
+
+                        Dr. Vasco Salgado
+
+                        <img class="fb-verified" src="images/verif.png" alt="">
+
+                    </div>
+
+                    <div class="fb-post-sub">
+
+                        <span id="fb-post-date" class="date-0" data-format="dd month"> </span> 11:02
+
+                        <span>·</span>
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 1.8c.9 0 2 1.6 2.6 4.2H9.4C10 5.4 11.1 3.8 12 3.8zM4 12c0-.8.1-1.5.3-2.2h3.3c-.1.7-.1 1.4-.1 2.2s0 1.5.1 2.2H4.3C4.1 13.5 4 12.8 4 12zm1.1 4.2h2.9c.4 1.7 1 3.1 1.7 4a8.2 8.2 0 01-4.6-4zm2.9-8.4H5.1a8.2 8.2 0 014.6-4c-.7.9-1.3 2.3-1.7 4zM12 20.2c-.9 0-2-1.6-2.6-4.2h5.2c-.6 2.6-1.7 4.2-2.6 4.2zm2.9-6.2H9.1c-.1-.7-.1-1.4-.1-2s0-1.4.1-2h5.8c.1.6.1 1.3.1 2s0 1.3-.1 2zm-.6 6.2c.7-.9 1.3-2.3 1.7-4h2.9a8.2 8.2 0 01-4.6 4zm2.1-6.2c.1-.7.1-1.4.1-2s0-1.4-.1-2h3.3c.2.7.3 1.4.3 2s-.1 1.5-.3 2.2h-3.3zm-.4-6.2c-.4-1.7-1-3.1-1.7-4a8.2 8.2 0 014.6 4h-2.9z">
+                            </path>
+                        </svg>
+
+                    </div>
+
+                </div>
+
+                <div class="fb-post-more">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M6 10a2 2 0 100 4 2 2 0 000-4zm6 0a2 2 0 100 4 2 2 0 000-4zm6 0a2 2 0 100 4 2 2 0 000-4z">
+                        </path>
+                    </svg>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <span id="oneform"></span>
+        <div class="vsl-sticky-wrap">
+            <div class="fb-post-media">
+
+                <div id="container_video">
+                    <div id="video-overlay"></div>
+                    <div id="close">
+                        <img src="images/2.svg" alt="">
+                    </div>
+                    <div id="open-video">
+                        <div>
+                            <h4>O vídeo está em pausa.</h4>
+                            <h4>Clique para continuar</h4>
+                        </div>
+                    </div>
+                    <div id="popup">
+                        <div>
+                            <h2>Stock limitado.</h2>
+                            <h2>Encomende já!</h2>
+                        </div>
+                    </div>
+                    <div id="play">
+                        <div>
+                            <h4>O vídeo já começou.</h4>
+                            <h4>Clique para ativar o som!</h4>
+                        </div>
+                    </div>
+                    <video id="video" autoplay muted playsinline preload="metadata" >
+                        <source src="media/vid.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="fb-post fb-post-bottom">
+
+
+
+            <div class="fb-post-stats">
+
+                <span class="fb-react-icons"><img class="fb-react-img" src="images/like1.svg"
+                        alt=""><img class="fb-react-img fb-react-img-2" src="images/like2.svg"
+                        alt=""></span>
+
+                <span class="fb-stats-total">70 mil</span>
+
+                <span class="fb-stats-right"><span>2361 comentários</span><span>854 partilhas</span></span>
+
+            </div>
+
+
+
+            <div class="fb-post-actions">
+
+                <div class="fb-action">
+
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 10.5v9H4.6A1.6 1.6 0 013 17.9v-5.8a1.6 1.6 0 011.6-1.6H7zm0 0l4.2-6.4a1.6 1.6 0 012.9 1v3.7h3.4a2 2 0 011.96 2.44l-1.2 5.2A2 2 0 0116.3 19.5H7">
+                        </path>
+                    </svg>
+
+                    Gosto
+
+                </div>
+
+                <div class="fb-action">
+
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M21 11.5c0 4.1-4 7.5-9 7.5-1 0-2-.1-2.9-.4L4 21l1.2-3.3C3.8 16.3 3 14 3 11.5 3 7.4 7 4 12 4s9 3.4 9 7.5z">
+                        </path>
+                    </svg>
+
+                    Comentar
+
+                </div>
+
+                <div class="fb-action">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9.5 15.5l-5-5 5-5v3h2.5a8.5 8.5 0 018.5 8.5v2a8.5 8.5 0 00-8.5-6.5H9.5v3z"></path>
+                    </svg>
+
+                    Partilhar
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="order-container" id="order-form-container">
+
+            <div class="medical-header">🏥 FORMULÁRIO MÉDICO OFICIAL</div>
+
+            <div class="medical-body">
+
+
+
+                <div class="stock-warning-box">
+
+                    <span class="warning-word">ATENÇÃO!</span> Restam apenas <b id="live-stock-count">36</b> pacotes
+                    disponíveis
+
+                </div>
+
+
+
+
+
+                <div class="clean-discount-title">50% de desconto válido até: <span class="date-0"></span></div>
+
+
+
+                <div class="clean-timer">
+
+                    <div class="ct-block">
+
+                        <div class="ct-val" id="hour-val">00</div>
+
+                        <div class="ct-lbl">HORAS</div>
+
+                    </div>
+
+                    <div class="ct-sep">:</div>
+
+                    <div class="ct-block">
+
+                        <div class="ct-val" id="min-val">05</div>
+
+                        <div class="ct-lbl">MINUTOS</div>
+
+                    </div>
+
+                    <div class="ct-sep">:</div>
+
+                    <div class="ct-block">
+
+                        <div class="ct-val" id="sec-val">00</div>
+
+                        <div class="ct-lbl">SEGUNDOS</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="price-container">
+
+                    <div class="price-col">
+
+                        <div class="price-lbl">Preço anterior:</div>
+
+                        <div class="price-old">69,90 €</div>
+
+                    </div>
+
+                    <div class="price-col">
+
+                        <div class="price-lbl">Novo preço:</div>
+
+                        <div class="price-new">34,90 €</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <form class="order-form" action="/order.php" method="POST" id="order_form">
+                        <input type="hidden" name="fbpx" value="{fbpx}">
+                        <input type="hidden" name="utm_code" value="{subid}">
+                        <input type="hidden" name="cid" value="{campaign_id}">
+                        <input type="hidden" name="sid" value="2115">
+                        <input type="hidden" name="hash" value="{hash}">
+                        <input type="hidden" name="country" value="PT">
+
+
+                    <div class="form-group">
+
+                        <label>👤 O seu nome:</label>
+
+                        <input autocomplete="name" type="text" name="name" id="name1" placeholder="Ex.: João Silva"
+                            required="">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>📱 Número de telefone:</label>
+
+                        <input autocomplete="tel" type="tel" name="phone" id="phone1" placeholder="+351 912 345 678"
+                            required="">
+
+                    </div>
+
+
+
+                    <button type="submit" id="btn1" class="submit-btn">ENCOMENDAR COM DESCONTO</button>
+
+
+                    </form>
+
+
+
+
+
+
+                <div class="trust-benefits">
+
+                    <div class="trust-item"><span>✅</span> Pagamento seguro na entrega (dinheiro)</div>
+
+                    <div class="trust-item"><span>📦</span> Entrega garantida em todo Portugal</div>
+
+                    <div class="trust-item"><span>🔒</span> Os seus dados estão 100% protegidos</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <footer>
+
+            <div class="footer-warning">ATENÇÃO! A gravação desta transmissão NÃO será guardada! Assista com atenção até ao fim.
+            </div>
+
+
+
+            <div class="fb-comments">
+
+                <div class="fb-comments-title">Comentários</div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av01.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Miguel Cardoso</div>
+
+                            <div class="fb-comment-text">3 anos com os joelhos a doer tanto que levantar da cama de manha era um castigo. a minha mulher dizia vai ao medico e eu ja tinha ido umas 100 vezes. sentei-me a ver este video e quase desisti aos 10 minutos mas algo me fez ficar. aguentei ate ao fim e passada uma semana ja subo as escadas sem aquele medo horrivel no joelho. nao sei bem o que ajudou mas se alguem estiver como eu nao saiam a meio</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">53</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>2 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av02.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Tiago Nogueira</div>
+
+                            <div class="fb-comment-text">ola alguem tambem tem isso de que de manha os primeiros 20 minutos e como andar sobre vidros partidos?? porque eu ja nao sei se e a idade ou algo pior</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">47</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>3 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av03.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Maria Flores</div>
+
+                            <div class="fb-comment-text">por favor vejam ate ao fim porque eu quase fechei e depois arrependi-me de ter saido cedo demais. la para o final ha uma conversa toda sobre este metodo</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">39</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>5 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av04.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Isabel Amaral</div>
+
+                            <div class="fb-comment-text">a vizinha do primeiro andar mal conseguia chegar ao supermercado. agora vejo-a no quintal a fazer coisas normalmente. perguntei o que tinha feito e ela disse que tinha visto algo na internet. soa estranho mas vejo que ela anda</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">41</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>8 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av05.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Sofia Campos</div>
+
+                            <div class="fb-comment-text">a minha mae tem 72 anos e vive-se a queixar da anca. alguem sabe se nesta idade ainda se pode fazer alguma coisa ou so restam mesmo as injecoes</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">24</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>12 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av06.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Madalena Pinto</div>
+
+                            <div class="fb-comment-text">NAO FECHEM A MEIO!!! la no fim falam de todo o segredo e eu nao teria ouvido isso se tivesse saido</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">19</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>14 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av07.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Joana Novais</div>
+
+                            <div class="fb-comment-text">meu deus como eu choro quando me levanto de manha e o joelho outra vez.... tenho 68 anos e sinto-me com 90 😔</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">31</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>16 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av08.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Henrique Ferreira</div>
+
+                            <div class="fb-comment-text">o medico disse-me que isto e para a vida toda e pronto. mas aqui o senhor no video diz que se pode tentar de outra forma. sinceramente ja nao sei em quem acreditar</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">28</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>18 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av09.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Cristina Vieira</div>
+
+                            <div class="fb-comment-text">eu.... aguentei ate ao fim e ainda bem que aguentei porque no inicio nao se percebe nada e no fim tudo faz sentido</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">36</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>21 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av10.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Manuel Marques</div>
+
+                            <div class="fb-comment-text">ontem pela primeira vez em meio ano fui dar um passeio normal com o meu neto. sem parar a cada 50 metros. e uma felicidade tao simples</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">15</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>24 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av11.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Deolinda Ramos</div>
+
+                            <div class="fb-comment-text">eu sai a meio e depois tive de procurar tudo de novo porque um colega disse que havia algo importante ali. alguem tem o link?? ou como e que se encontra outra vez</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">44</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>27 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av12.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Rui Teixeira</div>
+
+                            <div class="fb-comment-text">gelatina soa ridiculo mas vejam ate ao fim antes que seja tarde porque a gravacao vai desaparecer</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">12</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>29 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av13.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Fernanda Lobo</div>
+
+                            <div class="fb-comment-text">ja nao tenho forcas para mais uma injecao no joelho. alguem tambem teve um medico a dizer que essa e a unica saida??</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">33</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>32 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av14.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Ricardo Freitas</div>
+
+                            <div class="fb-comment-text">ao fim de 2 semanas ja consigo sentar-me num banco baixo sem gemer. e uma coisa pequena mas da tanta alegria</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">9</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>35 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av15.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Bárbara Pacheco</div>
+
+                            <div class="fb-comment-text">vi na tv que portugal tem um problema com as articulacoes e apareceu-me este video entao pensei vou ver tudo ate ao fim porque talvez finalmente perceba alguma coisa</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">26</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>38 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av16.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Teresa Malheiro</div>
+
+                            <div class="fb-comment-text">😭 joelhos 😭 anca 😭 as vezes penso que nunca mais vou fazer uma viagem com as colegas do trabalho</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">37</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>41 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av17.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">André Janeiro</div>
+
+                            <div class="fb-comment-text">10 anos de tratamento e zero resultado. as vezes de noite nao consigo dormir com a dor no ombro. se calhar alguem tem algo parecido</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">21</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>44 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av18.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Helena Sardinha</div>
+
+                            <div class="fb-comment-text">Obrigada pela transmissao. A parte mais importante e no final quando o senhor doutor explica todo o metodo. Vale a pena ver ate ao fim.</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">17</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>47 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av19.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Casimiro Rocha</div>
+
+                            <div class="fb-comment-text">a minha mulher disse que ia ver e eu sentei-me ao lado dela e agora fazemos juntos os exercicios do video. rimo-nos porque finalmente fazemos algo juntos 😊</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">29</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>51 min</div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fb-comment">
+
+                    <img class="fb-comment-ava" src="images/av20.jpg" alt="" loading="lazy">
+
+                    <div class="fb-comment-body">
+
+                        <div class="fb-comment-bubble">
+
+                            <div class="fb-comment-name">Graça Machado</div>
+
+                            <div class="fb-comment-text">quase desliguei porque pensei que era mais uma parvoice da internet mas mesmo assim algo me despertou a curiosidade. vamos ver o que vem a seguir</div>
+
+                            <div class="fb-comment-reactions"><span class="fb-react-icons"><img class="fb-react-img"
+                                        src="images/like1.svg" alt=""><img
+                                        class="fb-react-img fb-react-img-2"
+                                        src="images/like2.svg" alt=""></span><span
+                                    class="fb-react-count">14</span></div>
+
+                        </div>
+
+                        <div class="fb-comment-meta"><a
+                                href="#">Gosto</a><span
+                                class="dot">·</span><a
+                                href="#">Responder</a><span
+                                class="dot">·</span>54 min</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-copy">Meta © <span class="date-0" data-format="yyyy"></span></div>
+
+        </footer>
+
+    </div>
+
+
+
+    <div id="backfix-overlay">
+
+        <div class="backfix-modal">
+
+            <div class="bf-close" onclick="window.closeBackfixAndScroll()">×</div>
+
+            <div class="bf-header">ESPERE! 🛑</div>
+
+
+
+            <div class="bf-body">
+
+                <div id="bf-state-1">
+
+                    <p class="bf-text">
+
+                        Não saia ainda! A gravação desta transmissão confidencial <b>NÃO SERÁ GUARDADA</b>.
+
+                    </p>
+
+                    <div class="bf-promo-box">
+
+                        <div
+                            style="font-size: 13px; color: #555; text-transform: uppercase; font-weight: bold; margin-bottom: 6px;">
+
+                            ⚠️ Aviso importante:</div>
+
+                        <div style="color: #d90000; font-weight: 900; font-size: 18px; line-height: 1.2;">
+
+                            Se sair agora, vai perder o acesso ao método 2026 para a regeneração das articulações e alívio da dor em qualquer idade.
+
+                            Tem de ver o vídeo até ao fim!
+
+                        </div>
+
+                    </div>
+
+                    <p style="margin-bottom: 10px; font-size: 15px; color: #333; font-weight: bold;">O seu acesso ao
+                        vídeo expira em:</p>
+
+                    <div class="bf-timer" id="bf-timer">02:00</div>
+
+                    <button onclick="window.closeBackfixAndScroll()" class="bf-btn">➤ CONTINUAR A VER</button>
+
+                    <div class="bf-trust">
+
+                        <span>🔴 Transmissão em direto</span><span>•</span><span>👁 +21 000 espectadores</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div id="bf-state-2" style="display: none;">
+
+                    <p class="bf-text">
+
+                        Não saia de mãos vazias! O sistema reservou o seu cupão de <b>50% DE DESCONTO</b>.
+
+                    </p>
+
+                    <div class="bf-promo-box" style="background: #fff0f0; border-color: #d90000;">
+
+                        <div
+                            style="font-size: 14px; color: #555; text-transform: uppercase; font-weight: bold; margin-bottom: 8px;">
+
+                            🔥 Alerta de stock:</div>
+
+                        <div style="color: #111; font-weight: 900; font-size: 20px; line-height: 1.2;">
+
+                            Restam apenas <span class="stock-highlight" id="bf-stock-count">36</span> pacotes deste
+                            método único de gelatina para as articulações.
+
+                        </div>
+
+                    </div>
+
+                    <p style="margin-bottom: 15px; font-size: 14px; color: #333;">
+
+                        O seu pacote pode ser atribuído a outra pessoa a qualquer momento. Complete a sua encomenda agora!
+
+                    </p>
+
+                    <button onclick="window.closeBackfixAndScroll()" class="bf-btn"
+                        style="background: #28a745; box-shadow: 0 6px 0 #1e7e34;">
+
+                        👉 GARANTIR O MEU PACOTE
+
+                    </button>
+
+                    <div class="bf-trust" style="margin-top: 15px; display: flex; flex-direction: column; gap: 5px;">
+
+                        <span>✅ Pagamento na entrega</span>
+
+                        <span>📦 Entrega em todo Portugal</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+<script src="js/video.js"></script>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var comments = document.querySelectorAll('.fb-comment');
+            var delay = 8000;
+
+            function showComment(index) {
+                if (index >= comments.length) {
+                    return;
+                }
+                var comment = comments[index];
+                comment.classList.add('is-visible');
+                if (index > 0 && comments[index - 1].parentNode) {
+                    comments[index - 1].parentNode.insertBefore(comment, comments[index - 1]);
+                }
+                setTimeout(function () {
+                    showComment(index + 1);
+                }, delay);
+            }
+
+            showComment(0);
+        });
+    </script>
+  <script async>
+  const LAZY = document.querySelectorAll('img');
+  for (let i = 0; i < LAZY.length; i++) {
+    LAZY[i].setAttribute('loading', 'lazy');
+  }
+</script>
+  <script>
+  $("a").on("touchend click", function (e) {
+    e.preventDefault();
+    $('body,html').animate({
+      scrollTop: $('#oneform').offset().top
+    }, 400);
+  });
+</script>
+  <script>
+  $('[name="name"]').on("input", function () {
+    var val = $(this).val();
+    var cleaned = val
+      .replace(/[^\p{L}\s]/gu, "")
+      .replace(/^\s+/, "")
+      .replace(/\s\s+/, " ");
+    var parts = cleaned.split(" ");
+    if (parts.length > 2) {
+      cleaned = parts[0] + " " + parts[1];
+    }
+    $(this).val(cleaned);
+  });
+  $('[name="name"]').on("change blur", function () {
+    $(this).val($(this).val().trim());
+  });
+  $('[name="phone"]').on("input change", function (e) {
+    var val = $(this).val();
+    $(this).val(val.replace(/\D/g, ""));
+    $(e.currentTarget).attr("pattern", "[0-9]{6,}");
+  });
+</script>
+<p style="opacity: 0;">{_box:696Vgj23}</p>
+</body>
+
+</html>
