@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark" data-theme-preference="system" style="--vh: 812px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/css.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/comments.css">
+  <link rel="stylesheet" href="css/style_2.css">
+
+  <title>Arthrovia</title>
+  <link rel="shortcut icon" href="images/product.png" type="image/x-icon">
+  <style>
+    .formFb__img {
+      max-width: 250px !important;
+    }
+
+    .tv_icons {
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 360px) {
+      .main_header {
+        font-size: 30px;
+      }
+
+      .tv_icons>img {
+        scale: 0.7;
+      }
+    }
+
+    #video {
+      pointer-events: auto;
+    }
+
+    .iti {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 500px) {
+      .main_header {
+        font-size: 25px;
+      }
+
+      .tv_icons {
+        gap: 10px;
+      }
+
+      .tv_icons img {
+        width: 85px;
+      }
+
+      .block_tv p {
+        font-size: 28px;
+      }
+
+      #open-video,
+      #popup,
+      #play {
+        font-size: 1rem;
+      }
+    }
+
+    @media screen and (max-width: 380px) {
+      .main_header {
+        font-size: 30px;
+      }
+
+      .block_tv p {
+        font-size: 24px;
+      }
+
+      .tv_icons img {
+        width: 70px;
+      }
+    }
+
+    .iti {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="main_header">
+    NAJDJELOTVORNIJI KUĆNI RECEPT
+    <span class="green_bg">ZA UBLAŽAVANJE BOLOVA U LEĐIMA I KOLJENIMA ZA SAMO 4 SATA!</span>, 94% LJUDI KOJI SU
+    ODGLEDALI OVAJ VIDEO DO KRAJA,
+    RIJEŠILO SE BOLOVA U ZGLOBOVIMA ZA 4 SATA!
+  </h1>
+  <div id="oneform"></div>
+  <div class="video_wrapper">
+    <div id="container_video">
+      <div id="close"></div>
+      <div id="open-video">
+        <div>
+          <h4>Kliknite da biste ostali online</h4>
+        </div>
+      </div>
+      <div id="popup">
+        <div>
+          <button id="close-popup">×</button>
+          <h2>Ostalo je još 17 pakovanja Arthrovia</h2>
+          <h2>Naručite odmah!</h2>
+        </div>
+      </div>
+      <div id="play">
+        <div>
+          <h4>Video je počeo</h4>
+          <h4>Kliknite za zvuk!</h4>
+        </div>
+      </div>
+      <video class="productVideo" id="video" autoplay="autoplay" muted="" playsinline="" preload="metadata">
+        <source src="media/PL_video.mp4" type="video/mp4">
+      </video>
+      <div class="preload_container Deactivate">
+        <div class="preload_box">
+          <span class="preload_text">Vaš video se učitava. Molimo sačekajte.</span>
+          <span class="preload_timer">3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form id="order" action="/order.php" method="post">
+    <input type="hidden" name="fbpx" value="{fbpx}">
+    <input type="hidden" name="utm_code" value="{subid}">
+    <input type="hidden" name="cid" value="{campaign_id}">
+    <input type="hidden" name="sid" value="2115">
+    <input type="hidden" name="hash" value="{hash}">
+    <input type="hidden" name="country" value="PL">
+
+    <div id="formFb" class="formFb">
+      <div class="formFb__container">
+        <p class="formFb__action formFb__text">
+          <b>POŽURITE!</b> Promotivni paketi Arthrovia uskoro će se rasprodati.
+        </p>
+        <p class="formFb__counter formFb__text">
+          <b>Ažurirano:</b> ostalo je samo
+          <span class="prod_left_val form-instock red">3</span> kom. na dan
+          <span class="js-current-date"></span>.
+        </p>
+
+        <div class="formFb__img" style="text-align: center">
+          <img src="images/product.png" alt="" style="width: 100% !important" loading="lazy">
+        </div>
+        <div style="margin-bottom: 10px; display: flex; flex-direction: column; align-items: center;">
+          <div style="text-decoration: line-through; color: gray;">78 KM</div>
+          <div style="color: red; font-size: 24px;">39 KM</div>
+        </div>
+        <div class="formFb__inputs">
+          <label>Vaše ime:</label>
+          <input name="name" placeholder="Amar" style="padding-left: 10px; padding: 0.5em 0.65em" required="required"
+            autocomplete="name" type="text" minlength="3">
+        </div>
+        <div class="formFb__inputs">
+          <label>Vaš telefon:</label>
+          <input placeholder="+387 61 123 456" name="phone" class="phone input-flag" required="required"
+            autocomplete="tel" type="text">
+        </div>
+        <button class="formFb__btn" type="submit">POŠALJI NARUDŽBU</button>
+        <!-- <p class="formFb__counter formFb__text">*Ovaj popust važi za jedno pakovanje uz narudžbu punog kursa</p> -->
+      </div>
+    </div>
+  </form>
+  <style>
+    select {
+      display: block;
+      border: 1px solid #3578e563;
+      padding-left: 10px;
+      padding: 0.5em 0.65em;
+      width: 100%;
+      margin: 0 auto;
+    }
+  </style>
+  <style>
+    .fb-comments-wrapper {
+      display: none;
+      opacity: 0;
+    }
+  </style>
+  <script src="js/video3.js"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var dd = String(new Date().getDate()).padStart(2, '0');
+          var mm = String(new Date().getMonth() + 1).padStart(2, '0');
+          var yyyy = new Date().getFullYear();
+          var today = dd + '.' + mm + '.' + yyyy;
+
+          document.querySelectorAll('.js-current-date')
+            .forEach(function (el) {
+              el.textContent = today;
+            });
+        });
+      </script>
+  <script async="">
+    const LAZY = document.querySelectorAll('img');
+    for (let i = 0; i < LAZY.length; i++) {
+      LAZY[i].setAttribute('loading', 'lazy');
+    } </script>
+  <script>
+    $("a").on("touchend, click", function (e) {
+      e.preventDefault();
+      $('body,html').animate({
+        scrollTop: $('#oneform').offset().top
+      }, 400);
+    });
+  </script>
+  <script>
+    $('[name="name"]').on("input", function () {
+      var val = $(this).val();
+      var cleaned = val
+        .replace(/[^\p{L}\s]/gu, "")
+        .replace(/^\s+/, "")
+        .replace(/\s\s+/, " ");
+      var parts = cleaned.split(" ");
+      if (parts.length > 2) {
+        cleaned = parts[0] + " " + parts[1];
+      }
+      $(this).val(cleaned);
+    });
+    $('[name="name"]').on("change blur", function () {
+      $(this).val($(this).val().trim());
+    });
+    $('[name="phone"]').on("input change", function (e) {
+      var val = $(this).val();
+      $(this).val(val.replace(/\D/g, ""));
+      $(e.currentTarget).attr("pattern", "[0-9]{6,}");
+    });
+  </script>
+
+</body>
+
+</html>
