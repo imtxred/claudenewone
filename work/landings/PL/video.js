@@ -1,11 +1,15 @@
-/* video.js — v4
-   Форма заказа открывается модальным окном по центру экрана, фон затемняется.
-   Три входа: конец ролика, клик по попапу, крестик.
+/* video.js — v5
+   Форма заказа открывается окном поверх всего экрана: тёмный слой на весь
+   экран, белая карточка с формой по центру. Три входа: конец ролика,
+   клик по попапу, крестик на видео.
 
-   Отличие от v3: до первого открытия окна скрипт НИЧЕГО не добавляет
-   в разметку страницы. Слой окна и его стили создаются в момент открытия,
-   форма возвращается на место по ссылке на соседний узел, а не по метке.
-   Так плеер и его вёрстка гарантированно остаются нетронутыми.
+   Ставится одним файлом, index.html править не нужно: подключение
+   js/video.js?=v5 там уже стоит. Все настройки берутся из инлайн-блока
+   страницы (start, duration, showForm).
+
+   До первого действия человека скрипт НИЧЕГО не добавляет в разметку:
+   слой окна и его стили создаются в момент открытия, форма возвращается
+   на место по ссылкам на соседние узлы. Плеер не затрагивается.
 
    Аварийный откат: window.orderModal = false — форма снова проявляется
    под видео, без окна.
@@ -32,7 +36,7 @@ $(document).ready(function () {
 
     if (window.__videoInit) { window.__vlog('повторное подключение video.js — пропущено'); return; }
     window.__videoInit = true;
-    window.__vlog('video.js v4 запущен');
+    window.__vlog('video.js v5 запущен');
 
     var $video = $('#video');
     var $play = $('#play');
@@ -57,6 +61,10 @@ $(document).ready(function () {
     var USE_MODAL = (typeof window.orderModal === 'boolean') ? window.orderModal : true;
     // Крестик в углу окна. Поставьте false — окно станет без выхода.
     var MODAL_CLOSABLE = (typeof window.modalClosable === 'boolean') ? window.modalClosable : true;
+    // На showForm (по умолчанию 10-я минута) форма проявляется ПОД видео,
+    // чтобы не закрывать ролик тому, кто ещё смотрит. Поставьте
+    // window.modalOnShowForm = true — на этой секунде тоже всплывёт окно.
+    var MODAL_ON_SHOWFORM = (typeof window.modalOnShowForm === 'boolean') ? window.modalOnShowForm : false;
     window.__vlog('настройки: start=' + tStart + ' duration=' + tDuration +
         ' showForm=' + tShowForm + ' окно=' + USE_MODAL);
 
@@ -226,8 +234,13 @@ $(document).ready(function () {
     $video.on('timeupdate', function () {
         var t = $(this).prop('currentTime');
         if (!orderShown && t >= tShowForm) {
-            window.__vlog('секунда ' + Math.round(t) + ' — форма открыта под видео');
-            showOrderInline();
+            if (MODAL_ON_SHOWFORM) {
+                window.__vlog('секунда ' + Math.round(t) + ' — открыто окно поверх экрана');
+                openModal();
+            } else {
+                window.__vlog('секунда ' + Math.round(t) + ' — форма открыта под видео');
+                showOrderInline();
+            }
             orderShown = true;
         }
         if (!showPlay && !showPopup && t > tStart) {
