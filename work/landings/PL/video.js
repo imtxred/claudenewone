@@ -1,15 +1,15 @@
-/* video.js — v5
-   Форма заказа открывается окном поверх всего экрана: тёмный слой на весь
+/* video.js — v6
+   Форма заказа открывается окном поверх всего экрана: тёмный слой во весь
    экран, белая карточка с формой по центру. Три входа: конец ролика,
    клик по попапу, крестик на видео.
 
-   Ставится одним файлом, index.html править не нужно: подключение
-   js/video.js?=v5 там уже стоит. Все настройки берутся из инлайн-блока
-   страницы (start, duration, showForm).
+   Что исправлено против v5: при закрытии окна плеер возвращался не полностью —
+   видео и кнопка запуска оставались скрытыми, и ролик со страницы пропадал.
+   Теперь закрытие окна возвращает и видео, и кнопку, а повторный запуск идёт
+   с той же секунды, на которой человек остановился.
 
-   До первого действия человека скрипт НИЧЕГО не добавляет в разметку:
-   слой окна и его стили создаются в момент открытия, форма возвращается
-   на место по ссылкам на соседние узлы. Плеер не затрагивается.
+   Настройки берутся из инлайн-блока страницы (start, duration, showForm).
+   До первого действия человека скрипт ничего не добавляет в разметку.
 
    Аварийный откат: window.orderModal = false — форма снова проявляется
    под видео, без окна.
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     if (window.__videoInit) { window.__vlog('повторное подключение video.js — пропущено'); return; }
     window.__videoInit = true;
-    window.__vlog('video.js v5 запущен');
+    window.__vlog('video.js v6 запущен');
 
     var $video = $('#video');
     var $play = $('#play');
@@ -72,6 +72,9 @@ $(document).ready(function () {
     var hidePopup = true;
     var showPlay = true;
     var orderShown = false;
+    var startedOnce = false;    // ролик уже запускали руками
+    var videoFinished = false;  // досмотрен до конца
+    var lastTime = 0;           // на какой секунде остановились
 
     hideOrder();
 
@@ -194,7 +197,21 @@ $(document).ready(function () {
         var order = $order.get(0);
         if (homeParent) { homeParent.insertBefore(order, homeNext); }
         forceShow(order, 'block');
-        window.__vlog('окно закрыто, форма вернулась под видео');
+        // Возвращаем плеер: showOrder() спрятал видео и кнопку запуска,
+        // иначе после закрытия окна на странице не останется ролика.
+        restorePlayer();
+        window.__vlog('окно закрыто, плеер и форма на месте');
+    }
+
+    // Снимаем инлайновые display, которые поставили fadeOut/hide,
+    // чтобы элементы вернулись к тому, что им прописано в style_3.css.
+    function restorePlayer() {
+        $video.css('display', '');
+        $play.css('display', '');
+        $close.css('display', '');
+        $popup.css('display', '');
+        showPlay = true;
+        window.__vlog('плеер возвращён, ролик на ' + Math.round(lastTime) + ' с');
     }
 
     function showOrderInline() {
@@ -219,8 +236,16 @@ $(document).ready(function () {
         window.__vlog('клик по #play');
         window.scrollTo(0, 0);
         $play.fadeOut('fast', function () {
-            $video.prop('muted', false).prop('currentTime', 0);
-            var pr = $video.get(0).play();
+            var el = $video.get(0);
+            $video.css('display', '');          // на случай, если ролик прятали
+            el.muted = false;
+            // Первый запуск — с начала. Возврат после закрытия окна —
+            // с той же секунды. Досмотренный до конца — снова с начала.
+            var from = (!startedOnce || videoFinished) ? 0 : lastTime;
+            try { el.currentTime = from; } catch (e) {}
+            startedOnce = true;
+            videoFinished = false;
+            var pr = el.play();
             if (pr && pr.catch) {
                 pr.catch(function (e) { window.__vlog('play() отклонён браузером: ' + e); });
             }
@@ -228,6 +253,7 @@ $(document).ready(function () {
             document.documentElement.classList.add('is-locked');
             $close.fadeIn();
             showPlay = false;
+            window.__vlog('запуск с ' + Math.round(from) + ' с, полный экран включён');
         });
     });
 
@@ -255,7 +281,7 @@ $(document).ready(function () {
     });
 
     // Три входа в модальное окно.
-    $video.on('ended', function () { window.__vlog('событие ended'); showOrder(); });
+    $video.on('ended', function () { window.__vlog('событие ended'); videoFinished = true; showOrder(); });
     $popup.on('click', function () { window.__vlog('клик по попапу'); showOrder(); });
     $close.on('click', function () { window.__vlog('клик по крестику'); showOrder(); });
 
@@ -271,6 +297,7 @@ $(document).ready(function () {
     });
 
     function showOrder() {
+        lastTime = $video.get(0).currentTime || 0;   // чтобы вернуться на то же место
         $container.removeClass('fullscreen');
         $play.hide();
         $popup.fadeOut();
