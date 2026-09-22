@@ -1,6 +1,14 @@
-/* video.js — v3
-   Форма заказа открывается модальным окном по центру экрана,
-   фон затемняется. Три входа: конец ролика, клик по попапу, крестик.
+/* video.js — v4
+   Форма заказа открывается модальным окном по центру экрана, фон затемняется.
+   Три входа: конец ролика, клик по попапу, крестик.
+
+   Отличие от v3: до первого открытия окна скрипт НИЧЕГО не добавляет
+   в разметку страницы. Слой окна и его стили создаются в момент открытия,
+   форма возвращается на место по ссылке на соседний узел, а не по метке.
+   Так плеер и его вёрстка гарантированно остаются нетронутыми.
+
+   Аварийный откат: window.orderModal = false — форма снова проявляется
+   под видео, без окна.
    Диагностика: открыть страницу с ?debug=1 — внизу чёрная плашка с логом. */
 
 (function () {
@@ -24,7 +32,7 @@ $(document).ready(function () {
 
     if (window.__videoInit) { window.__vlog('повторное подключение video.js — пропущено'); return; }
     window.__videoInit = true;
-    window.__vlog('video.js v3 запущен');
+    window.__vlog('video.js v4 запущен');
 
     var $video = $('#video');
     var $play = $('#play');
@@ -45,9 +53,12 @@ $(document).ready(function () {
     var tStart    = (typeof window.start    === 'number') ? window.start    : 120;
     var tDuration = (typeof window.duration === 'number') ? window.duration : 10;
     var tShowForm = (typeof window.showForm === 'number') ? window.showForm : 600;
-    // Крестик в углу модального окна. Поставьте false — окно станет без выхода.
+    // Окно по центру. Поставьте window.orderModal = false — форма пойдёт под видео.
+    var USE_MODAL = (typeof window.orderModal === 'boolean') ? window.orderModal : true;
+    // Крестик в углу окна. Поставьте false — окно станет без выхода.
     var MODAL_CLOSABLE = (typeof window.modalClosable === 'boolean') ? window.modalClosable : true;
-    window.__vlog('настройки: start=' + tStart + ' duration=' + tDuration + ' showForm=' + tShowForm);
+    window.__vlog('настройки: start=' + tStart + ' duration=' + tDuration +
+        ' showForm=' + tShowForm + ' окно=' + USE_MODAL);
 
     var showPopup = false;
     var hidePopup = true;
@@ -56,54 +67,80 @@ $(document).ready(function () {
 
     hideOrder();
 
-    /* ---------- модальное окно ---------- */
+    /* ---------- диагностика самого ролика ---------- */
 
-    var STYLE_ID = 'orderModalStyle';
-    if (!document.getElementById(STYLE_ID)) {
-        var st = document.createElement('style');
-        st.id = STYLE_ID;
-        st.textContent =
-            '#orderModal{position:fixed!important;inset:0!important;z-index:2147483000!important;' +
-            'display:none;align-items:center;justify-content:center;padding:16px;' +
-            'background:rgba(0,0,0,.65)!important;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);' +
-            'overflow-y:auto;-webkit-overflow-scrolling:touch}' +
-            '#orderModal.is-open{display:flex!important}' +
-            '#orderModal>.orderModal__box{position:relative;width:100%;max-width:440px;margin:auto;' +
-            'max-height:92vh;overflow-y:auto;background:#fff;border-radius:14px;' +
-            'padding:26px 16px 18px;box-sizing:border-box;' +
-            'box-shadow:0 18px 60px rgba(0,0,0,.45);animation:orderModalIn .22s ease-out}' +
-            '#orderModal #order{width:100%!important;max-width:100%!important;margin:0!important;' +
-            'box-sizing:border-box;overflow-wrap:break-word}' +
-            '#orderModal .orderModal__x{position:absolute;top:6px;right:10px;z-index:2;cursor:pointer;' +
-            'width:32px;height:32px;line-height:30px;text-align:center;font:22px/30px Arial,sans-serif;' +
-            'color:#9aa0a6;background:transparent;border:0}' +
-            '#orderModal .orderModal__x:hover{color:#444}' +
-            '@keyframes orderModalIn{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}' +
-            'html.is-modal-open,body.is-modal-open{overflow:hidden!important}';
-        document.head.appendChild(st);
+    var vEl = $video.get(0);
+    window.__vlog('ролик: src=' + (vEl.currentSrc || vEl.src || '(из <source>)') +
+        ' readyState=' + vEl.readyState + ' networkState=' + vEl.networkState);
+    $video.on('error', function () {
+        var e = vEl.error;
+        window.__vlog('ОШИБКА РОЛИКА: code=' + (e ? e.code : '?') +
+            ' — файл не найден, не тот формат или не докачивается');
+    });
+    $video.on('loadedmetadata', function () {
+        window.__vlog('ролик загрузился, длина = ' + Math.round(vEl.duration) + ' с');
+    });
+    setTimeout(function () {
+        if (vEl.readyState === 0) {
+            window.__vlog('ВНИМАНИЕ: через 4 с ролик так и не начал грузиться. ' +
+                'Проверьте, лежит ли vslsluh.mp4 рядом с index.html');
+        }
+    }, 4000);
+
+    /* ---------- модальное окно, создаётся при первом открытии ---------- */
+
+    var modal = null;
+    var modalBox = null;
+    var homeParent = null;
+    var homeNext = null;
+
+    function buildModal() {
+        if (modal) { return; }
+
+        var STYLE_ID = 'orderModalStyle';
+        if (!document.getElementById(STYLE_ID)) {
+            var st = document.createElement('style');
+            st.id = STYLE_ID;
+            st.textContent =
+                '#orderModal{position:fixed!important;top:0!important;right:0!important;' +
+                'bottom:0!important;left:0!important;z-index:2147483000!important;' +
+                'display:none;align-items:center;justify-content:center;padding:16px;' +
+                'background:rgba(0,0,0,.65)!important;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);' +
+                'overflow-y:auto;-webkit-overflow-scrolling:touch}' +
+                '#orderModal.is-open{display:flex!important}' +
+                '#orderModal>.orderModal__box{position:relative;width:100%;max-width:440px;margin:auto;' +
+                'max-height:92vh;overflow-y:auto;background:#fff;border-radius:14px;' +
+                'padding:26px 16px 18px;box-sizing:border-box;' +
+                'box-shadow:0 18px 60px rgba(0,0,0,.45);animation:orderModalIn .22s ease-out}' +
+                '#orderModal #order{width:100%!important;max-width:100%!important;margin:0!important;' +
+                'box-sizing:border-box;overflow-wrap:break-word}' +
+                '#orderModal .orderModal__x{position:absolute;top:6px;right:10px;z-index:2;cursor:pointer;' +
+                'width:32px;height:32px;line-height:30px;text-align:center;font:22px/30px Arial,sans-serif;' +
+                'color:#9aa0a6;background:transparent;border:0;padding:0}' +
+                '#orderModal .orderModal__x:hover{color:#444}' +
+                '@keyframes orderModalIn{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}' +
+                'html.is-modal-open,body.is-modal-open{overflow:hidden!important}';
+            document.head.appendChild(st);
+        }
+
+        modal = document.createElement('div');
+        modal.id = 'orderModal';
+        modalBox = document.createElement('div');
+        modalBox.className = 'orderModal__box';
+        modal.appendChild(modalBox);
+        document.body.appendChild(modal);
+
+        if (MODAL_CLOSABLE) {
+            var xBtn = document.createElement('button');
+            xBtn.type = 'button';
+            xBtn.className = 'orderModal__x';
+            xBtn.setAttribute('aria-label', 'Zamknij');
+            xBtn.innerHTML = '&times;';
+            modalBox.appendChild(xBtn);
+            xBtn.addEventListener('click', closeModal);
+        }
+        window.__vlog('слой окна создан');
     }
-
-    var modal = document.createElement('div');
-    modal.id = 'orderModal';
-    var modalBox = document.createElement('div');
-    modalBox.className = 'orderModal__box';
-    modal.appendChild(modalBox);
-    document.body.appendChild(modal);
-
-    if (MODAL_CLOSABLE) {
-        var xBtn = document.createElement('button');
-        xBtn.type = 'button';
-        xBtn.className = 'orderModal__x';
-        xBtn.setAttribute('aria-label', 'Zamknij');
-        xBtn.innerHTML = '&times;';
-        modalBox.appendChild(xBtn);
-        xBtn.addEventListener('click', closeModal);
-    }
-
-    // Запоминаем, где форма лежала изначально, чтобы вернуть её при закрытии.
-    var orderHome = document.createElement('span');
-    orderHome.style.display = 'none';
-    $order.get(0).parentNode.insertBefore(orderHome, $order.get(0));
 
     function forceShow(el, display) {
         if (!el) { return; }
@@ -120,7 +157,12 @@ $(document).ready(function () {
     }
 
     function openModal() {
+        if (!USE_MODAL) { showOrderInline(); orderShown = true; return; }
+        buildModal();
         var order = $order.get(0);
+        // Запоминаем место формы именно сейчас, по живым соседям.
+        homeParent = order.parentNode;
+        homeNext = order.nextSibling;
         modalBox.appendChild(order);           // переносим саму форму внутрь окна
         forceShow(order, 'block');
         unhideInside(order);
@@ -136,12 +178,13 @@ $(document).ready(function () {
     }
 
     function closeModal() {
+        if (!modal) { return; }
         modal.classList.remove('is-open');
         document.documentElement.classList.remove('is-modal-open');
         document.body.classList.remove('is-modal-open');
-        // Возвращаем форму на место под видео, чтобы она оставалась доступной.
+        // Возвращаем форму ровно туда, откуда взяли.
         var order = $order.get(0);
-        orderHome.parentNode.insertBefore(order, orderHome);
+        if (homeParent) { homeParent.insertBefore(order, homeNext); }
         forceShow(order, 'block');
         window.__vlog('окно закрыто, форма вернулась под видео');
     }
@@ -168,7 +211,11 @@ $(document).ready(function () {
         window.__vlog('клик по #play');
         window.scrollTo(0, 0);
         $play.fadeOut('fast', function () {
-            $video.prop('muted', false).prop('currentTime', 0).trigger('play');
+            $video.prop('muted', false).prop('currentTime', 0);
+            var pr = $video.get(0).play();
+            if (pr && pr.catch) {
+                pr.catch(function (e) { window.__vlog('play() отклонён браузером: ' + e); });
+            }
             $container.addClass('fullscreen');
             document.documentElement.classList.add('is-locked');
             $close.fadeIn();
