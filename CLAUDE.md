@@ -7,6 +7,10 @@
 2. `work/ops/launch_spec.md` — регламент запуска и отсечки рекламных кампаний.
    Во всём, что касается рекламы, он главнее любых общих соображений.
 3. `Claude_Skill_-_Performance_Copywriting/` — навык перформанс-копирайтинга.
+   Рядом в `.claude/skills/` стоят пять скиллов Роба Палмера: `ad-copy`,
+   `compliance-checker`, `landing-page-copy`, `direct-response-copy`,
+   `copychief`. Как они сведены с нашим движком и где мы им не подчиняемся —
+   `work/ops/skills_rob_razbor.md`.
 4. `story-examples/` — образцы лонгридов для калибровки тона и структуры.
 
 `work/README.md` — карта всего перенесённого. `work/transcript/dialog.md` — дословный
