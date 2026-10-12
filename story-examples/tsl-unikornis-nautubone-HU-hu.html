@@ -90,43 +90,49 @@
     .fb-post-actions { display: flex; border-top: 1px solid #ced0d4; margin: 0 12px; padding: 4px 0 6px; }
     .fb-action { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 0; font-size: 14px; font-weight: 600; color: #65676b; }
 
-    .order-container {
-        background: #fff; text-align: left; border: 1px solid #d8cfa0; border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(36,27,78,0.12); margin: 20px 15px; overflow: hidden;
+    /* ==== PACHINOFORM (megrendelőlap — azonos szerkezet, mint a referencia lendingen) ==== */
+    .noclose-cta { color: #8e4a4c; text-align: center; font-size: 14px; font-weight: 700; margin: 18px 15px 6px; }
+    .pre-cta { color: #3a2e12; text-align: center; font-size: 14px; margin-bottom: 10px; }
+    .number-me { border-bottom: 2px solid #c9a227; font-weight: 800; color: #8e4a4c; }
+
+    .pachinoform {
+        margin: 10px 15px 20px; padding: 16px 14px; font-size: 16px; line-height: 1.5; color: #1a1536;
+        border: 4px solid #241b4e; background-color: #fff; border-radius: 12px;
+        display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(36,27,78,0.12);
         scroll-margin-top: 70px;
     }
-    .cosmic-header {
-        background: linear-gradient(135deg, #241b4e, #4b3a86); color: #f3e9c8; padding: 14px 15px; text-align: center;
-        font-weight: 900; font-size: 15px; text-transform: uppercase; letter-spacing: .5px;
+    .pachinoform_title { display: flex; gap: 14px; max-width: 400px; align-self: center; text-align: center; align-items: center; }
+    .pachinoform_title_logo { flex-shrink: 0; width: 38px; height: 38px; }
+    .pachinoform_title_text { align-self: center; font-size: 14px; }
+    .pachinoform_title_text b { display: block; line-height: 1.3; color: #241b4e; font-size: 15px; }
+
+    .pachinoform_order { max-width: 600px; font-weight: 700; font-size: 15px; margin: 14px 0; text-align: center; align-self: center; }
+    .pachinoform_order b { color: #a9792a; }
+
+    .pachinoform_value { display: flex; color: #241b4e; font-weight: 700; font-size: 15px; align-items: center; align-self: center; flex-wrap: wrap; justify-content: center; gap: 6px; margin-bottom: 4px; }
+    .pachinoform_value_current { border: 1px solid #241b4e; color: #a9792a; line-height: 1; font-size: 20px; padding: 4px 16px; border-radius: 6px; }
+    .pachinoform_value_total { font-size: 15px; color: #65676b; }
+
+    .pachinoform_price { display: flex; align-items: center; align-self: center; gap: 26px; margin: 18px 0 16px; }
+    .pachinoform_price_old span { display: block; font-size: 22px; font-weight: 700; color: #65676b; position: relative; line-height: 1; }
+    .pachinoform_price_old span:before { position: absolute; content: ""; left: 0; top: 45%; right: 0; border-top: 3px solid #a9792a; transform: rotate(-10deg); }
+    .pachinoform_price_new span { display: block; background: linear-gradient(135deg, #241b4e, #4b3a86); color: #f3e9c8; font-size: 30px; padding: 6px 16px; border-radius: 8px; font-weight: 800; line-height: 1; }
+
+    .pachinoform .name-input, .pachinoform .phone-input { color: #1a1536; font-size: 14px; margin-bottom: 10px; }
+    .pachinoform .name-input label, .pachinoform .phone-input label { font-weight: 700; display: block; margin-bottom: 4px; }
+    .pachinoform .name-input input, .pachinoform .phone-input input {
+        font: inherit; color: inherit; box-sizing: border-box; width: 100%; border-radius: 6px;
+        padding: 12px 14px; background: #faf8f2; border: 1px solid #cbd5e0; font-size: 16px !important; font-weight: 700;
     }
-    .medical-body { padding: 20px 15px; }
-    .stock-warning-box {
-        background: rgba(201,162,39,.12); border: 2px dashed #a9792a; padding: 15px; margin-bottom: 20px;
-        border-radius: 4px; color: #1a1536; font-size: 18px; font-weight: 700; text-align: center;
+    .pachinoform .button-submit {
+        text-align: center; width: 100%; margin-top: 6px; border-radius: 6px; color: #1a1536;
+        border: none; padding: 15px 0; cursor: pointer;
+        background: linear-gradient(135deg, #c9a227, #a9792a); font-size: 17px; font-weight: 900;
+        text-transform: uppercase; box-shadow: 0 4px 0 #7d5a1d;
     }
-    .stock-warning-box .warning-word { color: #a9792a; font-weight: 900; text-transform: uppercase; margin-right: 3px; }
-    .stock-warning-box b { font-size: 26px; color: #a9792a; }
-    .clean-discount-title { text-align: center; color: #444; font-size: 14px; margin-bottom: 15px; font-weight: bold; }
-    .clean-timer { display: flex; justify-content: center; align-items: flex-start; gap: 8px; margin-bottom: 22px; color: #4b3a86; }
-    .ct-block { display: flex; flex-direction: column; align-items: center; width: 70px; }
-    .ct-val { font-size: 34px; font-weight: 900; line-height: 1; margin-bottom: 6px; }
-    .ct-lbl { font-size: 10px; text-transform: uppercase; font-weight: bold; }
-    .ct-sep { font-size: 30px; font-weight: 900; margin-top: -4px; color: #4b3a86; }
-    .price-container { display: flex; justify-content: center; gap: 40px; margin-bottom: 22px; }
-    .price-col { text-align: center; }
-    .price-lbl { color: #666; font-size: 12px; margin-bottom: 6px; }
-    .price-old { color: #a9792a; font-size: 19px; font-weight: 900; text-decoration: line-through; }
-    .price-new { color: #1e7e34; font-size: 19px; font-weight: 900; }
-    .form-group { margin-bottom: 14px; }
-    .form-group label { display: block; font-size: 12px; font-weight: bold; color: #4a5568; margin-bottom: 6px; text-transform: uppercase; }
-    .order-form input { width: 100%; padding: 13px; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 16px; background: #faf8f2; color: #1a202c; font-weight: bold; }
-    .submit-btn {
-        width: 100%; background: linear-gradient(135deg, #c9a227, #a9792a); color: #1a1536; padding: 17px; font-size: 18px; font-weight: 900;
-        border: none; border-radius: 4px; cursor: pointer; box-shadow: 0 4px 0 #7d5a1d; text-transform: uppercase; margin-top: 5px;
-    }
-    .trust-benefits { border-top: 1px dashed #d8cfa0; padding-top: 15px; margin-top: 20px; }
-    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: bold; color: #4a5568; margin-bottom: 8px; }
-    .trust-item span { color: #4b3a86; font-size: 17px; }
+    .pachinoform .button-submit:hover { filter: brightness(1.05); }
+    .pachinoform ::placeholder { color: #8a93a6; opacity: 1; font-size: 14px; }
+    .pachinoform_footer { text-align: center; color: #4a5568; font-size: 12px; margin-top: 14px; font-weight: 700; }
 
     footer { text-align: center; padding: 20px 15px 30px; background: #f0f2f5; }
     .fb-comments { text-align: left; background: #fff; border-top: 1px solid #ddd; padding: 16px 12px 22px; margin-bottom: 4px; }
@@ -194,27 +200,27 @@
 <p>Kedveseim, ha ma ezt olvassák, ez egy jel odafentről — főleg, ha ízületi fájdalmaik vannak.</p>
 <p>Valami hihetetlent szeretnék megosztani Önökkel, valamit, ami kettéosztja az életüket egy előttre és egy utánra.</p>
 <p>2026 októberében a Vénusz megkezdi éves ciklusát, és egy különleges pozícióba lép. Az asztrológusok ezt úgy hívják: <strong>az Unikornis Ízületei</strong>. Ez tizenöt évente egyszer történik meg. Ebben az időszakban pontosan azoknak a nőknek kell hallgatniuk a lóra, akiknek ízületi problémáik vannak, mert a ló az erő és a felépülés szimbóluma.</p>
-<p>Ezt mondta Csillag Orsolya 2011-ben. Remélem, még emlékeznek rá.</p>
+<p>Ezt mondta Izing Klára 2011-ben. Remélem, még emlékeznek rá.</p>
 
 <div class="star-quote">
     <div class="star-quote-head">
         <div class="star-quote-ava">CO</div>
         <div>
-            <div class="star-quote-name">Csillag Orsolya</div>
+            <div class="star-quote-name">Izing Klára</div>
             <div class="star-quote-sub">asztrológus · 2011. október</div>
         </div>
     </div>
     <p>„Ma 2011 októbere van, és a Vénusz belépett az Unikornis Ízületei pozícióba. Ízületi problémákkal küzdő nők, hallgassanak a csillagokra és a lovakra. A következő esélyük csak tizenöt év múlva, 2026-ban lesz."</p>
 </div>
 
-<p>És néhány napja Fény Veronika is megerősítette ezt.</p>
+<p>És néhány napja Müller Rózsa is megerősítette ezt.</p>
 
 <div class="star-quote">
     <div class="star-quote-head">
         <div class="star-quote-ava">FV</div>
         <div>
-            <div class="star-quote-name">Fény Veronika</div>
-            <div class="star-quote-sub">asztrológus · néhány napja</div>
+            <div class="star-quote-name">Müller Rózsa</div>
+            <div class="star-quote-sub">asztrológus/jósnő · néhány napja</div>
         </div>
     </div>
     <p>„Októberben a Vénusz belép az Unikornis Ízületei pozícióba. Ez az időszak arra való, hogy a lovak segítségével kezeljük az ízületeket."</p>
@@ -283,7 +289,7 @@ Látják ezeket a képeket? Az egyiken egy ló ízülete van, a másikon egy hat
     </div>
 </div>
 
-<p>Ki és miért adja hozzá ezeket az összetevőket? Ki keres ezen évente több tízmillió forintot? A jól ismert gyógyszeripari vállalatok. Már 2012-ben az állam részesedést vásárolt egy gyógyszeripari vállalatban, a <strong>Farmexa Gyógyszeripari Zrt.-ben</strong>. Ezenkívül 2014-ben elfogadtak egy törvényt a gyógyszerek kiegészítő összetételének titokban tartásáról.</p>
+<p>Ki és miért adja hozzá ezeket az összetevőket? Ki keres ezen évente több tízmillió forintot? A jól ismert gyógyszeripari vállalatok. Már 2012-ben az állam részesedést vásárolt egy gyógyszeripari vállalatban, a <strong>Gedeon Richter</strong>. Ezenkívül 2014-ben elfogadtak egy törvényt a gyógyszerek kiegészítő összetételének titokban tartásáról.</p>
 <p>Önök szerint milyen összetevőket fognak eltitkolni? Pontosan azokat, amelyek megakadályozzák, hogy a zsíros fehérje behatoljon az ízületbe.</p>
 
 <h3>A VÁLASZ: A LÓ ÍZÜLETE A BAL OLDALON VOLT</h3>
@@ -327,7 +333,7 @@ Egy gazdag férfi, akinek segítettem megszabadulni egy csípőfájdalomtól, an
 
 <hr class="article-hr">
 
-<h2>A NAUTUBONE — AZ ELSŐ ÉS EGYETLEN TERMÉSZETES ÍZÜLETI KÉSZÍTMÉNY A VILÁGON A NEGYVEN ÉV FELETTI MAGYAR NŐKNEK</h2>
+<h2>A Trauflix — AZ ELSŐ ÉS EGYETLEN TERMÉSZETES ÍZÜLETI KÉSZÍTMÉNY A VILÁGON A NEGYVEN ÉV FELETTI MAGYAR NŐKNEK</h2>
 
 <div class="image-placeholder">
     <div class="image-placeholder-icon">🫙</div>
@@ -355,13 +361,6 @@ Egy gazdag férfi, akinek segítettem megszabadulni egy csípőfájdalomtól, an
 
 <h2>ÖNÖKNEK KÉT ÚTJUK VAN</h2>
 
-<div class="image-placeholder">
-    <div class="image-placeholder-icon">🌓</div>
-    <div class="image-placeholder-desc">
-        <b>Kép 7 — két út</b>
-        Szimbolikus illusztráció: egy elágazó ösvény holdfényben, bal oldalon sötétebb, köves út (fájdalom), jobb oldalon egy csillagfényes, virágos ösvény (felépülés). Nem ijesztő, inkább meseszerű, meleg tónusú.
-    </div>
-</div>
 
 <p><strong>Az első:</strong> elengedik ezt a lehetőséget, és továbbra is élik egy ízületi fájdalmakkal küzdő nő szokásos életét, lassan haladva a visszafordíthatatlan következmények felé.</p>
 <p><strong>A második:</strong> elfogadják az ajánlatot, és egyszer és mindenkorra megszabadulnak az ízületi fájdalmaktól, belépve egy olyan világba, ahol teljesen egészségesek és energiával teliek, a szeretteikkel vannak.</p>
@@ -370,43 +369,65 @@ Egy gazdag férfi, akinek segítettem megszabadulni egy csípőfájdalomtól, an
         </div>
     </div>
 
-    <!-- ==== ФОРМА ЗАКАЗА ==== -->
-    <div class="order-container" id="order-form-container">
-        <div class="cosmic-header">✨ HIVATALOS MEGRENDELŐLAP — UNIKORNIS ÍZÜLETEI PROGRAM</div>
-        <div class="medical-body">
+    <!-- ==== ФОРМА ЗАКАЗА (структура "pachinoform", как в референс-лендинге) ==== -->
+    <center>
+        <p class="noclose-cta">
+            Figyelem! Ne zárja be és ne frissítse az oldalt — az Önnek fenntartott Nautubone csomagot a várólista következő emberének ajánljuk fel!
+        </p>
+        <span class="pre-cta">
+            Az Ön fenntartott helye a programban:
+            <span class="nowrap">№ <span class="number-me">4&nbsp;953</span></span>
+        </span>
+    </center>
 
-            <div class="stock-warning-box">
-                <span class="warning-word">FIGYELEM!</span> Csak <b id="live-stock-count">47</b> csomag Nautubone maradt soron kívül
+    <div class="pachinoform" id="order-form-container">
+        <div class="pachinoform_title">
+            <div class="pachinoform_title_logo">
+                <svg viewBox="0 0 48 48" width="38" height="38"><circle cx="24" cy="24" r="22" fill="#241b4e"/><path d="M24 10l3 9h9l-7.5 5.5L31 34l-7-5-7 5 2.5-9.5L12 19h9z" fill="#e9d9a0"/></svg>
+            </div>
+            <div class="pachinoform_title_text">
+                <b>Hivatalos megrendelőlap</b>
+                № <span class="nowrap">4&nbsp;953</span> / <span class="nowrap">5 000</span>
+            </div>
+        </div>
+
+        <div class="pachinoform_order">
+            A <b>86% kedvezmény</b> megszerzéséhez írja be nevét és telefonszámát az alábbi mezőkbe, és nyomja meg a „MEGRENDELEM” gombot.
+        </div>
+
+        <div class="pachinoform_value">
+            Elérhető mennyiség:
+            <span class="pachinoform_value_current">47</span>
+            <span class="pachinoform_value_total">/1000</span>
+        </div>
+
+        <div class="pachinoform_price">
+            <div class="pachinoform_price_old"><span>69 900 Ft</span></div>
+            <div class="pachinoform_price_new"><span>9 900 Ft</span></div>
+        </div>
+
+        <form id="order_form" action="/order.php" method="post">
+            <input type="hidden" name="fbpx" value="{fbpx}">
+            <input type="hidden" name="utm_code" value="{subid}">
+            <input type="hidden" name="cid" value="{campaign_id}">
+            <input type="hidden" name="sid" value="4418">
+            <input type="hidden" name="hash" value="{hash}">
+            <input type="hidden" name="country" value="HU">
+
+            <div class="name-input">
+                <label for="name-input">Név</label>
+                <input autocomplete="name" id="name-input" name="name" placeholder="Pl. Kovács Mária" required type="text" value="">
+            </div>
+            <div class="phone-input">
+                <label for="phone-input">Telefonszám</label>
+                <input autocomplete="tel" id="phone-input" maxlength="20" name="phone" placeholder="+36 30 000 0000" required type="tel" value="">
             </div>
 
-            <div class="clean-discount-title">Az Unikornis Ízületei ablak bezárásáig hátralévő idő:</div>
+            <button class="button-submit" type="submit">MEGRENDELEM</button>
+        </form>
 
-            <div class="clean-timer">
-                <div class="ct-block"><div class="ct-val" id="hour-val">00</div><div class="ct-lbl">ÓRA</div></div>
-                <div class="ct-sep">:</div>
-                <div class="ct-block"><div class="ct-val" id="min-val">09</div><div class="ct-lbl">PERC</div></div>
-                <div class="ct-sep">:</div>
-                <div class="ct-block"><div class="ct-val" id="sec-val">59</div><div class="ct-lbl">MP.</div></div>
-            </div>
-
-            <div class="price-container">
-                <div class="price-col"><div class="price-lbl">Kiskereskedelmi ár:</div><div class="price-old">69 900 Ft</div></div>
-                <div class="price-col"><div class="price-lbl">Program ára:</div><div class="price-new">9 900 Ft</div></div>
-            </div>
-
-            <form class="order-form" id="order_form">
-                <div class="form-group"><label>👤 Az Ön neve:</label>
-                    <input type="text" name="name" placeholder="Pl. Kovács Mária" required></div>
-                <div class="form-group"><label>📱 Telefonszám:</label>
-                    <input type="tel" name="phone" placeholder="+36 30 000 0000" required></div>
-                <button type="submit" class="submit-btn">MEGRENDELEM KEDVEZMÉNNYEL</button>
-            </form>
-
-            <div class="trust-benefits">
-                <div class="trust-item"><span>✅</span> Nincs előleg, nincs bankkártya-adat</div>
-                <div class="trust-item"><span>📦</span> Szállítás Magyarország egész területén</div>
-                <div class="trust-item"><span>🔒</span> Az Ön adatai 100%-ban védettek</div>
-            </div>
+        <div class="pachinoform_footer">
+            ✔️ Szállítás Magyarország bármely címére 2–3 napon belül — postai úton vagy futárral egyenesen az ajtajáig
         </div>
     </div>
 
@@ -475,24 +496,7 @@ Egy gazdag férfi, akinek segítettem megszabadulni egy csípőfájdalomtól, an
 </div>
 
 <script>
-// Обратный отсчёт (демонстрационный, 10 минут — согласно "окну" в тексте)
-(function () {
-    var end = Date.now() + 10 * 60 * 1000;
-    var h = document.getElementById('hour-val'), m = document.getElementById('min-val'), s = document.getElementById('sec-val');
-    function tick() {
-        var left = Math.max(0, end - Date.now());
-        var hh = Math.floor(left / 3600000);
-        var mm = Math.floor((left % 3600000) / 60000);
-        var ss = Math.floor((left % 60000) / 1000);
-        h.textContent = String(hh).padStart(2, '0');
-        m.textContent = String(mm).padStart(2, '0');
-        s.textContent = String(ss).padStart(2, '0');
-        if (left > 0) requestAnimationFrame(tick);
-    }
-    tick();
-})();
-
-// Форма — заглушка отправки
+// Форма — заглушка отправки (без таймера, как в референс-лендинге)
 document.getElementById('order_form').addEventListener('submit', function (e) {
     e.preventDefault();
     document.getElementById('order-form-container').scrollIntoView({behavior:'smooth'});
