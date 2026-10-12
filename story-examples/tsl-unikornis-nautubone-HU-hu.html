@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="hu" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Nautubone — cikk</title>
+<style>
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #f0f2f5; color: #1c1e21; line-height: 1.45;
+    }
+    .container {
+        width: 100%; max-width: 480px; margin: 0 auto; background: #f0f2f5;
+        min-height: 100vh; padding-bottom: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); position: relative;
+    }
+    .fb-topbar {
+        background: #fff; padding: 8px 10px; display: flex; align-items: center;
+        justify-content: space-between; gap: 8px; position: sticky; top: 0; z-index: 100;
+        border-bottom: 1px solid #dadde1;
+    }
+    .fb-topbar-side { display: flex; align-items: center; gap: 8px; }
+    .fb-brand { width: 40px; height: 40px; display: block; flex-shrink: 0; }
+    .fb-icon-btn {
+        width: 36px; height: 36px; border-radius: 50%; background: #e4e6eb;
+        display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .fb-icon-btn svg { width: 20px; height: 20px; fill: #050505; display: block; }
+
+    .fb-post { background: #fff; border-top: 1px solid #dadde1; border-bottom: 1px solid #dadde1; margin: 8px 0; }
+    .fb-post-head { display: flex; align-items: flex-start; gap: 10px; padding: 12px 12px 0; }
+    .fb-post-ava {
+        width: 44px; height: 44px; border-radius: 50%;
+        background: radial-gradient(circle at 30% 30%, #4b3a86, #241b4e);
+        flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+        font-size: 16px; color: #e9d9a0; font-weight: 800;
+    }
+    .fb-post-meta { flex: 1; min-width: 0; padding-top: 1px; }
+    .fb-post-author { display: flex; align-items: center; gap: 4px; font-size: 15px; font-weight: 600; color: #050505; line-height: 1.2; }
+    .fb-verified { width: 15px; height: 15px; flex-shrink: 0; }
+    .fb-post-sub { font-size: 12px; color: #65676b; margin-top: 2px; }
+
+    .article-badge {
+        margin: 10px 12px 0; display: inline-flex; align-items: center; gap: 6px;
+        background: #efe7f7; color: #4b3a86; font-size: 12px; font-weight: 700;
+        padding: 4px 9px; border-radius: 6px;
+    }
+
+    .fb-post-text {
+        padding: 10px 12px 4px; font-size: 21px; line-height: 1.3; font-weight: 800; color: #1a1536;
+    }
+    .fb-post-sub2 { padding: 0 12px 10px; font-size: 14px; color: #444; font-weight: 600; line-height: 1.4; }
+
+    .article-body { padding: 4px 14px 6px; font-size: 17px; color: #1c1e21; }
+    .article-body p { margin: 0 0 13px; }
+    .article-body h2 {
+        font-size: 19px; font-weight: 900; color: #241b4e; margin: 26px 0 10px; line-height: 1.3;
+    }
+    .article-body h3 {
+        font-size: 16px; font-weight: 800; color: #6b4fbb; margin: 18px 0 8px;
+    }
+    .article-body blockquote {
+        border-left: 3px solid #c9a227; background: #f8f3e8; padding: 10px 14px;
+        margin: 12px 0; font-style: italic; color: #333; font-size: 15px;
+    }
+    .star-quote {
+        border: 1px solid #e3d6a8; background: linear-gradient(135deg, #fbf7ec, #f3ead0);
+        border-radius: 10px; padding: 12px 14px; margin: 14px 0;
+    }
+    .star-quote-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .star-quote-ava { width: 30px; height: 30px; border-radius: 50%; background: #241b4e; color: #e9d9a0; display:flex; align-items:center; justify-content:center; font-size: 13px; font-weight: 800; flex-shrink: 0; }
+    .star-quote-name { font-size: 13px; font-weight: 800; color: #5b3e1c; }
+    .star-quote-sub { font-size: 11px; color: #8a7a4f; }
+    .star-quote p { font-size: 15px; font-style: italic; color: #3a2e12; margin: 0; }
+
+    .article-body ul { margin: 0 0 14px 18px; }
+    .article-body li { margin-bottom: 6px; }
+    .article-body strong { color: #241b4e; }
+    .article-hr { border: none; border-top: 1px dashed #d8cfa0; margin: 22px 0; }
+
+    .image-placeholder {
+        margin: 16px 0; border: 2px dashed #c9a227; border-radius: 10px;
+        background: #faf6ea; padding: 16px; display: flex; gap: 12px; align-items: flex-start;
+    }
+    .image-placeholder-icon { font-size: 26px; line-height: 1; flex-shrink: 0; }
+    .image-placeholder-desc { font-size: 13px; color: #5b4a20; line-height: 1.45; }
+    .image-placeholder-desc b { display: block; color: #8a6d1f; font-size: 13px; margin-bottom: 3px; }
+
+    .fb-post-stats { display: flex; align-items: center; gap: 6px; padding: 10px 12px; font-size: 13px; color: #65676b; border-top: 1px solid #e4e6eb; margin-top: 10px; }
+    .fb-post-actions { display: flex; border-top: 1px solid #ced0d4; margin: 0 12px; padding: 4px 0 6px; }
+    .fb-action { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 0; font-size: 14px; font-weight: 600; color: #65676b; }
+
+    .order-container {
+        background: #fff; text-align: left; border: 1px solid #d8cfa0; border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(36,27,78,0.12); margin: 20px 15px; overflow: hidden;
+        scroll-margin-top: 70px;
+    }
+    .cosmic-header {
+        background: linear-gradient(135deg, #241b4e, #4b3a86); color: #f3e9c8; padding: 14px 15px; text-align: center;
+        font-weight: 900; font-size: 15px; text-transform: uppercase; letter-spacing: .5px;
+    }
+    .medical-body { padding: 20px 15px; }
+    .stock-warning-box {
+        background: rgba(201,162,39,.12); border: 2px dashed #a9792a; padding: 15px; margin-bottom: 20px;
+        border-radius: 4px; color: #1a1536; font-size: 18px; font-weight: 700; text-align: center;
+    }
+    .stock-warning-box .warning-word { color: #a9792a; font-weight: 900; text-transform: uppercase; margin-right: 3px; }
+    .stock-warning-box b { font-size: 26px; color: #a9792a; }
+    .clean-discount-title { text-align: center; color: #444; font-size: 14px; margin-bottom: 15px; font-weight: bold; }
+    .clean-timer { display: flex; justify-content: center; align-items: flex-start; gap: 8px; margin-bottom: 22px; color: #4b3a86; }
+    .ct-block { display: flex; flex-direction: column; align-items: center; width: 70px; }
+    .ct-val { font-size: 34px; font-weight: 900; line-height: 1; margin-bottom: 6px; }
+    .ct-lbl { font-size: 10px; text-transform: uppercase; font-weight: bold; }
+    .ct-sep { font-size: 30px; font-weight: 900; margin-top: -4px; color: #4b3a86; }
+    .price-container { display: flex; justify-content: center; gap: 40px; margin-bottom: 22px; }
+    .price-col { text-align: center; }
+    .price-lbl { color: #666; font-size: 12px; margin-bottom: 6px; }
+    .price-old { color: #a9792a; font-size: 19px; font-weight: 900; text-decoration: line-through; }
+    .price-new { color: #1e7e34; font-size: 19px; font-weight: 900; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 12px; font-weight: bold; color: #4a5568; margin-bottom: 6px; text-transform: uppercase; }
+    .order-form input { width: 100%; padding: 13px; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 16px; background: #faf8f2; color: #1a202c; font-weight: bold; }
+    .submit-btn {
+        width: 100%; background: linear-gradient(135deg, #c9a227, #a9792a); color: #1a1536; padding: 17px; font-size: 18px; font-weight: 900;
+        border: none; border-radius: 4px; cursor: pointer; box-shadow: 0 4px 0 #7d5a1d; text-transform: uppercase; margin-top: 5px;
+    }
+    .trust-benefits { border-top: 1px dashed #d8cfa0; padding-top: 15px; margin-top: 20px; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: bold; color: #4a5568; margin-bottom: 8px; }
+    .trust-item span { color: #4b3a86; font-size: 17px; }
+
+    footer { text-align: center; padding: 20px 15px 30px; background: #f0f2f5; }
+    .fb-comments { text-align: left; background: #fff; border-top: 1px solid #ddd; padding: 16px 12px 22px; margin-bottom: 4px; }
+    .fb-comments-title { font-size: 16px; font-weight: 700; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #e4e6eb; }
+    .fb-comment { display: flex; gap: 8px; margin-bottom: 14px; align-items: flex-start; }
+    .fb-comment-ava {
+        width: 36px; height: 36px; border-radius: 50%; background: #e9ddf5; flex-shrink: 0;
+        display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #4b3a86;
+    }
+    .fb-comment-body { flex: 1; min-width: 0; }
+    .fb-comment-bubble { background: #f0f2f5; border-radius: 16px; padding: 8px 12px; }
+    .fb-comment-name { font-size: 13px; font-weight: 700; color: #385898; margin-bottom: 1px; }
+    .fb-comment-text { font-size: 14px; color: #050505; line-height: 1.35; }
+    .fb-comment-meta { margin-top: 3px; padding-left: 12px; font-size: 12px; color: #65676b; font-weight: 600; }
+    .footer-copy { font-size: 12px; color: #888; font-weight: bold; margin-top: 18px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+    <div class="fb-topbar">
+        <div class="fb-topbar-side">
+            <svg class="fb-brand" viewBox="0 0 40 40" aria-hidden="true">
+                <circle cx="20" cy="20" r="20" fill="#1877f2"></circle>
+                <path fill="#fff" d="M22.6 32.4V22.1h3.6l.55-4.2h-4.15v-2.65c0-1.2.35-2.05 2.1-2.05h2.2V9.45c-.38-.05-1.72-.17-3.28-.17-3.25 0-5.47 1.98-5.47 5.62v3h-3.6v4.2h3.6v10.3h4.45z"></path>
+            </svg>
+            <div class="fb-icon-btn"><svg viewBox="0 0 24 24"><path d="M10.5 3a7.5 7.5 0 015.92 12.11l4.24 4.23a1.1 1.1 0 01-1.56 1.56l-4.23-4.24A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"></path></svg></div>
+        </div>
+        <div class="fb-topbar-side">
+            <div class="fb-icon-btn"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.2 2 11.3c0 2.9 1.5 5.5 3.8 7.2V22l3.5-1.9c.9.2 1.8.4 2.7.4 5.5 0 10-4.2 10-9.3S17.5 2 12 2z"></path></svg></div>
+        </div>
+    </div>
+
+    <!-- ==== ПОСТ: ШАПКА АВТОРА ==== -->
+    <div class="fb-post" style="border-bottom:none; margin-bottom:0;">
+        <div class="fb-post-head">
+            <div class="fb-post-ava">HÉ</div>
+            <div class="fb-post-meta">
+                <div class="fb-post-author">
+                    Horváth Éva
+                    <svg class="fb-verified" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1877f2"/><path d="M9.5 12.5l1.8 1.8 3.7-4.2" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="fb-post-sub">Ma · 09:14 · nyilvános bejegyzés</div>
+            </div>
+        </div>
+        <span class="article-badge">✨ Cikk · 12 perc olvasás</span>
+    </div>
+
+    <!-- ==== ТЕКСТОВЫЙ ПОСТ ==== -->
+    <div class="fb-post" style="margin-top:0; border-top:none;">
+
+        <div class="fb-post-text">2026 OKTÓBERÉBEN A VÉNUSZ BELÉP AZ „UNIKORNIS ÍZÜLETEI” POZÍCIÓBA — TIZENÖT ÉVENTE EGYSZER TÖRTÉNIK MEG, ÉS PONTOSAN AZ ÍZÜLETI FÁJDALMAKKAL ÉLŐ NŐKNEK SZÓL</div>
+        <div class="fb-post-sub2">Egy magyar állatorvos elmondja, hogyan gyógyította meg saját ízületeit pontosan tizenöt évvel ezelőtt — akkor, amikor a Vénusz utoljára ebben a pozícióban állt.</div>
+
+        <div class="image-placeholder">
+            <div class="image-placeholder-icon">🌌</div>
+            <div class="image-placeholder-desc">
+                <b>Kép 1 — borítókép</b>
+                Éjszakai égbolt csillagokkal, a Vénusz kiemelve halvány fénykörrel. Előtérben egy kb. 60 éves nő sziluettje, aki a teraszról felnéz az égre, kezében egy csésze teával. Meleg, barátságos holdfény, nem hideg/horror hangulat.
+            </div>
+        </div>
+
+        <div class="article-body">
+
+<p>Kedveseim, ha ma ezt olvassák, ez egy jel odafentről — főleg, ha ízületi fájdalmaik vannak.</p>
+<p>Valami hihetetlent szeretnék megosztani Önökkel, valamit, ami kettéosztja az életüket egy előttre és egy utánra.</p>
+<p>2026 októberében a Vénusz megkezdi éves ciklusát, és egy különleges pozícióba lép. Az asztrológusok ezt úgy hívják: <strong>az Unikornis Ízületei</strong>. Ez tizenöt évente egyszer történik meg. Ebben az időszakban pontosan azoknak a nőknek kell hallgatniuk a lóra, akiknek ízületi problémáik vannak, mert a ló az erő és a felépülés szimbóluma.</p>
+<p>Ezt mondta Csillag Orsolya 2011-ben. Remélem, még emlékeznek rá.</p>
+
+<div class="star-quote">
+    <div class="star-quote-head">
+        <div class="star-quote-ava">CO</div>
+        <div>
+            <div class="star-quote-name">Csillag Orsolya</div>
+            <div class="star-quote-sub">asztrológus · 2011. október</div>
+        </div>
+    </div>
+    <p>„Ma 2011 októbere van, és a Vénusz belépett az Unikornis Ízületei pozícióba. Ízületi problémákkal küzdő nők, hallgassanak a csillagokra és a lovakra. A következő esélyük csak tizenöt év múlva, 2026-ban lesz."</p>
+</div>
+
+<p>És néhány napja Fény Veronika is megerősítette ezt.</p>
+
+<div class="star-quote">
+    <div class="star-quote-head">
+        <div class="star-quote-ava">FV</div>
+        <div>
+            <div class="star-quote-name">Fény Veronika</div>
+            <div class="star-quote-sub">asztrológus · néhány napja</div>
+        </div>
+    </div>
+    <p>„Októberben a Vénusz belép az Unikornis Ízületei pozícióba. Ez az időszak arra való, hogy a lovak segítségével kezeljük az ízületeket."</p>
+</div>
+
+<p>Egyébként én is elmondtam a véleményemet erről 2011-ben. Kedveseim, a csillagok azt mondják, hogy pontosan a nőknek van esélyük meggyógyítani az ízületeiket. Figyelniük kell a ló erejére. Ez egy meglehetősen ritka esemény, tizenöt évente egyszer történik.</p>
+<p>De pontosan mit kell tenniük, hogy az ízületi fájdalom elmúljon? Ezt szó szerint két perc múlva megtudják. De előbb ezt kell tudniuk.</p>
+<p>Felkutattam egy állatorvos nőt, aki szörnyű térdízületi gyulladásban szenvedett. A leguggolás vagy a lépcsőzés valódi gyötrelem volt számára. De pontosan tizenöt évvel ezelőtt, 2011 októberében meggyógyult a lovak módszerével, amikor a Vénusz is az Unikornis Ízületei pozícióban állt. Ő fogja elmondani, mit kell tenni.</p>
+<p>Megismerik egy olyan nő történetét is, akinek az ujjai alig hajlottak, és aki még a saját lakása ajtaját sem tudta kinyitni. Az orvosok azt mondták neki, semmi esélye nincs visszanyerni az ujjai mozgékonyságát. De tizenöt évvel ezelőtt, októberben, ugyanazt a lovas módszert alkalmazta, és a kezei a mai napig olyanok, mint egy fiatal lányé.</p>
+<p>Ha elmulasztják ezt a lehetőséget, a következő csak tizenöt év múlva jön el. Ezért, ha készen állnak a cselekvésre, figyeljenek jól.</p>
+<p>Önökért elhatároztam, hogy közvetlenül beszélek az állatorvossal, azzal a nővel, aki megmentheti az ízületeiket ettől a pokoli fájdalomtól. Nem veszíthetünk több időt. Nagyon kevés idő maradt október kezdetéig.</p>
+
+<hr class="article-hr">
+
+<h2>„DOKTOR VARGA ILDIKÓ, JÓ NAPOT!”</h2>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🖼️</div>
+    <div class="image-placeholder-desc">
+        <b>Kép 2 — portré</b>
+        Kb. 55 éves nő, enyhén őszülő haj, állatorvosi köpeny, nyugodt, magabiztos tekintet, egyenesen a kamerába néz. Háttérben elmosódott lovas istálló körvonalai. Természetes, meleg fény, nem mesterkélt stúdiófotó.
+    </div>
+</div>
+
+<p><strong>Mondja el nekem teljes őszintén:</strong> sok ötven év feletti nő szenved évek óta ízületi fájdalmaktól. Valóban hiszi, hogy lehetséges megszabadulni ettől a fájdalomtól? Vagy ez csak egy átmeneti enyhülés, mint minden tabletta esetében?</p>
+
+<blockquote>„Éva, nagyon örülök, hogy megismerhetem. Tudja, tizenöt évvel ezelőtt a térdeim annyira fájtak, hogy nem tudtam sem leguggolni, sem lépcsőn felmenni. Az életem pokolnak tűnt.<br><br>
+De 2011 októbere megváltoztatott mindent. Láttam egy videót az Unikornis Ízületeiről, arról, hogy a ló ereje hogyan segíthet megszüntetni a térd- és más ízületi fájdalmakat. Először azt gondoltam: hogy lehet ez egyáltalán lehetséges? De utána megértettem, hogy abban a pillanatban kell cselekednem.<br><br>
+Mindent tudtam a lovakról — ekkor már huszonöt éve voltam állatorvos, és segítettem lovaknak visszaállni a lábukra a legsúlyosabb esések után, térdoperációk után és a legsúlyosabb ízületi problémákkal. Mindannyian szó szerint néhány hét alatt visszatértek a normális állapotba. Ez volt a saját módszerem, amelyet huszonöt év kemény állatorvosi munkával fejlesztettem ki. Akkoriban már felkértek, hogy képezzek állatorvosokat az ország minden részéről. Még állami elismerést is kaptam."</blockquote>
+
+<p>Ildikó valóban megérdemli ezt az elismerést. Mindenkinek bebizonyította, hogy egy lovat nem kell kiszenvedni egy sérülés után, mint azt régebben tették.</p>
+
+<blockquote>„Az életemet a lovaknak szenteltem, de sajnos elhanyagoltam a saját ízületeimet, és eljutottam egy olyan ponthoz, ahol már az orvosok sem tudtak segíteni. Azt mondták, a porcom elkopott, és az utolsó esély a műtét.<br><br>
+De aztán megtaláltam az Önök videóját 2011 októberében. Tanulmányoztam mindent, amit a lovaknál alkalmaztam, és találtam valamit, amit elhatároztam, hogy kipróbálok magamon is. És nem csalódtam. A mai napig, a lovas módszer után, az ízületeim alig fájnak. Szenvedtem, nem éltem. Istenhez imádkoztam, hogy szabadítson meg ezektől a gyötrelmektől.<br><br>
+Ezért örülök, hogy akkor nem zártam be az Önök videóját, hanem hittem benne, és cselekedtem. Ez nem átmeneti enyhülés, ez a visszatérés az élethez."</blockquote>
+
+<h3>„VÁRJON, VÁRJON CSAK...”</h3>
+<p>De ha ez ilyen egyszerű, akkor miért nem alkalmazzák még ezt a módszert az embereken? Az emberek szenvednek, és a mai napig nincs jó megoldás.</p>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🐴</div>
+    <div class="image-placeholder-desc">
+        <b>Kép 3 — rejtvény</b>
+        Két egymás mellé helyezett röntgenszerű illusztráció, A és B felirattal: az egyiken egy lóízület, a másikon egy hatvanéves nő térdízülete. A képaláírás: „Tudják megtippelni, melyik melyik?" Egyszerű, tiszta orvosi illusztrációs stílus.
+    </div>
+</div>
+
+<blockquote>„Ez egy nagyszerű kérdés, Éva. Miután megszabadultam az ízületi fájdalmaktól, elhatároztam, hogy tanulmányozom ezt a kérdést. 2011-ben beiratkoztam egy fővárosi állami orvostudományi egyetem orvosi karára, és kitűnő eredménnyel végeztem. Az időm nagy részét az emberi ízületek tanulmányozásával töltöttem, és valami hihetetlent fedeztem fel.<br><br>
+Látják ezeket a képeket? Az egyiken egy ló ízülete van, a másikon egy hatvanéves nő ízülete. Tudják megtippelni, melyik a lóé? Megmondom a választ, de előbb ezt kell tudniuk."</blockquote>
+
+<h3>MIÉRT FÁJNAK AZ ÍZÜLETEK?</h3>
+<p>Valószínűleg sokan tudják, hogy az ízületek azért fájnak, mert az életkorral a porc elkopik, és a csontok elkezdenek egymáshoz érni. Ez egy klasszikus helyzet, amely előbb-utóbb mindenkivel megtörténik.</p>
+<p>De miért történik ez? Mindez annak köszönhető, hogy a porcszövet egy különleges fehérjéből áll, amelyet <strong>GK309-nek</strong> neveznek. Dr. Varga Ildikó <strong>zsíros fehérjének</strong> hívja. Fiatal korunkban a szervezetünk termeli, ezért a porc regenerálódik. De az életkorral a szervezet leállítja ennek előállítását, és akkor kezdődik a pusztulási folyamat.</p>
+
+<blockquote>„Bármit is tesznek, ötven év után a porc elkezd lebomlani, és ezt folytatja mindaddig, amíg teljesen el nem pusztul. És csak azzal az alkotóelemmel lehet helyreállítani, amelyből maga is készül — pontosabban a zsíros fehérjével."</blockquote>
+
+<h3>MIÉRT NEM SEGÍTENEK A GYÓGYSZERTÁRI KRÉMEK ÉS TABLETTÁK?</h3>
+<p>Majdnem minden krémben vagy tablettában megtalálható ez a zsíros fehérje. De van egy ok, amiért az ízület nem kapja meg — bizonyos összetevőket adnak hozzá, amelyek megakadályozzák, hogy a zsíros fehérje behatoljon az ízületekbe. Egyszerűen a bőr felszínén marad, és a szervezet kiválasztja.</p>
+<p><strong>Ezért csak átmeneti enyhülést éreznek</strong>, amelyet kizárólag a fájdalomcsillapító összetevők okoznak. De az ízület napról napra tovább pusztul.</p>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">⚠️</div>
+    <div class="image-placeholder-desc">
+        <b>Kép 4 — illusztráció</b>
+        Egyszerű infografika: egy tablettából kiinduló nyíl, amely megáll a bőr felszínénél egy láthatatlan fal előtt, nem éri el az ízületet. Tiszta, minimalista stílus, meleg sárga-barna tónusok.
+    </div>
+</div>
+
+<p>Ki és miért adja hozzá ezeket az összetevőket? Ki keres ezen évente több tízmillió forintot? A jól ismert gyógyszeripari vállalatok. Már 2012-ben az állam részesedést vásárolt egy gyógyszeripari vállalatban, a <strong>Farmexa Gyógyszeripari Zrt.-ben</strong>. Ezenkívül 2014-ben elfogadtak egy törvényt a gyógyszerek kiegészítő összetételének titokban tartásáról.</p>
+<p>Önök szerint milyen összetevőket fognak eltitkolni? Pontosan azokat, amelyek megakadályozzák, hogy a zsíros fehérje behatoljon az ízületbe.</p>
+
+<h3>A VÁLASZ: A LÓ ÍZÜLETE A BAL OLDALON VOLT</h3>
+<blockquote>„Már szabad szemmel is látszik, hogy az ízületek azonosak. A lovak csont- és ízületi szerkezete kilencven százalékban hasonló a miénkhez. Pontosan ezért szereztem orvosi végzettséget, hogy ezt minden kétséget kizáróan kimondhassam. A zsíros fehérjével állítottam helyre a beteg ízületeiket súlyos sérülések vagy ízületi betegségek esetén. Ezért, ha a lovaknál működik, az embereknél is fog működni."</blockquote>
+
+<hr class="article-hr">
+
+<h2>„MIÉRT DÖNTÖTT ÚGY, HOGY SEGÍT AZ EMBEREKNEK?”</h2>
+
+<blockquote>„Az első dolog, amit mondanom kell, Éva, hogy Önök maguk hívtak meg erre a beszélgetésre. Én sehol nem vásárolok reklámot, sehol nem beszélek a saját termékemről. Azoknak az embereknek segítek, akik közvetlenül fordulnak hozzám, és ezt mindig ingyen tettem.<br><br>
+Miután 2011 októberében meggyógyítottam az ízületeimet, elhatároztam, hogy segítek egy munkatársamnak. Az ujjai alig hajlottak, és nem is tudta kinyitni a saját lakása ajtaját. Az orvosok azt mondták neki, hogy semmi esélye nincs visszanyerni az ujjai mozgékonyságát. El akarták bocsátani.<br><br>
+De tizenöt évvel ezelőtt rávettem, hogy alkalmazza ugyanazt a lovas módszert. A lovas készítmény minden hete alatt egyre jobban érezte magát, mert a zsíros fehérje végre elkezdett behatolni az ízületekbe. Megváltozott az élete, és a mai napig a kezei olyanok, mint egy fiatal lányé, pedig már hatvannyolc éves.<br><br>
+És most, mivel a Vénusz belépett az Unikornis Ízületei pozícióba, százak kezdtek felkeresni. Senki sem akar még tizenöt évet várni."</blockquote>
+
+<h3>„DE EZ ÁLLATOKNAK VAN KITALÁLVA — BIZTONSÁGOS EZ EMBEREKNEK?”</h3>
+<blockquote>„Pontosan ezért mentem egyetemre, és végeztem kitűnő eredménnyel! Nem egyszerűen egy lovaknak készült krémet használok. Embereknek alakítottam át: a felére csökkentettem a hatóanyagok koncentrációját, hozzáadtam természetes olajokat, kék zsályát és vadgesztenyét, hogy a szervezet jobban befogadja a terméket. Nem számít, mióta fáj az ízület: egy éve, öt éve vagy tíz éve. A fontos, hogy a felépülés bármely szakaszban megkezdődhet."</blockquote>
+
+<hr class="article-hr">
+
+<h2>„DE AKKOR HOGYAN JUTHATUNK HOZZÁ? ÖN NEM ÁRULJA EZT A TERMÉKET!”</h2>
+
+<blockquote>„Így van, Éva. Soha nem adtam el ezt a terméket, mert mindig úgy gondoltam, hogy ingyen kell segítenem az embereknek. Mindezen évek alatt a saját pénzemből kerestem meg a szükséges összetevőket. Soha nem kerestem pénzt ezen.<br><br>
+Egy gazdag férfi, akinek segítettem megszabadulni egy csípőfájdalomtól, annyira hálás volt, hogy <strong>százmillió forintot</strong> hozott nekem köszönetképpen. De visszautasítottam a pénzt, és megkértem, hogy adja jótékony célra."</blockquote>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🕯️</div>
+    <div class="image-placeholder-desc">
+        <b>Kép 5 — a fiú</b>
+        Egy kb. 30 éves férfi egy idősek otthonának napfényes közösségi termében, egy idős nő kezét fogja, miközben beszélgetnek. Meleg, bizalmat sugalló hangulat, nem kórházi/steril.
+    </div>
+</div>
+
+<blockquote>„A fiam önkéntesként dolgozik idősek otthonaiban országszerte. Látta, hogyan szenvednek az idősek nap mint nap a fájdalomtól. De fizikailag nem tudna egész életében minden embernek segíteni. Ezért azt javasolta, hogy hozzunk létre egy weboldalt, hogy több embernek segíthessünk."</blockquote>
+
+<h3>„AKKOR MOST BÁRKI MEGKAPHATJA?”</h3>
+<blockquote>„Igen, pontosan így van. De van egy probléma. Minden jelenlegi tétel már le van foglalva. Több ezer ember van a várólistán. Vannak, akik nagy összeget ajánlanak, hogy hamarabb megkapják — de nem tehetek kivételt. Csak feliratkozhatnak, és kivárhatják a sorukat."</blockquote>
+
+<p><strong>Ildikó, nem tehetne kivételt az Unikornis Ízületei pozíció tiszteletére?</strong> — kérdeztem tőle. És igent mondott.</p>
+
+<blockquote>„Megértem, Éva. Igaza van. Ez az októberi hónap különleges. Rendben, kivételt teszek. Ezért most, ebben a pillanatban, negyvenhét helyet foglalok le a soron kívül az Önök nézői — olvasói — számára, és bemutatom:"</blockquote>
+
+<hr class="article-hr">
+
+<h2>A NAUTUBONE — AZ ELSŐ ÉS EGYETLEN TERMÉSZETES ÍZÜLETI KÉSZÍTMÉNY A VILÁGON A NEGYVEN ÉV FELETTI MAGYAR NŐKNEK</h2>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🫙</div>
+    <div class="image-placeholder-desc">
+        <b>Kép 6 — packshot</b>
+        Üveg tégely „Nautubone" felirattal, mélykék-arany csomagoláson egy stilizált lópatkó és egy csillagmotívum. Világos háttér, enyhe árnyékkal, 3/4 szögből fotózva.
+    </div>
+</div>
+
+<p>A valódi zsíros fehérje hatására a készítmény az ízületek pusztulásának valódi okára hat, és véglegesen nullára csökkenti a fájdalom szintjét tízből, mindössze <strong>huszonnyolc nap alatt</strong>, fájdalomcsillapítók, kimerítő diéták és fizikai erőfeszítés nélkül.</p>
+<p>Még akkor is, ha az ízületeik csak nemrég kezdtek fájni, még akkor is, ha előrehaladott stádiumú artrózisban szenvednek, a Nautubone huszonnyolc nap alatt segít. Még akkor is, ha évekig pusztították ízületeiket kémiai fájdalomcsillapítókkal. Még akkor is, ha súlyos allergiáik vannak — ez egy teljesen természetes, hipoallergén termék.</p>
+<p>Ha egy csodakészítményt keresnek, ami egyetlen éjszaka alatt helyreállítja az ízületeket, zárják be ezt az oldalt. De ha valódi megoldást keresnek, és készek cselekedni a valódi ok ellen, jó helyen járnak.</p>
+
+<h3>MIT KAPNAK, HA ELFELEJTIK A FÁJDALMAT:</h3>
+<ul>
+    <li>Elfelejtik a térd-, csípő- és derékfájdalmakat, a ropogást, a merevséget</li>
+    <li>Mozoghatnak, sétálhatnak, azzal foglalkozhatnak, amit szeretnek</li>
+    <li>Megehetik a kedvenc ételeiket, félelem nélkül</li>
+    <li>Több tízezer forintot takaríthatnak meg hatástalan vegyi készítményeken és műtéteken</li>
+    <li>Élhetnek állandó fájdalomcsillapítók nélkül</li>
+    <li>Maximális energiát érezhetnek, legyőzhetik a fáradtságot</li>
+</ul>
+
+<blockquote>„Ne feledjék: a tétlenség teljes mozgásképtelenséghez, elkerülhetetlen ízületi protézis-műtéthez és egy hosszú, szenvedéssel teli élethez vezet, mert az ízületek szó szerint belülről pusztulnak el."</blockquote>
+
+<h2>ÖNÖKNEK KÉT ÚTJUK VAN</h2>
+
+<div class="image-placeholder">
+    <div class="image-placeholder-icon">🌓</div>
+    <div class="image-placeholder-desc">
+        <b>Kép 7 — két út</b>
+        Szimbolikus illusztráció: egy elágazó ösvény holdfényben, bal oldalon sötétebb, köves út (fájdalom), jobb oldalon egy csillagfényes, virágos ösvény (felépülés). Nem ijesztő, inkább meseszerű, meleg tónusú.
+    </div>
+</div>
+
+<p><strong>Az első:</strong> elengedik ezt a lehetőséget, és továbbra is élik egy ízületi fájdalmakkal küzdő nő szokásos életét, lassan haladva a visszafordíthatatlan következmények felé.</p>
+<p><strong>A második:</strong> elfogadják az ajánlatot, és egyszer és mindenkorra megszabadulnak az ízületi fájdalmaktól, belépve egy olyan világba, ahol teljesen egészségesek és energiával teliek, a szeretteikkel vannak.</p>
+<p>Ha a második lehetőséget választják, töltsék ki az alábbi űrlapot, amíg az Unikornis Ízületei ablaka még nyitva áll.</p>
+
+        </div>
+    </div>
+
+    <!-- ==== ФОРМА ЗАКАЗА ==== -->
+    <div class="order-container" id="order-form-container">
+        <div class="cosmic-header">✨ HIVATALOS MEGRENDELŐLAP — UNIKORNIS ÍZÜLETEI PROGRAM</div>
+        <div class="medical-body">
+
+            <div class="stock-warning-box">
+                <span class="warning-word">FIGYELEM!</span> Csak <b id="live-stock-count">47</b> csomag Nautubone maradt soron kívül
+            </div>
+
+            <div class="clean-discount-title">Az Unikornis Ízületei ablak bezárásáig hátralévő idő:</div>
+
+            <div class="clean-timer">
+                <div class="ct-block"><div class="ct-val" id="hour-val">00</div><div class="ct-lbl">ÓRA</div></div>
+                <div class="ct-sep">:</div>
+                <div class="ct-block"><div class="ct-val" id="min-val">09</div><div class="ct-lbl">PERC</div></div>
+                <div class="ct-sep">:</div>
+                <div class="ct-block"><div class="ct-val" id="sec-val">59</div><div class="ct-lbl">MP.</div></div>
+            </div>
+
+            <div class="price-container">
+                <div class="price-col"><div class="price-lbl">Kiskereskedelmi ár:</div><div class="price-old">69 900 Ft</div></div>
+                <div class="price-col"><div class="price-lbl">Program ára:</div><div class="price-new">9 900 Ft</div></div>
+            </div>
+
+            <form class="order-form" id="order_form">
+                <div class="form-group"><label>👤 Az Ön neve:</label>
+                    <input type="text" name="name" placeholder="Pl. Kovács Mária" required></div>
+                <div class="form-group"><label>📱 Telefonszám:</label>
+                    <input type="tel" name="phone" placeholder="+36 30 000 0000" required></div>
+                <button type="submit" class="submit-btn">MEGRENDELEM KEDVEZMÉNNYEL</button>
+            </form>
+
+            <div class="trust-benefits">
+                <div class="trust-item"><span>✅</span> Nincs előleg, nincs bankkártya-adat</div>
+                <div class="trust-item"><span>📦</span> Szállítás Magyarország egész területén</div>
+                <div class="trust-item"><span>🔒</span> Az Ön adatai 100%-ban védettek</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="fb-comments">
+            <div class="fb-comments-title">Hozzászólások</div>
+
+            <div class="fb-comment">
+                <div class="fb-comment-ava">KM</div>
+                <div class="fb-comment-body">
+                    <div class="fb-comment-bubble">
+                        <div class="fb-comment-name">Kovács Mária</div>
+                        <div class="fb-comment-text">eleinte azt hittem ez valami csillagjós reklám lesz, de végigolvastam és tényleg a lovas módszerről szólt. két hete rendeltem, várom hogy kiderüljön.</div>
+                    </div>
+                    <div class="fb-comment-meta">Tetszik · Válasz · 2 perc</div>
+                </div>
+            </div>
+
+            <div class="fb-comment">
+                <div class="fb-comment-ava">NT</div>
+                <div class="fb-comment-body">
+                    <div class="fb-comment-bubble">
+                        <div class="fb-comment-name">Nagy Teréz</div>
+                        <div class="fb-comment-text">nálam is pont októberben kezdődött ez az egész a térdemmel, most olvasva libabőrös vagyok hogy ez nem véletlen</div>
+                    </div>
+                    <div class="fb-comment-meta">Tetszik · Válasz · 7 perc</div>
+                </div>
+            </div>
+
+            <div class="fb-comment">
+                <div class="fb-comment-ava">SP</div>
+                <div class="fb-comment-body">
+                    <div class="fb-comment-bubble">
+                        <div class="fb-comment-name">Szabó Piroska</div>
+                        <div class="fb-comment-text">olvassátok el a végéig, ott van a doktornő teljes válasza arról miért nem kapható patikában</div>
+                    </div>
+                    <div class="fb-comment-meta">Tetszik · Válasz · 14 perc</div>
+                </div>
+            </div>
+
+            <div class="fb-comment">
+                <div class="fb-comment-ava">FJ</div>
+                <div class="fb-comment-body">
+                    <div class="fb-comment-bubble">
+                        <div class="fb-comment-name">Farkas Judit</div>
+                        <div class="fb-comment-text">az ujjas hölgy története megrázott, pont olyan tüneteim vannak. remélem még van hely a 47-ből</div>
+                    </div>
+                    <div class="fb-comment-meta">Tetszik · Válasz · 23 perc</div>
+                </div>
+            </div>
+
+            <div class="fb-comment">
+                <div class="fb-comment-ava">BL</div>
+                <div class="fb-comment-body">
+                    <div class="fb-comment-bubble">
+                        <div class="fb-comment-name">Balogh László</div>
+                        <div class="fb-comment-text">anyámnak küldtem ezt, ő mindig hitt a csillagokban, most legalább egy olyan dologban is hisz ami talán segít a térdén</div>
+                    </div>
+                    <div class="fb-comment-meta">Tetszik · Válasz · 31 perc</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-copy">Meta © 2026</div>
+    </footer>
+</div>
+
+<script>
+// Обратный отсчёт (демонстрационный, 10 минут — согласно "окну" в тексте)
+(function () {
+    var end = Date.now() + 10 * 60 * 1000;
+    var h = document.getElementById('hour-val'), m = document.getElementById('min-val'), s = document.getElementById('sec-val');
+    function tick() {
+        var left = Math.max(0, end - Date.now());
+        var hh = Math.floor(left / 3600000);
+        var mm = Math.floor((left % 3600000) / 60000);
+        var ss = Math.floor((left % 60000) / 1000);
+        h.textContent = String(hh).padStart(2, '0');
+        m.textContent = String(mm).padStart(2, '0');
+        s.textContent = String(ss).padStart(2, '0');
+        if (left > 0) requestAnimationFrame(tick);
+    }
+    tick();
+})();
+
+// Форма — заглушка отправки
+document.getElementById('order_form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('order-form-container').scrollIntoView({behavior:'smooth'});
+});
+</script>
+
+</body>
+</html>
