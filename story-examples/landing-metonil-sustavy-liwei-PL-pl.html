@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+  <head>
+    <title>Metonil</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="css/comments.css" rel="stylesheet" />
+    <link href="css/style_3.css" rel="stylesheet" />
+    <link href="css/intlTelInput.css" rel="stylesheet" type="text/css" />
+    <link href="images/product.png" rel="icon" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      start = 120;
+      duration = 600;
+    </script>
+
+    <style>
+      .tv_icons {
+        flex-wrap: wrap;
+      }
+
+      @media screen and (max-width: 500px) {
+        .main_header {
+          font-size: 25px;
+        }
+      }
+
+      @media screen and (max-width: 360px) {
+        .main_header {
+          font-size: 30px;
+        }
+
+        .tv_icons > img {
+          scale: 0.7;
+        }
+      }
+
+      #video {
+        pointer-events: none;
+      }
+
+      .iti {
+        width: 100%;
+      }
+    </style>
+
+    <style></style>
+
+    <style></style>
+  </head>
+
+  <body>
+    <h1 class="main_header">
+      NAJSKUTECZNIEJSZY
+      <span class="green_bg"
+        >DOMOWY ŚRODEK NA ZŁAGODZENIE BÓLU PLECÓW I KOLANA JUŻ W 4
+        GODZINY!</span
+      >
+    </h1>
+    <div id="container_video">
+      <div id="close"></div>
+      <div id="open-video">
+        <div>
+          <h4>Kliknij, aby kontynuować</h4>
+        </div>
+      </div>
+      <div id="popup">
+        <div>
+          <h2>Zostało tylko 17 opakowań Metonil.</h2>
+          <h2>Zamów swoje teraz!</h2>
+        </div>
+      </div>
+      <div id="play">
+        <div>
+          <h4>Film już się rozpoczął</h4>
+          <h4>Kliknij, aby włączyć dźwięk!</h4>
+        </div>
+      </div>
+      <span id="oneform"></span>
+      <video
+        autoplay="autoplay"
+        id="video"
+        muted=""
+        playsinline=""
+        preload="metadata"
+      >
+        <source
+          src="https://preview.ink/free/019b2726-448d-7b03-963e-713ef0dc8abb.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div id="oneform"></div>
+      <form action="/order.php" method="post" id="order">
+        <input type="hidden" name="fbpx" value="{fbpx}" />
+        <input type="hidden" name="utm_code" value="{subid}" />
+        <input type="hidden" name="cid" value="{campaign_id}" />
+        <input type="hidden" name="sid" value="1041" />
+        <input type="hidden" name="hash" value="{hash}" />
+        <input type="hidden" name="country" value="PL" />
+        <div class="formFb" id="formFb">
+          <div class="formFb__container">
+            <p class="formFb__action formFb__text">
+              <b>Pospiesz się!</b> Promocyjne opakowania szybko się kończą.
+            </p>
+            <p class="formFb__counter formFb__text">
+              <b>Aktualizacja:</b> Dziś zostało tylko
+              <span class="form-instock red">17</span> opakowań
+              <span class="js-current-date"></span>.
+            </p>
+            <div class="formFb__img">
+              <img
+                alt=""
+                loading="eager"
+                src="images/product.png"
+                style="max-width: 160px"
+              />
+            </div>
+            <div class="formFb__price">
+              <p class="formFb__price--txt formFb__text">-50% ZNIŻKI</p>
+              <span class="formFb__price--p">
+                <span
+                  class="oldPriceAndLabelForLandingInfoApi formFb__price--old"
+                  ><span class="price-old">198</span>
+                  <span class="">PLN</span></span
+                >
+                <span class="priceAndLabelForLandingInfoApi formFb__price--new"
+                  ><span class="price-new">99</span>
+                  <span class="">PLN</span></span
+                >
+              </span>
+            </div>
+            <div class="formFb__timer">
+              <p class="formFb__text">Kończy się wkrótce</p>
+              <div style="color: red">
+                <span class="min" id="min" style="font-size: 30px">10</span>
+                <span style="font-size: 30px"> : </span>
+                <span class="sec" id="sec" style="font-size: 30px">00</span>
+              </div>
+            </div>
+            <input
+              type="text"
+              placeholder="Imię"
+              name="name"
+              required=""
+              autocomplete="name"
+              style="padding: 10px 30px"
+            />
+            <input
+              name="phone"
+              type="tel"
+              placeholder="Numer telefonu"
+              required=""
+              autocomplete="tel"
+              style="padding: 10px 30px; margin-top: 20px"
+            />
+            <button class="formFb__btn orderGet offer_link" type="submit">
+              ZŁÓŻ MOJE ZAMÓWIENIE
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="block_tv" style="max-width: 900px; margin: 0 auto">
+      <p>POJAWIA</p>
+      <div class="tv_icons">
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913992-fce779e3-8fb5-4671-9dba-4a502e507ecd.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-40c15d29-b933-4dfa-bf8c-086034f2ea38.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209997078-bab6bd07-47f1-4a05-bd41-572c32207986.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-97be1703-e503-4851-af2b-5210b0e5839e.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-be59b449-a9a6-486d-b526-1bfca40b71ee.jpg"
+        />
+      </div>
+    </div>
+    <style>
+      .fb-comments-wrapper {
+        display: none;
+        opacity: 0;
+      }
+    </style>
+    <section class="comments py-4" style="max-width: 900px; margin: 0 auto">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="fb-comments" style="margin-top: 5px">
+              <div class="fb-comments-header">
+                <span>Komentarze</span>
+              </div>
+              <div class="fb-comments-wrapper" id="6" style="opacity: 1.02661">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/6.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Katarzyna Nowak (48 lat)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Mam 48 lat i myślałam, że za wcześnie na takie problemy
+                        ze stawami. Ból kolan i pleców nie dawał żyć. Znalazłam
+                        przepis doktora Li Wei, przygotowałam
+                        wieczorem i już pierwszej nocy spałam jak dziecko – bez
+                        bólu! Rano wstałam i nie wierzyłam: zero chrupania, zero
+                        sztywności. Dziękuję,
+                        Doktorze! ❤️
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Lubię to</like> · <reply>Odpowiedz</reply> ·
+                        <likes>18</likes> <date>3 min temu</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="5" style="opacity: 1.0292">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/5.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Tomasza Kowalska (52 lata)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        W wieku 52 lat kolana już odmawiały posłuszeństwa, ledwo
+                        wchodziłam po schodach. Dzięki recepturze doktora Li Wei
+                        po pierwszej nocy ból zniknął jakby ręką odjął.
+                        Teraz biegam za wnukami, jak za młodych lat!
+                        Dziękuję z całego serca, Doktorze Li Wei!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Lubię to</like> · <reply>Odpowiedz</reply> ·
+                        <likes>17</likes> <date>3 min temu</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="4" style="opacity: 1.0304">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/4.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Maria Wiśniewska (55 lat)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Takiego poranka bez bólu kręgosłupa jeszcze nigdy nie
+                        miałam! Po jednym wieczorze z przepisem doktora
+                        Li Wei wstałam jak nowo narodzona. Mąż pyta:
+                        „Co ty brałaś?”, a ja: „Tylko sól z
+                        cynamonem od chińskiego doktora!” 😂 A potem dodał: „I skąd nagle
+                        tyle energii?” 😂 Dziękuję, Doktorze Li Wei!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Lubię to</like> · <reply>Odpowiedz</reply> ·
+                        <likes>15</likes> <date>3 min temu</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="1" style="opacity: 1.0324">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/1.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Zbigniew Wójcik (59 lat)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Dokładnie to samo, bracie! Miałem takie same bóle w
+                        kolanach i palcach. Zrobiłem napar według przepisu
+                        doktora Li Wei i już pierwszej nocy przestało boleć.
+                        Teraz nawet bez naparu wszystko działa idealnie – i
+                        stawy, i męska moc wróciła na 100 %. Doktorze
+                        Li Wei, dziękuję i niech pan ma się dobrze!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Lubię to</like> · <reply>Odpowiedz</reply> ·
+                        <likes>8</likes> <date>3 min temu</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="2" style="opacity: 1.0298">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/2.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Grażyn Lewandowski (67 lat)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Mam 67 lat, żona młodsza o 10, a ja już nie mogłem nawet
+                        przykucnąć w ogrodzie. Ból pleców i kolan był nie do
+                        zniesienia. Po recepturze doktora Li Wei
+                        pierwszej nocy spałem jak niemowlę, a rano wstałem i
+                        przykucnąłem bez problemu. Czuję się młodszy o 20 lat, a w
+                        sypialni… jak za czasów kawalerskich! Dziękuję z całego serca,
+                        Doktorze Li Wei!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Lubię to</like> · <reply>Odpowiedz</reply> ·
+                        <likes>9</likes> <date>3 min temu</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="fb-comments-wrapper resposta"
+                id="3"
+                style="opacity: 1.0216"
+              >
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/3.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Daniel Kamiński (64 lata)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Próbowałem różnych maści i tabletek na stawy – nic nie
+                        pomagało. Tylko przepis doktora Li Wei dał efekt od
+                        pierwszej nocy. Ból zniknął, chrupanie ustało, znowu
+                        mogę pracować w ogrodzie, a żona mówi, że w łóżku jestem
+                        znowu jak 30-latek! Doktorze Li Wei – dziękuję
+                        z całego serca!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Lubię to</like> · <reply>Odpowiedz</reply> ·
+                        <likes>11</likes> <date>3 min temu</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="7">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/7.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Halina Zielińska (70 lat)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Świetny przepis od doktora Li Wei. Gdy zaczęły się
+                        straszne bóle kręgosłupa i kolan, znalazłam jego
+                        wideo. Po pierwszej nocy przestało boleć, a
+                        po tygodniu zapomniałam, że w ogóle miałam problem.
+                        Teraz znowu chodzę na długie spacery z wnuczką.
+                        Polecam wszystkim! Dziękuję, Doktorze Li Wei! ❤️
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Lubię to</like> · <reply>Odpowiedz</reply> ·
+                        <likes>22</likes> <date>2 min temu</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var comments = document.querySelectorAll('.fb-comments-wrapper');
+
+        function fadeInElement(element, duration) {
+          var start = null;
+
+          function step(timestamp) {
+            if (!start) start = timestamp;
+            var progress = timestamp - start;
+            element.style.opacity = progress / duration;
+            if (progress < duration) {
+              window.requestAnimationFrame(step);
+            }
+          }
+          window.requestAnimationFrame(step);
+        }
+
+        function displayCommentsSequentially(index) {
+          if (index >= comments.length) {
+            return;
+          }
+          var comment = comments[index];
+          comment.style.display = 'block';
+          fadeInElement(comment, 500);
+          if (index > 0) {
+            comments[index - 1].parentNode.insertBefore(
+              comment,
+              comments[index - 1]
+            );
+          }
+          setTimeout(function () {
+            displayCommentsSequentially(index + 1);
+          }, 10000);
+        }
+        displayCommentsSequentially(0);
+      });
+    </script>
+
+    <script async>
+      const LAZY = document.querySelectorAll('img');
+      for (let i = 0; i < LAZY.length; i++) {
+        LAZY[i].setAttribute('loading', 'lazy');
+      }
+    </script>
+
+    <script>
+      $('a').on('touchend, click', function (e) {
+        e.preventDefault();
+        $('body,html').animate(
+          {
+            scrollTop: $('#oneform').offset().top,
+          },
+          400
+        );
+      });
+    </script>
+
+    <script>
+      $('[name="name"]').on('input change', function () {
+        var val = $(this).val();
+        $(this).val(val.replace(/[^a-zA-Zа-яА-ЯёЁії\s]/g, ''));
+      });
+
+      $('[name="phone"]').on('input change', function (e) {
+        var val = $(this).val();
+        $(this).val(val.replace(/[^0-9]/g, ''));
+        $(e.currentTarget).attr('pattern', '[0-9]{6,}');
+      });
+    </script>
+
+    <script src="js/video.js?=v1"></script>
+    <p style="opacity: 0">{_box:h93PZ1SM}</p>
+  </body>
+</html>
