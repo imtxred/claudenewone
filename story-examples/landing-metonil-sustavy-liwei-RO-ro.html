@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <title>Metonil</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="css/comments.css" rel="stylesheet" />
+    <link href="css/style_3.css" rel="stylesheet" />
+    <link href="css/intlTelInput.css" rel="stylesheet" type="text/css" />
+    <link href="images/product.png" rel="icon" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      start = 120;
+      duration = 600;
+    </script>
+
+    <style>
+      .tv_icons {
+        flex-wrap: wrap;
+      }
+
+      @media screen and (max-width: 500px) {
+        .main_header {
+          font-size: 25px;
+        }
+      }
+
+      @media screen and (max-width: 360px) {
+        .main_header {
+          font-size: 30px;
+        }
+
+        .tv_icons > img {
+          scale: 0.7;
+        }
+      }
+
+      #video {
+        pointer-events: none;
+      }
+
+      .iti {
+        width: 100%;
+      }
+    </style>
+
+    <style></style>
+
+    <style></style>
+  </head>
+
+  <body>
+    <h1 class="main_header">
+      CEL MAI EFICIENT
+      <span class="green_bg"
+        >REMEDIU NATURAL PENTRU AMELIORAREA DURERII DE SPATE ȘI GENUNCHI
+        ÎN DOAR 4 ORE!</span
+      >
+    </h1>
+    <div id="container_video">
+      <div id="close"></div>
+      <div id="open-video">
+        <div>
+          <h4>Apasă pentru a continua</h4>
+        </div>
+      </div>
+      <div id="popup">
+        <div>
+          <h2>Au mai rămas doar 17 pachete Metonil.</h2>
+          <h2>Comandă-l pe al tău acum!</h2>
+        </div>
+      </div>
+      <div id="play">
+        <div>
+          <h4>Filmul a început deja</h4>
+          <h4>Apasă pentru a activa sunetul!</h4>
+        </div>
+      </div>
+      <span id="oneform"></span>
+      <video
+        autoplay="autoplay"
+        id="video"
+        muted=""
+        playsinline=""
+        preload="metadata"
+      >
+        <source
+          src="images/VSLPLready1.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div id="oneform"></div>
+      <form action="/order.php" method="post" id="order">
+        <input type="hidden" name="fbpx" value="{fbpx}" />
+        <input type="hidden" name="utm_code" value="{subid}" />
+        <input type="hidden" name="cid" value="{campaign_id}" />
+        <input type="hidden" name="sid" value="6891" />
+        <input type="hidden" name="hash" value="{hash}" />
+        <input type="hidden" name="country" value="RO" />
+        <div class="formFb" id="formFb">
+          <div class="formFb__container">
+            <p class="formFb__action formFb__text">
+              <b>Grăbește-te!</b> Pachetele promoționale se epuizează rapid.
+            </p>
+            <p class="formFb__counter formFb__text">
+              <b>Actualizare:</b> Astăzi au mai rămas doar
+              <span class="form-instock red">17</span> pachete
+              <span class="js-current-date"></span>.
+            </p>
+            <div class="formFb__img">
+              <img
+                alt=""
+                loading="eager"
+                src="images/product.png"
+                style="max-width: 160px"
+              />
+            </div>
+            <div class="formFb__price">
+              <p class="formFb__price--txt formFb__text">-50% REDUCERE</p>
+              <span class="formFb__price--p">
+                <span
+                  class="oldPriceAndLabelForLandingInfoApi formFb__price--old"
+                  ><span class="price-old">230</span>
+                  <span class="">LEI</span></span
+                >
+                <span class="priceAndLabelForLandingInfoApi formFb__price--new"
+                  ><span class="price-new">115</span>
+                  <span class="">LEI</span></span
+                >
+              </span>
+            </div>
+            <div class="formFb__timer">
+              <p class="formFb__text">Se termină în curând</p>
+              <div style="color: red">
+                <span class="min" id="min" style="font-size: 30px">10</span>
+                <span style="font-size: 30px"> : </span>
+                <span class="sec" id="sec" style="font-size: 30px">00</span>
+              </div>
+            </div>
+            <input
+              type="text"
+              placeholder="Nume"
+              name="name"
+              required=""
+              autocomplete="name"
+              style="padding: 10px 30px"
+            />
+            <input
+              name="phone"
+              type="tel"
+              placeholder="Număr de telefon"
+              required=""
+              autocomplete="tel"
+              style="padding: 10px 30px; margin-top: 20px"
+            />
+            <button class="formFb__btn orderGet offer_link" type="submit">
+              TRIMITE COMANDA MEA
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="block_tv" style="max-width: 900px; margin: 0 auto">
+      <p>APARE ÎN</p>
+      <div class="tv_icons">
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913992-fce779e3-8fb5-4671-9dba-4a502e507ecd.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-40c15d29-b933-4dfa-bf8c-086034f2ea38.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209997078-bab6bd07-47f1-4a05-bd41-572c32207986.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-97be1703-e503-4851-af2b-5210b0e5839e.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-be59b449-a9a6-486d-b526-1bfca40b71ee.jpg"
+        />
+      </div>
+    </div>
+    <style>
+      .fb-comments-wrapper {
+        display: none;
+        opacity: 0;
+      }
+    </style>
+    <section class="comments py-4" style="max-width: 900px; margin: 0 auto">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="fb-comments" style="margin-top: 5px">
+              <div class="fb-comments-header">
+                <span>Comentarii</span>
+              </div>
+              <div class="fb-comments-wrapper" id="6" style="opacity: 1.02661">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/6.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Cristina Popescu (48 ani)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Am 48 de ani și credeam că e prea devreme pentru
+                        astfel de probleme cu articulațiile. Durerea de
+                        genunchi și de spate nu mă lăsa să trăiesc. Am
+                        găsit rețeta doctorului Li Wei, am pregătit-o
+                        seara și deja în prima noapte am dormit ca un
+                        copil – fără durere! Dimineața m-am trezit și nu
+                        îmi venea să cred: zero scârțâit, zero rigiditate.
+                        Vă mulțumesc, Doctore! ❤️
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Îmi place</like> · <reply>Răspunde</reply> ·
+                        <likes>18</likes> <date>acum 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="5" style="opacity: 1.0292">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/5.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Elena Ionescu (52 ani)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        La 52 de ani genunchii deja nu mă mai ascultau, cu
+                        greu urcam scările. Grație rețetei doctorului Li
+                        Wei, după prima noapte durerea a dispărut ca prin
+                        farmec. Acum alerg după nepoți, ca în anii tinereții!
+                        Vă mulțumesc din suflet, Doctore Li Wei!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Îmi place</like> · <reply>Răspunde</reply> ·
+                        <likes>17</likes> <date>acum 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="4" style="opacity: 1.0304">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/4.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Maria Dumitrescu (55 ani)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        O asemenea dimineață fără durere de coloană nu am
+                        avut niciodată! După o singură seară cu rețeta
+                        doctorului Li Wei m-am trezit ca renăscută. Soțul
+                        mă întreabă: „Ce ai luat?", iar eu: „Doar sare cu
+                        scorțișoară de la un doctor chinez!" 😂 Și apoi a
+                        adăugat: „Și de unde atâta energie dintr-odată?"
+                        😂 Vă mulțumesc, Doctore Li Wei!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Îmi place</like> · <reply>Răspunde</reply> ·
+                        <likes>15</likes> <date>acum 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="1" style="opacity: 1.0324">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/1.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Gheorghe Stan (59 ani)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Exact la fel, frate! Aveam aceleași dureri la
+                        genunchi și la degete. Am făcut o infuzie după
+                        rețeta doctorului Li Wei și deja din prima noapte
+                        a încetat să mă doară. Acum, chiar și fără
+                        infuzie, totul funcționează perfect – și
+                        articulațiile, și puterea masculină s-a revenit
+                        la 100%. Doctore Li Wei, vă mulțumesc și sănătate!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Îmi place</like> · <reply>Răspunde</reply> ·
+                        <likes>8</likes> <date>acum 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="2" style="opacity: 1.0298">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/2.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Ion Georgescu (67 ani)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Am 67 de ani, soția e mai tânără cu 10 ani, iar eu
+                        nu mai puteam nici să mă ghemuiesc în grădină.
+                        Durerea de spate și de genunchi era insuportabilă.
+                        După rețeta doctorului Li Wei, în prima noapte am
+                        dormit ca un prunc, iar dimineața m-am trezit și
+                        m-am ghemuit fără probleme. Mă simt mai tânăr cu
+                        20 de ani, iar în dormitor… ca în anii de burlac!
+                        Vă mulțumesc din suflet, Doctore Li Wei!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Îmi place</like> · <reply>Răspunde</reply> ·
+                        <likes>9</likes> <date>acum 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="fb-comments-wrapper resposta"
+                id="3"
+                style="opacity: 1.0216"
+              >
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/3.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Vasile Munteanu (64 ani)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Am încercat diverse alifii și pastile pentru
+                        articulații – nimic nu ajuta. Doar rețeta
+                        doctorului Li Wei a avut efect din prima noapte.
+                        Durerea a dispărut, scârțâitul s-a oprit, pot din
+                        nou să lucrez în grădină, iar soția spune că în
+                        pat sunt din nou ca la 30 de ani! Doctore Li Wei
+                        – vă mulțumesc din suflet!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Îmi place</like> · <reply>Răspunde</reply> ·
+                        <likes>11</likes> <date>acum 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="7">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/7.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Ana Radu (70 ani)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Rețetă excelentă de la doctorul Li Wei. Când au
+                        început durerile groaznice de coloană și de
+                        genunchi, am găsit videoclipul lui. După prima
+                        noapte durerea a încetat, iar după o săptămână am
+                        uitat că am avut vreodată o problemă. Acum merg
+                        din nou la plimbări lungi cu nepoata. Recomand
+                        tuturor! Vă mulțumesc, Doctore Li Wei! ❤️
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Îmi place</like> · <reply>Răspunde</reply> ·
+                        <likes>22</likes> <date>acum 2 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var comments = document.querySelectorAll('.fb-comments-wrapper');
+
+        function fadeInElement(element, duration) {
+          var start = null;
+
+          function step(timestamp) {
+            if (!start) start = timestamp;
+            var progress = timestamp - start;
+            element.style.opacity = progress / duration;
+            if (progress < duration) {
+              window.requestAnimationFrame(step);
+            }
+          }
+          window.requestAnimationFrame(step);
+        }
+
+        function displayCommentsSequentially(index) {
+          if (index >= comments.length) {
+            return;
+          }
+          var comment = comments[index];
+          comment.style.display = 'block';
+          fadeInElement(comment, 500);
+          if (index > 0) {
+            comments[index - 1].parentNode.insertBefore(
+              comment,
+              comments[index - 1]
+            );
+          }
+          setTimeout(function () {
+            displayCommentsSequentially(index + 1);
+          }, 10000);
+        }
+        displayCommentsSequentially(0);
+      });
+    </script>
+
+    <script async>
+      const LAZY = document.querySelectorAll('img');
+      for (let i = 0; i < LAZY.length; i++) {
+        LAZY[i].setAttribute('loading', 'lazy');
+      }
+    </script>
+
+    <script>
+      $('a').on('touchend, click', function (e) {
+        e.preventDefault();
+        $('body,html').animate(
+          {
+            scrollTop: $('#oneform').offset().top,
+          },
+          400
+        );
+      });
+    </script>
+
+    <script>
+      $('[name="name"]').on('input change', function () {
+        var val = $(this).val();
+        $(this).val(val.replace(/[^a-zA-Zа-яА-ЯёЁії\s]/g, ''));
+      });
+
+      $('[name="phone"]').on('input change', function (e) {
+        var val = $(this).val();
+        $(this).val(val.replace(/[^0-9]/g, ''));
+        $(e.currentTarget).attr('pattern', '[0-9]{6,}');
+      });
+    </script>
+
+    <script src="js/video.js?=v1"></script>
+    <p style="opacity: 0">{_box:h93PZ1SM}</p>
+  </body>
+</html>
