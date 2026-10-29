@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <title>Metonil</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="css/comments.css" rel="stylesheet" />
+    <link href="css/style_3.css" rel="stylesheet" />
+    <link href="css/intlTelInput.css" rel="stylesheet" type="text/css" />
+    <link href="images/product.png" rel="icon" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      start = 120;
+      duration = 600;
+    </script>
+
+    <style>
+      .tv_icons {
+        flex-wrap: wrap;
+      }
+
+      @media screen and (max-width: 500px) {
+        .main_header {
+          font-size: 25px;
+        }
+      }
+
+      @media screen and (max-width: 360px) {
+        .main_header {
+          font-size: 30px;
+        }
+
+        .tv_icons > img {
+          scale: 0.7;
+        }
+      }
+
+      #video {
+        pointer-events: none;
+      }
+
+      .iti {
+        width: 100%;
+      }
+    </style>
+
+    <style></style>
+
+    <style></style>
+  </head>
+
+  <body>
+    <h1 class="main_header">
+      NAJUČINKOVITIJE
+      <span class="green_bg"
+        >DOMAĆE SREDSTVO ZA UBLAŽAVANJE BOLI U LEĐIMA I KOLJENU VEĆ ZA 4
+        SATA!</span
+      >
+    </h1>
+    <div id="container_video">
+      <div id="close"></div>
+      <div id="open-video">
+        <div>
+          <h4>Kliknite za nastavak</h4>
+        </div>
+      </div>
+      <div id="popup">
+        <div>
+          <h2>Preostalo je samo 17 pakiranja Metonila.</h2>
+          <h2>Naručite svoje odmah!</h2>
+        </div>
+      </div>
+      <div id="play">
+        <div>
+          <h4>Film je već počeo</h4>
+          <h4>Kliknite za uključivanje zvuka!</h4>
+        </div>
+      </div>
+      <span id="oneform"></span>
+      <video
+        autoplay="autoplay"
+        id="video"
+        muted=""
+        playsinline=""
+        preload="metadata"
+      >
+        <source
+          src="images/VSLPLready1.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div id="oneform"></div>
+      <form action="/order.php" method="post" id="order">
+        <input type="hidden" name="fbpx" value="{fbpx}" />
+        <input type="hidden" name="utm_code" value="{subid}" />
+        <input type="hidden" name="cid" value="{campaign_id}" />
+        <input type="hidden" name="sid" value="6891" />
+        <input type="hidden" name="hash" value="{hash}" />
+        <input type="hidden" name="country" value="HR" />
+        <div class="formFb" id="formFb">
+          <div class="formFb__container">
+            <p class="formFb__action formFb__text">
+              <b>Požurite!</b> Promotivna pakiranja se brzo troše.
+            </p>
+            <p class="formFb__counter formFb__text">
+              <b>Ažurirano:</b> Danas je ostalo samo
+              <span class="form-instock red">17</span> pakiranja
+              <span class="js-current-date"></span>.
+            </p>
+            <div class="formFb__img">
+              <img
+                alt=""
+                loading="eager"
+                src="images/product.png"
+                style="max-width: 160px"
+              />
+            </div>
+            <div class="formFb__price">
+              <p class="formFb__price--txt formFb__text">-50% POPUSTA</p>
+              <span class="formFb__price--p">
+                <span
+                  class="oldPriceAndLabelForLandingInfoApi formFb__price--old"
+                  ><span class="price-old">46</span>
+                  <span class="">EUR</span></span
+                >
+                <span class="priceAndLabelForLandingInfoApi formFb__price--new"
+                  ><span class="price-new">23</span>
+                  <span class="">EUR</span></span
+                >
+              </span>
+            </div>
+            <div class="formFb__timer">
+              <p class="formFb__text">Uskoro ističe</p>
+              <div style="color: red">
+                <span class="min" id="min" style="font-size: 30px">10</span>
+                <span style="font-size: 30px"> : </span>
+                <span class="sec" id="sec" style="font-size: 30px">00</span>
+              </div>
+            </div>
+            <input
+              type="text"
+              placeholder="Ime"
+              name="name"
+              required=""
+              autocomplete="name"
+              style="padding: 10px 30px"
+            />
+            <input
+              name="phone"
+              type="tel"
+              placeholder="Broj telefona"
+              required=""
+              autocomplete="tel"
+              style="padding: 10px 30px; margin-top: 20px"
+            />
+            <button class="formFb__btn orderGet offer_link" type="submit">
+              POŠALJI MOJU NARUDŽBU
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="block_tv" style="max-width: 900px; margin: 0 auto">
+      <p>POJAVLJUJE SE</p>
+      <div class="tv_icons">
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913992-fce779e3-8fb5-4671-9dba-4a502e507ecd.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-40c15d29-b933-4dfa-bf8c-086034f2ea38.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209997078-bab6bd07-47f1-4a05-bd41-572c32207986.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-97be1703-e503-4851-af2b-5210b0e5839e.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-be59b449-a9a6-486d-b526-1bfca40b71ee.jpg"
+        />
+      </div>
+    </div>
+    <style>
+      .fb-comments-wrapper {
+        display: none;
+        opacity: 0;
+      }
+    </style>
+    <section class="comments py-4" style="max-width: 900px; margin: 0 auto">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="fb-comments" style="margin-top: 5px">
+              <div class="fb-comments-header">
+                <span>Komentari</span>
+              </div>
+              <div class="fb-comments-wrapper" id="6" style="opacity: 1.02661">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/6.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Katarina Horvat (48 godina)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Imam 48 godina i mislila sam da je još rano za
+                        takve probleme sa zglobovima. Bol u koljenima i
+                        leđima mi nije dao živjeti. Pronašla sam recepturu
+                        doktora Li Weija, pripremila je navečer i već prve
+                        noći sam spala kao dijete – bez boli! Ujutro sam se
+                        probudila i nisam mogla vjerovati: nula pucketanja,
+                        nula ukočenosti. Hvala, doktore! ❤️
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Sviđa mi se</like> · <reply>Odgovori</reply> ·
+                        <likes>18</likes> <date>prije 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="5" style="opacity: 1.0292">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/5.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Tomislava Kovačević (52 godine)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        U 52. godini koljena su mi već odbijala poslušnost,
+                        jedva sam se penjala uz stepenice. Zahvaljujući
+                        recepturi doktora Li Weija, nakon prve noći bol je
+                        nestala kao rukom odnesena. Sada trčim za unucima
+                        kao za mladih dana! Zahvaljujem od srca, doktore
+                        Li Wei!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Sviđa mi se</like> · <reply>Odgovori</reply> ·
+                        <likes>17</likes> <date>prije 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="4" style="opacity: 1.0304">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/4.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Marija Novak (55 godina)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Takvo jutro bez boli u leđima još nikad nisam
+                        imala! Nakon jedne večeri s recepturom doktora Li
+                        Weija ustala sam kao preporođena. Muž pita: „Što si
+                        to pila?", a ja: „Samo sol s cimetom od kineskog
+                        doktora!" 😂 A onda je dodao: „I odakle ti odjednom
+                        toliko energije?" 😂 Hvala, doktore Li Wei!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Sviđa mi se</like> · <reply>Odgovori</reply> ·
+                        <likes>15</likes> <date>prije 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="1" style="opacity: 1.0324">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/1.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Zdravko Vuković (59 godina)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Potpuno isto, brate! Imao sam iste bolove u
+                        koljenima i prstima. Napravio sam napitak po
+                        recepturi doktora Li Weija i već prve noći je
+                        prestalo boljeti. Sada i bez napitka sve radi
+                        savršeno – i zglobovi, i muška snaga vratila se na
+                        100%. Doktore Li Wei, hvala i neka ste zdravo!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Sviđa mi se</like> · <reply>Odgovori</reply> ·
+                        <likes>8</likes> <date>prije 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="2" style="opacity: 1.0298">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/2.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Ivica Barišić (67 godina)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Imam 67 godina, žena je mlađa 10 godina, a ja više
+                        nisam mogao ni čučnuti u vrtu. Bol u leđima i
+                        koljenima bio je nepodnošljiv. Nakon recepture
+                        doktora Li Weija prve noći sam spao kao beba, a
+                        ujutro sam ustao i čučnuo bez problema. Osjećam se
+                        mlađim 20 godina, a u spavaćoj sobi… kao u
+                        mladenačkim danima! Zahvaljujem od srca, doktore Li
+                        Wei!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Sviđa mi se</like> · <reply>Odgovori</reply> ·
+                        <likes>9</likes> <date>prije 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="fb-comments-wrapper resposta"
+                id="3"
+                style="opacity: 1.0216"
+              >
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/3.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Danijel Kovač (64 godine)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Probao sam razne masti i tablete za zglobove –
+                        ništa nije pomagalo. Samo receptura doktora Li
+                        Weija dala je učinak od prve noći. Bol je nestala,
+                        pucketanje je prestalo, ponovno mogu raditi u
+                        vrtu, a žena kaže da sam u krevetu ponovno kao
+                        tridesetogodišnjak! Doktore Li Wei – hvala od srca!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Sviđa mi se</like> · <reply>Odgovori</reply> ·
+                        <likes>11</likes> <date>prije 3 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="7">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/7.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Jelena Marić (70 godina)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Odlična receptura od doktora Li Weija. Kad su
+                        počeli strašni bolovi u leđima i koljenima,
+                        pronašla sam njegov video. Nakon prve noći
+                        prestalo je boljeti, a nakon tjedan dana zaboravila
+                        sam da sam ikad imala problem. Sada opet idem na
+                        duge šetnje s unukom. Preporučujem svima! Hvala,
+                        doktore Li Wei! ❤️
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Sviđa mi se</like> · <reply>Odgovori</reply> ·
+                        <likes>22</likes> <date>prije 2 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var comments = document.querySelectorAll('.fb-comments-wrapper');
+
+        function fadeInElement(element, duration) {
+          var start = null;
+
+          function step(timestamp) {
+            if (!start) start = timestamp;
+            var progress = timestamp - start;
+            element.style.opacity = progress / duration;
+            if (progress < duration) {
+              window.requestAnimationFrame(step);
+            }
+          }
+          window.requestAnimationFrame(step);
+        }
+
+        function displayCommentsSequentially(index) {
+          if (index >= comments.length) {
+            return;
+          }
+          var comment = comments[index];
+          comment.style.display = 'block';
+          fadeInElement(comment, 500);
+          if (index > 0) {
+            comments[index - 1].parentNode.insertBefore(
+              comment,
+              comments[index - 1]
+            );
+          }
+          setTimeout(function () {
+            displayCommentsSequentially(index + 1);
+          }, 10000);
+        }
+        displayCommentsSequentially(0);
+      });
+    </script>
+
+    <script async>
+      const LAZY = document.querySelectorAll('img');
+      for (let i = 0; i < LAZY.length; i++) {
+        LAZY[i].setAttribute('loading', 'lazy');
+      }
+    </script>
+
+    <script>
+      $('a').on('touchend, click', function (e) {
+        e.preventDefault();
+        $('body,html').animate(
+          {
+            scrollTop: $('#oneform').offset().top,
+          },
+          400
+        );
+      });
+    </script>
+
+    <script>
+      $('[name="name"]').on('input change', function () {
+        var val = $(this).val();
+        $(this).val(val.replace(/[^a-zA-Zа-яА-ЯёЁії\s]/g, ''));
+      });
+
+      $('[name="phone"]').on('input change', function (e) {
+        var val = $(this).val();
+        $(this).val(val.replace(/[^0-9]/g, ''));
+        $(e.currentTarget).attr('pattern', '[0-9]{6,}');
+      });
+    </script>
+
+    <script src="js/video.js?=v1"></script>
+    <p style="opacity: 0">{_box:h93PZ1SM}</p>
+  </body>
+</html>

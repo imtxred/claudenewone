@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <title>Metonil</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="css/comments.css" rel="stylesheet" />
+    <link href="css/style_3.css" rel="stylesheet" />
+    <link href="css/intlTelInput.css" rel="stylesheet" type="text/css" />
+    <link href="images/product.png" rel="icon" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      start = 120;
+      duration = 600;
+    </script>
+
+    <style>
+      .tv_icons {
+        flex-wrap: wrap;
+      }
+
+      @media screen and (max-width: 500px) {
+        .main_header {
+          font-size: 25px;
+        }
+      }
+
+      @media screen and (max-width: 360px) {
+        .main_header {
+          font-size: 30px;
+        }
+
+        .tv_icons > img {
+          scale: 0.7;
+        }
+      }
+
+      #video {
+        pointer-events: none;
+      }
+
+      .iti {
+        width: 100%;
+      }
+    </style>
+
+    <style></style>
+
+    <style></style>
+  </head>
+
+  <body>
+    <h1 class="main_header">
+      НАЙ-ЕФЕКТИВНОТО
+      <span class="green_bg"
+        >ДОМАШНО СРЕДСТВО ЗА ОБЛЕКЧАВАНЕ НА БОЛКАТА В ГЪРБА И КОЛЯНОТО ВЕЧЕ
+        ЗА 4 ЧАСА!</span
+      >
+    </h1>
+    <div id="container_video">
+      <div id="close"></div>
+      <div id="open-video">
+        <div>
+          <h4>Кликнете, за да продължите</h4>
+        </div>
+      </div>
+      <div id="popup">
+        <div>
+          <h2>Останаха само 17 опаковки Метонил.</h2>
+          <h2>Поръчайте своята сега!</h2>
+        </div>
+      </div>
+      <div id="play">
+        <div>
+          <h4>Видеото вече започна</h4>
+          <h4>Кликнете, за да включите звука!</h4>
+        </div>
+      </div>
+      <span id="oneform"></span>
+      <video
+        autoplay="autoplay"
+        id="video"
+        muted=""
+        playsinline=""
+        preload="metadata"
+      >
+        <source
+          src="images/VSLPLready1.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div id="oneform"></div>
+      <form action="/order.php" method="post" id="order">
+        <input type="hidden" name="fbpx" value="{fbpx}" />
+        <input type="hidden" name="utm_code" value="{subid}" />
+        <input type="hidden" name="cid" value="{campaign_id}" />
+        <input type="hidden" name="sid" value="6891" />
+        <input type="hidden" name="hash" value="{hash}" />
+        <input type="hidden" name="country" value="BG" />
+        <div class="formFb" id="formFb">
+          <div class="formFb__container">
+            <p class="formFb__action formFb__text">
+              <b>Побързайте!</b> Промоционалните опаковки свършват бързо.
+            </p>
+            <p class="formFb__counter formFb__text">
+              <b>Актуализация:</b> Днес останаха само
+              <span class="form-instock red">17</span> опаковки
+              <span class="js-current-date"></span>.
+            </p>
+            <div class="formFb__img">
+              <img
+                alt=""
+                loading="eager"
+                src="images/product.png"
+                style="max-width: 160px"
+              />
+            </div>
+            <div class="formFb__price">
+              <p class="formFb__price--txt formFb__text">-50% ОТСТЪПКА</p>
+              <span class="formFb__price--p">
+                <span
+                  class="oldPriceAndLabelForLandingInfoApi formFb__price--old"
+                  ><span class="price-old">90</span>
+                  <span class="">лв</span></span
+                >
+                <span class="priceAndLabelForLandingInfoApi formFb__price--new"
+                  ><span class="price-new">45</span>
+                  <span class="">лв</span></span
+                >
+              </span>
+            </div>
+            <div class="formFb__timer">
+              <p class="formFb__text">Изтича скоро</p>
+              <div style="color: red">
+                <span class="min" id="min" style="font-size: 30px">10</span>
+                <span style="font-size: 30px"> : </span>
+                <span class="sec" id="sec" style="font-size: 30px">00</span>
+              </div>
+            </div>
+            <input
+              type="text"
+              placeholder="Име"
+              name="name"
+              required=""
+              autocomplete="name"
+              style="padding: 10px 30px"
+            />
+            <input
+              name="phone"
+              type="tel"
+              placeholder="Телефонен номер"
+              required=""
+              autocomplete="tel"
+              style="padding: 10px 30px; margin-top: 20px"
+            />
+            <button class="formFb__btn orderGet offer_link" type="submit">
+              ИЗПРАТИ МОЯТА ПОРЪЧКА
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="block_tv" style="max-width: 900px; margin: 0 auto">
+      <p>ПОЯВЯВА СЕ</p>
+      <div class="tv_icons">
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913992-fce779e3-8fb5-4671-9dba-4a502e507ecd.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-40c15d29-b933-4dfa-bf8c-086034f2ea38.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209997078-bab6bd07-47f1-4a05-bd41-572c32207986.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-97be1703-e503-4851-af2b-5210b0e5839e.jpg"
+        />
+        <img
+          alt=""
+          loading="eager"
+          src="images/1747209913991-be59b449-a9a6-486d-b526-1bfca40b71ee.jpg"
+        />
+      </div>
+    </div>
+    <style>
+      .fb-comments-wrapper {
+        display: none;
+        opacity: 0;
+      }
+    </style>
+    <section class="comments py-4" style="max-width: 900px; margin: 0 auto">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="fb-comments" style="margin-top: 5px">
+              <div class="fb-comments-header">
+                <span>Коментари</span>
+              </div>
+              <div class="fb-comments-wrapper" id="6" style="opacity: 1.02661">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/6.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Катерина Иванова (48 г.)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        На 48 години съм и мислех, че е твърде рано за
+                        такива проблеми със ставите. Болката в коленете и
+                        гърба не ми даваше да живея. Намерих рецептата на
+                        доктор Ли Уей, приготвих я вечерта и още първата
+                        нощ спах като дете – без болка! Сутрин се събудих
+                        и не вярвах: никакво скърцане, никаква скованост.
+                        Благодаря, докторе! ❤️
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Харесва ми</like> · <reply>Отговори</reply> ·
+                        <likes>18</likes> <date>преди 3 мин</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="5" style="opacity: 1.0292">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/5.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Таня Петрова (52 г.)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        На 52 години коленете ми вече не ме слушаха, едвам
+                        се качвах по стълбите. Благодарение на рецептата на
+                        доктор Ли Уей, след първата нощ болката изчезна
+                        като с ръка отнета. Сега тичам след внуците, като в
+                        младите години! Благодаря от сърце, докторе Ли
+                        Уей!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Харесва ми</like> · <reply>Отговори</reply> ·
+                        <likes>17</likes> <date>преди 3 мин</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="4" style="opacity: 1.0304">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/4.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Мария Георгиева (55 г.)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Такава сутрин без болка в гърба никога не съм
+                        имала! След една вечер с рецептата на доктор Ли
+                        Уей се събудих като новородена. Мъжът пита:
+                        „Какво си пила?", а аз: „Само сол с канела от
+                        китайски доктор!" 😂 А после добави: „И откъде
+                        изведнъж толкова енергия?" 😂 Благодаря, докторе
+                        Ли Уей!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Харесва ми</like> · <reply>Отговори</reply> ·
+                        <likes>15</likes> <date>преди 3 мин</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="1" style="opacity: 1.0324">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/1.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Здравко Димитров (59 г.)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Точно същото, братко! Имах същите болки в коленете
+                        и пръстите. Направих отвара по рецептата на доктор
+                        Ли Уей и още първата нощ спря да боли. Сега дори
+                        без отварата всичко работи идеално – и ставите, и
+                        мъжката сила се върна на 100%. Докторе Ли Уей,
+                        благодаря и бъдете здрав!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Харесва ми</like> · <reply>Отговори</reply> ·
+                        <likes>8</likes> <date>преди 3 мин</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="2" style="opacity: 1.0298">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/2.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Георги Костов (67 г.)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        На 67 години съм, жената е по-млада с 10, а аз вече
+                        не можех дори да се наведа в градината. Болката в
+                        гърба и коленете беше непоносима. След рецептата
+                        на доктор Ли Уей първата нощ спах като бебе, а
+                        сутрин се събудих и се наведох без проблем.
+                        Чувствам се по-млад с 20 години, а в спалнята…
+                        като в ергенските години! Благодаря от сърце,
+                        докторе Ли Уей!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Харесва ми</like> · <reply>Отговори</reply> ·
+                        <likes>9</likes> <date>преди 3 мин</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="fb-comments-wrapper resposta"
+                id="3"
+                style="opacity: 1.0216"
+              >
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/3.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Даниел Колев (64 г.)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Опитах различни мехлеми и таблетки за стави –
+                        нищо не помагаше. Само рецептата на доктор Ли Уей
+                        даде ефект от първата нощ. Болката изчезна,
+                        скърцането спря, отново мога да работя в
+                        градината, а жената казва, че в леглото отново
+                        съм като 30-годишен! Докторе Ли Уей – благодаря
+                        от сърце!
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Харесва ми</like> · <reply>Отговори</reply> ·
+                        <likes>11</likes> <date>преди 3 мин</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="7">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td class="fb-comments-comment-img" rowspan="3">
+                        <img loading="eager" src="images/7.jpeg" />
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Елена Николова (70 г.)</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        Чудесна рецепта от доктор Ли Уей. Когато започнаха
+                        страшните болки в гърба и коленете, намерих
+                        видеото му. След първата нощ болката спря, а след
+                        седмица забравих, че изобщо имах проблем. Сега
+                        отново ходя на дълги разходки с внучката.
+                        Препоръчвам на всички! Благодаря, докторе Ли Уей!
+                        ❤️
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Харесва ми</like> · <reply>Отговори</reply> ·
+                        <likes>22</likes> <date>преди 2 мин</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var comments = document.querySelectorAll('.fb-comments-wrapper');
+
+        function fadeInElement(element, duration) {
+          var start = null;
+
+          function step(timestamp) {
+            if (!start) start = timestamp;
+            var progress = timestamp - start;
+            element.style.opacity = progress / duration;
+            if (progress < duration) {
+              window.requestAnimationFrame(step);
+            }
+          }
+          window.requestAnimationFrame(step);
+        }
+
+        function displayCommentsSequentially(index) {
+          if (index >= comments.length) {
+            return;
+          }
+          var comment = comments[index];
+          comment.style.display = 'block';
+          fadeInElement(comment, 500);
+          if (index > 0) {
+            comments[index - 1].parentNode.insertBefore(
+              comment,
+              comments[index - 1]
+            );
+          }
+          setTimeout(function () {
+            displayCommentsSequentially(index + 1);
+          }, 10000);
+        }
+        displayCommentsSequentially(0);
+      });
+    </script>
+
+    <script async>
+      const LAZY = document.querySelectorAll('img');
+      for (let i = 0; i < LAZY.length; i++) {
+        LAZY[i].setAttribute('loading', 'lazy');
+      }
+    </script>
+
+    <script>
+      $('a').on('touchend, click', function (e) {
+        e.preventDefault();
+        $('body,html').animate(
+          {
+            scrollTop: $('#oneform').offset().top,
+          },
+          400
+        );
+      });
+    </script>
+
+    <script>
+      $('[name="name"]').on('input change', function () {
+        var val = $(this).val();
+        $(this).val(val.replace(/[^a-zA-Zа-яА-ЯёЁії\s]/g, ''));
+      });
+
+      $('[name="phone"]').on('input change', function (e) {
+        var val = $(this).val();
+        $(this).val(val.replace(/[^0-9]/g, ''));
+        $(e.currentTarget).attr('pattern', '[0-9]{6,}');
+      });
+    </script>
+
+    <script src="js/video.js?=v1"></script>
+    <p style="opacity: 0">{_box:h93PZ1SM}</p>
+  </body>
+</html>
