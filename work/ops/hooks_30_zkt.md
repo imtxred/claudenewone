@@ -14,9 +14,9 @@
 ## Проверка
 
 ```
-python3 work/tools/check_hooks_zkt.py work/hooks/hooks_30_zkt_RU.txt
+python3 work/tools/check_hooks.py work/hooks/hooks_30_zkt_RU.txt --alphabet cyrillic
 ```
-Результат: всего 30 | брак 0 | длинных 15 | коротких 15
+Результат: проблем: 0 из 30 (15 длинных, 15 коротких)
 
 ## A. Аптека и повторная покупка
 
